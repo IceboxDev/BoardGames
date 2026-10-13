@@ -255,6 +255,20 @@ describe("buildDailyQueue", () => {
       expect(ids({})).toEqual([...sets("c001"), ...sets("c002")]);
     });
 
+    // An article begun on an earlier day: its leftover questions are always
+    // dealt and never take a fresh article's place in the day's budget.
+    it("deals a started set's leftovers outside the cap, wherever they sit", () => {
+      const seenIds = new Set(sets("c003").slice(0, 4));
+      const startedSets = new Set(["c003-s01"]);
+      expect(ids({ seenIds, startedSets })).toEqual([
+        "c003-s01-q4",
+        ...sets("c001"),
+        ...sets("c002"),
+      ]);
+      // Even with no fresh budget left, the leftover still comes.
+      expect(ids({ seenIds, startedSets, newRemaining: 0 })).toEqual(["c003-s01-q4"]);
+    });
+
     it("rounds the cap up to finish the set it cut into", () => {
       expect(ids({ newRemaining: 7 })).toEqual([...sets("c001"), ...sets("c002")]);
       expect(ids({ newRemaining: 1 })).toEqual(sets("c001"));

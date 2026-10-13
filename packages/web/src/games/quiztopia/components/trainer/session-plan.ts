@@ -16,12 +16,15 @@ export interface StudyAllPlan {
   newUnits: number;
   /** The questions those new units hold. */
   newQuestions: number;
-  /** Every card the session deals: due + new questions. */
+  /** Whole-set mode: questions left over from articles begun on an earlier
+   *  sitting — dealt on top of the day's new articles. */
+  leftover: number;
+  /** Every card the session deals: due + new questions + leftovers. */
   total: number;
   /** District numbers "Study all" draws from. */
   included: readonly number[];
   excluded: number;
-  /** "22 due + 3 new articles (15 questions)" — what the button promises. */
+  /** "22 due + 3 new articles (15 questions) + 1 to finish" — what the button promises. */
   summary: string;
 }
 
@@ -38,12 +41,14 @@ export function studyAllPlan(
   );
   const newUnits = Math.min(bySet ? settings.newSetsPerDay : settings.newPerDay, available);
   const newQuestions = bySet ? newUnits * 5 : newUnits;
+  const leftover = bySet ? sum(included.map((c) => c.leftoverToday)) : 0;
   const unit = bySet
     ? `new article${newUnits === 1 ? "" : "s"}`
     : `new card${newUnits === 1 ? "" : "s"}`;
   const summary = [
     due > 0 ? `${due} due` : null,
     newUnits > 0 ? `${newUnits} ${unit}${bySet ? ` (${newQuestions} questions)` : ""}` : null,
+    leftover > 0 ? `${leftover} to finish` : null,
   ]
     .filter(Boolean)
     .join(" + ");
@@ -54,7 +59,8 @@ export function studyAllPlan(
     reviewDue: due - learningDue,
     newUnits,
     newQuestions,
-    total: due + newQuestions,
+    leftover,
+    total: due + newQuestions + leftover,
     included: included.map((c) => c.n),
     excluded: cats.length - included.length,
     summary,
@@ -63,4 +69,33 @@ export function studyAllPlan(
 
 function sum(values: readonly number[]): number {
   return values.reduce((a, b) => a + b, 0);
+}
+
+/** An article the day's intro reads before any card is dealt. */
+export interface ArticleToRead {
+  setId: string;
+  cardId: string;
+  category: number;
+}
+
+/**
+ * The whole-set day's reading list: each article with a new question in the
+ * session, in deal order — except an article begun on an earlier sitting,
+ * which was read then; its leftover questions are just dealt.
+ */
+export function articlesToRead(
+  items: readonly {
+    setId: string;
+    cardId: string;
+    category: number;
+    tier: string;
+    setStarted?: boolean;
+  }[],
+): ArticleToRead[] {
+  const seen = new Map<string, ArticleToRead>();
+  for (const it of items) {
+    if (it.tier !== "new" || it.setStarted || seen.has(it.setId)) continue;
+    seen.set(it.setId, { setId: it.setId, cardId: it.cardId, category: it.category });
+  }
+  return [...seen.values()];
 }

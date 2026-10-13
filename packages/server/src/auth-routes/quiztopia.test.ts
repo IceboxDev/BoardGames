@@ -20,7 +20,7 @@ import type {
   TrainerReset,
   WikiReads,
 } from "@boardgames/core/protocol";
-import { type Client, createClient } from "@libsql/client";
+import { type Client, createClient, type InStatement } from "@libsql/client";
 import { Hono } from "hono";
 import { afterAll, afterEach, beforeAll, beforeEach, describe, expect, it, vi } from "vitest";
 import type { AppEnv } from "../auth/types.ts";
@@ -275,6 +275,70 @@ describe("/api/quiztopia", () => {
       expect(await count(client, "SELECT COUNT(*) n FROM quiztopia_reviews")).toBe(2);
     });
 
+    // Two grades of one card in flight at once (the held-back grade sent as
+    // the tab closes, the next one straight after): the newer lands while the
+    // older is between reading the state and writing it. The older must not
+    // be applied on top — production lost a member's final "good" this way.
+    it("does not apply an older grade that loses the write race to a newer one", async () => {
+      const store = getContentStore();
+      const now = Date.now();
+      const base = { questionId: "c001-s01-q0", localDate: TODAY, source: "trainer" as const };
+      const first = new Date(now - 30_000).toISOString();
+      await recordReview(
+        client,
+        USER,
+        { ...base, clientId: "first", grade: "again", reviewedAt: first },
+        store,
+      );
+      const older = {
+        ...base,
+        clientId: "older",
+        grade: "again" as const,
+        reviewedAt: new Date(now - 4_000).toISOString(),
+      };
+      const newer = {
+        ...base,
+        clientId: "newer",
+        grade: "good" as const,
+        reviewedAt: new Date(now).toISOString(),
+      };
+      // Let the newer grade land at the moment the older one logs itself —
+      // after its ordering check, before its state write.
+      let interleaved = false;
+      const racing = new Proxy(client, {
+        get(target, key) {
+          if (key === "execute") {
+            return async (stmt: InStatement) => {
+              const sql = typeof stmt === "string" ? stmt : stmt.sql;
+              if (!interleaved && sql.includes("INSERT OR IGNORE INTO quiztopia_reviews")) {
+                interleaved = true;
+                await recordReview(client, USER, newer, store);
+              }
+              return target.execute(stmt);
+            };
+          }
+          const value = Reflect.get(target, key);
+          return typeof value === "function" ? value.bind(target) : value;
+        },
+      });
+
+      const res = await recordReview(racing, USER, older, store);
+      expect(interleaved).toBe(true);
+      expect(res).toMatchObject({ existed: false, applied: false });
+      const { rows } = await client.execute(
+        "SELECT client_id, applied FROM quiztopia_reviews ORDER BY client_id",
+      );
+      expect(rows.map((r) => [r.client_id, r.applied])).toEqual([
+        ["first", 1],
+        ["newer", 1],
+        ["older", 0],
+      ]);
+      const { rows: state } = await client.execute(
+        "SELECT last_reviewed_at FROM quiztopia_srs WHERE question_id = 'c001-s01-q0'",
+      );
+      expect(state[0]?.last_reviewed_at).toBe(newer.reviewedAt);
+    });
+
     it("keeps game answers out of the schedule until the member opts in", async () => {
       const off = await recordGame({
         questionId: "c001-s03-q0",
@@ -467,6 +531,79 @@ describe("/api/quiztopia", () => {
       expect(body.items.filter((it) => it.tier === "learning")).toHaveLength(2);
     });
 
+    // A sitting that ended with one question of an article unanswered: the
+    // next day deals that leftover without re-reading the whole article.
+    it("flags a new question whose article was already begun", async () => {
+      await call("PUT", "/settings", { language: "en", newCardOrder: "sets", newSetsPerDay: 3 });
+      for (const q of ["q0", "q1", "q2", "q3"]) {
+        await seedState(client, `c001-s01-${q}`, {
+          state: "review",
+          intervalDays: 4,
+          dueDate: TOMORROW,
+          lastReviewedAt: "2026-01-01T10:00:00.000Z",
+        });
+      }
+      const { body } = await call<TrainerQueue>("GET", `/trainer/queue?today=${TODAY}&category=1`);
+      const fresh = body.items.filter((it) => it.tier === "new");
+      expect(fresh.find((it) => it.questionId === "c001-s01-q4")).toMatchObject({
+        setStarted: true,
+      });
+      const untouched = fresh.filter((it) => it.setId !== "c001-s01");
+      expect(untouched.length).toBeGreaterThan(0);
+      for (const it of untouched) expect(it.setStarted).toBe(false);
+    });
+
+    // The daily budget is in articles opened TODAY: one begun yesterday and
+    // left a question short is finished for free; one begun today is charged.
+    it("charges the article budget only for articles opened today", async () => {
+      await call("PUT", "/settings", { language: "en", newCardOrder: "sets", newSetsPerDay: 1 });
+      for (const q of ["q0", "q1", "q2", "q3"]) {
+        await seedState(client, `c001-s01-${q}`, {
+          state: "review",
+          intervalDays: 4,
+          dueDate: TOMORROW,
+          lastReviewedAt: "2026-01-01T10:00:00.000Z",
+        });
+        await seedReview(client, {
+          questionId: `c001-s01-${q}`,
+          grade: "good",
+          prevState: "new",
+          localDate: YESTERDAY,
+        });
+      }
+      const before = await call<TrainerQueue>("GET", `/trainer/queue?today=${TODAY}&category=1`);
+      const news = before.body.items.filter((it) => it.tier === "new").map((it) => it.questionId);
+      // Yesterday's leftover plus the one new article the budget allows.
+      expect(news.sort()).toEqual([
+        "c001-s01-q4",
+        "c002-s01-q0",
+        "c002-s01-q1",
+        "c002-s01-q2",
+        "c002-s01-q3",
+        "c002-s01-q4",
+      ]);
+      const ov = await call<TrainerOverview>("GET", `/trainer/overview?today=${TODAY}`);
+      expect(ov.body.categories[0]).toMatchObject({ newRemainingToday: 5, leftoverToday: 1 });
+
+      // Opening today's article spends the budget; finishing yesterday's didn't.
+      await post(review({ questionId: "c001-s01-q4", grade: "good" }));
+      expect(
+        (await call<TrainerOverview>("GET", `/trainer/overview?today=${TODAY}`)).body.categories[0],
+      ).toMatchObject({ newRemainingToday: 5, leftoverToday: 0 });
+      await post(review({ questionId: "c002-s01-q0", grade: "good" }));
+      expect(
+        (await call<TrainerOverview>("GET", `/trainer/overview?today=${TODAY}`)).body.categories[0],
+      ).toMatchObject({ newRemainingToday: 0, leftoverToday: 4 });
+      // The begun article's remaining questions still come, budget spent or not.
+      const after = await call<TrainerQueue>("GET", `/trainer/queue?today=${TODAY}&category=1`);
+      expect(
+        after.body.items
+          .filter((it) => it.tier === "new")
+          .map((it) => it.questionId)
+          .sort(),
+      ).toEqual(["c002-s01-q1", "c002-s01-q2", "c002-s01-q3", "c002-s01-q4"]);
+    });
+
     it("caps new cards per day by today's applied introductions only", async () => {
       await call("PUT", "/settings", { language: "en", newPerDay: 3, newCardOrder: "originals" });
       const first = await call<TrainerQueue>("GET", `/trainer/queue?today=${TODAY}&category=1`);
@@ -543,9 +680,9 @@ describe("/api/quiztopia", () => {
       });
       const all = await call<TrainerQueue>("GET", `/trainer/queue?today=${TODAY}&limit=200`);
       expect(all.body.items.some((it) => it.category === 1 || it.category === 2)).toBe(false);
-      // District 3's begun article is finished first and counts: it + two new ones.
+      // District 3's begun article is finished on top of the day's three new ones.
       expect(all.body.items.some((it) => it.questionId === "c001-s03-q0")).toBe(true);
-      expect(new Set(all.body.items.map((it) => it.setId)).size).toBe(3);
+      expect(new Set(all.body.items.map((it) => it.setId)).size).toBe(4);
       const own = await call<TrainerQueue>("GET", `/trainer/queue?today=${TODAY}&category=1`);
       expect(own.body.items.some((it) => it.questionId === "c001-s01-q0")).toBe(true);
       const settings = await call<{ excludeFromAll: number[] }>("GET", "/settings");
@@ -579,10 +716,12 @@ describe("/api/quiztopia", () => {
 
       const mixed = await call<TrainerQueue>("GET", `/trainer/queue?today=${TODAY}&limit=200`);
       const mixedNew = mixed.body.items.filter((it) => it.tier === "new");
-      // Study all: the article the due card began (4 left) is finished first
-      // and uses the sitting's budget of one — no other new article.
-      expect(mixedNew).toHaveLength(4);
-      expect(new Set(mixedNew.map((it) => it.setId))).toEqual(new Set(["c001-s02"]));
+      // Study all: the article the due card began (4 left) is finished on
+      // top of the sitting's budget of one — plus one new article.
+      expect(mixedNew).toHaveLength(9);
+      const mixedSets = new Set(mixedNew.map((it) => it.setId));
+      expect(mixedSets.size).toBe(2);
+      expect(mixedSets.has("c001-s02")).toBe(true);
       expect(mixed.body.items.some((it) => it.questionId === "c001-s02-q0")).toBe(true);
     });
 
@@ -629,7 +768,10 @@ describe("/api/quiztopia", () => {
         due: 2,
         learningDue: 2,
         newAvailable: 8,
-        newRemainingToday: 8,
+        // The begun article's three unseen questions are left to finish, on
+        // top of the default three new articles (here: the one remaining).
+        newRemainingToday: 5,
+        leftoverToday: 3,
         known: 0,
         mature: 0,
         mastery: 0,

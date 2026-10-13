@@ -78,7 +78,11 @@ export const CategoryOverviewSchema = z.object({
   due: z.number().int().nonnegative(),
   learningDue: z.number().int().nonnegative(),
   newAvailable: z.number().int().nonnegative(),
+  /** Whole-set mode: fresh questions still allowed today (whole articles). */
   newRemainingToday: z.number().int().nonnegative(),
+  /** Whole-set mode: unseen questions of articles already begun — dealt on
+   *  top of the daily budget. Defaults 0 for a server that predates it. */
+  leftoverToday: z.number().int().nonnegative().default(0),
   known: z.number().int().nonnegative(),
   mature: z.number().int().nonnegative(),
   mastery: z.number().min(0).max(1),
@@ -125,6 +129,10 @@ export const TrainerQueueItemSchema = z.object({
   category: QuiztopiaCategorySchema,
   tier: QueueTierSchema,
   state: SrsStateSchema.nullable(),
+  /** A new question whose article was already begun (a sibling has been
+   *  studied): the reading was done then, so the day's intro skips it.
+   *  Defaults false for a server that predates the field. */
+  setStarted: z.boolean().default(false),
 });
 export type TrainerQueueItem = z.infer<typeof TrainerQueueItemSchema>;
 

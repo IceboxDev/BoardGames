@@ -62,6 +62,7 @@ function fixtureOverview(today: string, fresh: boolean): TrainerOverview {
         learningDue: n === 1 ? 11 : 0,
         newAvailable: 885 - s,
         newRemainingToday: 15,
+        leftoverToday: 0,
         known,
         mature: Math.round(known * 0.1),
         mastery: 0,

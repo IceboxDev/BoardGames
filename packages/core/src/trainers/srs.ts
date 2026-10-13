@@ -227,6 +227,12 @@ export interface QueueInput {
    * stay back to back and due siblings are gathered.
    */
   shuffleSeed?: number;
+  /**
+   * Set mode only: articles begun on an earlier day. Their unseen questions
+   * are leftovers — always dealt, and outside `newRemaining`, which budgets
+   * only articles opened fresh.
+   */
+  startedSets?: ReadonlySet<string>;
 }
 
 /**
@@ -248,13 +254,22 @@ export function buildDailyQueue(input: QueueInput): QueueItem[] {
     .sort((a, b) => a.dueDate.localeCompare(b.dueDate) || a.questionId.localeCompare(b.questionId));
   const bySet = input.grouping === "sets";
   const fresh: string[] = [];
+  const leftover: string[] = [];
   const cap = Math.max(0, input.newRemaining);
+  let full = false;
   for (const id of input.newOrder) {
     if (input.seenIds.has(id)) continue;
+    if (bySet && input.startedSets?.has(input.setIdOf(id))) {
+      leftover.push(id);
+      continue;
+    }
+    if (full) continue; // past the cap: only leftovers are still collected
     if (fresh.length >= cap) {
       // In set mode, finish the set the cap cut into, then stop.
       if (!bySet || cap === 0 || input.setIdOf(id) !== input.setIdOf(fresh[fresh.length - 1])) {
-        break;
+        if (!bySet || !input.startedSets) break;
+        full = true;
+        continue;
       }
     }
     fresh.push(id);
@@ -262,7 +277,7 @@ export function buildDailyQueue(input: QueueInput): QueueItem[] {
   const items: QueueItem[] = [
     ...learning.map((s) => ({ questionId: s.questionId, tier: "learning" as const, state: s })),
     ...review.map((s) => ({ questionId: s.questionId, tier: "review" as const, state: s })),
-    ...fresh.map((id) => ({ questionId: id, tier: "new" as const, state: null })),
+    ...[...leftover, ...fresh].map((id) => ({ questionId: id, tier: "new" as const, state: null })),
   ];
   const keyOf = (it: QueueItem) => input.setIdOf(it.questionId);
   let ordered: QueueItem[];

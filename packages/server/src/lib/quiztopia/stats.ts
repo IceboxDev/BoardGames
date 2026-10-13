@@ -10,6 +10,7 @@
 import {
   hashSeed,
   parseQuestionId,
+  QUESTIONS_PER_SET,
   shuffledIntroductionOrder,
   shuffledSetOrder,
 } from "@boardgames/core/games/quiztopia/ids";
@@ -44,6 +45,7 @@ const CATEGORIES = Array.from({ length: 12 }, (_, i) => i + 1);
 const CategoryStateAggRowSchema = z.object({
   category: z.number().int(),
   seen: z.number().int(),
+  started_sets: z.number().int(),
   known: z.number().int(),
   mature: z.number().int(),
   due_all: z.number().int(),
@@ -116,6 +118,37 @@ export async function newIntroducedToday(
   );
 }
 
+/**
+ * Whole-set mode's daily budget is in articles OPENED today: an article
+ * whose first question was introduced today. Finishing one begun on an
+ * earlier day (a sitting that ended a question short) costs nothing.
+ */
+export async function setsBegunToday(
+  db: Client,
+  userId: string,
+  today: string,
+): Promise<Map<number, number>> {
+  const setOf = (col: string) => `substr(${col}, 1, instr(${col}, '-q') - 1)`;
+  const { rows } = await db.execute({
+    sql: `SELECT r.category, COUNT(DISTINCT ${setOf("r.question_id")}) AS n
+            FROM quiztopia_reviews r
+           WHERE r.user_id = ? AND r.local_date = ? AND r.prev_state = 'new' AND r.applied = 1
+             AND NOT EXISTS (
+               SELECT 1 FROM quiztopia_reviews p
+                WHERE p.user_id = r.user_id AND p.applied = 1 AND p.prev_state = 'new'
+                  AND p.local_date < r.local_date
+                  AND ${setOf("p.question_id")} = ${setOf("r.question_id")})
+           GROUP BY r.category`,
+    args: [userId, today],
+  });
+  return new Map(
+    parseRows(CategoryCountRowSchema, rows, "quiztopia_reviews.sets-begun-today").map((r) => [
+      r.category,
+      r.n,
+    ]),
+  );
+}
+
 // ── Overview ───────────────────────────────────────────────────────────
 
 export async function trainerOverview(
@@ -126,10 +159,12 @@ export async function trainerOverview(
   settings: QuiztopiaSettings,
 ): Promise<TrainerOverview> {
   const since = addDays(today, -(RETENTION_DAYS - 1));
-  const [stateAgg, reviewAgg, introduced, todayRow, dates] = await Promise.all([
+  const [stateAgg, reviewAgg, introduced, begun, todayRow, dates] = await Promise.all([
     db.execute({
       sql: `SELECT category,
                    COUNT(*) AS seen,
+                   COUNT(DISTINCT substr(question_id, 1, instr(question_id, '-q') - 1))
+                     AS started_sets,
                    SUM(state = 'review') AS known,
                    SUM(state = 'review' AND interval_days >= ?) AS mature,
                    SUM(due_date <= ?) AS due_all,
@@ -164,6 +199,7 @@ export async function trainerOverview(
       args: [userId, since, today],
     }),
     newIntroducedToday(db, userId, today),
+    setsBegunToday(db, userId, today),
     db.execute({
       sql: `SELECT COUNT(*) AS reviews,
                    COALESCE(SUM(grade = 'good'), 0) AS good,
@@ -196,11 +232,16 @@ export async function trainerOverview(
     const r = reviews.get(n);
     const seen = s?.seen ?? 0;
     const newAvailable = Math.max(0, total - seen);
-    const cap = Math.max(0, newPerDayFor(settings, n) - (introduced.get(n) ?? 0));
-    // Set mode finishes the set the cap cuts into — count whole sets (an
-    // estimate when a set is already half seen).
-    const setCap = settings.newCardOrder === "sets" ? Math.ceil(cap / 5) * 5 : cap;
-    const newRemainingToday = Math.min(newAvailable, setCap);
+    const bySet = settings.newCardOrder === "sets";
+    // Set mode: the unseen questions of articles already begun are finished
+    // on top of the budget, which counts only the articles opened today.
+    const leftoverToday = bySet
+      ? Math.max(0, (s?.started_sets ?? 0) * QUESTIONS_PER_SET - seen)
+      : 0;
+    const cap = bySet
+      ? Math.max(0, settings.newSetsPerDay - (begun.get(n) ?? 0)) * QUESTIONS_PER_SET
+      : Math.max(0, newPerDayFor(settings, n) - (introduced.get(n) ?? 0));
+    const newRemainingToday = Math.min(newAvailable - leftoverToday, cap);
     const mature = s?.mature ?? 0;
     const graded = r?.review_graded ?? 0;
     return {
@@ -211,6 +252,7 @@ export async function trainerOverview(
       learningDue: (settings.includeLeeches ? s?.learning_due_all : s?.learning_due_non_leech) ?? 0,
       newAvailable,
       newRemainingToday,
+      leftoverToday,
       known: s?.known ?? 0,
       mature,
       mastery: total > 0 ? mature / total : 0,
@@ -305,8 +347,8 @@ function mergeRoundRobin(lists: readonly QueueItem[][]): QueueItem[] {
  * question id) across the districts' queues, in place: districts take turns
  * in a seeded order, each offering its next unit, so the day's few new
  * articles come from different districts. Due items are untouched. Units
- * in `started` (an article already begun) are always kept — finished
- * first — and count toward the budget.
+ * in `started` (an article already begun) are always kept, on top of the
+ * budget — the caller has already charged today's own openings to it.
  */
 export function capNewAcross(
   perCategory: QueueItem[][],
@@ -335,13 +377,17 @@ export function capNewAcross(
     perCategory.map((_, i) => i),
     seed,
   );
-  for (let round = 0; keep.size < budget; round++) {
+  let taken = 0;
+  for (let round = 0; taken < budget; round++) {
     let offered = false;
     for (const i of order) {
       const u = units[i][round];
       if (u === undefined) continue;
       offered = true;
-      if (keep.size < budget) keep.add(u);
+      if (taken < budget) {
+        keep.add(u);
+        taken++;
+      }
     }
     if (!offered) break;
   }
@@ -366,7 +412,7 @@ export async function trainerQueue(
   settings: QuiztopiaSettings,
 ): Promise<TrainerQueue> {
   const includeLeeches = opts.includeLeeches || settings.includeLeeches;
-  const [seenRows, dueRows, introduced, reviewedRows] = await Promise.all([
+  const [seenRows, dueRows, introduced, begun, reviewedRows] = await Promise.all([
     db.execute({
       sql: `SELECT question_id, category FROM quiztopia_srs
              WHERE user_id = ?${opts.category !== undefined ? " AND category = ?" : ""}`,
@@ -374,6 +420,7 @@ export async function trainerQueue(
     }),
     readAllStates(db, userId, { category: opts.category, dueBy: opts.today }),
     newIntroducedToday(db, userId, opts.today),
+    setsBegunToday(db, userId, opts.today),
     db.execute({
       sql: `SELECT DISTINCT question_id FROM quiztopia_reviews
              WHERE user_id = ? AND local_date = ? AND source = 'trainer' AND applied = 1${
@@ -413,6 +460,11 @@ export async function trainerQueue(
       ? [opts.category]
       : CATEGORIES.filter((n) => !settings.excludeFromAll.includes(n));
   const bySet = settings.newCardOrder === "sets";
+  // Articles with a question already studied. Whole-set mode deals their
+  // leftover new questions outside the daily budget, which counts only the
+  // articles opened today (`setsBegunToday`).
+  const startedSets = new Set<string>();
+  for (const ids of seenByCategory.values()) for (const id of ids) startedSets.add(setIdOf(id));
   const perCategory = categories.map((n) => {
     // A per-user, per-district shuffle: stable for the learner, random
     // across learners — whole sets, or all originals before any sibling.
@@ -423,29 +475,30 @@ export async function trainerQueue(
       newOrder: bySet
         ? shuffledSetOrder(store.cardIds, n, seed)
         : shuffledIntroductionOrder(store.cardIds, n, seed),
-      newRemaining: newPerDayFor(settings, n) - (introduced.get(n) ?? 0),
+      newRemaining: bySet
+        ? Math.max(0, settings.newSetsPerDay - (begun.get(n) ?? 0)) * QUESTIONS_PER_SET
+        : newPerDayFor(settings, n) - (introduced.get(n) ?? 0),
       limit: Number.MAX_SAFE_INTEGER,
       includeLeeches,
       setIdOf,
       grouping: bySet ? "sets" : "spread",
       // The day's new questions mixed across their articles — stable for the day.
       shuffleSeed: bySet ? hashSeed(`${userId}:${opts.today}:${n}`) : undefined,
+      startedSets: bySet ? startedSets : undefined,
     });
   });
   // "Study all" introduces one sitting's budget in total — `newSetsPerDay`
   // articles (or `newPerDay` questions) drawn across the districts — not
-  // every district's full daily budget at once.
-  // An article already begun is finished first, as part of the budget.
+  // every district's full daily budget at once. An article already begun is
+  // finished on top of it; only the articles opened today use it up.
   if (opts.category === undefined) {
-    const started = new Set<string>();
-    if (bySet)
-      for (const ids of seenByCategory.values()) for (const id of ids) started.add(setIdOf(id));
+    const begunToday = [...begun.values()].reduce((a, b) => a + b, 0);
     capNewAcross(
       perCategory,
-      bySet ? settings.newSetsPerDay : settings.newPerDay,
+      bySet ? Math.max(0, settings.newSetsPerDay - begunToday) : settings.newPerDay,
       bySet ? setIdOf : (id) => id,
       hashSeed(`${userId}:${opts.today}:new`),
-      started,
+      bySet ? startedSets : undefined,
     );
   }
   // Several districts: round-robin tier by tier — except in whole-set mode,
@@ -470,6 +523,7 @@ export async function trainerQueue(
       category: q.n,
       tier: it.tier,
       state: it.state ? toWireState(it.state) : null,
+      setStarted: it.tier === "new" && startedSets.has(q.setId),
     });
   }
   // Questions studied today that the queue no longer holds: a sitting

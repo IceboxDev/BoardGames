@@ -3,10 +3,11 @@
 
 import type { GeoOverview, GeoReviewBody, GeoReviewResponse } from "@boardgames/core/protocol";
 import { addDays } from "@boardgames/core/trainers/srs";
-import { type Client, createClient } from "@libsql/client";
+import { type Client, createClient, type InStatement } from "@libsql/client";
 import { Hono } from "hono";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import type { AppEnv } from "../auth/types.ts";
+import { recordDeckReview } from "../lib/trainers/deck-db.ts";
 import { runMigrations } from "../migrations/migrator.ts";
 
 const db = vi.hoisted(() => ({ current: null as Client | null }));
@@ -156,6 +157,61 @@ describe("geography trainer routes", () => {
     });
     expect(reset.body.deleted).toEqual({ states: 2, reviews: 2 });
     expect((await overview()).body.states).toEqual([]);
+  });
+
+  // Two grades of one card in flight at once: the newer lands while the older
+  // is between its ordering check and its state write. The older must stay
+  // unapplied rather than overwrite the newer (same race as Quiztopia's).
+  it("does not apply an older grade that loses the write race to a newer one", async () => {
+    const now = Date.now();
+    const at = (ms: number) => new Date(now - ms).toISOString();
+    const base = {
+      cardId: "ct:eu:s1",
+      localDate: TODAY,
+      source: "trainer" as const,
+      outcome: { verdict: "correct" },
+    };
+    const opts = { cardExists: () => true };
+    await recordDeckReview(
+      client,
+      USER,
+      "geography",
+      { ...base, clientId: "first", grade: "again", reviewedAt: at(30_000) },
+      opts,
+    );
+    const older = { ...base, clientId: "older", grade: "again" as const, reviewedAt: at(4_000) };
+    const newer = { ...base, clientId: "newer", grade: "good" as const, reviewedAt: at(0) };
+    let interleaved = false;
+    const racing = new Proxy(client, {
+      get(target, key) {
+        if (key === "execute") {
+          return async (stmt: InStatement) => {
+            const sql = typeof stmt === "string" ? stmt : stmt.sql;
+            if (!interleaved && sql.includes("INTO trainer_reviews")) {
+              interleaved = true;
+              await recordDeckReview(client, USER, "geography", newer, opts);
+            }
+            return target.execute(stmt);
+          };
+        }
+        const value = Reflect.get(target, key);
+        return typeof value === "function" ? value.bind(target) : value;
+      },
+    });
+
+    const res = await recordDeckReview(racing, USER, "geography", older, opts);
+    expect(interleaved).toBe(true);
+    expect(res).toMatchObject({ existed: false, applied: false });
+    const { rows } = await client.execute(
+      "SELECT client_id, applied FROM trainer_reviews ORDER BY client_id",
+    );
+    expect(rows.map((r) => [r.client_id, r.applied])).toEqual([
+      ["first", 1],
+      ["newer", 1],
+      ["older", 0],
+    ]);
+    const { rows: state } = await client.execute("SELECT last_reviewed_at FROM trainer_srs");
+    expect(state[0]?.last_reviewed_at).toBe(newer.reviewedAt);
   });
 
   it("stores settings per member and serves history", async () => {

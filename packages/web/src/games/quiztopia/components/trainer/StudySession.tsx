@@ -26,6 +26,7 @@ import { FlashCard } from "./FlashCard";
 import { GradeBar } from "./GradeBar";
 import { NewArticlesIntro } from "./NewArticlesIntro";
 import { SessionSummary } from "./SessionSummary";
+import { articlesToRead } from "./session-plan";
 import { specFromSearch } from "./session-spec";
 import { TrainerScreen } from "./TrainerScreen";
 
@@ -66,19 +67,16 @@ export default function StudySession() {
 
   // Whole-set days start by reading the day's new articles; their questions
   // are then shuffled in with everything due (the server already mixed them).
+  // An article begun on an earlier sitting was read then: its leftover
+  // questions are just dealt.
   const { settings } = useQuiztopiaSettings();
-  const newSets = useMemo(() => {
-    if (spec.kind !== "due" || settings.newCardOrder !== "sets" || session.status !== "ready") {
-      return [];
-    }
-    const seen = new Map<string, { setId: string; cardId: string; category: number }>();
-    for (const it of session.items) {
-      if (it.tier === "new" && !seen.has(it.setId)) {
-        seen.set(it.setId, { setId: it.setId, cardId: it.cardId, category: it.category });
-      }
-    }
-    return [...seen.values()];
-  }, [spec.kind, settings.newCardOrder, session.status, session.items]);
+  const newSets = useMemo(
+    () =>
+      spec.kind === "due" && settings.newCardOrder === "sets" && session.status === "ready"
+        ? articlesToRead(session.items)
+        : [],
+    [spec.kind, settings.newCardOrder, session.status, session.items],
+  );
   const [readIndex, setReadIndex] = useState(0);
   const [readingDone, setReadingDone] = useState(false);
   const reading =

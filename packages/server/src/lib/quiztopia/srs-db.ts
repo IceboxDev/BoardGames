@@ -353,6 +353,17 @@ export async function recordReview(
       return { existed: false, applied: true, state: next, firstOfDay };
     }
     base = await readState(db, userId, body.questionId);
+    // The request that beat us may be a NEWER grade of the same card (two
+    // sends in flight at once, the later one landing first). The ordering
+    // check above saw the state from before it, so make it again: an older
+    // grade stays in the log, unapplied, instead of overwriting the newer.
+    if (base?.lastReviewedAt && reviewedAt < base.lastReviewedAt) {
+      await db.execute({
+        sql: "UPDATE quiztopia_reviews SET applied = 0 WHERE user_id = ? AND client_id = ?",
+        args: [userId, body.clientId],
+      });
+      return { existed: false, applied: false, state: base, firstOfDay };
+    }
   }
   throw new Error(`quiztopia review ${body.clientId}: lost the state race twice`);
 }

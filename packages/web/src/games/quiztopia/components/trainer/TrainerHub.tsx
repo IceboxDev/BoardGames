@@ -344,7 +344,11 @@ function HubBody({ overview, today }: { overview: TrainerOverview; today: string
                 to={paths.study({ category: d.slug })}
                 lit={isLit}
                 progress={{ seen: c.seen, learned: c.known, total: c.total }}
-                cta={isLit && c.newRemainingToday === 0 ? "Review anyway" : "Study"}
+                cta={
+                  isLit && c.newRemainingToday === 0 && c.leftoverToday === 0
+                    ? "Review anyway"
+                    : "Study"
+                }
                 corner={{ to: paths.wikiCategory(d.slug), label: "Wiki →" }}
               >
                 <div className="flex flex-col gap-1.5">
@@ -357,6 +361,15 @@ function HubBody({ overview, today }: { overview: TrainerOverview; today: string
                         {all.bySet
                           ? `${Math.ceil(c.newRemainingToday / 5)} new article${Math.ceil(c.newRemainingToday / 5) === 1 ? "" : "s"}`
                           : `${c.newRemainingToday} new`}
+                      </Badge>
+                    )}
+                    {c.leftoverToday > 0 && (
+                      <Badge
+                        tone="neutral"
+                        size="xs"
+                        title="Questions of an article you began on an earlier sitting"
+                      >
+                        {c.leftoverToday} to finish
                       </Badge>
                     )}
                     {c.leeches > 0 && (

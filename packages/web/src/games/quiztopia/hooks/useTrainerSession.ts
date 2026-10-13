@@ -62,6 +62,8 @@ export interface SessionItem {
   cardId: string;
   category: number;
   tier: QueueTier;
+  /** A new question of an article begun on an earlier sitting (due queues only). */
+  setStarted?: boolean;
 }
 
 export interface SessionReview {
@@ -318,6 +320,7 @@ async function fetchSource(
         cardId: i.cardId,
         category: i.category,
         tier: i.tier,
+        setStarted: i.setStarted,
       };
     });
     return { items, states, doneToday: res.doneToday };
