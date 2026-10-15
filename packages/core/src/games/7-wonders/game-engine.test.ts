@@ -72,9 +72,9 @@ describe("legal actions", () => {
   });
 
   it("offers a chain build for free", () => {
-    // Statue chains from Theater; its cost (wood + 2 ore) is otherwise unaffordable.
+    // Statue chains from Well; its cost (wood + 2 ore) is otherwise unaffordable.
     const state = makeTestState([
-      { wonder: "giza", tableau: ["Theater"], hand: ["Statue"] },
+      { wonder: "giza", tableau: ["Well"], hand: ["Statue"] },
       { wonder: "babylon", hand: ["Theater"] },
       { wonder: "olympia", hand: ["Loom"] },
     ]);
@@ -87,28 +87,45 @@ describe("legal actions", () => {
     });
   });
 
-  it("offers the Olympia free build once per age", () => {
-    const state = makeTestState([
-      { wonder: "olympia", stagesBuilt: 2, hand: ["Aqueduct"] }, // 3 stone — unaffordable
-      { wonder: "babylon", hand: ["Theater"] },
-      { wonder: "giza", hand: ["Loom"] },
-    ]);
-    const actions = getLegalActions(state, 0);
-    expect(actions.some((a) => a.type === "play-card" && a.payment.kind === "free-build")).toBe(
-      true,
+  const freeBuild = (state: GameState, seat = 0) =>
+    getLegalActions(state, seat).some(
+      (a) => a.type === "play-card" && a.payment.kind === "free-build",
     );
 
-    const used = makeTestState([
-      { wonder: "olympia", stagesBuilt: 2, hand: ["Aqueduct"] },
+  it("Olympia Day builds the first card of each colour free", () => {
+    const seats = (tableau: string[]) =>
+      makeTestState([
+        { wonder: "olympia", stagesBuilt: 2, tableau, hand: ["Aqueduct"] }, // 3 stone — unaffordable
+        { wonder: "babylon", hand: ["Theater"] },
+        { wonder: "giza", hand: ["Loom"] },
+      ]);
+    expect(freeBuild(seats([]))).toBe(true);
+    // A blue card already in the city: Aqueduct is no longer the first blue.
+    expect(freeBuild(seats(["Altar"]))).toBe(false);
+    // Free cards never need it.
+    const free = makeTestState([
+      { wonder: "olympia", stagesBuilt: 2, hand: ["Altar"] },
       { wonder: "babylon", hand: ["Theater"] },
       { wonder: "giza", hand: ["Loom"] },
     ]);
-    used.players[0].freeBuildUsedThisAge = true;
-    expect(
-      getLegalActions(used, 0).some(
-        (a) => a.type === "play-card" && a.payment.kind === "free-build",
-      ),
-    ).toBe(false);
+    expect(freeBuild(free)).toBe(false);
+  });
+
+  it("Olympia Night builds the first and the last card of each age free", () => {
+    const at = (stagesBuilt: number, turn: number) =>
+      makeTestState(
+        [
+          { wonder: "olympia", side: "B", stagesBuilt, hand: ["Baths"] },
+          { wonder: "babylon", hand: ["Theater"] },
+          { wonder: "giza", hand: ["Loom"] },
+        ],
+        { turn },
+      );
+    expect(freeBuild(at(1, 1))).toBe(true);
+    expect(freeBuild(at(1, 3))).toBe(false);
+    expect(freeBuild(at(1, 6))).toBe(false);
+    expect(freeBuild(at(2, 6))).toBe(true);
+    expect(freeBuild(at(2, 3))).toBe(false);
   });
 });
 
@@ -128,7 +145,7 @@ describe("applyReveal", () => {
 
   it("chain builds cost nothing and land in the tableau", () => {
     const state = makeTestState([
-      { wonder: "giza", tableau: ["Theater"], hand: ["Statue", "Altar"] },
+      { wonder: "giza", tableau: ["Well"], hand: ["Statue", "Altar"] },
       { wonder: "babylon", hand: ["Baths", "Stockade"] },
       { wonder: "olympia", hand: ["Loom", "Press"] },
     ]);
@@ -220,8 +237,8 @@ describe("applyReveal", () => {
     // p0 buys wood from p1 (2 coins) while p1 buys stone from p0 (2 coins).
     const state = makeTestState([
       { wonder: "giza", coins: 3, hand: ["Stockade", "Altar"] }, // stone; Stockade needs wood
-      { wonder: "olympia", coins: 3, hand: ["Baths", "Theater"] }, // wood; Baths needs stone
-      { wonder: "babylon", hand: ["Loom", "Press"] },
+      { wonder: "babylon", coins: 3, hand: ["Baths", "Theater"] }, // wood; Baths needs stone
+      { wonder: "olympia", hand: ["Loom", "Press"] },
     ]);
     let next = applySelection(state, 0, {
       type: "play-card",

@@ -5,15 +5,28 @@ import type { TournamentResults } from "@boardgames/core/tournament/results";
 import type { ComponentType, LazyExoticComponent } from "react";
 
 /**
- * What the mode picker's left card opens. Every playable game is exactly one:
- *   - `ai`        — play against (or alongside) computer players.
+ * What the mode picker's solo card opens. Every playable game is exactly one:
+ *   - `singleplayer` — play on your own (against, alongside or run by the computer).
  *   - `trainer`   — 1-v-0 practice, for games an AI would always win.
- *   - `companion` — a tool that runs a physical game at the table.
+ *   - `companion` — a helper for a game played elsewhere: at the table, or
+ *                   beside a Board Game Arena game (every game BGA has, except chess).
  *   - `solver`    — analysis of games played elsewhere.
  * The card's label, icon, tone and copy come from the group alone
  * (`ModeSelect`), so every game in a group shows the identical card.
  */
-export type SoloMode = "ai" | "trainer" | "companion" | "solver";
+export type SoloMode = "singleplayer" | "trainer" | "companion" | "solver";
+
+/**
+ * The mode picker's third mode beside the solo card and Multiplayer. The
+ * picker is always [other mode, Singleplayer, Multiplayer], so a game whose
+ * solo group isn't `singleplayer` takes `singleplayer` here; the rest take any
+ * other solo group, or one of
+ *   - `coach`       — a game against the AI with hints and graded moves.
+ *   - `score-sheet` — scoring for a game played at the table.
+ *   - `campaign`    — scenarios that unlock as you win.
+ * Not wired yet: the card renders disabled, badged "Coming soon".
+ */
+export type ExtraMode = SoloMode | "coach" | "score-sheet" | "campaign";
 
 export type { BggGame };
 
@@ -214,9 +227,16 @@ export interface PlayableGame extends GameBase {
   backgroundImage?: string;
   /**
    * Which of the four solo groups the mode-picker's left card opens; the
-   * card's label, icon, tone and copy come from the group. Defaults to `"ai"`.
+   * card's label, icon, tone and copy come from the group. Defaults to `"singleplayer"`.
    */
   soloMode?: SoloMode;
+  /** The mode picker's first card (see `ExtraMode`). Every playable game has one. */
+  extraMode: ExtraMode;
+  /**
+   * Where the extra-mode card leads, under `/play/:slug/` (Clocktower:
+   * `solo/bots`). Absent = not wired yet: the card shows "Coming soon".
+   */
+  extraModePath?: string;
   /**
    * The game has no online rooms yet: the mode-picker still shows the same
    * Multiplayer card as every other game, disabled and badged "Coming soon",
@@ -249,6 +269,13 @@ export interface PlayableGame extends GameBase {
    * games whose mp lobby has no extra controls.
    */
   lobbyConfigComponent?: LazyExoticComponent<ComponentType<LobbyConfigProps>>;
+  /**
+   * Extra ways a room's host can play again besides "Rematch": each moves
+   * every seat `by` places down the seat order first. Codenames rotates the
+   * spymasters (`by: 2` keeps the teams and makes each team's next operative
+   * its spymaster).
+   */
+  rematchRotations?: readonly { label: string; by: number }[];
   /**
    * Lobby layout variant. `"wide"` swaps the centered scrolling column
    * for a full-viewport, non-scrolling screen that mirrors the game's

@@ -87,20 +87,57 @@ describe("codenames AI situation", () => {
   it("scores a reader's ranking: hits in order, then the price of the miss", () => {
     const kinds = ["own", "own", "bystander", "assassin"] as const;
     const kindOf = (c: number) => kinds[c];
-    expect(readScore([0, 1], kindOf, 2)).toBe(2);
-    expect(readScore([0, 3], kindOf, 2)).toBe(-5);
-    expect(readScore([2, 0], kindOf, 2)).toBeCloseTo(-0.1); // first-touch miss, one lead left
-    expect(readScore([2], kindOf, 1)).toBeCloseTo(-0.4);
+    const sure = (...cards: number[]) => cards.map((card) => ({ card, confidence: 0.9 }));
+    expect(readScore(sure(0, 1), kindOf, 2, [0, 1])).toBe(2);
+    expect(readScore(sure(0, 3), kindOf, 2, [0, 1])).toBe(-5);
+    expect(readScore(sure(2, 0), kindOf, 2, [0])).toBeCloseTo(-0.65); // first-touch miss, target unread
+    expect(readScore(sure(2), kindOf, 1, [])).toBeCloseTo(-0.4);
   });
 
-  it("an ambitious clue that lands two beats a safe single", () => {
-    const kinds = ["own", "own", "bystander", "own", "opponent"] as const;
+  it("stops where an operative would stop: a long shot earns nothing", () => {
+    // CYCLONE 3 (traced): HURRICANE and TORNADO sure, then ICE at 25 % — ours by luck.
+    const kinds = ["own", "own", "own", "own"] as const;
     const kindOf = (c: number) => kinds[c];
-    const safeSingle = readScore([0], kindOf, 1);
-    const ambitious = readScore([0, 2, 1], kindOf, 3); // one, a bystander, one more in reach
-    expect(ambitious).toBeGreaterThan(safeSingle);
-    expect(readScore([0, 1, 2, 3], kindOf, 4)).toBeGreaterThan(readScore([0, 1], kindOf, 2) - 0.2);
+    const read = [
+      { card: 0, confidence: 0.93 },
+      { card: 1, confidence: 0.9 },
+      { card: 2, confidence: 0.25 },
+    ];
+    expect(readScore(read, kindOf, 3, [0, 1])).toBe(2);
+    // The first touch is always taken, however unsure.
+    expect(readScore([{ card: 3, confidence: 0.2 }], kindOf, 1, [3])).toBe(1);
+  });
+
+  it("a stretch that lands one loses to the clean clue; a big clue that reads cleanly wins", () => {
+    const kinds = ["own", "own", "own", "own", "bystander", "opponent"] as const;
+    const kindOf = (c: number) => kinds[c];
+    // ODOR 4 (traced): SOCK sure, then BONE at 35 % — three targets never read.
+    const stretch = readScore(
+      [
+        { card: 0, confidence: 0.82 },
+        { card: 1, confidence: 0.35 },
+        { card: 2, confidence: 0.33 },
+      ],
+      kindOf,
+      4,
+      [0, 1, 2, 3],
+    );
+    const single = readScore([{ card: 0, confidence: 0.95 }], kindOf, 1, [0]);
+    expect(stretch).toBeLessThan(single);
+    const clean = readScore(
+      [0, 1, 2].map((card) => ({ card, confidence: 0.8 })),
+      kindOf,
+      3,
+      [0, 1, 2],
+    );
+    expect(clean).toBeGreaterThan(single);
     // Handing the other team a point is never worth it.
-    expect(readScore([0, 4, 1], kindOf, 3)).toBeLessThan(safeSingle);
+    const handsOver = readScore(
+      [0, 5, 1].map((card) => ({ card, confidence: 0.8 })),
+      kindOf,
+      3,
+      [0, 1],
+    );
+    expect(handsOver).toBeLessThan(single);
   });
 });

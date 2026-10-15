@@ -136,6 +136,13 @@ export const GUEST_MERGE_COVERAGE = {
     // A Clocktower game / D&D session the member ran from their own device:
     // a guest stub never signs in to run one.
     "companion_records.user_id",
+    // Chess opening trainer: a linked lichess account, its imported games and
+    // the repertoires built from them — a guest stub never signs in to link one.
+    "chess_lichess_links.user_id",
+    "chess_imported_games.user_id",
+    "chess_repertoires.user_id",
+    // Who queued a farm evaluation (SET NULL; the shared eval survives).
+    "chess_eval_jobs.requested_by",
   ],
 } as const;
 

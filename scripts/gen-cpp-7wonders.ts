@@ -98,8 +98,8 @@ function emitEffect(e: CardEffect | WonderStageEffect): string {
     case "points-per-stage":
       f.push(`.kind=EffectKind::PointsPerStage`, `.scopes=${scopeMask(e.scopes)}`, `.amount=${e.amount}`);
       break;
-    case "points-per-defeat":
-      f.push(`.kind=EffectKind::PointsPerDefeat`, `.scopes=${scopeMask(e.scopes)}`, `.amount=${e.amount}`);
+    case "points-if-wonder-complete":
+      f.push(`.kind=EffectKind::PointsIfWonderComplete`, `.amount=${e.amount}`);
       break;
     case "trade-discount":
       f.push(`.kind=EffectKind::TradeDiscount`, `.tradeRaw=${e.resources === "raw" ? 1 : 0}`,
@@ -111,14 +111,17 @@ function emitEffect(e: CardEffect | WonderStageEffect): string {
     case "play-discarded":
       f.push(`.kind=EffectKind::PlayDiscarded`);
       break;
-    case "free-build-per-age":
-      f.push(`.kind=EffectKind::FreeBuildPerAge`);
+    case "free-first-of-color":
+      f.push(`.kind=EffectKind::FreeFirstOfColor`);
+      break;
+    case "free-first-of-age":
+      f.push(`.kind=EffectKind::FreeFirstOfAge`);
+      break;
+    case "free-last-of-age":
+      f.push(`.kind=EffectKind::FreeLastOfAge`);
       break;
     case "play-seventh-card":
       f.push(`.kind=EffectKind::PlaySeventhCard`);
-      break;
-    case "copy-guild":
-      f.push(`.kind=EffectKind::CopyGuild`);
       break;
     default: {
       const _exhaustive: never = e;

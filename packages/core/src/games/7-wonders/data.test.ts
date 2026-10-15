@@ -1,6 +1,8 @@
 import { describe, expect, it } from "vitest";
+import { BGA_CARD_NAMES } from "./bga/adapter";
+import realCapture from "./bga/fixtures/real-capture.json";
 import { CARDS, GUILDS } from "./cards";
-import type { CardDef } from "./types";
+import type { CardDef, ResourceType } from "./types";
 import { WONDERS } from "./wonders";
 
 function deckSize(cards: readonly CardDef[], playerCount: number): number {
@@ -92,5 +94,91 @@ describe("wonder data", () => {
     // B sides vary: Rhodes B has 2, Giza B has 4, the rest have 3.
     expect(WONDERS.find((w) => w.id === "rhodes")?.sides.B.stages).toHaveLength(2);
     expect(WONDERS.find((w) => w.id === "giza")?.sides.B.stages).toHaveLength(4);
+  });
+});
+
+/**
+ * The cards and boards are the 2020 second edition. BGA plays the same
+ * edition and ships its whole dictionary in `gamedatas`, so the captured
+ * table pins every cost, chain, copy count and wonder stage to it.
+ */
+describe("matches the second edition (BGA's dictionary)", () => {
+  const RES: Record<string, ResourceType> = {
+    W: "wood",
+    S: "stone",
+    C: "clay",
+    O: "ore",
+    G: "glass",
+    L: "loom",
+    P: "papyrus",
+  };
+  const tally = (letters: readonly string[]) => {
+    const out: Partial<Record<ResourceType, number>> = {};
+    for (const l of letters) out[RES[l]] = (out[RES[l]] ?? 0) + 1;
+    return out;
+  };
+  const gamedatas = realCapture.find((e) => e.kind === "gamedatas")?.payload as unknown as {
+    card_types: Record<
+      string,
+      {
+        name: string;
+        age: number;
+        cost: string[];
+        coincost: number;
+        qt: Record<string, number>;
+        freeif: number[];
+        points?: { type: string; qt: number };
+        shield?: number;
+      }
+    >;
+    wonders: Record<
+      string,
+      { name: string; side: "A" | "B"; ress: string[]; stages: Record<string, { cost: string[] }> }
+    >;
+  };
+  const bga = Object.values(gamedatas.card_types);
+  const name = (n: string) => BGA_CARD_NAMES[n] ?? n;
+  const all = [...CARDS, ...GUILDS];
+
+  it("has exactly BGA's cards", () => {
+    const ours = all.map((c) => `${c.name}@${c.age}`).sort();
+    const theirs = bga.map((c) => `${name(c.name)}@${c.age}`).sort();
+    expect(ours).toEqual(theirs);
+  });
+
+  it.each(bga.map((c) => [`${name(c.name)} (age ${c.age})`, c] as const))("%s", (_, c) => {
+    const def = all.find((d) => d.name === name(c.name) && d.age === c.age);
+    expect(def).toBeDefined();
+    if (!def) return;
+    expect(def.cost.resources ?? {}).toEqual(tally(c.cost));
+    expect(def.cost.coins ?? 0).toBe(c.coincost);
+    const copies: number[] = [];
+    for (let n = 3, prev = 0; n <= 7; prev = c.qt[String(n)], n++) {
+      for (let k = prev; k < c.qt[String(n)]; k++) copies.push(n);
+    }
+    if (def.color !== "purple") expect(def.copies).toEqual(copies);
+    const chain = c.freeif.map((id) => name(gamedatas.card_types[String(id)].name)).sort();
+    expect([...(def.chainFrom ?? [])].sort()).toEqual(chain);
+    if (c.points?.type === "simple") {
+      expect(def.effects).toContainEqual({ kind: "points", amount: c.points.qt });
+    }
+    if (c.shield) expect(def.effects).toContainEqual({ kind: "shields", amount: c.shield });
+  });
+
+  it("has BGA's wonder boards", () => {
+    let matched = 0;
+    for (const w of Object.values(gamedatas.wonders)) {
+      const ours =
+        WONDERS.find((d) => d.name.replace("Ephesos", "Ephesus") === w.name) ??
+        WONDERS.find((d) => w.name.startsWith(d.name.replace("Halikarnassos", "Halicarnassus")));
+      if (!ours) continue; // Ur and Carthage: the Edifice wonders we don't play
+      matched++;
+      const side = ours.sides[w.side];
+      expect(side.initialResource).toBe(RES[w.ress[0]]);
+      expect(side.stages.map((s) => s.cost.resources)).toEqual(
+        Object.values(w.stages).map((s) => tally(s.cost)),
+      );
+    }
+    expect(matched).toBe(WONDERS.length * 2);
   });
 });

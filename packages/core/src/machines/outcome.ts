@@ -42,6 +42,12 @@ const TeamsOutcomeSchema = z.object({
   winningTeam: z.number().int().min(0).nullable(),
   /** Score per team, when the game keeps one. */
   teamScores: z.array(z.number()).readonly().optional(),
+  /**
+   * Seats that ran the game rather than played it (the Blood on the Clocktower
+   * Storyteller). Their `teamOf` entry is a placeholder: they neither win nor
+   * lose, and every reader goes through `seatResult` / `isModeratorSeat`.
+   */
+  moderatorSeats: z.array(z.number().int().min(0)).readonly().optional(),
 });
 
 export const GameOutcomeSchema = z.discriminatedUnion("kind", [
@@ -54,7 +60,8 @@ export type RankedOutcome = z.infer<typeof RankedOutcomeSchema>;
 export type CoopOutcome = z.infer<typeof CoopOutcomeSchema>;
 export type TeamsOutcome = z.infer<typeof TeamsOutcomeSchema>;
 
-export type SeatResult = "win" | "loss" | "draw";
+/** `"moderator"`: the seat ran the game (a Storyteller) — neither a win nor a loss. */
+export type SeatResult = "win" | "loss" | "draw" | "moderator";
 
 // ── Builders ──────────────────────────────────────────────────────────────
 
@@ -118,8 +125,14 @@ export function rankedByWinners(
 
 // ── Readers ───────────────────────────────────────────────────────────────
 
-/** Win / loss / draw from one seat's point of view. */
+/** Whether `seat` ran the game instead of playing it (see `TeamsOutcome.moderatorSeats`). */
+export function isModeratorSeat(outcome: GameOutcome, seat: number): boolean {
+  return outcome.kind === "teams" && (outcome.moderatorSeats?.includes(seat) ?? false);
+}
+
+/** Win / loss / draw from one seat's point of view (or `"moderator"` for one that ran it). */
 export function seatResult(outcome: GameOutcome, seat: number): SeatResult {
+  if (isModeratorSeat(outcome, seat)) return "moderator";
   switch (outcome.kind) {
     case "coop":
       return outcome.won ? "win" : "loss";
@@ -138,6 +151,7 @@ export function seatResult(outcome: GameOutcome, seat: number): SeatResult {
 
 /** A seat's 1-based finishing place, or `null` where places don't apply (co-op). */
 export function seatPlacement(outcome: GameOutcome, seat: number): number | null {
+  if (isModeratorSeat(outcome, seat)) return null;
   switch (outcome.kind) {
     case "coop":
       return null;
@@ -151,6 +165,7 @@ export function seatPlacement(outcome: GameOutcome, seat: number): number | null
 
 /** A seat's final score (its team's, in a team game), or `null` when none is kept. */
 export function seatScore(outcome: GameOutcome, seat: number): number | null {
+  if (isModeratorSeat(outcome, seat)) return null;
   switch (outcome.kind) {
     case "coop":
       return outcome.score ?? null;

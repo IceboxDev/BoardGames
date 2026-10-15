@@ -6,6 +6,7 @@ import rulesUrl from "./assets/rules.pdf";
 // hand and of finished online matches), multiplayer = the online game.
 export default {
   component: lazy(() => import("./ResistanceGame")),
+  extraMode: "singleplayer",
   soloMode: "solver",
   rulesUrl,
   lobbyConfigComponent: lazy(() => import("./ResistanceLobbyConfig")),

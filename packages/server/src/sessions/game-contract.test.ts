@@ -12,6 +12,7 @@
  * faked, so the games' pacing costs nothing.
  */
 
+import type { BotcOnline } from "@boardgames/core/games/blood-on-the-clocktower/online/state";
 import { applyMove } from "@boardgames/core/games/chess/engine/apply";
 import { parseFen } from "@boardgames/core/games/chess/engine/fen";
 import { boardState } from "@boardgames/core/games/chess/engine/status";
@@ -189,7 +190,31 @@ const bughouseMove: MoveFinder = (spec, actor, seat, rng) => {
   return pool[Math.floor(rng() * pool.length)] ?? null;
 };
 
+/**
+ * Clocktower: a big table has more residents than the bag holds (15), so the
+ * Storyteller makes the extra players Travellers before dealing.
+ */
+const botcMove: MoveFinder = (spec, actor, seat, rng) => {
+  const game = (actor.getSnapshot().context as { game: BotcOnline | null }).game;
+  const setup = game?.setup;
+  if (seat === 0 && game && setup && !setup.bag) {
+    const resident = [...setup.order]
+      .reverse()
+      .find((s) => !setup.travellers.some((t) => t.roomSeat === s));
+    if (resident !== undefined) {
+      return {
+        kind: "setup-traveller",
+        rev: game.rev,
+        roomSeat: resident,
+        traveller: { character: null, alignment: "good" },
+      };
+    }
+  }
+  return randomLegal(spec, actor, seat, rng);
+};
+
 const MOVES: Readonly<Record<string, MoveFinder>> = {
+  "blood-on-the-clocktower": botcMove,
   "chess-bughouse": bughouseMove,
   codenames: codenamesMove,
   "codenames-duet": codenamesMove,
@@ -208,7 +233,7 @@ function expectOutcomeFits(outcome: GameOutcome, seats: number): void {
   if (outcome.kind === "ranked") expect(outcome.placements).toHaveLength(seats);
   if (outcome.kind === "teams") expect(outcome.teamOf).toHaveLength(seats);
   for (let seat = 0; seat < seats; seat++) {
-    expect(["win", "loss", "draw"]).toContain(seatResult(outcome, seat));
+    expect(["win", "loss", "draw", "moderator"]).toContain(seatResult(outcome, seat));
   }
 }
 

@@ -207,7 +207,12 @@ const router = createBrowserRouter(
             lazy={page(() => import("./pages/CodenamesPreview"))}
           />
           <Route path="dev/go-preview" lazy={page(() => import("./pages/GoPreview"))} />
+          <Route path="dev/botc-online" lazy={page(() => import("./pages/BotcOnlinePreview"))} />
           <Route path="dev/senso-preview" lazy={page(() => import("./pages/SensoPreview"))} />
+          <Route
+            path="dev/seven-wonders-preview"
+            lazy={page(() => import("./pages/SevenWondersPreview"))}
+          />
           <Route path="dev/senso-cards" lazy={page(() => import("./pages/SensoCardsPreview"))} />
           <Route path="dev/hunger-preview" lazy={page(() => import("./pages/HungerPreview"))} />
           <Route path="dev/hunger-board" lazy={page(() => import("./pages/HungerBoardEditor"))} />

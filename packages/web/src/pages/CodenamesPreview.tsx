@@ -1,10 +1,14 @@
 import type { ClueCount } from "@boardgames/core/games/codenames/clue-rules";
 import type { ClueNote, GuessNote } from "@boardgames/core/games/codenames/notes";
 import { buildPlayerView } from "@boardgames/core/games/codenames/player-view";
+import { handOver, markAway, markBack } from "@boardgames/core/games/codenames/presence";
 import {
   applyClue,
   applyEndTurn,
   applyGuess,
+  applyMark,
+  applyNote,
+  askClue,
   attachGuessNote,
   createGame,
 } from "@boardgames/core/games/codenames/rules";
@@ -27,7 +31,18 @@ import DuetOver from "../games/codenames-duet/components/GameOverScreen";
 // Dev-only Codenames / Duet preview — the real boards and debriefs fed games
 // played through the actual core rules (scripted clues, notes and touches),
 // no auth/WS/AI. /dev/codenames-preview?scene=<name>&frame=WxH
-// Scenes: clue | guess | watch | over | duet-clue | duet-guess | duet-over
+// Scenes: clue | guess | watch | over | team | ask | judge | ask-watch |
+//         duet-clue | duet-guess | duet-over
+//   team      — Red operative at a 6-seat table: a teammate's pointer, your
+//               pointer, and sticky notes from Red's earlier clues
+//   ask       — Red's spymaster waiting on a clue question (SPARROW-style)
+//   judge     — Blue's spymaster ruling on it; ask-watch — an operative's view
+//   away      — Red's spymaster dropped out a minute ago: Red's operative may
+//               hand the seat to the AI (the table is waiting on its clue)
+//   standin   — Red's spymaster is back while their AI stand-in is mid-clue
+//   over-guest — the debrief as a room guest waiting on the host
+//   marks     — Red operative after Blue's turn (blue, blue, then a red agent):
+//               the touch-order marks
 
 const AI = "codenames-expert";
 const REASONS = [
@@ -92,7 +107,98 @@ function playTurn(state: CodenamesState, n: number, miss: boolean, turn: number)
   return s;
 }
 
+/** Red operative (seat 2) with a human teammate (seat 4): pointers and sticky notes. */
+function teamScene(): { state: CodenamesState; phase: ViewPhase; seat: number } {
+  let s = createGame({
+    seed: 11,
+    ai: [AI, AI, null, AI, null, AI],
+    language: "en",
+    clueTimerSec: 0,
+    guessTimerSec: 0,
+  });
+  s = playTurn(s, 2, false, 0);
+  s = playTurn(s, 3, true, 1);
+  if (s.currentTeam !== 0) s = playTurn(s, 2, true, 2);
+  const red = cardsOf(s, 0);
+  s = applyClue(s, 0, { word: "voyage", count: 3 }, clueNote(red.slice(0, 3), 1));
+  s = applyGuess(s, 2, red[0] ?? 0);
+  // Red's earlier clues, pinned where the team thinks they belong.
+  const redTurns = s.turns.flatMap((t, i) => (t.team === 0 && t.clue && t.end ? [i] : []));
+  const open = s.revealed.flatMap((up, i) => (up ? [] : [i]));
+  redTurns.forEach((turn, k) => {
+    s = applyNote(s, 4, open[3 + k] ?? 0, turn);
+    s = applyNote(s, 2, open[8 + k] ?? 0, turn);
+  });
+  s = applyMark(s, 4, red[1] ?? 0);
+  s = applyMark(s, 2, red[2] ?? 0);
+  return { state: s, phase: "guessing", seat: 2 };
+}
+
+/** A clue question open between the spymasters, seen from `seat`. */
+function askScene(seat: number): { state: CodenamesState; phase: ViewPhase; seat: number } {
+  let s = createGame({
+    seed: 11,
+    ai: [null, null, AI, AI],
+    language: "en",
+    clueTimerSec: 0,
+    guessTimerSec: 0,
+    beats: { appealWait: 10 * 60_000 },
+  });
+  s = playTurn(s, 2, false, 0);
+  s = playTurn(s, 3, true, 1);
+  if (s.currentTeam !== 0) s = playTurn(s, 2, true, 2);
+  const word = s.words.find((w, i) => !s.revealed[i] && w.length >= 4) ?? "row";
+  const targets = cardsOf(s, 0).slice(0, 2);
+  s = askClue(s, 0, { word: `${word}fall`, count: 2 }, clueNote(targets, 2), Date.now());
+  return { state: s, phase: "clue", seat };
+}
+
+/** Red's clue phase at a table with a person on each Red seat. */
+function presenceScene(scene: "away" | "standin"): {
+  state: CodenamesState;
+  phase: ViewPhase;
+  seat: number;
+} {
+  let s = createGame({
+    seed: 11,
+    ai: [null, AI, null, AI],
+    language: "en",
+    clueTimerSec: 0,
+    guessTimerSec: 0,
+  });
+  s = playTurn(s, 2, false, 0);
+  s = playTurn(s, 3, true, 1);
+  if (s.currentTeam !== 0) s = playTurn(s, 2, true, 2);
+  s = markAway(s, 0, Date.now() - 62_000);
+  if (scene === "away") return { state: s, phase: "clue", seat: 2 };
+  s = { ...handOver(s, 0), aiThinking: 0 };
+  return { state: markBack(s, 0), phase: "clue", seat: 0 };
+}
+
+/** Blue just touched two of its agents, then one of Red's: what Red's operative sees. */
+function marksScene(): { state: CodenamesState; phase: ViewPhase; seat: number } {
+  let s = createGame({
+    seed: 11,
+    ai: [AI, AI, null, AI],
+    language: "en",
+    clueTimerSec: 0,
+    guessTimerSec: 0,
+  });
+  s = playTurn(s, 2, false, 0);
+  if (s.currentTeam !== 1) s = playTurn(s, 2, true, 1);
+  const blue = cardsOf(s, 1);
+  s = applyClue(s, 1, { word: "talon", count: 3 }, clueNote(blue.slice(0, 3), 1));
+  for (const card of [blue[0], blue[1], cardsOf(s, 0)[0]]) s = applyGuess(s, 3, card ?? 0);
+  return { state: s, phase: "clue", seat: 2 };
+}
+
 function classicScene(scene: string): { state: CodenamesState; phase: ViewPhase; seat: number } {
+  if (scene === "marks") return marksScene();
+  if (scene === "away" || scene === "standin") return presenceScene(scene);
+  if (scene === "team") return teamScene();
+  if (scene === "ask") return askScene(0);
+  if (scene === "judge") return askScene(1);
+  if (scene === "ask-watch") return askScene(2);
   let s = createGame({
     seed: 11,
     // The viewer: spymaster (seat 0) for the clue scenes, operative (seat 2) otherwise.
@@ -181,7 +287,7 @@ export default function CodenamesPreview() {
     );
   }
   const scene = params.get("scene") ?? "guess";
-  const names = [null, null, null, null];
+  const names = [null, null, null, null, null, null];
 
   if (scene.startsWith("duet")) {
     const { state, phase, seat } = duetScene(scene);
@@ -205,6 +311,7 @@ export default function CodenamesPreview() {
         <CodenamesOver
           view={view}
           names={names}
+          waitingForHost={scene === "over-guest"}
           actions={[
             { label: "Play again", onClick: () => {}, variant: "primary" },
             { label: "Back to games", onClick: () => {}, variant: "secondary" },

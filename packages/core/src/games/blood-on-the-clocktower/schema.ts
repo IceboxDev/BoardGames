@@ -105,6 +105,12 @@ export const CompanionPlayerSchema = z.object({
     )
     .optional(),
   note: z.string().optional(),
+  /**
+   * Online games: the room seat of the person in this chair. Chairs move
+   * (re-seating, a traveller joining); the person doesn't, so everything a
+   * player sends is keyed by this, never by chair.
+   */
+  roomSeat: SeatSchema.optional(),
 });
 export type CompanionPlayer = z.infer<typeof CompanionPlayerSchema>;
 

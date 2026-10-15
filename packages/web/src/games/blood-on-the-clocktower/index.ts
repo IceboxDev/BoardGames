@@ -2,15 +2,18 @@ import { lazy } from "react";
 import type { PlayableModule } from "../types";
 import rulesUrl from "./assets/rules.pdf";
 
-// Not a server-run game (yet) — the Storyteller companion is a purely
-// client-side Grimoire that runs the physical table game. The mode picker
-// shows the Companion card (the tool, under solo/*) and the Multiplayer card,
-// disabled until online rooms are implemented. No server-side machine exists
-// for this slug — see the D&D tool for the same pattern.
+// Solo = the Storyteller companion: a phone Grimoire for a game played at a
+// real table (`companion/`). Multiplayer = the fully online game: one
+// Storyteller and 5–20 players on their own screens, run by the server
+// (`core/.../machine.ts`, UI in `online/`). Singleplayer = that same online
+// game alone, every other seat a stand-in bot (`solo/bots`).
 export default {
   component: lazy(() => import("./ClocktowerGame")),
+  extraMode: "singleplayer",
+  extraModePath: "solo/bots",
   soloMode: "companion",
-  multiplayerComingSoon: true,
   rulesUrl,
+  lobbyConfigComponent: lazy(() => import("./BotcLobbyConfig")),
+  replayComponent: lazy(() => import("./online/BotcReplay")),
   matchHistoryComponent: lazy(() => import("./ClocktowerMatchHistory")),
 } satisfies PlayableModule;

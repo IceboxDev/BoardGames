@@ -9,7 +9,11 @@ import { z } from "zod";
 
 /** What a seat is at START. Humans are bound to sockets by the server. */
 export type StartSeat =
-  | { readonly kind: "human" }
+  | {
+      readonly kind: "human";
+      /** The person's display name, when the server knows it (rooms). Never trusted for identity. */
+      readonly name?: string | null;
+    }
   | { readonly kind: "ai"; readonly strategy: string };
 
 /** Wire shape of a seat in a solo `create-session` request. */

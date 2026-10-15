@@ -7,7 +7,7 @@ import { createActor } from "xstate";
 import { getServerGame } from "../games/registry.ts";
 import { gameLog } from "../lib/game-log.ts";
 import { saveMatch } from "../matches/store.ts";
-import { handleRoomWsClose } from "./room-manager.ts";
+import { handleLeaveRoom, handleRoomWsClose } from "./room-manager.ts";
 import { prepareStart } from "./start.ts";
 import type { ClientToServerMessage, ServerToClientMessage } from "./types.ts";
 
@@ -71,6 +71,8 @@ interface ActiveSession {
   seed: number;
   players: PlayerConnection[];
   roomCode?: string;
+  /** When the game began (ms) — for the health check's list of live games. */
+  startedAtMs: number;
 }
 
 const sessions = new Map<string, ActiveSession>();
@@ -195,6 +197,12 @@ function destroySession(active: ActiveSession, reason?: string): void {
   }
   sessions.delete(active.id);
   for (const p of active.players) wsSessions.get(p.ws)?.delete(active.id);
+}
+
+/** Whether a session has finished (or is gone) — a room may only play again after its game. */
+export function isSessionOver(sessionId: string): boolean {
+  const active = sessions.get(sessionId);
+  return !active || active.spec.isGameOver(active.actor.getSnapshot());
 }
 
 /** End a session by id — the room manager's hook when a room is finally closed. */
@@ -345,6 +353,7 @@ function startSession(params: {
     seed: prepared.seed,
     players: params.players,
     ...(params.roomCode ? { roomCode: params.roomCode } : {}),
+    startedAtMs: Date.now(),
   };
   sessions.set(active.id, active);
   for (const p of active.players) {
@@ -568,7 +577,33 @@ function handleLeaveSession(
     return;
   }
 
+  // A room game belongs to the whole table: one person going back to the menu
+  // leaves their seat (they may come back with the code), it doesn't end the
+  // game for everyone. The room ends the session once nobody is left.
+  if (active.roomCode) {
+    handleLeaveRoom(ws, { roomCode: active.roomCode });
+    dropRoomPlayer(active, ws);
+    wsSessions.get(ws)?.delete(active.id);
+    return;
+  }
+
   destroySession(active);
+}
+
+/** A seated socket left a room game: its seat goes quiet and the table is told. */
+function dropRoomPlayer(active: ActiveSession, ws: WSContext): void {
+  const player = active.players.find((p) => p.ws === ws);
+  if (!player) return;
+  player.connected = false;
+  for (const p of active.players) {
+    if (!p.connected) continue;
+    send(p.ws, {
+      type: "player-disconnected",
+      sessionId: active.id,
+      playerIndex: player.playerIndex,
+      playerName: active.seats[player.playerIndex]?.name ?? "",
+    });
+  }
 }
 
 /**
@@ -612,6 +647,31 @@ export function handleWsMessage(ws: WSContext, msg: ClientToServerMessage): void
   }
 }
 
+export interface LiveRoomGame {
+  readonly slug: string;
+  readonly startedAt: string;
+  /** People connected right now. */
+  readonly connected: number;
+}
+
+/**
+ * Room games still being played — what a deploy would end. Counts only: no
+ * codes, names or seats. The pre-push guard reads it off `/api/health` so a
+ * push doesn't end a game night's Clocktower game halfway through.
+ */
+export function liveRoomGames(): LiveRoomGame[] {
+  const out: LiveRoomGame[] = [];
+  for (const active of sessions.values()) {
+    if (!active.roomCode || active.spec.isGameOver(active.actor.getSnapshot())) continue;
+    out.push({
+      slug: active.gameSlug,
+      startedAt: new Date(active.startedAtMs).toISOString(),
+      connected: active.players.filter((p) => p.connected).length,
+    });
+  }
+  return out;
+}
+
 /**
  * Stop every live session, telling players why. Used by the SIGTERM path so a
  * deploy produces an explicit "server restarting" message instead of sockets
@@ -643,18 +703,7 @@ export function handleWsClose(ws: WSContext): void {
       destroySession(active);
       continue;
     }
-    const player = active.players.find((p) => p.ws === ws);
-    if (!player) continue;
-    player.connected = false;
-    for (const p of active.players) {
-      if (!p.connected) continue;
-      send(p.ws, {
-        type: "player-disconnected",
-        sessionId: id,
-        playerIndex: player.playerIndex,
-        playerName: active.seats[player.playerIndex]?.name ?? "",
-      });
-    }
+    dropRoomPlayer(active, ws);
   }
   wsSessions.delete(ws);
 }

@@ -52,13 +52,10 @@ static int endGamePoints(const Effect& e, const GameState& st, int pi) {
     case EffectKind::PointsPerStage:
       return e.amount *
              scopedSum(st, pi, e.scopes, [&](const PlayerState& p) { return int(p.stagesBuilt); });
-    case EffectKind::PointsPerDefeat:
-      return e.amount * scopedSum(st, pi, e.scopes, [&](const PlayerState& p) {
-               int n = 0;
-               for (int k = 0; k < p.numTokens; k++)
-                 if (p.militaryTokens[k] < 0) n++;
-               return n;
-             });
+    case EffectKind::PointsIfWonderComplete: {
+      const PlayerState& p = st.players[pi];
+      return p.stagesBuilt == wonderSide(p.wonderId, p.side).numStages ? e.amount : 0;
+    }
     default:
       return 0;
   }
@@ -83,20 +80,14 @@ static int guildValue(const Card& c, const GameState& st, int pi) {
   return val;
 }
 
-static int bestGuildValue(const GameState& st, int pi, bool own) {
+// The most valuable guild on pi's own board (Edifice duplicate-guild reward).
+static int bestOwnGuildValue(const GameState& st, int pi) {
   int best = 0;
-  auto scan = [&](const PlayerState& src) {
-    for (int t = 0; t < src.numTableau; t++) {
-      const Card& c = cardType(src.tableau[t]);
-      if (c.color != Purple) continue;
-      best = std::max(best, guildValue(c, st, pi));
-    }
-  };
-  if (own) {
-    scan(st.players[pi]);
-  } else {
-    scan(st.players[leftOf(pi)]);
-    scan(st.players[rightOf(pi)]);
+  const PlayerState& p = st.players[pi];
+  for (int t = 0; t < p.numTableau; t++) {
+    const Card& c = cardType(p.tableau[t]);
+    if (c.color != Purple) continue;
+    best = std::max(best, guildValue(c, st, pi));
   }
   return best;
 }
@@ -130,7 +121,7 @@ static int scoreEdifice(const GameState& st, int pi) {
         case EdRewardKind::PointsPerBrownGreySet:
           pts += def.rewards[r].amount * std::min(countColor(p, Brown), countColor(p, Grey));
           break;
-        case EdRewardKind::DuplicateGuild: pts += bestGuildValue(st, pi, /*own=*/true); break;
+        case EdRewardKind::DuplicateGuild: pts += bestOwnGuildValue(st, pi); break;
         default: break;  // coins/shield/token/production resolved at construction
       }
     }
@@ -164,7 +155,6 @@ GameResult scoreFinal(const GameState& st) {
     for (int s = 0; s < p.stagesBuilt; s++)
       for (int e = 0; e < ws.stages[s].numEffects; e++)
         wonder += endGamePoints(ws.stages[s].effects[e], st, i);
-    if (hasBuiltStageEffect(p, EffectKind::CopyGuild)) guilds += bestGuildValue(st, i, /*own=*/false);
 
     int counts[3], wild;
     scienceProfile(p, counts, wild);

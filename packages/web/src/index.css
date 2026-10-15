@@ -245,6 +245,9 @@
   --color-cn-tan-deep: #9a835a;
   --color-cn-ink-deep: #050403;
   --color-cn-green-deep: #22602f;
+  /* The operatives' sticky notes (a clue pinned to a card) and their ink. */
+  --color-cn-note: #f2d25c;
+  --color-cn-note-ink: #3a2e06;
   /* Stacking layers. Keep this list as the single source of truth.
      nav      — sticky app chrome (TopNav); above page content, below every
                 portaled layer.

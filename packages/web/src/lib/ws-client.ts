@@ -124,6 +124,8 @@ export interface GameSession<TPlayerView, TAction, TResult> {
   swapSeats: (a: number, b: number) => void;
   /** Host-only: deal the filled seats out at random (pre-start). */
   shuffleSeats: () => void;
+  /** Host-only, after the game: play again at once, seats moved `rotateBy` places first. */
+  rematchRoom: (rotateBy?: number) => void;
   /** Clear the connection-level error. Used by screens that present a
    *  clean-slate entry point (e.g. JoinRoomRoute) so a stale "Host left"
    *  / "Room ABCD not found" notice from a previous session doesn't
@@ -454,6 +456,8 @@ export function useGameSession<
             setLegalActions(msg.legalActions as TAction[]);
             setResult(null);
             setOutcome(null);
+            // A rematch's game must not offer the last game's replay.
+            setReplayId(null);
             setAiThinking(false);
             setError(null);
             setPeers([]);
@@ -681,6 +685,15 @@ export function useGameSession<
     sendMessage({ type: "shuffle-seats", roomCode });
   }, [sendMessage, roomCode]);
 
+  const rematchRoom = useCallback(
+    (rotateBy = 0) => {
+      if (!roomCode) return;
+      setError(null);
+      sendMessage({ type: "rematch-room", roomCode, rotateBy });
+    },
+    [sendMessage, roomCode],
+  );
+
   return {
     status,
     sessionId,
@@ -712,6 +725,7 @@ export function useGameSession<
     toggleReady,
     swapSeats,
     shuffleSeats,
+    rematchRoom,
     clearError,
     chatMessages,
     sendChat,

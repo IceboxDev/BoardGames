@@ -35,7 +35,10 @@ interface MatchHistoryProps {
 
 /** The viewer's result in one game — every row has one, legacy rows at seat 0. */
 function resultOf(match: MatchSummary): MatchOutcome {
-  return match.viewerSeat === null ? "draw" : seatResult(match.outcome, match.viewerSeat);
+  if (match.viewerSeat === null) return "draw";
+  const result = seatResult(match.outcome, match.viewerSeat);
+  // Running the game (a Storyteller) is neither a win nor a loss.
+  return result === "moderator" ? "draw" : result;
 }
 
 /** "Win" at two seats; the place ("2nd of 4") at more; the team's or crew's result otherwise. */
@@ -44,6 +47,7 @@ function resultLabel(match: MatchSummary): string {
   const word = result === "win" ? "Win" : result === "loss" ? "Loss" : "Draw";
   const { outcome, viewerSeat, playerCount } = match;
   if (viewerSeat === null) return "—";
+  if (seatResult(outcome, viewerSeat) === "moderator") return "Ran the game";
   if (outcome.kind === "coop") return outcome.won ? "Won together" : "Lost together";
   if (outcome.kind === "teams") return result === "draw" ? "Draw" : `Team ${word.toLowerCase()}`;
   const place = seatPlacement(outcome, viewerSeat);

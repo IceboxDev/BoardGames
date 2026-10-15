@@ -1,5 +1,5 @@
 // Final scoring — port of scoring.ts. 7 base categories + edifice, science
-// wildcard optimization, copy-guild (Olympia B), and winner/tiebreak.
+// wildcard optimization, Decorators (wonder-complete bonus), and winner/tiebreak.
 #pragma once
 #include "sw/state.hpp"
 

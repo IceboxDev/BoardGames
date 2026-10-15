@@ -1,10 +1,9 @@
-import cardsSheet from "./assets/cards.webp";
+import { SHEET, spriteStyle } from "../logic/card-art";
 
-// The spritesheet is a 10-wide × 8-tall grid (255×393 per cell); a card's cell
-// index is BGA's `img` value (0-76, row-major). Percentage background-position
-// selects the cell: for an N-wide sheet, showing column c uses c/(N-1)·100%.
-const COLS = 10;
-const ROWS = 8;
+// A card's cell index is BGA's `img` value (0-76, row-major); the sheet and
+// its maths are shared with the game board (`logic/card-art.ts`).
+const COLS = SHEET.cols;
+const ROWS = SHEET.rows;
 
 interface CardSpriteProps {
   /** Sprite cell index (0-76), or undefined to show the name fallback. */
@@ -31,20 +30,12 @@ export default function CardSprite({ img, name, width = 46, className }: CardSpr
     );
   }
 
-  const col = img % COLS;
-  const row = Math.floor(img / COLS);
   return (
     <span
       role="img"
       aria-label={name}
       className={`inline-block shrink-0 rounded-sm ring-1 ring-black/30 ${className ?? ""}`}
-      style={{
-        width,
-        height,
-        backgroundImage: `url(${cardsSheet})`,
-        backgroundSize: `${COLS * 100}% ${ROWS * 100}%`,
-        backgroundPosition: `${(col / (COLS - 1)) * 100}% ${(row / (ROWS - 1)) * 100}%`,
-      }}
+      style={{ width, height, ...spriteStyle(img, SHEET.cellW / SHEET.cellH) }}
       title={name}
     />
   );

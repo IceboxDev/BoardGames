@@ -5,6 +5,7 @@ import baseRulesUrl from "./assets/rules.pdf";
 
 export default {
   component: lazy(() => import("./SkyTeam")),
+  extraMode: "companion",
   // Sky Team ships two booklets — the base rules ("Landing Procedure") and
   // the advanced scenarios book ("Flight Log") — so the viewer renders a
   // tab bar instead of a single PDF.

@@ -20,3 +20,8 @@ commit-msg:
   commands:
     no-attribution:
       run: node scripts/check-commit-msg.mjs {1}
+
+pre-push:
+  commands:
+    live-games:
+      run: node scripts/check-live-games.mjs

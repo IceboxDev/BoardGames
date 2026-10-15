@@ -19,6 +19,7 @@ export const DND_RULEBOOKS = [
 
 export default {
   component: lazy(() => import("./DndTool")),
+  extraMode: "singleplayer",
   soloMode: "companion",
   multiplayerComingSoon: true,
   rulesUrl: DND_RULEBOOKS,

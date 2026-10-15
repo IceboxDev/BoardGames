@@ -4,6 +4,7 @@ import rulesUrl from "./assets/rules.pdf";
 
 export default {
   component: lazy(() => import("./Parks")),
+  extraMode: "companion",
   rulesUrl,
   tournamentResults: () => import("./tournament-results.generated"),
 } satisfies PlayableModule;

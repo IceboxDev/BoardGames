@@ -65,9 +65,12 @@ export interface SessionFlow<TView, TAction, TResult, TSetup> {
   readonly viewReplay: (() => void) | null;
   /**
    * The game-over buttons, the same in every game: solo — Play Again, Change
-   * Setup; room — Back to Menu; both — View replay when there is one.
+   * Setup; room host — Rematch (and the game's `rematchRotations`), Back to
+   * Menu; room guest — Back to Menu; both — View replay when there is one.
    */
   readonly endActions: readonly GameOverAction[];
+  /** A room guest at a finished game: the host decides whether there is another. */
+  readonly waitingForHost: boolean;
   /**
    * Play one of `legalActions`. `seat` claims one of this player's human seats
    * in a solo game where they hold several (Pandemic's roles); rooms ignore it.
@@ -118,9 +121,13 @@ export function useSessionFlow<TView, TAction, TResult, TSetup = never>(
       setLastStart(soloStart);
       setStarting({ errorBefore: game.error });
       lastView.current = null;
+      // Play Again: close the finished game first, so the board goes straight
+      // to loading instead of showing the old result until the new one lands
+      // (and the server isn't left holding it).
+      game.reset();
       game.start(soloStart.seats, soloStart.config);
     },
-    [game.error, game.start],
+    [game.error, game.reset, game.start],
   );
 
   const changeSetup = useCallback(() => {
@@ -208,7 +215,17 @@ export function useSessionFlow<TView, TAction, TResult, TSetup = never>(
                 },
               ]),
         ]
-      : [{ label: "Back to Menu", variant: "primary" as const, onClick: backToMenu }]),
+      : mp.isHost
+        ? [
+            { label: "Rematch", variant: "primary" as const, onClick: () => mp.rematchRoom(0) },
+            ...(def.kind === "playable" ? (def.rematchRotations ?? []) : []).map((r) => ({
+              label: r.label,
+              variant: "secondary" as const,
+              onClick: () => mp.rematchRoom(r.by),
+            })),
+            { label: "Back to Menu", variant: "secondary" as const, onClick: backToMenu },
+          ]
+        : [{ label: "Back to Menu", variant: "primary" as const, onClick: backToMenu }]),
     ...(viewReplay
       ? [{ label: "View Replay", variant: "secondary" as const, onClick: viewReplay }]
       : []),
@@ -234,6 +251,7 @@ export function useSessionFlow<TView, TAction, TResult, TSetup = never>(
     backToMenu,
     viewReplay,
     endActions,
+    waitingForHost: source === "mp" && phase === "finished" && !mp.isHost,
     sendAction: source === "mp" ? (action) => mp.send(action) : game.send,
   };
 }

@@ -36,6 +36,15 @@ TEST_CASE("scoring: guild counts neighbours' cards") {
   CHECK_EQ(r.breakdowns[0].guilds, 3);  // 1 * (2 left + 1 right)
 }
 
+TEST_CASE("scoring: Decorators Guild scores only with the wonder complete") {
+  GameState st = blankState(Babylon, 1);  // Babylon B: 2 stages
+  give(st, 0, "Decorators Guild");
+  st.players[0].stagesBuilt = 1;
+  CHECK_EQ(scoreFinal(st).breakdowns[0].guilds, 0);
+  st.players[0].stagesBuilt = 2;
+  CHECK_EQ(scoreFinal(st).breakdowns[0].guilds, 7);
+}
+
 TEST_CASE("scoring: winner tiebreak is most coins") {
   GameState st = blankState();
   for (int i = 0; i < N; i++) st.players[i].coins = 0;

@@ -4,6 +4,7 @@ import rulesUrl from "./assets/rules.pdf";
 
 export default {
   component: lazy(() => import("./SetGame")),
+  extraMode: "singleplayer",
   soloMode: "trainer",
   rulesUrl,
   // Custom dual-tab (Trainer + PvP) match-history view — generic

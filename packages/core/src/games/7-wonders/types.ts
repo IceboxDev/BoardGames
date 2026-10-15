@@ -36,7 +36,8 @@ export type CardEffect =
   | { kind: "coins-per-stage"; scopes: readonly CountScope[]; amount: number }
   | { kind: "points-per-card"; color: CardColor; scopes: readonly CountScope[]; amount: number }
   | { kind: "points-per-stage"; scopes: readonly CountScope[]; amount: number }
-  | { kind: "points-per-defeat"; scopes: readonly CountScope[]; amount: number }
+  /** Decorators Guild: the points only if every stage of your wonder is built. */
+  | { kind: "points-if-wonder-complete"; amount: number }
   | {
       kind: "trade-discount";
       resources: "raw" | "manufactured";
@@ -82,12 +83,14 @@ export type WonderStageEffect =
   | CardEffect
   /** Halikarnassos: build one card from the discard pile for free. */
   | { kind: "play-discarded" }
-  /** Olympia A: build one card per age for free. */
-  | { kind: "free-build-per-age" }
+  /** Olympia A: build the first card of each colour for free. */
+  | { kind: "free-first-of-color" }
+  /** Olympia B: build the first card of each age for free. */
+  | { kind: "free-first-of-age" }
+  /** Olympia B: build the last card of each age for free. */
+  | { kind: "free-last-of-age" }
   /** Babylon B: play the 7th card at the end of each age instead of discarding it. */
-  | { kind: "play-seventh-card" }
-  /** Olympia B: copy one guild from a neighbor at game end (scoring only). */
-  | { kind: "copy-guild" };
+  | { kind: "play-seventh-card" };
 
 export interface WonderStage {
   cost: Cost;
@@ -125,10 +128,8 @@ export interface PlayerState {
   coins: number;
   /** Played cards (color/effects derivable via the card def). */
   tableau: CardId[];
-  /** Military conflict tokens, e.g. [1, -1, 3]. List kept for UI + Strategists Guild. */
+  /** Military conflict tokens, e.g. [1, -1, 3]. */
   militaryTokens: number[];
-  /** Olympia A once-per-age free build. */
-  freeBuildUsedThisAge: boolean;
   // ── Edifice expansion (all empty/0 in a base game) ──
   /** VP-token values gained from constructed Edifices. */
   victoryTokens: number[];
@@ -165,6 +166,8 @@ export type SevenWondersAction =
   // Pending-phase actions (turn-based, not simultaneous):
   | { type: "pick-discard"; cardId: CardId }
   | { type: "skip-pending" }
+  // Before Age I, with sides chosen at the table: every seat picks its board side.
+  | { type: "choose-side"; side: "A" | "B" }
   | {
       type: "play-seventh";
       action:
@@ -182,7 +185,10 @@ export interface PendingAction {
   playerIndex: number;
 }
 
-export type GamePhase = "selecting" | "revealing" | "pending" | "game-over";
+export type GamePhase = "choosing-sides" | "selecting" | "revealing" | "pending" | "game-over";
+
+/** Board sides: all Day (A), all Night (B), dealt at random, or each seat chooses its own. */
+export type SideMode = "A" | "B" | "random" | "choose";
 
 // ── Action log ──────────────────────────────────────────────────────────────
 
@@ -196,7 +202,12 @@ export interface RevealedPlay {
 
 export interface MilitaryOutcome {
   playerIndex: number;
-  /** Tokens gained this age against [left, right]: +1/+3/+5, -1, or 0 for ties. */
+  /**
+   * Tokens gained this age, +1/+3/+5, -1, or 0 for a tie — one per border, in
+   * the order `resolveMilitary` walks them (seat by seat, each against its
+   * left neighbour), so seat 0's come [left, right] and every other seat's
+   * [right, left].
+   */
   tokens: number[];
 }
 
@@ -227,7 +238,7 @@ export type LogEntry =
 export interface SevenWondersConfig {
   playerCount: number;
   seed: number;
-  sideMode: "A" | "B" | "random";
+  sideMode: SideMode;
   /** Enable the Edifice expansion (communal projects). */
   edifice?: boolean;
 }
@@ -265,6 +276,12 @@ export interface GameState {
   edifices?: EdificeSlot[];
   lastRevealed: RevealedPlay[];
   actionLog: LogEntry[];
+  /**
+   * While sides are chosen (`choosing-sides`): each seat's pick, null until
+   * made. Picks stay here, unseen, until every seat has chosen; meanwhile
+   * each player's `side` is a coin flip the AI seats take as their pick.
+   */
+  sideChoices?: ("A" | "B" | null)[];
 }
 
 /** Zeroed Edifice-related PlayerState fields (base games leave these untouched). */

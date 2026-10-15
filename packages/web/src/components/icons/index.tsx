@@ -378,6 +378,54 @@ export function SolverIcon({ className = "h-6 w-6" }: IconProps) {
   );
 }
 
+/** A light bulb: the coach mode (hints and graded moves). */
+export function CoachIcon({ className = "h-6 w-6" }: IconProps) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      className={className}
+      strokeWidth={1.8}
+      aria-hidden="true"
+      {...STROKE_BASE}
+    >
+      <path d="M9 18h6M10 21h4" />
+      <path d="M12 3a6 6 0 00-3.5 10.9c.6.4 1 1.1 1 1.8V16h5v-.3c0-.7.4-1.4 1-1.8A6 6 0 0012 3z" />
+    </svg>
+  );
+}
+
+/** A clipboard with tally lines: the score-sheet mode. */
+export function ScoreSheetIcon({ className = "h-6 w-6" }: IconProps) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      className={className}
+      strokeWidth={1.8}
+      aria-hidden="true"
+      {...STROKE_BASE}
+    >
+      <rect x="5" y="4" width="14" height="17" rx="2" />
+      <path d="M9 4V3h6v1M8.5 10h7M8.5 14h7M8.5 18h4" />
+    </svg>
+  );
+}
+
+/** A flag on a trail: the campaign mode. */
+export function CampaignIcon({ className = "h-6 w-6" }: IconProps) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      className={className}
+      strokeWidth={1.8}
+      aria-hidden="true"
+      {...STROKE_BASE}
+    >
+      <path d="M6 21V4M6 4h11l-2.5 4L17 12H6" />
+      <path d="M3 21h6" />
+    </svg>
+  );
+}
+
 /** A cog: settings. */
 export function GearIcon({ className = "h-4 w-4" }: IconProps) {
   return (

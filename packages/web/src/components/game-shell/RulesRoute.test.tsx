@@ -32,6 +32,7 @@ function setup() {
     def: {
       slug: "lost-cities",
       title: "Lost Cities",
+      extraMode: "coach",
       rulesUrl: "/rules/lost-cities.pdf",
     },
   });

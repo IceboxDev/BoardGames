@@ -91,7 +91,12 @@ export function Lobby({
     ? [...seating, ...roomState.slots.map((_, i) => i).filter((i) => !seating.includes(i))]
     : roomState.slots.map((_, i) => i);
 
+  // A big table with no AI to add (Blood on the Clocktower seats 21) would
+  // list every empty chair; one open row says "waiting", the rest are a count.
+  const openRows = rowOrder.filter((i) => roomState.slots[i]?.kind === "open");
+  const hiddenOpen = manifest.strategies.length === 0 ? openRows.slice(1) : [];
   const slotRows = rowOrder
+    .filter((i) => !hiddenOpen.includes(i))
     .map((i) => ({ slot: roomState.slots[i] as RoomSlot, i }))
     .map(({ slot, i }) => (
       <SlotRow
@@ -126,6 +131,13 @@ export function Lobby({
         }}
       />
     ));
+  if (hiddenOpen.length > 0) {
+    slotRows.push(
+      <p key="more-open" className="px-3 text-xs text-fg-muted">
+        +{hiddenOpen.length} more open seat{hiddenOpen.length === 1 ? "" : "s"}
+      </p>,
+    );
+  }
 
   // Host-only role swap — shown for games whose seats carry meaning
   // (Sky Team: Pilot / Co-Pilot). Two-seat rooms only; players keep their

@@ -38,7 +38,6 @@ export function makeTestState(
     coins: s.coins ?? 3,
     tableau: idsFor(s.tableau ?? []),
     militaryTokens: s.militaryTokens ?? [],
-    freeBuildUsedThisAge: false,
     ...emptyEdificeFields(),
   }));
   const rng = createRng(1234);

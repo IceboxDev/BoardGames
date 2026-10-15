@@ -81,6 +81,29 @@ describe("match store", () => {
     ]);
   });
 
+  it("records a moderator seat (a Storyteller) as neither a win nor a loss", async () => {
+    const id = await saveMatch({
+      gameSlug: "blood-on-the-clocktower",
+      seed: 3,
+      outcome: { kind: "teams", teamOf: [0, 0, 1], winningTeam: 1, moderatorSeats: [0] },
+      log: { formatVersion: 1 },
+      seats: [
+        { kind: "human", userId: "ana", strategy: null },
+        { kind: "human", userId: "bo", strategy: null },
+        { kind: "human", userId: null, strategy: null },
+      ],
+    });
+    const { rows } = await (db.current as Client).execute({
+      sql: "SELECT seat, result, placement FROM replay_seats WHERE replay_id = ? ORDER BY seat",
+      args: [id],
+    });
+    expect(rows.map((r) => [r.seat, r.result, r.placement])).toEqual([
+      [0, "moderator", null],
+      [1, "loss", 2],
+      [2, "win", 1],
+    ]);
+  });
+
   it("lists only games the account sat in, plus legacy games saved before seats", async () => {
     await saveMatch({
       gameSlug: "lost-cities",

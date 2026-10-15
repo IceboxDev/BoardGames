@@ -14,6 +14,7 @@ export interface OutcomeHeadline {
 export function outcomeHeadline(outcome: GameOutcome | null, seat: number): OutcomeHeadline {
   if (!outcome) return { headline: "Game over", color: "neutral" };
   const result = seatResult(outcome, seat);
+  if (result === "moderator") return { headline: "The game is over", color: "neutral" };
   switch (outcome.kind) {
     case "coop":
       return outcome.won

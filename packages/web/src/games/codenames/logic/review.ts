@@ -1,7 +1,13 @@
 import { CODENAMES_AI_MODELS, codenamesModelOf } from "@boardgames/core/games/codenames/ai/models";
 import type { Clue } from "@boardgames/core/games/codenames/clue-rules";
 import type { ClueNote, GuessNote } from "@boardgames/core/games/codenames/notes";
-import type { KeyEntry, Team, TurnEnd, TurnRecord } from "@boardgames/core/games/codenames/types";
+import type {
+  AppealRuling,
+  KeyEntry,
+  Team,
+  TurnEnd,
+  TurnRecord,
+} from "@boardgames/core/games/codenames/types";
 import type { CoverTone, GridCard } from "../components/WordGrid";
 import { seatLabel, TEAM_TONE, teamName, toneOf } from "./labels";
 
@@ -36,6 +42,15 @@ export interface ReviewGuess {
   why: string | null;
 }
 
+/** A clue question asked before the turn's clue (classic only). */
+export interface ReviewAppeal {
+  word: string;
+  clash: string;
+  judge: string;
+  ruling: AppealRuling;
+  reason: string | null;
+}
+
 export interface ReviewTurn {
   index: number;
   /** The side's colour (a team, or Duet green). */
@@ -47,6 +62,8 @@ export interface ReviewTurn {
   guesser: string | null;
   guesserAi: string | null;
   clue: Clue | null;
+  /** Clue questions put to the other spymaster first (Duet has none). */
+  appeals?: ReviewAppeal[];
   reasoning: string | null;
   standIn: boolean;
   /** null: nothing was recorded (a person who didn't tap their cards). */
@@ -194,6 +211,13 @@ export function buildClassicReview(game: ClassicGame): ReviewModel {
       guesser: guesserSeat === null ? null : seatLabel(guesserSeat, game.names),
       guesserAi: guesserSeat === null ? null : tierName(game.ai[guesserSeat]),
       clue: t.clue,
+      appeals: (t.appeals ?? []).map((a) => ({
+        word: a.word.toUpperCase(),
+        clash: a.clash.toUpperCase(),
+        judge: seatLabel(a.judge, game.names),
+        ruling: a.ruling,
+        reason: a.reason,
+      })),
       reasoning: t.note?.reasoning ?? null,
       standIn: t.note?.standIn ?? false,
       targets,
@@ -252,7 +276,6 @@ export function buildClassicReview(game: ClassicGame): ReviewModel {
           word: w,
           cover,
           keyTone: cover === null ? tone(card) : null,
-          marks: [],
           pickable: false,
           ...(shown !== null ? { emphasis: focus ? ("focus" as const) : ("fade" as const) } : {}),
           ...(targets.has(card) ? { target: true } : {}),

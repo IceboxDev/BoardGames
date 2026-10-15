@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// Turn generated card-art PNGs (Sensō, The Hunger) into the small webp blocks the
+// Turn generated card-art PNGs (Sensō, The Hunger, 7 Wonders) into the small webp blocks the
 // compositor draws. Re-run after dropping new PNGs into art-src. Idempotent:
 // skips blocks whose webp is newer than the source, the manifest and this
 // script.
@@ -35,6 +35,9 @@ const SELF = fileURLToPath(import.meta.url);
 const GAMES = {
   senso: { src: "senso-cards", out: "senso-battle-for-japan", budgetKb: 1024 },
   hunger: { src: "hunger-cards", out: "the-hunger", budgetKb: 12 * 1024 },
+  // 7 Wonders: wonder boards, backdrops, Edifice plans and the icon set
+  // (ART-PROMPTS.md). Loaded per image as each view needs it.
+  "7-wonders": { src: "7-wonders", out: "7-wonders", dir: "art", budgetKb: 12 * 1024 },
 };
 
 const args = process.argv.slice(2);
@@ -49,7 +52,15 @@ if (!GAME) {
 }
 
 const SRC_DIR = path.resolve(__dirname, "..", "art-src", GAME.src);
-const OUT_DIR = path.resolve(__dirname, "..", "src", "games", GAME.out, "assets", "cards");
+const OUT_DIR = path.resolve(
+  __dirname,
+  "..",
+  "src",
+  "games",
+  GAME.out,
+  "assets",
+  GAME.dir ?? "cards",
+);
 const MANIFEST = path.join(OUT_DIR, "manifest.json");
 const BUDGET_BYTES = GAME.budgetKb * 1024;
 

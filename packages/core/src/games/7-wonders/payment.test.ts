@@ -25,7 +25,6 @@ function makeState(setups: [PlayerSetup, PlayerSetup, PlayerSetup]): GameState {
     coins: s.coins ?? 3,
     tableau: tableauIds(s.tableau ?? []),
     militaryTokens: [],
-    freeBuildUsedThisAge: false,
     ...emptyEdificeFields(),
   }));
   return {
@@ -57,16 +56,16 @@ describe("solvePayments — own production", () => {
     // Giza A produces stone; Stone Pit adds another.
     const state = makeState([
       { wonder: "giza", tableau: ["Stone Pit"] },
-      { wonder: "babylon" },
       { wonder: "olympia" },
+      { wonder: "babylon" },
     ]);
     expect(splits(solvePayments(state, 0, { resources: { stone: 2 } }))).toEqual([[0, 0]]);
   });
 
   it("only the free split is returned when own production suffices, even if neighbors also produce", () => {
     const state = makeState([
-      { wonder: "olympia" }, // wood
-      { wonder: "olympia", tableau: ["Lumber Yard"] },
+      { wonder: "babylon" }, // wood
+      { wonder: "babylon", tableau: ["Lumber Yard"] },
       { wonder: "giza", tableau: ["Lumber Yard"] },
     ]);
     expect(splits(solvePayments(state, 0, { resources: { wood: 1 } }))).toEqual([[0, 0]]);
@@ -108,8 +107,8 @@ describe("solvePayments — trading", () => {
   it("buys a missing resource from a neighbor at 2 coins", () => {
     const state = makeState([
       { wonder: "giza" }, // stone only
-      { wonder: "olympia" }, // left neighbor: wood
-      { wonder: "babylon" }, // right neighbor: clay
+      { wonder: "babylon" }, // left neighbor: wood
+      { wonder: "olympia" }, // right neighbor: clay
     ]);
     expect(splits(solvePayments(state, 0, { resources: { wood: 1 } }))).toEqual([[2, 0]]);
     expect(splits(solvePayments(state, 0, { resources: { clay: 1 } }))).toEqual([[0, 2]]);
@@ -118,8 +117,8 @@ describe("solvePayments — trading", () => {
   it("offers both neighbor splits when either could supply", () => {
     const state = makeState([
       { wonder: "giza" },
-      { wonder: "olympia" }, // wood
-      { wonder: "olympia" }, // wood
+      { wonder: "babylon" }, // wood
+      { wonder: "babylon" }, // wood
     ]);
     const options = splits(solvePayments(state, 0, { resources: { wood: 1 } }));
     expect(options).toContainEqual([2, 0]);
@@ -130,8 +129,8 @@ describe("solvePayments — trading", () => {
   it("East Trading Post discounts raw purchases from the right neighbor only", () => {
     const state = makeState([
       { wonder: "giza", tableau: ["East Trading Post"] },
-      { wonder: "olympia" },
-      { wonder: "olympia" },
+      { wonder: "babylon" },
+      { wonder: "babylon" },
     ]);
     expect(getTradeCost(state, 0, "right", "wood")).toBe(1);
     expect(getTradeCost(state, 0, "left", "wood")).toBe(2);
@@ -152,20 +151,10 @@ describe("solvePayments — trading", () => {
     expect(splits(solvePayments(state, 0, { resources: { loom: 1 } }))).toEqual([[1, 0]]);
   });
 
-  it("Olympia B stage 1 discounts raw resources on both sides", () => {
-    const state = makeState([
-      { wonder: "olympia", side: "B", stagesBuilt: 1 },
-      { wonder: "giza" }, // stone
-      { wonder: "babylon" }, // clay
-    ]);
-    expect(getTradeCost(state, 0, "left", "stone")).toBe(1);
-    expect(getTradeCost(state, 0, "right", "clay")).toBe(1);
-  });
-
   it("neighbor yellow/stage production is not for sale", () => {
     const state = makeState([
       { wonder: "giza" }, // stone; needs wood
-      { wonder: "babylon", tableau: ["Caravansery"] }, // clay + choice raw (yellow)
+      { wonder: "olympia", tableau: ["Caravansery"] }, // clay + choice raw (yellow)
       { wonder: "alexandria", side: "A", stagesBuilt: 2 }, // glass + stage choice raw
     ]);
     expect(solvePayments(state, 0, { resources: { wood: 1 } })).toBeNull();
@@ -176,7 +165,7 @@ describe("solvePayments — trading", () => {
   it("respects the coin budget", () => {
     const state = makeState([
       { wonder: "giza", coins: 1 }, // needs 2 coins to buy wood
-      { wonder: "olympia" },
+      { wonder: "babylon" },
       { wonder: "giza" },
     ]);
     expect(solvePayments(state, 0, { resources: { wood: 1 } })).toBeNull();
@@ -186,8 +175,8 @@ describe("solvePayments — trading", () => {
     // Cost: 2 wood + 1 stone. Own: stone. Left: wood. Right: wood.
     const state = makeState([
       { wonder: "giza", coins: 4 },
-      { wonder: "olympia" },
-      { wonder: "olympia" },
+      { wonder: "babylon" },
+      { wonder: "babylon" },
     ]);
     const options = splits(solvePayments(state, 0, { resources: { wood: 2, stone: 1 } }));
     // One wood from each side is forced (each neighbor produces one unit).
@@ -210,8 +199,8 @@ describe("solvePayments — coin costs", () => {
     // 3 coins total: 1 to bank leaves 2 for exactly one 2-coin trade.
     const state = makeState([
       { wonder: "giza", coins: 3 },
-      { wonder: "olympia" },
-      { wonder: "olympia" },
+      { wonder: "babylon" },
+      { wonder: "babylon" },
     ]);
     expect(solvePayments(state, 0, { coins: 1, resources: { wood: 2 } })).toBeNull();
     const single = splits(solvePayments(state, 0, { coins: 1, resources: { wood: 1 } }));

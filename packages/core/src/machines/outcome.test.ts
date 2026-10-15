@@ -1,7 +1,9 @@
 import { describe, expect, it } from "vitest";
 import {
   compareSeatGroups,
+  type GameOutcome,
   GameOutcomeSchema,
+  isModeratorSeat,
   placementsFromScores,
   rankedByKeys,
   rankedByScore,
@@ -33,6 +35,19 @@ describe("placementsFromScores", () => {
   });
   it("ranks low scores first when asked", () => {
     expect(placementsFromScores([10, 30, 5], "low")).toEqual([2, 3, 1]);
+  });
+});
+
+describe("moderator seats", () => {
+  const o: GameOutcome = { kind: "teams", teamOf: [0, 0, 1], winningTeam: 1, moderatorSeats: [0] };
+  it("neither win nor lose, and hold no place or score", () => {
+    expect(isModeratorSeat(o, 0)).toBe(true);
+    expect(seatResult(o, 0)).toBe("moderator");
+    expect(seatPlacement(o, 0)).toBeNull();
+    expect(seatScore(o, 0)).toBeNull();
+    expect(seatResult(o, 1)).toBe("loss");
+    expect(seatResult(o, 2)).toBe("win");
+    expect(GameOutcomeSchema.parse(o)).toEqual(o);
   });
 });
 

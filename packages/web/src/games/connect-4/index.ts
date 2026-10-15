@@ -4,6 +4,7 @@ import rulesUrl from "./assets/rules.pdf";
 
 export default {
   component: lazy(() => import("./Connect4")),
+  extraMode: "companion",
   rulesUrl,
   lobbyConfigComponent: lazy(() => import("./Connect4LobbyConfig")),
   replayComponent: lazy(() => import("./components/GameReplay")),

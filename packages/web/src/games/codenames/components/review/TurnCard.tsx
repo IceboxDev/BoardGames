@@ -2,7 +2,13 @@ import { formatClueCount } from "@boardgames/core/games/codenames/clue-rules";
 import { useEffect, useRef } from "react";
 import { BotIcon, KeyIcon, UsersIcon } from "../../../../components/icons";
 import { cn } from "../../../../lib/cn";
-import type { ReviewGuess, ReviewTarget, ReviewTurn, Verdict } from "../../logic/review";
+import type {
+  ReviewAppeal,
+  ReviewGuess,
+  ReviewTarget,
+  ReviewTurn,
+  Verdict,
+} from "../../logic/review";
 import type { CoverTone } from "../WordGrid";
 
 // One turn of the review, in its two halves. The spymaster's (tinted in the
@@ -118,6 +124,28 @@ function GuessRow({ guess, n }: { guess: ReviewGuess; n: number }) {
           “{guess.why}”
         </span>
       )}
+    </li>
+  );
+}
+
+const RULING: Record<ReviewAppeal["ruling"], { label: string; ink: string }> = {
+  allowed: { label: "allowed", ink: "text-emerald-300" },
+  unanswered: { label: "no answer — stood", ink: "text-emerald-300" },
+  refused: { label: "refused", ink: "text-amber-300" },
+  withdrawn: { label: "withdrawn", ink: "text-fg-muted" },
+};
+
+function AppealRow({ appeal }: { appeal: ReviewAppeal }) {
+  const ruling = RULING[appeal.ruling];
+  return (
+    <li className="flex flex-col gap-0.5 text-3xs text-fg-secondary">
+      <span>
+        <span className="font-black uppercase tracking-pill text-fg-strong">{appeal.word}</span>
+        <span className="text-fg-muted"> with {appeal.clash} on the table · </span>
+        <span className={cn("font-semibold", ruling.ink)}>{ruling.label}</span>
+        {appeal.ruling !== "withdrawn" && <span className="text-fg-muted"> by {appeal.judge}</span>}
+      </span>
+      {appeal.reason && <span className="italic">“{appeal.reason}”</span>}
     </li>
   );
 }
@@ -276,6 +304,20 @@ export function TurnCard({
           <span className="text-sm font-semibold text-fg-secondary">
             {turn.giver === null ? "Sudden death — no clue" : "No clue given"}
           </span>
+        )}
+
+        {turn.appeals && turn.appeals.length > 0 && (
+          <div className="flex flex-col gap-1.5">
+            <SubLabel title="Clues that only shared spelling with a table word, put to the other spymaster first">
+              Asked first
+            </SubLabel>
+            <ul className="flex flex-col gap-1">
+              {turn.appeals.map((a, i) => (
+                // biome-ignore lint/suspicious/noArrayIndexKey: questions are append-only, in order
+                <AppealRow key={i} appeal={a} />
+              ))}
+            </ul>
+          </div>
         )}
 
         {turn.targets && turn.targets.length > 0 && (

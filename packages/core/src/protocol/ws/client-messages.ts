@@ -11,10 +11,16 @@ import { RoomSlotSchema } from "./room.ts";
  * checked on the server against the game's manifest before anything starts;
  * the START event itself is built server-side, never taken from the client.
  */
+/**
+ * The most seats any game's table has (Clocktower: a Storyteller and 20).
+ * Only a payload bound — the game's manifest decides the real range.
+ */
+export const MAX_SOLO_SEATS = 21;
+
 const CreateSessionSchema = z.object({
   type: z.literal("create-session"),
   gameSlug: GameSlugSchema,
-  seats: z.array(SeatRequestSchema).min(1).max(8),
+  seats: z.array(SeatRequestSchema).min(1).max(MAX_SOLO_SEATS),
   /** Game options; parsed by the game's `manifest.config` on the server. */
   config: z.unknown(),
 });
@@ -105,6 +111,16 @@ const ShuffleSeatsSchema = z.object({
   roomCode: z.string(),
 });
 
+// Host only, once a room's game is over: play again at the same table with
+// the same options. `rotateBy` moves every filled seat that many places down
+// the seat order first (Codenames: 2, so each team's next operative becomes
+// its spymaster); 0 keeps the seats.
+const RematchRoomSchema = z.object({
+  type: z.literal("rematch-room"),
+  roomCode: z.string(),
+  rotateBy: z.number().int().min(0).max(31).default(0),
+});
+
 // Free-form chat between seated humans. Used during the Sky Team briefing
 // phase (and other games that want pre-round discussion). The server
 // rebroadcasts with the sender's slot + display name so clients don't
@@ -138,6 +154,7 @@ export const ClientMessageSchema = z.discriminatedUnion("type", [
   ToggleReadySchema,
   SwapSeatsSchema,
   ShuffleSeatsSchema,
+  RematchRoomSchema,
   ChatSchema,
   PingSchema,
 ]);
@@ -154,6 +171,7 @@ export {
   LeaveRoomSchema,
   LeaveSessionSchema,
   PingSchema,
+  RematchRoomSchema,
   ShuffleSeatsSchema,
   StartRoomSchema,
   SwapSeatsSchema,

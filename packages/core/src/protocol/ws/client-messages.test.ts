@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
-import { ClientMessageSchema } from "./client-messages.ts";
+import { GAME_MANIFESTS } from "../../games/manifests.ts";
+import { ClientMessageSchema, MAX_SOLO_SEATS } from "./client-messages.ts";
 
 describe("ClientMessageSchema", () => {
   it("accepts create-session and action", () => {
@@ -56,6 +57,27 @@ describe("ClientMessageSchema", () => {
     expect(() => ClientMessageSchema.parse({ type: "shuffle-seats" })).toThrow();
   });
 
+  it("parses rematch-room, rotation defaulting to none", () => {
+    expect(ClientMessageSchema.parse({ type: "rematch-room", roomCode: "ABC" })).toEqual({
+      type: "rematch-room",
+      roomCode: "ABC",
+      rotateBy: 0,
+    });
+    expect(
+      ClientMessageSchema.parse({ type: "rematch-room", roomCode: "ABC", rotateBy: 2 }),
+    ).toMatchObject({ rotateBy: 2 });
+  });
+
+  it("rejects rematch-room with a negative or fractional rotation", () => {
+    expect(() =>
+      ClientMessageSchema.parse({ type: "rematch-room", roomCode: "ABC", rotateBy: -1 }),
+    ).toThrow();
+    expect(() =>
+      ClientMessageSchema.parse({ type: "rematch-room", roomCode: "ABC", rotateBy: 1.5 }),
+    ).toThrow();
+    expect(() => ClientMessageSchema.parse({ type: "rematch-room" })).toThrow();
+  });
+
   it("rejects swap-seats with negative or missing slot indices", () => {
     expect(() =>
       ClientMessageSchema.parse({ type: "swap-seats", roomCode: "ABC", a: -1, b: 1 }),
@@ -102,5 +124,21 @@ describe("ClientMessageSchema", () => {
     expect(() => ClientMessageSchema.parse({ ...base, seats: [] })).toThrow();
     expect(() => ClientMessageSchema.parse({ ...base, seats: [{ kind: "ai" }] })).toThrow();
     expect(() => ClientMessageSchema.parse({ ...base })).toThrow();
+  });
+});
+
+describe("create-session seats", () => {
+  it("fit every game's largest table", () => {
+    const largest = Math.max(...GAME_MANIFESTS.map((m) => m.seats.max));
+    expect(MAX_SOLO_SEATS).toBeGreaterThanOrEqual(largest);
+    const seats = Array.from({ length: largest }, () => ({ kind: "human" as const }));
+    expect(
+      ClientMessageSchema.safeParse({
+        type: "create-session",
+        gameSlug: "blood-on-the-clocktower",
+        seats,
+        config: {},
+      }).success,
+    ).toBe(true);
   });
 });

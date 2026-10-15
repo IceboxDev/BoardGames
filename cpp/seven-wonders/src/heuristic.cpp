@@ -32,8 +32,9 @@ static double cardIntrinsic(const Card& c, Style style) {
       case EffectKind::CoinsPerCard:
       case EffectKind::CoinsPerStage: v += style == Style::Commercial ? 1.2 : 0.6; break;
       case EffectKind::PointsPerCard:
-      case EffectKind::PointsPerStage:
-      case EffectKind::PointsPerDefeat: v += 1.0; break;
+      case EffectKind::PointsPerStage: v += 1.0; break;
+      // Decorators: points only once the wonder is complete — worth about half.
+      case EffectKind::PointsIfWonderComplete: v += ef.amount * 0.5; break;
       case EffectKind::TradeDiscount: v += style == Style::Commercial ? 1.0 : 0.4; break;
       default: break;
     }

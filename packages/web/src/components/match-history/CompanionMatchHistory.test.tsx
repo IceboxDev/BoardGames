@@ -3,6 +3,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { render, screen, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import type { ReactNode } from "react";
+import { MemoryRouter } from "react-router-dom";
 import { describe, expect, it, vi } from "vitest";
 
 // The companions' Match History: the same list kit as online games, a row per
@@ -12,6 +13,10 @@ const entries = vi.hoisted(() => ({ current: [] as unknown[] }));
 vi.mock("../../lib/companion-records", () => ({
   companionRecordsQueryFn: () => async () => entries.current,
   useCompanionRecordOutbox: () => ({ pendingCount: 1 }),
+}));
+// Clocktower's history also lists online games; none here.
+vi.mock("../../lib/api-client", () => ({
+  apiClient: { getGameReplays: async () => [] },
 }));
 
 const { default: ClocktowerMatchHistory } = await import(
@@ -23,7 +28,11 @@ const { default: DndMatchHistory } = await import(
 
 function wrap(node: ReactNode) {
   const client = new QueryClient({ defaultOptions: { queries: { retry: false } } });
-  return render(<QueryClientProvider client={client}>{node}</QueryClientProvider>);
+  return render(
+    <MemoryRouter>
+      <QueryClientProvider client={client}>{node}</QueryClientProvider>
+    </MemoryRouter>,
+  );
 }
 
 function list(raw: unknown[]): CompanionRecordEntry[] {
@@ -57,6 +66,7 @@ describe("Clocktower Match History", () => {
       },
     ]);
     wrap(<ClocktowerMatchHistory onBack={() => {}} />);
+    await userEvent.click(screen.getByRole("tab", { name: "Run as Storyteller" }));
 
     const row = await screen.findByRole("row", { name: /Evil won/ });
     expect(within(row).getByText("Trouble Brewing")).toBeTruthy();

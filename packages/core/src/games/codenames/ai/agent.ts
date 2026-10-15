@@ -5,9 +5,13 @@
  * `withDuetAgent` — XState `provide`), never through module globals.
  *
  * SAFETY CONTRACT: the machines race every call against a deadline, catch
- * throws and sanitize the output against the rules (`clueProblem`, face-down
+ * throws and sanitize the output against the rules (`clueVerdict`, face-down
  * cards only), so an agent may be slow, wrong or hostile — the fallback must
  * be synchronous-fast, throw-free and always legal.
+ *
+ * SAME RULES FOR EVERYONE: an AI spymaster may give a clue that only shares
+ * spelling with a table word; the machine then asks the opposing spymaster
+ * (person or AI, `judgeClue`) exactly as it would for a person.
  *
  * REDACTION: `GuessInput` has no key field at all, and its history is the
  * public one (`PublicTurn`, no intended targets). An operative's prompt is
@@ -108,7 +112,30 @@ export interface GuessOutput extends AiSpend {
   standIn?: boolean;
 }
 
+/**
+ * A clue question put to an AI spymaster: may the other side's clue stand,
+ * though its spelling overlaps a word on the table? Only the two words — the
+ * judge needs no key and no number to rule on spelling.
+ */
+export interface JudgeInput {
+  model: CodenamesAiModel;
+  language: Language;
+  /** The clue as asked. */
+  clue: string;
+  /** The face-down word it shares spelling with. */
+  clash: string;
+}
+
+export interface JudgeOutput extends AiSpend {
+  allow: boolean;
+  /** One sentence, shown with the ruling after the game. */
+  reason?: string;
+  standIn?: boolean;
+}
+
 export interface CodenamesAiAgent {
   giveClue(input: ClueInput): Promise<ClueOutput>;
   guess(input: GuessInput): Promise<GuessOutput>;
+  /** Rule on a clue question; absent → the deterministic judge (`fallbackJudge`). */
+  judgeClue?(input: JudgeInput): Promise<JudgeOutput>;
 }

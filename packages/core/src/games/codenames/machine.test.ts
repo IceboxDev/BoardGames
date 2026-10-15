@@ -7,6 +7,7 @@ import {
   codenamesMachine,
   codenamesSpec,
   phaseOf,
+  settleClue,
   withCodenamesAgent,
 } from "./machine";
 import { CodenamesReplayLogSchema } from "./record";
@@ -175,6 +176,53 @@ describe("codenames machine — people at the table", () => {
     expect(actor.getSnapshot().context.game.currentTeam).toBe(1);
   });
 
+  it("a clue can only mean the team's own agents: a bystander or theirs is dropped", () => {
+    const actor = startActor({ ai: [null, null, null, null] });
+    const game = actor.getSnapshot().context.game;
+    const team = game.currentTeam;
+    const mine = game.key.indexOf(team);
+    const bystander = game.key.indexOf("bystander");
+    const theirs = game.key.indexOf((1 - team) as typeof team);
+    expect(
+      send(actor, team, {
+        kind: "give-clue",
+        clue: { word: "zqx", count: 1 },
+        targets: [mine, bystander, theirs],
+      }).ok,
+    ).toBe(true);
+    expect(view(actor, team).turns[0]?.note?.targets).toEqual([mine]);
+  });
+
+  it("an AI's note keeps only its own agents as targets, leftovers and considered clues", () => {
+    const state = startActor({ ai: [null, null, null, null] }).getSnapshot().context.game;
+    const team = state.currentTeam;
+    const mine = state.key.flatMap((k, i) => (k === team ? [i] : [])).slice(0, 2);
+    const bystander = state.key.indexOf("bystander");
+    const settled = settleClue(
+      {
+        word: "zqx",
+        count: 2,
+        targets: [...mine, bystander],
+        links: [{ card: bystander, why: "tempting misread" }],
+        leftover: [bystander],
+        considered: [{ word: "zqy", count: 2, targets: [bystander, mine[0]] }],
+      },
+      {
+        words: state.words,
+        faceDown: (c) => state.revealed[c] === false,
+        ours: (c) => state.key[c] === team,
+        language: state.language,
+      },
+      () => {
+        throw new Error("no fallback expected");
+      },
+    );
+    expect(settled.note.targets).toEqual(mine);
+    expect(settled.note.links).toEqual([]);
+    expect(settled.note.leftover).toEqual([]);
+    expect(settled.note.considered[0]?.targets).toEqual([mine[0]]);
+  });
+
   it("keeps a person's clue targets secret from their operatives until the end", async () => {
     const actor = startActor({ ai: [null, null, null, null] });
     const game = actor.getSnapshot().context.game;
@@ -267,5 +315,179 @@ describe("codenames machine — timers", () => {
     expect(view(actor, 2 + team).deadlineTs).toBe(deadline);
     await waitFor(actor, (s) => s.context.game.currentTeam !== team, { timeout: 2000 });
     expect(actor.getSnapshot().context.game.turns[0]?.end).toBe("guess-timeout");
+  });
+});
+
+describe("codenames machine — clue questions", () => {
+  /** A clue that only shares spelling with a face-down word (`<word>zq`, or `<word>zqzq`). */
+  function softWord(actor: Actor, tail = "zq"): string {
+    const game = actor.getSnapshot().context.game;
+    const word = game.words.find((w, i) => !game.revealed[i] && w.length >= 4) as string;
+    return `${word}${tail}`;
+  }
+
+  /** The starting team for the shared seed — fixes who asks and who judges. */
+  function starter(): 0 | 1 {
+    return startActor({ ai: [null, null, null, null] }).getSnapshot().context.game.currentTeam;
+  }
+
+  it("a person's spelling clash goes to the other spymaster — only the spymasters see it", () => {
+    const actor = startActor({ ai: [null, null, null, null] });
+    const sm = actor.getSnapshot().context.game.currentTeam;
+    const judge = 1 - sm;
+    const word = softWord(actor);
+    expect(send(actor, sm, { kind: "give-clue", clue: { word, count: 1 } }).ok).toBe(false);
+    expect(send(actor, sm, { kind: "ask-clue", clue: { word, count: 2 } }).ok).toBe(true);
+
+    expect(view(actor, sm).mustGiveClue).toBe(false);
+    expect(view(actor, sm).canWithdrawClue).toBe(true);
+    expect(view(actor, sm).appeal).toMatchObject({ word, count: 2 });
+    expect(view(actor, judge).mustRuleClue).toBe(true);
+    expect(view(actor, judge).appeal).toMatchObject({ word, count: null });
+    for (const seat of [2, 3, -1]) {
+      expect(view(actor, seat).appeal).toMatchObject({ word: null, clash: null, count: null });
+    }
+    expect(send(actor, 2 + sm, { kind: "rule-clue", allow: true }).ok).toBe(false);
+
+    expect(send(actor, judge, { kind: "rule-clue", allow: true }).ok).toBe(true);
+    expect(phaseOf(actor.getSnapshot())).toBe("guessing");
+    expect(view(actor, 2 + sm).clue).toEqual({ word, count: 2 });
+    expect(view(actor, 2 + sm).turns[0]?.appeals).toBeUndefined();
+    expect(view(actor, judge).turns[0]?.appeals?.[0]).toMatchObject({ word, ruling: "allowed" });
+  });
+
+  it("refused or withdrawn: the spymaster thinks again", () => {
+    const actor = startActor({ ai: [null, null, null, null] });
+    const sm = actor.getSnapshot().context.game.currentTeam;
+    const word = softWord(actor);
+    send(actor, sm, { kind: "ask-clue", clue: { word, count: 1 } });
+    expect(send(actor, 1 - sm, { kind: "rule-clue", allow: false }).ok).toBe(true);
+    expect(phaseOf(actor.getSnapshot())).toBe("clue");
+    expect(view(actor, sm).mustGiveClue).toBe(true);
+
+    send(actor, sm, { kind: "ask-clue", clue: { word, count: 1 } });
+    expect(send(actor, sm, { kind: "withdraw-clue" }).ok).toBe(true);
+    expect(view(actor, sm).mustGiveClue).toBe(true);
+    const appeals = actor.getSnapshot().context.game.turns[0]?.appeals ?? [];
+    expect(appeals.map((a) => a.ruling)).toEqual(["refused", "withdrawn"]);
+  });
+
+  it("an unanswered question stands — silence is consent", async () => {
+    const actor = startActor({ ai: [null, null, null, null], beats: { ...FAST, appealWait: 20 } });
+    const sm = actor.getSnapshot().context.game.currentTeam;
+    const word = softWord(actor);
+    send(actor, sm, { kind: "ask-clue", clue: { word, count: 1 } });
+    await waitFor(actor, (s) => phaseOf(s) === "guessing", { timeout: 2000 });
+    expect(actor.getSnapshot().context.game.turns[0]?.appeals?.[0]?.ruling).toBe("unanswered");
+  });
+
+  it("the clue timer stops while a question is open, and gives the time back", () => {
+    const actor = startActor({ ai: [null, null, null, null], clueTimerSec: 60 });
+    const sm = actor.getSnapshot().context.game.currentTeam;
+    const before = actor.getSnapshot().context.game.deadlineTs as number;
+    send(actor, sm, { kind: "ask-clue", clue: { word: softWord(actor), count: 1 } });
+    expect(actor.getSnapshot().context.game.deadlineTs).toBeNull();
+    send(actor, 1 - sm, { kind: "rule-clue", allow: false });
+    const after = actor.getSnapshot().context.game.deadlineTs as number;
+    expect(Math.abs(after - before)).toBeLessThan(1000);
+  });
+
+  it("an AI spymaster judges a person's question", async () => {
+    const sm = starter();
+    const ai: (string | null)[] = [null, null, null, null];
+    ai[1 - sm] = AI;
+    const allowed = startActor({ ai });
+    send(allowed, sm, { kind: "ask-clue", clue: { word: softWord(allowed), count: 1 } });
+    await waitFor(allowed, (s) => phaseOf(s) === "guessing", { timeout: 2000 });
+    const record = allowed.getSnapshot().context.game.turns[0]?.appeals?.[0];
+    expect(record).toMatchObject({ ruling: "allowed", judge: 1 - sm });
+    expect(record?.reason).toBeTruthy();
+
+    // A real compound (the table word plus four letters or more): the stand-in judge refuses.
+    const refused = startActor({ ai });
+    send(refused, sm, { kind: "ask-clue", clue: { word: softWord(refused, "zqzq"), count: 1 } });
+    await waitFor(refused, (s) => (s.context.game.turns[0]?.appeals?.length ?? 0) > 0, {
+      timeout: 2000,
+    });
+    expect(phaseOf(refused.getSnapshot())).toBe("clue");
+    expect(view(refused, sm).mustGiveClue).toBe(true);
+  });
+
+  describe("an AI spymaster asks too", () => {
+    afterEach(() => {
+      agent = null;
+    });
+
+    function askingAgent(): CodenamesAiAgent {
+      return {
+        giveClue: async (input) => {
+          const word = input.cards.find((c) => !c.revealed && c.word.length >= 4)?.word ?? "";
+          const own = input.cards.filter((c) => c.kind === "own" && !c.revealed);
+          return {
+            word: `${word}zq`,
+            count: 1,
+            targets: [own[0]?.index ?? 0],
+            considered: [{ word: "zqy", count: 2, targets: own.slice(0, 2).map((c) => c.index) }],
+          };
+        },
+        guess: async () => ({ picks: [] }),
+      };
+    }
+
+    function aiAsks() {
+      const sm = starter();
+      const ai: (string | null)[] = [null, null, AI, AI];
+      ai[sm] = AI;
+      agent = askingAgent();
+      const actor = startActor({ ai });
+      return { actor, sm, judge: 1 - sm };
+    }
+
+    it("and the person's refusal sends it to its next idea, without a second question", async () => {
+      const { actor, judge } = aiAsks();
+      await waitFor(actor, () => view(actor, judge).mustRuleClue, { timeout: 2000 });
+      expect(view(actor, judge).appeal?.word).toMatch(/zq$/);
+      expect(send(actor, judge, { kind: "rule-clue", allow: false }).ok).toBe(true);
+      const turn = actor.getSnapshot().context.game.turns[0];
+      expect(turn?.clue).toEqual({ word: "zqy", count: 2 });
+      expect(turn?.appeals?.[0]?.ruling).toBe("refused");
+    });
+
+    it("and an allowed question is its clue", async () => {
+      const { actor, judge } = aiAsks();
+      await waitFor(actor, () => view(actor, judge).mustRuleClue, { timeout: 2000 });
+      send(actor, judge, { kind: "rule-clue", allow: true });
+      expect(actor.getSnapshot().context.game.turns[0]?.clue?.word).toMatch(/zq$/);
+    });
+  });
+});
+
+describe("codenames machine — the team's working-out", () => {
+  it("pointers and sticky notes reach the team's operatives only", () => {
+    const actor = startActor({ ai: [null, null, null, null, null, null] });
+    const team = actor.getSnapshot().context.game.currentTeam;
+    const [op, mate] = [2 + team, 4 + team];
+    const [spymaster, enemyOp] = [team, 2 + (1 - team)];
+    send(actor, team, { kind: "give-clue", clue: { word: "zqx", count: 2 } });
+
+    expect(send(actor, op, { kind: "mark", card: 4 }).ok).toBe(true);
+    expect(view(actor, mate).cards[4]?.marks).toEqual([op]);
+    expect(view(actor, spymaster).cards[4]?.marks).toEqual([]);
+    expect(view(actor, enemyOp).cards[4]?.marks).toEqual([]);
+    // One pointer each: pointing elsewhere moves it.
+    send(actor, op, { kind: "mark", card: 5 });
+    expect(view(actor, mate).cards[4]?.marks).toEqual([]);
+    expect(view(actor, mate).cards[5]?.marks).toEqual([op]);
+
+    const card = actor.getSnapshot().context.game.revealed.findIndex((up, i) => !up && i !== 5);
+    expect(send(actor, op, { kind: "note", card, turn: 0 }).ok).toBe(true);
+    expect(view(actor, mate).cards[card]?.notes).toEqual([{ turn: 0, seat: op }]);
+    expect(view(actor, spymaster).cards[card]?.notes).toEqual([]);
+    expect(view(actor, enemyOp).cards[card]?.notes).toEqual([]);
+    expect(view(actor, -1).cards[card]?.notes).toEqual([]);
+    expect(send(actor, enemyOp, { kind: "note", card, turn: 0 }).ok).toBe(false);
+    expect(send(actor, spymaster, { kind: "note", card, turn: 0 }).ok).toBe(false);
+    expect(send(actor, op, { kind: "note", card: 99, turn: 0 }).ok).toBe(false);
+    expect(send(actor, op, { kind: "note", card, turn: "0" }).ok).toBe(false);
   });
 });

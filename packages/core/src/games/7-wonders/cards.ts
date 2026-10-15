@@ -1,7 +1,7 @@
 import type { CardDef } from "./types";
 
 /**
- * Full base-game card list (2010 edition). `copies` lists the player counts at
+ * Full base-game card list (2020 second edition). `copies` lists the player counts at
  * which one more physical copy enters the deck (the printed "3+", "4+" corner
  * values), so the deck for N players contains every entry once per copies
  * value <= N. `data.test.ts` asserts each age totals 7 cards per player.
@@ -118,7 +118,7 @@ const AGE_1: readonly CardDef[] = [
   },
   // Blue — civilian
   {
-    name: "Pawnshop",
+    name: "Well",
     age: 1,
     color: "blue",
     cost: {},
@@ -138,7 +138,7 @@ const AGE_1: readonly CardDef[] = [
     age: 1,
     color: "blue",
     cost: {},
-    effects: [{ kind: "points", amount: 2 }],
+    effects: [{ kind: "points", amount: 3 }],
     copies: [3, 5],
   },
   {
@@ -146,7 +146,7 @@ const AGE_1: readonly CardDef[] = [
     age: 1,
     color: "blue",
     cost: {},
-    effects: [{ kind: "points", amount: 2 }],
+    effects: [{ kind: "points", amount: 3 }],
     copies: [3, 6],
   },
   // Yellow — commercial
@@ -310,8 +310,7 @@ const AGE_2: readonly CardDef[] = [
     age: 2,
     color: "blue",
     cost: { resources: { wood: 1, clay: 1, glass: 1 } },
-    effects: [{ kind: "points", amount: 3 }],
-    chainFrom: ["Altar"],
+    effects: [{ kind: "points", amount: 4 }],
     copies: [3, 6],
   },
   {
@@ -320,7 +319,7 @@ const AGE_2: readonly CardDef[] = [
     color: "blue",
     cost: { resources: { wood: 1, ore: 2 } },
     effects: [{ kind: "points", amount: 4 }],
-    chainFrom: ["Theater"],
+    chainFrom: ["Well"],
     copies: [3, 7],
   },
   {
@@ -454,7 +453,7 @@ const AGE_3: readonly CardDef[] = [
     color: "blue",
     cost: { resources: { clay: 2, ore: 1, glass: 1, papyrus: 1, loom: 1 } },
     effects: [{ kind: "points", amount: 7 }],
-    chainFrom: ["Temple"],
+    chainFrom: ["Altar"],
     copies: [3, 6],
   },
   {
@@ -463,7 +462,7 @@ const AGE_3: readonly CardDef[] = [
     color: "blue",
     cost: { resources: { clay: 2, wood: 1 } },
     effects: [{ kind: "points", amount: 5 }],
-    chainFrom: ["Statue"],
+    chainFrom: ["Theater"],
     copies: [3, 4],
   },
   {
@@ -472,7 +471,7 @@ const AGE_3: readonly CardDef[] = [
     color: "blue",
     cost: { resources: { stone: 2, ore: 1, glass: 1 } },
     effects: [{ kind: "points", amount: 6 }],
-    copies: [3, 5, 6],
+    copies: [3, 6],
   },
   {
     name: "Palace",
@@ -539,14 +538,25 @@ const AGE_3: readonly CardDef[] = [
       { kind: "points-per-stage", scopes: ["self"], amount: 1 },
     ],
     chainFrom: ["Dispensary"],
-    copies: [3, 5, 7],
+    copies: [3, 5],
+  },
+  {
+    name: "Ludus",
+    age: 3,
+    color: "yellow",
+    cost: { resources: { stone: 1, ore: 1 } },
+    effects: [
+      { kind: "coins-per-card", color: "red", scopes: ["self"], amount: 3 },
+      { kind: "points-per-card", color: "red", scopes: ["self"], amount: 1 },
+    ],
+    copies: [5, 7],
   },
   // Red
   {
     name: "Fortifications",
     age: 3,
     color: "red",
-    cost: { resources: { ore: 3, stone: 1 } },
+    cost: { resources: { ore: 3, clay: 1 } },
     effects: [{ kind: "shields", amount: 3 }],
     chainFrom: ["Walls"],
     copies: [3, 7],
@@ -558,7 +568,7 @@ const AGE_3: readonly CardDef[] = [
     cost: { resources: { stone: 3, ore: 1 } },
     effects: [{ kind: "shields", amount: 3 }],
     chainFrom: ["Training Ground"],
-    copies: [4, 5, 6],
+    copies: [4, 6],
   },
   {
     name: "Arsenal",
@@ -566,7 +576,7 @@ const AGE_3: readonly CardDef[] = [
     color: "red",
     cost: { resources: { wood: 2, ore: 1, loom: 1 } },
     effects: [{ kind: "shields", amount: 3 }],
-    copies: [3, 4, 7],
+    copies: [3, 5],
   },
   {
     name: "Siege Workshop",
@@ -576,6 +586,14 @@ const AGE_3: readonly CardDef[] = [
     effects: [{ kind: "shields", amount: 3 }],
     chainFrom: ["Laboratory"],
     copies: [3, 5],
+  },
+  {
+    name: "Castrum",
+    age: 3,
+    color: "red",
+    cost: { resources: { clay: 2, wood: 1, papyrus: 1 } },
+    effects: [{ kind: "shields", amount: 3 }],
+    copies: [4, 7],
   },
   // Green
   {
@@ -664,16 +682,16 @@ export const GUILDS: readonly CardDef[] = [
     name: "Spies Guild",
     age: 3,
     color: "purple",
-    cost: { resources: { clay: 3, glass: 1 } },
+    cost: { resources: { clay: 2, glass: 1 } },
     effects: [{ kind: "points-per-card", color: "red", scopes: ["left", "right"], amount: 1 }],
     copies: [3],
   },
   {
-    name: "Strategists Guild",
+    name: "Decorators Guild",
     age: 3,
     color: "purple",
     cost: { resources: { ore: 2, stone: 1, loom: 1 } },
-    effects: [{ kind: "points-per-defeat", scopes: ["left", "right"], amount: 1 }],
+    effects: [{ kind: "points-if-wonder-complete", amount: 7 }],
     copies: [3],
   },
   {
@@ -708,7 +726,7 @@ export const GUILDS: readonly CardDef[] = [
     name: "Builders Guild",
     age: 3,
     color: "purple",
-    cost: { resources: { stone: 2, clay: 2, glass: 1 } },
+    cost: { resources: { stone: 3, clay: 2, glass: 1 } },
     effects: [{ kind: "points-per-stage", scopes: ["self", "left", "right"], amount: 1 }],
     copies: [3],
   },

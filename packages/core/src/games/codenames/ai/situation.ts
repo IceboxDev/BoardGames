@@ -190,39 +190,52 @@ export function guessSituation(input: GuessInput): GuessSituation {
   return { lines, urgency };
 }
 
-/** A later-ranked target the reader would still have found, after a harmless miss. */
-const LEFTOVER_VALUE = 0.3;
+/** A reader's pick below this confidence is one a real operative wouldn't take. */
+export const READ_CONFIDENCE = 0.5;
+
+/** What each target the reader didn't confidently find costs a clue. */
+const UNREAD_TARGET = 0.25;
+
+/** One word of a keyless reader's ranking, with how sure it was. */
+export interface ReadPick {
+  card: number;
+  confidence: number;
+}
 
 /**
- * How well a keyless reader's ranking serves a clue, within its number:
- * +1 per own agent read in order, until the first miss. The miss is priced
- * by what it touches: the assassin loses the game, an opponent's agent hands
- * them a point, a bystander only ends the turn — nearly free once something
- * was found, a little worse when it is the very first touch. Own agents the
- * reader still ranks within reach after a harmless miss count a little too:
- * the team knows they're out there (a leftover for a later +1), which is
- * why an ambitious 3-word clue that lands two beats a safe single.
+ * How well a keyless reader's ranking serves a clue, read the way an
+ * operative plays it: the first word is always touched, every later one
+ * only while the reader is still sure of it (`READ_CONFIDENCE`), at most the
+ * clue's number. +1 per own agent touched, until the first miss — priced by
+ * what it hits: the assassin loses the game, an opponent's agent hands them a
+ * point, a bystander only ends the turn (worse as the very first touch).
+ *
+ * A clue then pays for each of its `targets` the reader didn't confidently
+ * find: its number promised a word the table won't see. So a long shot the
+ * reader happened to rank (ICE at 25 % for CYCLONE) earns nothing, and a
+ * 4-word stretch that lands one loses to the clean single — while a big
+ * clue that reads cleanly still beats a small one.
  */
 export function readScore(
-  ranking: readonly number[],
+  ranking: readonly ReadPick[],
   kindOf: (card: number) => SpymasterCardKind | undefined,
   count: ClueCount,
+  targets: readonly number[],
 ): number {
   const reach = typeof count === "number" && count > 0 ? count : ranking.length;
-  const read = ranking.slice(0, reach);
+  const found = new Set<number>();
   let score = 0;
-  for (const [i, card] of read.entries()) {
-    const kind = kindOf(card);
+  for (const [i, pick] of ranking.slice(0, reach).entries()) {
+    if (i > 0 && pick.confidence < READ_CONFIDENCE) break;
+    const kind = kindOf(pick.card);
     if (kind === "own") {
       score += 1;
+      found.add(pick.card);
       continue;
     }
     if (kind === "assassin") return score - 6;
-    if (kind === "opponent") return score - 1;
-    // A bystander: the turn ends here. What the reader ranked after it is
-    // still a lead for later turns.
-    const later = read.slice(i + 1).filter((c) => kindOf(c) === "own").length;
-    return score - (score === 0 ? 0.4 : 0.1) + later * LEFTOVER_VALUE;
+    score -= kind === "opponent" ? 1 : score === 0 ? 0.4 : 0.1;
+    break;
   }
-  return score;
+  return score - targets.filter((t) => !found.has(t)).length * UNREAD_TARGET;
 }

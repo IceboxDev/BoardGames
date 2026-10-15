@@ -30,13 +30,7 @@ export function serializePosition(gs: GameState, seat: number): string {
   out.push(seat, gs.age, gs.turn, gs.phase === "pending" ? 1 : 0, gs.edifices ? 1 : 0);
   for (let p = 0; p < gs.playerCount; p++) {
     const pl = gs.players[p];
-    out.push(
-      WONDER_IDS.indexOf(pl.wonderId),
-      pl.side === "A" ? 0 : 1,
-      pl.stagesBuilt,
-      pl.coins,
-      pl.freeBuildUsedThisAge ? 1 : 0,
-    );
+    out.push(WONDER_IDS.indexOf(pl.wonderId), pl.side === "A" ? 0 : 1, pl.stagesBuilt, pl.coins);
     out.push(pl.tableau.length, ...pl.tableau.map(cardTypeId));
     out.push(pl.militaryTokens.length, ...pl.militaryTokens);
     out.push(pl.bonusShields);

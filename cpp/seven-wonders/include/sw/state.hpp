@@ -42,7 +42,6 @@ struct PlayerState {
   uint8_t wonderId = 0;
   uint8_t side = 0;  // 0=A, 1=B
   uint8_t stagesBuilt = 0;
-  bool freeBuildUsedThisAge = false;
   int16_t coins = 0;
 
   uint8_t numTableau = 0;

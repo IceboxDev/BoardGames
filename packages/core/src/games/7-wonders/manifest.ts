@@ -2,8 +2,8 @@ import { z } from "zod";
 import { defineManifest } from "../../machines/manifest";
 
 export const SevenWondersConfigSchema = z.object({
-  /** Wonder board sides: all A, all B, or dealt at random. */
-  sideMode: z.enum(["A", "B", "random"]).default("random"),
+  /** Wonder board sides: each seat chooses (as at the table), all A, all B, or dealt at random. */
+  sideMode: z.enum(["choose", "A", "B", "random"]).default("choose"),
   /** The Edifice expansion — communal projects. */
   edifice: z.boolean().default(false),
 });

@@ -2,6 +2,10 @@ import { describe, expect, it } from "vitest";
 import { createActor, waitFor } from "xstate";
 import { buildPlayerView, sevenWondersMachine, sevenWondersSpec } from "./machine";
 import { getActivePlayer } from "./rules";
+import type { CardId } from "./types";
+import { getWonderDef } from "./wonders";
+
+const cardIdOf = (name: string): CardId => `${name}@9`;
 
 const fastMachine = sevenWondersMachine.provide({
   delays: { revealDelay: 0 },
@@ -19,6 +23,43 @@ describe("sevenWondersMachine", () => {
     const view = sevenWondersSpec.getPlayerView(snapshot, 0);
     expect(view.players).toHaveLength(3);
     expect(view.me?.hand).toHaveLength(7);
+    actor.stop();
+  });
+
+  it("lets each person choose a side before Age I; AI seats have chosen already", () => {
+    const actor = createActor(fastMachine);
+    actor.start();
+    actor.send({ type: "START", strategies: [null, null, "random"], seed: 11, sideMode: "choose" });
+    let snap = actor.getSnapshot();
+    expect(snap.context.gameState.phase).toBe("choosing-sides");
+    expect(sevenWondersSpec.getLegalActions(snap, 0)).toEqual([
+      { type: "choose-side", side: "A" },
+      { type: "choose-side", side: "B" },
+    ]);
+    expect(sevenWondersSpec.getLegalActions(snap, 2)).toEqual([]);
+    const view = sevenWondersSpec.getPlayerView(snap, 0);
+    expect(view.me?.hand).toEqual([]);
+    expect(view.players.map((p) => p.hasSelected)).toEqual([false, false, true]);
+    expect(view.players.map((p) => p.side)).toEqual(["A", "A", "A"]);
+
+    actor.send({
+      type: "PLAYER_ACTION",
+      playerIndex: 0,
+      action: { type: "choose-side", side: "B" },
+    });
+    snap = actor.getSnapshot();
+    expect(snap.context.gameState.phase).toBe("choosing-sides");
+    expect(sevenWondersSpec.getLegalActions(snap, 0)).toEqual([]);
+
+    actor.send({
+      type: "PLAYER_ACTION",
+      playerIndex: 1,
+      action: { type: "choose-side", side: "A" },
+    });
+    snap = actor.getSnapshot();
+    expect(snap.context.gameState.phase).toBe("selecting");
+    expect(snap.context.gameState.players.slice(0, 2).map((p) => p.side)).toEqual(["B", "A"]);
+    expect(sevenWondersSpec.getPlayerView(snap, 0).me?.hand).toHaveLength(7);
     actor.stop();
   });
 
@@ -56,6 +97,38 @@ describe("sevenWondersMachine", () => {
     const spectator = buildPlayerView(ctx, -1);
     expect(spectator.me).toBeNull();
     expect(spectator.players).toHaveLength(3);
+    actor.stop();
+  });
+
+  it("shows each city's running score and production", () => {
+    const actor = createActor(sevenWondersMachine);
+    actor.start();
+    actor.send({ type: "START", strategies: [null, null, null], seed: 3, sideMode: "A" });
+    const ctx = actor.getSnapshot().context;
+    const view = buildPlayerView(ctx, 0);
+    for (const [i, p] of view.players.entries()) {
+      // 3 coins = 1 VP, nothing else yet.
+      expect(p.score.total).toBe(1);
+      expect(p.score.coins).toBe(1);
+      const initial = getWonderDef(ctx.gameState.players[i].wonderId).sides.A.initialResource;
+      expect(p.production).toEqual([[initial]]);
+    }
+    // Spectators see the same public numbers.
+    expect(buildPlayerView(ctx, -1).players[0].score).toEqual(view.players[0].score);
+
+    // An either/or card is one entry with two choices.
+    const gs = ctx.gameState;
+    const withTreeFarm = {
+      ...ctx,
+      gameState: {
+        ...gs,
+        players: gs.players.map((p, i) =>
+          i === 0 ? { ...p, tableau: [...p.tableau, cardIdOf("Tree Farm")] } : p,
+        ),
+      },
+    };
+    const farm = buildPlayerView(withTreeFarm, 0).players[0].production;
+    expect(farm).toContainEqual(["wood", "clay"]);
     actor.stop();
   });
 
@@ -104,6 +177,10 @@ describe("sevenWondersMachine", () => {
     expect(result?.breakdowns[0].total).toBe(result?.totals[0]);
     expect(result?.winner).toBeGreaterThanOrEqual(0);
     expect(result?.winner).toBeLessThan(3);
+
+    // The view's running score is the final breakdown once the game is over.
+    const view = buildPlayerView(snapshot.context, 0);
+    expect(view.players.map((p) => p.score)).toEqual(result?.breakdowns);
 
     const gs = snapshot.context.gameState;
     expect(gs.age).toBe(3);

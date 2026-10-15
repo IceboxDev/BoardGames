@@ -34,6 +34,15 @@ worker URL's hash: `new Worker(\`${engineUrl}#${encodeURIComponent(wasmUrl)}\`)`
 both imported with Vite's `?url`. Loaded only when a player presses "Analyse".
 A 7-move game analyses at depth 14 in ~2.5 s.
 
+## Opening trainer (`web/src/games/chess/trainer/engine-provider.ts`)
+
+A tree's engine choices try lichess's cloud eval first (up to move 12, when it
+is as deep as the tree asks and has enough lines), then the browser Stockfish
+above at the tree's depth. Cloud evals and the explorer write castling as the
+king taking its rook (`e1h1`); `normalizeUcis` turns that back into `e1g1`.
+"Most popular" is the lichess explorer's database (every rating and speed);
+it needs the lichess OAuth token (401 without).
+
 ## Fallback
 
 `fallback-ai.ts` (alpha-beta, material + piece-square tables, quiescence) plays

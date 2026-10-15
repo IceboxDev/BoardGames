@@ -526,13 +526,13 @@ static bool readPosition(std::istream& in, GameState& st, int& seat) {
   st.phase = phase == 1 ? Phase::Pending : Phase::Selecting;
   for (int p = 0; p < N; p++) {
     PlayerState& pl = st.players[p];
-    int w, side, stages, coins, freeBuild;
-    in >> w >> side >> stages >> coins >> freeBuild;
+    int w, side, stages, coins;
+    in >> w >> side >> stages >> coins;
     pl.wonderId = uint8_t(w < 0 || w >= NUM_WONDERS ? 0 : w);
     pl.side = uint8_t(side ? 1 : 0);
-    pl.stagesBuilt = uint8_t(stages < 0 || stages > MAX_STAGES ? 0 : stages);
+    const int maxStages = wonderSide(pl.wonderId, pl.side).numStages;
+    pl.stagesBuilt = uint8_t(stages < 0 || stages > maxStages ? 0 : stages);
     pl.coins = int16_t(coins);
-    pl.freeBuildUsedThisAge = freeBuild != 0;
     int n = count(MAX_TABLEAU);
     pl.numTableau = uint8_t(n);
     for (int i = 0; i < n; i++) {

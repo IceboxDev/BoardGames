@@ -4,6 +4,7 @@ import rulesUrl from "./assets/rules.pdf";
 
 export default {
   component: lazy(() => import("./TheHunger")),
+  extraMode: "coach",
   rulesUrl,
   lobbyConfigComponent: lazy(() => import("./HungerLobbyConfig")),
   tournamentResults: () => import("./tournament-results.generated"),

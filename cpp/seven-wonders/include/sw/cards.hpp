@@ -14,7 +14,7 @@ inline constexpr int MAX_EFFECTS = 4;
 inline constexpr int MAX_CHAIN = 3;
 inline constexpr int MAX_COPIES = 4;
 // Compile-time card count (== runtime NUM_CARD_TYPES; asserted in data_test).
-inline constexpr int NUM_CARD_TYPES_CT = 78;
+inline constexpr int NUM_CARD_TYPES_CT = 80;
 
 struct Card {
   uint8_t nameId;

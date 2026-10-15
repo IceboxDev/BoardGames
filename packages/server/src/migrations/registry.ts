@@ -58,6 +58,9 @@ import { quiztopiaReports } from "./0050-quiztopia-reports.ts";
 import { onboarding } from "./0051-onboarding.ts";
 import { goReviews } from "./0052-go-reviews.ts";
 import { companionRecords } from "./0053-companion-records.ts";
+import { replaySeatsModerator } from "./0054-replay-seats-moderator.ts";
+import { chessTrainer } from "./0055-chess-trainer.ts";
+import { chessFarm } from "./0056-chess-farm.ts";
 import type { Migration } from "./types.ts";
 
 export const migrations: readonly Migration[] = [
@@ -114,6 +117,9 @@ export const migrations: readonly Migration[] = [
   onboarding,
   goReviews,
   companionRecords,
+  replaySeatsModerator,
+  chessTrainer,
+  chessFarm,
 ];
 
 /**

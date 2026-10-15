@@ -8,6 +8,7 @@ import rulesUrl from "./assets/rules.pdf";
 // four table options.
 export default {
   component: lazy(() => import("./QuiztopiaGame")),
+  extraMode: "singleplayer",
   soloMode: "trainer",
   rulesUrl,
   lobbyConfigComponent: lazy(() => import("./QuiztopiaLobbyConfig")),

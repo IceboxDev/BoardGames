@@ -1,0 +1,448 @@
+/**
+ * Building an opening tree from the trainee's own games.
+ *
+ * - **Your positions** get exactly one move: within your first
+ *   `handpickMoves` moves, the one you choose (a move, or "Best" = the
+ *   engine's); after that, the engine's best. A choice you set anywhere
+ *   (changing your move later) wins over the engine.
+ * - **Opponent positions** get every move played against you there (by any
+ *   route — transpositions count). The very first opponent move of the game
+ *   (Black's reply to your first move, or White's first move) is exactly
+ *   that; anywhere else, fewer than `minReplies` distinct moves are padded by
+ *   `padReplies` (engine best, most popular, 2nd best, 2nd most popular, …).
+ * - **How far:** a game *follows* the tree from the start until its own move
+ *   differs from the tree's. A position is expanded while some following game
+ *   reaches it. An opponent move no following game took (padding, or a move
+ *   only seen in games that had already left the tree) gets just your reply,
+ *   and stops there. A game that never leaves keeps its line growing to its
+ *   last move.
+ *
+ * The build is resumable and cheap to repeat: everything slow (engine lines,
+ * database moves, your choices) is cached on the nodes, so a rebuild with the
+ * previous tree replays the games through the cached nodes and only asks the
+ * providers about positions it hasn't seen. Choosing a move, changing one,
+ * pulling new games or resuming after a pause are all just "rebuild".
+ */
+import { applyMove } from "../engine/apply";
+import { parseFen, positionKey, START_FEN, toFen } from "../engine/fen";
+import { legalMoves } from "../engine/movegen";
+import { toSan } from "../engine/san";
+import type { Color, Move, Position } from "../engine/types";
+import { moveToUci } from "../engine/uci";
+import { padReplies } from "./padding";
+import { MAX_PLIES, type PositionIndex } from "./position-index";
+import type {
+  EngineLine,
+  Lc0Stat,
+  PopularMove,
+  RepertoireTree,
+  TreeMove,
+  TreeNode,
+  TreeSettings,
+  TreeStats,
+} from "./tree";
+
+/** Thrown by `TreeProviders.evaluate` for a position the farm hasn't analysed yet. */
+export class EvalPending extends Error {
+  constructor() {
+    super("evaluation pending");
+  }
+}
+
+/** A deep evaluation (the analysis farm, under `settings.evalSpec`). */
+export interface NodeEval {
+  /** Best first: for your positions, the move to play; for opponents', their top moves. */
+  readonly lines: readonly EngineLine[];
+  readonly source?: string;
+  readonly ties?: readonly string[];
+  readonly contested?: boolean;
+  readonly lc0?: readonly Lc0Stat[];
+}
+
+export interface TreeProviders {
+  /** The engine's best `multipv` lines from this position, best first. */
+  engineLines(fen: string, multipv: number, depth: number): Promise<EngineLine[]>;
+  /** The database's moves from this position, most played first. */
+  popularMoves(fen: string): Promise<PopularMove[]>;
+  /**
+   * The deep evaluation under `settings.evalSpec`, or throw `EvalPending`
+   * while the farm works on it. Used instead of `engineLines` when the
+   * settings name a spec and this exists. `reach` = your games following the
+   * tree into the position (it decides how deep the farm searches).
+   */
+  evaluate?(fen: string, kind: "user" | "opp", reach: number): Promise<NodeEval>;
+}
+
+export interface BuildProgress {
+  /** Positions worked through (a position can be visited again when new games arrive). */
+  readonly processed: number;
+  readonly queued: number;
+  readonly nodes: number;
+  /** Games that have left the tree or ended. */
+  readonly settled: number;
+  /** Positions parked for the analysis farm so far. */
+  readonly awaiting: number;
+  readonly games: number;
+  readonly engineCalls: number;
+  readonly popularCalls: number;
+}
+
+export interface BuildOptions {
+  /** Checked between positions; `true` stops the build (status `generating`). */
+  shouldStop?: () => boolean;
+  onProgress?: (p: BuildProgress) => void;
+  /** Called every `checkpointEvery` positions with the tree so far. */
+  onCheckpoint?: (tree: RepertoireTree) => void | Promise<void>;
+  checkpointEvery?: number;
+}
+
+const PLY_BITS = 7;
+const PLY_MASK = (1 << PLY_BITS) - 1;
+const HISTORY_SIZE = 6;
+
+type MutableNode = { -readonly [K in keyof TreeNode]: TreeNode[K] };
+
+interface Work {
+  readonly key: string;
+  readonly pos: Position;
+  readonly legal: readonly Move[];
+  readonly node: MutableNode;
+  /** Following games waiting here, packed `game << 7 | ply`. */
+  inbox: number[];
+  queued: boolean;
+  determined: boolean;
+  deviations: Map<string, number>;
+}
+
+const firstOpponentPly = (color: Color) => (color === "w" ? 1 : 0);
+/** 1 for your first move, whichever colour you play. */
+const userMoveNumber = (ply: number) => Math.floor(ply / 2) + 1;
+
+export async function buildTree(
+  index: PositionIndex,
+  color: Color,
+  settings: TreeSettings,
+  previous: RepertoireTree | null,
+  providers: TreeProviders,
+  options: BuildOptions = {},
+): Promise<RepertoireTree> {
+  const games = index.games;
+  const works = new Map<string, Work>();
+  const queue: Work[] = [];
+  let processed = 0;
+  let engineCalls = 0;
+  let popularCalls = 0;
+  let deviated = 0;
+  let ended = 0;
+  let settledPlies = 0;
+  const cache = previous && previous.color === color ? previous.nodes : {};
+
+  const enqueue = (w: Work) => {
+    if (w.queued) return;
+    w.queued = true;
+    queue.push(w);
+  };
+
+  const workFor = (pos: Position, ply: number): Work => {
+    const key = positionKey(pos);
+    const existing = works.get(key);
+    if (existing) return existing;
+    const old = cache[key];
+    const node: MutableNode = {
+      fen: toFen(pos),
+      ply,
+      side: pos.turn === color ? "user" : "opp",
+      status: "open",
+      moves: [],
+      following: 0,
+      seen: 0,
+    };
+    if (old?.choice && node.side === "user") node.choice = old.choice;
+    if (old?.engine) node.engine = old.engine;
+    if (old?.evalSpec) node.evalSpec = old.evalSpec;
+    if (old?.evalSource) node.evalSource = old.evalSource;
+    if (old?.ties) node.ties = old.ties;
+    if (old?.contested) node.contested = old.contested;
+    if (old?.lc0) node.lc0 = old.lc0;
+    if (old?.popular) node.popular = old.popular;
+    const w: Work = {
+      key,
+      pos,
+      legal: legalMoves(pos),
+      node,
+      inbox: [],
+      queued: false,
+      determined: false,
+      deviations: new Map(),
+    };
+    works.set(key, w);
+    return w;
+  };
+
+  const childOf = (w: Work, uci: string): Work | null => {
+    if (w.node.ply + 1 >= MAX_PLIES) return null;
+    const move = w.legal.find((m) => moveToUci(m) === uci);
+    if (!move) return null;
+    return workFor(applyMove(w.pos, move), w.node.ply + 1);
+  };
+
+  const sanOf = (w: Work, uci: string): string => {
+    const move = w.legal.find((m) => moveToUci(m) === uci);
+    return move ? toSan(w.pos, move, w.legal) : uci;
+  };
+
+  const spec = settings.evalSpec;
+  let awaiting = 0;
+
+  const engineFor = async (w: Work, multipv: number): Promise<EngineLine[]> => {
+    if (spec && providers.evaluate) {
+      const node = w.node;
+      if (node.engine && node.evalSpec === spec) return node.engine;
+      engineCalls++;
+      const r = await providers.evaluate(node.fen, node.side, w.inbox.length);
+      node.engine = r.lines.slice(0, 12);
+      node.evalSpec = spec;
+      if (r.source) node.evalSource = r.source;
+      if (r.ties && r.ties.length > 1) node.ties = [...r.ties];
+      if (r.contested) node.contested = true;
+      if (r.lc0 && r.lc0.length > 0) node.lc0 = r.lc0.slice(0, 12);
+      return node.engine;
+    }
+    const want = Math.min(multipv, w.legal.length);
+    const cached = w.node.engine;
+    if (cached && cached.length >= want && (cached[0]?.depth ?? 0) >= settings.engineDepth) {
+      return cached;
+    }
+    engineCalls++;
+    const lines = await providers.engineLines(w.node.fen, want, settings.engineDepth);
+    w.node.engine = lines.slice(0, 12);
+    return lines;
+  };
+
+  const popularFor = async (w: Work): Promise<PopularMove[]> => {
+    if (w.node.popular) return w.node.popular;
+    popularCalls++;
+    const moves = (await providers.popularMoves(w.node.fen)).slice(0, 12);
+    w.node.popular = moves;
+    return moves;
+  };
+
+  const legalSet = (w: Work) => new Set(w.legal.map(moveToUci));
+
+  /** Work out a position's moves. Returns false when it waits (for your choice or the farm). */
+  const determine = async (w: Work): Promise<boolean> => {
+    if (w.determined) return w.node.status !== "decision" && w.node.status !== "awaiting-eval";
+    try {
+      return await work(w);
+    } catch (err) {
+      if (!(err instanceof EvalPending)) throw err;
+      w.node.status = "awaiting-eval";
+      w.node.moves = [];
+      w.determined = true;
+      awaiting++;
+      return false;
+    }
+  };
+
+  const work = async (w: Work): Promise<boolean> => {
+    const node = w.node;
+    const stats = index.movesFrom(w.key);
+    const legal = legalSet(w);
+    const played = stats.filter((s) => legal.has(s.uci));
+    node.seen = played.reduce((n, s) => n + s.games, 0);
+    const countOf = (uci: string) => played.find((s) => s.uci === uci)?.games ?? 0;
+
+    if (w.legal.length === 0) {
+      node.status = "terminal";
+      w.determined = true;
+      return true;
+    }
+
+    if (node.side === "user") {
+      node.history = played.slice(0, HISTORY_SIZE).map((s) => ({
+        uci: s.uci,
+        san: sanOf(w, s.uci),
+        games: s.games,
+        score: s.score,
+      }));
+      let uci: string | null = null;
+      let source: TreeMove["source"] = "engine";
+      const choice = node.choice;
+      if (choice?.source === "handpicked" && legal.has(choice.uci)) {
+        uci = choice.uci;
+        source = "handpicked";
+      } else if (choice?.source === "best") {
+        source = "best";
+      } else if (userMoveNumber(node.ply) <= settings.handpickMoves) {
+        node.status = "decision";
+        w.determined = true;
+        return false;
+      }
+      if (uci === null) {
+        const best = (await engineFor(w, 1))[0]?.uci;
+        uci = best && legal.has(best) ? best : moveToUci(w.legal[0] as Move);
+      }
+      node.moves = [{ uci, san: sanOf(w, uci), source, games: countOf(uci), following: 0 }];
+    } else {
+      const observed = played.map((s) => s.uci);
+      let replies: { uci: string; source: TreeMove["source"] }[];
+      if (
+        observed.length >= settings.minReplies ||
+        (node.ply === firstOpponentPly(color) && observed.length > 0)
+      ) {
+        replies = observed.map((uci) => ({ uci, source: "played" }));
+      } else {
+        const engine = await engineFor(w, settings.minReplies + observed.length);
+        const popular = await popularFor(w);
+        replies = padReplies(
+          observed,
+          engine.map((l) => l.uci),
+          popular.map((p) => p.uci),
+          legal,
+          settings.minReplies,
+        );
+      }
+      node.moves = replies.map((r) => ({
+        uci: r.uci,
+        san: sanOf(w, r.uci),
+        source: r.source,
+        games: countOf(r.uci),
+        following: 0,
+      }));
+      // Every reply gets your answer, whether or not a following game reaches it.
+      for (const r of replies) {
+        const child = childOf(w, r.uci);
+        if (child && !child.determined) enqueue(child);
+      }
+    }
+    node.status = "done";
+    w.determined = true;
+    return true;
+  };
+
+  const settle = (ply: number) => {
+    settledPlies += ply;
+  };
+
+  /** Send the following games waiting at `w` on down the tree. */
+  const consume = (w: Work) => {
+    const node = w.node;
+    const inbox = w.inbox;
+    w.inbox = [];
+    for (const ref of inbox) {
+      const gi = ref >>> PLY_BITS;
+      const ply = ref & PLY_MASK;
+      const game = games[gi];
+      if (!game) continue;
+      node.following++;
+      const uci = game.moves[ply];
+      if (uci === undefined || ply + 1 >= MAX_PLIES || node.status === "terminal") {
+        node.ended = (node.ended ?? 0) + 1;
+        ended++;
+        settle(ply);
+        continue;
+      }
+      let move = node.moves.find((m) => m.uci === uci);
+      if (!move && node.side === "user") {
+        w.deviations.set(uci, (w.deviations.get(uci) ?? 0) + 1);
+        deviated++;
+        settle(ply);
+        continue;
+      }
+      if (!move) {
+        // Only a hash collision in the index can hide a played move.
+        move = { uci, san: sanOf(w, uci), source: "played", games: 1, following: 0 };
+        node.moves.push(move);
+      }
+      move.following++;
+      const child = childOf(w, uci);
+      if (!child) {
+        node.ended = (node.ended ?? 0) + 1;
+        ended++;
+        settle(ply);
+        continue;
+      }
+      child.inbox.push(((gi << PLY_BITS) | (ply + 1)) >>> 0);
+      enqueue(child);
+    }
+  };
+
+  const root = workFor(parseFen(START_FEN), 0);
+  root.inbox = games.flatMap((g, gi) => (g.moves.length > 0 ? [(gi << PLY_BITS) >>> 0] : []));
+  enqueue(root);
+
+  const progress = (): BuildProgress => ({
+    processed,
+    queued: queue.length,
+    nodes: works.size,
+    settled: deviated + ended,
+    awaiting,
+    games: games.length,
+    engineCalls,
+    popularCalls,
+  });
+
+  const materialize = (stopped: boolean): RepertoireTree => {
+    const nodes: Record<string, TreeNode> = {};
+    let waiting = 0;
+    let decisions = 0;
+    for (const w of works.values()) {
+      const node: MutableNode = { ...w.node };
+      if (node.status === "decision") {
+        decisions++;
+        waiting += w.inbox.length;
+        node.following += w.inbox.length;
+      }
+      if (node.status === "awaiting-eval") node.following += w.inbox.length;
+      if (w.deviations.size > 0) {
+        node.deviations = [...w.deviations]
+          .map(([uci, n]) => ({ uci, san: sanOf(w, uci), games: n }))
+          .sort((a, b) => b.games - a.games);
+      }
+      nodes[w.key] = node;
+    }
+    const settled = deviated + ended;
+    const stats: TreeStats = {
+      games: games.length,
+      deviated,
+      ended,
+      waiting,
+      avgFollowPlies: settled > 0 ? Math.round((settledPlies / settled) * 10) / 10 : 0,
+      decisions,
+      awaiting,
+    };
+    return {
+      formatVersion: 1,
+      color,
+      settings,
+      status: stopped
+        ? "generating"
+        : awaiting > 0
+          ? "analysing"
+          : decisions > 0
+            ? "decisions"
+            : "ready",
+      root: root.key,
+      nodes,
+      stats,
+    };
+  };
+
+  const every = options.checkpointEvery ?? 25;
+  let stopped = false;
+  while (queue.length > 0) {
+    if (options.shouldStop?.()) {
+      stopped = true;
+      break;
+    }
+    const w = queue.shift() as Work;
+    w.queued = false;
+    const ready = await determine(w);
+    if (ready) consume(w);
+    processed++;
+    options.onProgress?.(progress());
+    if (options.onCheckpoint && processed % every === 0)
+      await options.onCheckpoint(materialize(true));
+  }
+  return materialize(stopped);
+}

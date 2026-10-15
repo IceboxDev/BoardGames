@@ -5,10 +5,16 @@ import type {
   CodenamesAiAgent,
   GuessInput,
   GuessOutput,
+  JudgeInput,
+  JudgeOutput,
   PublicTurn,
   SpymasterTurn,
 } from "@boardgames/core/games/codenames/ai/agent";
-import { fallbackClue, fallbackGuess } from "@boardgames/core/games/codenames/ai/fallback";
+import {
+  fallbackClue,
+  fallbackGuess,
+  fallbackJudge,
+} from "@boardgames/core/games/codenames/ai/fallback";
 import {
   type CodenamesAiModel,
   codenamesModelOf,
@@ -17,6 +23,7 @@ import {
   clueSituation,
   guessSituation,
   pendingTargets,
+  type ReadPick,
   readScore,
   unfinishedClues,
 } from "@boardgames/core/games/codenames/ai/situation";
@@ -24,6 +31,7 @@ import {
   type Clue,
   type ClueCount,
   clueProblem,
+  clueVerdict,
   foldWord,
   formatClueCount,
   MAX_CLUE_COUNT,
@@ -59,6 +67,8 @@ const CLUE_BUDGET_MS = 58_000;
 const QUICK_CLUE_MS = 20_000;
 const GUESS_BUDGET_MS = 30_000;
 const READ_BUDGET_MS = 14_000;
+/** A ruling on one clue question (the machine's own deadline is 20 s). */
+const JUDGE_BUDGET_MS = 15_000;
 /** Don't start a test read with less than this left of the clue step. */
 const MIN_READ_MS = 6_000;
 
@@ -107,7 +117,7 @@ const AMBITION: Record<CodenamesAiModel, string> = {
   "codenames-medium": "Play it safe: link one or two words you are sure of.",
   "codenames-hard": "Aim for two or three words when the link is clear; never risk the assassin.",
   "codenames-expert":
-    "Aim for the strongest clue: three or more words when a precise link exists, but a clue that leads to the assassin or the opponent loses games.",
+    "Aim for the strongest clue: as many words as one precise link truly carries — three or more only when every one of them is obvious. A clue that leads to the assassin or the opponent loses games.",
 };
 
 const LANGUAGE_NAME = { en: "English", de: "German" } as const;
@@ -168,12 +178,14 @@ function clueSystem(input: ClueInput): string {
     input.language === "de"
       ? "Spell German properly, with its umlauts and ß: SÄUGLING, not SAEUGLING; STRASSE only where it is spelled that way."
       : null,
-    "Rules: one single word (no spaces, no digits); it must not be, contain, or be part of any face-down word on the table, and must not be a form of one (plural, verb form). Covered cards no longer matter. Clues must be about meaning, not spelling or letter count.",
+    input.mode === "duet"
+      ? "Rules: one single word (no spaces, no digits); it must not be, contain, or be part of any face-down word on the table, and must not be a form of one (plural, verb form). Covered cards no longer matter. Clues must be about meaning, not spelling or letter count."
+      : "Rules: one single word (no spaces, no digits); it must not be a face-down word on the table or a form of one (plural, verb form). A word that only shares spelling with a face-down word (SPARROW while ROW is on the table, LAND while ENGLAND is) is given only if the other spymaster allows it — you will have to ask them, and they may refuse; prefer a clue that needs no permission when it is as good. Covered cards no longer matter. Clues must be about meaning, not spelling or letter count.",
     input.mode === "duet" ? DUET_PLAYBOOK : SPYMASTER_PLAYBOOK,
     AMBITION[input.model],
     [
-      `Give exactly ${ideaSizes(input.agentsLeft).length} candidates, one for each size: ${ideaSizes(input.agentsLeft).join(", ")} words. Each must genuinely try to link that many of YOUR face-down words (its targets are exactly that many) — attempt every size, even when the link is a stretch, and note its risk honestly. Then pick the one you would give by its index in \`choice\`.`,
-      "For each candidate: its `targets` are ONLY the face-down words this clue itself points to — each with `why`, a few words on how that word connects to the clue (shown to the players after the game). The number you give is the count of these targets.",
+      `Give up to ${ideaSizes(input.agentsLeft).length} candidates, one for each size: ${ideaSizes(input.agentsLeft).join(", ")} words. Each links that many of YOUR face-down words — skip a size that has no honest link; fewer, better candidates beat a stretch. Then pick the one you would give by its index in \`choice\`.`,
+      "For each candidate: its `targets` are ONLY face-down words from YOUR AGENTS that this clue itself points to — never a bystander, an opponent's agent or the assassin (the card you fear they'll misread goes in `risk`). Each target has `why` (a few words on the link, shown to the players after the game) and `strength`: `obvious` (most players would name it within seconds of hearing the clue), `fair` (a good player gets it), or `stretch` (wordplay, a loose 'can be', a link you have to explain). Stretches are not given: a stretched target is dropped from the clue, and its number shrinks. The number you give is the count of these targets.",
       "Leftovers from your earlier clues do NOT belong in `targets`: list the ones you expect your operatives to take with the extra guess in `leftovers`. Never stretch a new clue to cover a leftover.",
       "`summary`: one plain sentence about the idea that links the targets (and, if it matters, the dangerous card you kept away from). Never mention other candidates, tests, or your thinking process.",
     ].join(" "),
@@ -267,8 +279,13 @@ const CLUE_JSON_SCHEMA = {
               properties: {
                 word: { type: "string" },
                 why: { type: "string", description: "A few words: how it connects to the clue." },
+                strength: {
+                  type: "string",
+                  enum: ["obvious", "fair", "stretch"],
+                  description: "How readily a typical player connects it to the clue.",
+                },
               },
-              required: ["word", "why"],
+              required: ["word", "why", "strength"],
             },
           },
           leftovers: {
@@ -296,7 +313,10 @@ const CLUE_JSON_SCHEMA = {
 const RawCandidateSchema = z.object({
   clue: z.string(),
   unlimited: z.boolean(),
-  targets: z.array(z.object({ word: z.string(), why: z.string() })),
+  // Lenient: an unknown strength reads as `fair` rather than failing the whole answer.
+  targets: z.array(
+    z.object({ word: z.string(), why: z.string(), strength: z.string().optional() }),
+  ),
   leftovers: z.array(z.string()),
   risk: z.string(),
   summary: z.string(),
@@ -482,10 +502,14 @@ interface Candidate {
 }
 
 /**
- * A model candidate → a playable clue. Enforces the leftover rule: a word
- * still owed from an earlier clue is the extra guess's job, not the new
- * clue's — so it moves to `leftover` and the number drops (one leftover:
- * the +1 covers it; two or more: ∞, so the team can collect them all).
+ * A model candidate → a playable clue, or null when nothing it names is a
+ * target. Only the team's own face-down agents can be targets: a bystander
+ * or opponent the model listed (KITE for CYCLONE — the misread it feared) is
+ * dropped, and so is a target it rated a `stretch`; the number counts what
+ * remains. Enforces the leftover rule too: a word still owed from an earlier
+ * clue is the extra guess's job, not the new clue's — so it moves to
+ * `leftover` and the number drops (one leftover: the +1 covers it; two or
+ * more: ∞, so the team can collect them all).
  */
 export function toCandidate(raw: RawCandidate, input: ClueInput): Candidate | null {
   const faceDown = input.cards.filter((c) => !c.revealed);
@@ -498,7 +522,9 @@ export function toCandidate(raw: RawCandidate, input: ClueInput): Candidate | nu
   );
   const named = raw.targets.flatMap((t) => {
     const card = indexOfWord(faceDown, t.word);
-    return card === null ? [] : [{ card, why: t.why.trim() }];
+    return card === null || !own.has(card) || t.strength === "stretch"
+      ? []
+      : [{ card, why: t.why.trim() }];
   });
   const fresh = named.filter((t) => !pending.has(t.card));
   const moved = fresh.length > 0 ? named.filter((t) => pending.has(t.card)) : [];
@@ -513,6 +539,8 @@ export function toCandidate(raw: RawCandidate, input: ClueInput): Candidate | nu
     input.mode === "classic" && (raw.unlimited || (moved.length >= 2 && targets.length > 0));
   const count: ClueCount = unlimited ? "unlimited" : Math.min(MAX_CLUE_COUNT, targets.length);
   if (!raw.clue.trim()) return null;
+  // Named targets, none of them playable: not a deliberate 0 clue.
+  if (targets.length === 0 && raw.targets.length > 0 && !unlimited) return null;
   return {
     clue: { word: raw.clue.trim(), count },
     targets: targets.map((t) => t.card),
@@ -522,13 +550,13 @@ export function toCandidate(raw: RawCandidate, input: ClueInput): Candidate | nu
   };
 }
 
-/** The order a keyless operative would touch the table for `clue`. */
+/** The order a keyless operative would touch the table for `clue`, and how sure it is of each. */
 async function testRead(
   spend: Spend,
   input: ClueInput,
   clue: Clue,
   budgetMs: number,
-): Promise<number[]> {
+): Promise<ReadPick[]> {
   const words = input.cards
     .filter((c) => !c.revealed)
     .map((c) => ({ index: c.index, word: c.word }));
@@ -557,24 +585,36 @@ async function testRead(
     budgetMs,
     reasoningEffort: "low",
   });
-  return indicesOf(
-    words,
-    RawGuessSchema.parse(raw).picks.map((p) => p.word),
-  );
+  const read: ReadPick[] = [];
+  for (const pick of RawGuessSchema.parse(raw).picks) {
+    const card = indexOfWord(words, pick.word);
+    if (card !== null && !read.some((r) => r.card === card)) {
+      read.push({ card, confidence: pick.confidence });
+    }
+  }
+  return read;
 }
 
 /**
+ * How much the spymaster's own pick counts against the reads: one more word
+ * the reader is sure of outweighs it; a long shot doesn't.
+ */
+const OWN_CHOICE_BONUS = 0.3;
+
+/**
  * Mastermind: read every idea (one per size) through a keyless operative and
- * keep the one whose reading lands best — +1 per own agent read in order,
- * the first miss priced by what it hits (`readScore`). A 3-word idea that
- * reads cleanly beats a safe single; one that reads a bystander first loses.
+ * keep the one whose reading lands best (`readScore`: own agents touched
+ * while the reader is sure, the first miss priced by what it hits, each
+ * target it didn't find held against the clue). A 3-word idea that reads
+ * cleanly beats a safe single; a stretch the reader only half follows loses
+ * to it, and the spymaster's own pick wins anything close.
  */
 async function bestByTestRead(
   spend: Spend,
   input: ClueInput,
   pool: Candidate[],
   startedAt: number,
-): Promise<{ pick: Candidate; read: number[] | null }> {
+): Promise<{ pick: Candidate; read: ReadPick[] | null }> {
   const [chosen] = pool;
   if (!chosen) throw new Error("no candidate");
   const left = CLUE_STEP_MS - (Date.now() - startedAt);
@@ -589,8 +629,9 @@ async function bestByTestRead(
   pool.forEach((candidate, i) => {
     const read = reads[i];
     if (!read) return;
-    // The spymaster's own choice only breaks ties — the reads decide.
-    const score = readScore(read, kindOf, candidate.clue.count) + (i === 0 ? 0.05 : 0);
+    const score =
+      readScore(read, kindOf, candidate.clue.count, candidate.targets) +
+      (i === 0 ? OWN_CHOICE_BONUS : 0);
     if (score > bestScore) {
       bestScore = score;
       best = i;
@@ -603,7 +644,12 @@ async function giveClue(input: ClueInput): Promise<ClueOutput> {
   const startedAt = Date.now();
   const spend = new Spend();
   const faceUp = input.cards.filter((c) => !c.revealed).map((c) => c.word);
-  const legal = (c: Candidate) => clueProblem(c.clue.word, faceUp, input.language) === null;
+  // Classic: a spelling-only clash is a legal thing to propose — the machine
+  // asks the other spymaster, as it would for a person. Duet has no one to ask.
+  const legal = (c: Candidate) =>
+    input.mode === "classic"
+      ? clueVerdict(c.clue.word, faceUp, input.language).kind !== "hard"
+      : clueProblem(c.clue.word, faceUp, input.language) === null;
   const candidatesOf = (answer: RawClue) => {
     const all = answer.candidates.map((c) => toCandidate(c, input));
     const chosen = all[answer.choice] ?? all[0] ?? null;
@@ -639,7 +685,7 @@ async function giveClue(input: ClueInput): Promise<ClueOutput> {
         .filter((c) => c !== pick)
         .slice(0, 3)
         .map((c) => ({ word: c.clue.word, count: c.clue.count, targets: c.targets })),
-      ...(read ? { testRead: read } : {}),
+      ...(read ? { testRead: read.map((r) => r.card) } : {}),
       ...spend.fields,
     };
   } catch (err) {
@@ -682,4 +728,53 @@ async function guess(input: GuessInput): Promise<GuessOutput> {
   }
 }
 
-export const llmCodenamesAgent: CodenamesAiAgent = { giveClue, guess };
+// ---------------------------------------------------------------------------
+// Ruling on the other side's clue question
+// ---------------------------------------------------------------------------
+
+const JUDGE_JSON_SCHEMA = {
+  type: "object",
+  additionalProperties: false,
+  properties: {
+    allow: { type: "boolean" },
+    reason: {
+      type: "string",
+      description: "One short sentence, shown to both teams after the game.",
+    },
+  },
+  required: ["allow", "reason"],
+};
+
+const RawJudgeSchema = z.object({ allow: z.boolean(), reason: z.string() });
+
+function judgeSystem(input: JudgeInput): string {
+  return [
+    `You are the opposing spymaster in Codenames, playing in ${LANGUAGE_NAME[input.language]}. The other spymaster quietly asks whether a clue may stand although its spelling overlaps a word still face down on the table. You answer by the rulebook, fairly — not to win.`,
+    `The rulebook (Codenames, CGE 2015, "Valid clues"): "Your clue must be about the meaning of the words. You can't use your clue to talk about the letters in a word … Gland is not a valid clue for ENGLAND." "You can't say any form of a visible word on the table. Until BREAK is covered up by a card, you can't say break, broken, breakage, or breakdown." "You can't say part of a compound word on the table. Until HORSESHOE is covered up, you can't say horse, shoe, unhorsed, or snowshoe." "Same-sounding words with different meanings and different spellings are considered different words … You can give the clue k-n-i-g-h-t even when NIGHT is one of the codenames on the table." "Words that are spelled the same are considered the same." But: "DON'T BE TOO STRICT. England and island were originally compound words, but in this century, island is a valid clue for ENGLAND. Even land is a valid clue for ENGLAND. And anybody who says you can't say sparrow when ROW is on the table is just trying to cause trouble."`,
+    "Refuse when the clue is a form of the table word, a compound a speaker would hear as built from it, or a word whose only tie to the clue's meaning is its letters. Allow when the overlap is only spelling — the words mean unrelated things (KNIGHT and NIGHT, SPARROW and ROW) — or the compound is no longer felt as one.",
+  ].join("\n\n");
+}
+
+async function judgeClue(input: JudgeInput): Promise<JudgeOutput> {
+  const spend = new Spend();
+  try {
+    const raw = await spend.call({
+      feature: "codenames",
+      label: "codenames-judge",
+      modelOverride: modelForTier(input.model),
+      system: judgeSystem(input),
+      user: `Clue: ${input.clue.toUpperCase()}\nFace-down word it overlaps: ${input.clash.toUpperCase()}`,
+      schemaName: "codenames_judge",
+      jsonSchema: JUDGE_JSON_SCHEMA,
+      budgetMs: JUDGE_BUDGET_MS,
+      reasoningEffort: "low",
+    });
+    const parsed = RawJudgeSchema.parse(raw);
+    return { allow: parsed.allow, reason: parsed.reason, ...spend.fields };
+  } catch (err) {
+    console.error(`[codenames] ruling failed; using the stand-in judge: ${causeChain(err)}`);
+    return { ...fallbackJudge(input), ...spend.fields };
+  }
+}
+
+export const llmCodenamesAgent: CodenamesAiAgent = { giveClue, guess, judgeClue };

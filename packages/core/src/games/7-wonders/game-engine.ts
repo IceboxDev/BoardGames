@@ -48,7 +48,6 @@ export function createInitialState(config: SevenWondersConfig, rng?: Rng): GameS
     coins: STARTING_COINS,
     tableau: [],
     militaryTokens: [],
-    freeBuildUsedThisAge: false,
     ...emptyEdificeFields(),
   }));
 
@@ -80,7 +79,7 @@ export function createInitialState(config: SevenWondersConfig, rng?: Rng): GameS
     playerCount,
     age: 1,
     turn: 1,
-    phase: "selecting",
+    phase: sideMode === "choose" ? "choosing-sides" : "selecting",
     players,
     hands,
     selections: players.map(() => null),
@@ -90,6 +89,33 @@ export function createInitialState(config: SevenWondersConfig, rng?: Rng): GameS
     edifices,
     lastRevealed: [],
     actionLog: [{ type: "age-start", age: 1 }],
+    ...(sideMode === "choose" && { sideChoices: players.map(() => null) }),
+  };
+}
+
+// ── Choosing sides ──────────────────────────────────────────────────────────
+
+/**
+ * One seat picks its board side. The pick stays hidden until the last seat
+ * has chosen; then every board turns to its chosen side and Age I begins.
+ */
+export function applySideChoice(
+  state: GameState,
+  playerIndex: number,
+  action: SevenWondersAction,
+): GameState {
+  if (state.phase !== "choosing-sides" || !state.sideChoices) {
+    throw new Error("Not choosing sides");
+  }
+  if (action.type !== "choose-side") throw new Error("Only a side can be chosen now");
+  assertLegal(state, playerIndex, action);
+  const sideChoices = state.sideChoices.map((c, i) => (i === playerIndex ? action.side : c));
+  if (sideChoices.some((c) => c === null)) return { ...state, sideChoices };
+  const { sideChoices: _done, ...rest } = state;
+  return {
+    ...rest,
+    phase: "selecting",
+    players: state.players.map((p, i) => ({ ...p, side: sideChoices[i] ?? p.side })),
   };
 }
 
@@ -111,6 +137,8 @@ function actionKey(a: SevenWondersAction): string {
       return `pick|${a.cardId}`;
     case "skip-pending":
       return "skip";
+    case "choose-side":
+      return `side|${a.side}`;
     case "play-seventh":
       return `seventh|${actionKey(a.action)}`;
   }
@@ -215,7 +243,6 @@ export function applyReveal(state: GameState): GameState {
     hands[i] = hands[i].filter((id) => id !== sel.cardId);
     if (sel.type === "play-card") {
       players[i].tableau.push(sel.cardId);
-      if (sel.payment.kind === "free-build") players[i].freeBuildUsedThisAge = true;
       plays.push({ playerIndex: i, action: "play-card", cardId: sel.cardId, payment: sel.payment });
     } else if (sel.type === "build-wonder") {
       players[i].stagesBuilt += 1;
@@ -402,7 +429,6 @@ export function applyPendingAction(
         if (inner.payment.kind === "resources") {
           player.coins -= getCardDef(cardIdName(inner.cardId)).cost.coins ?? 0;
         }
-        if (inner.payment.kind === "free-build") player.freeBuildUsedThisAge = true;
         player.tableau.push(inner.cardId);
         const mid: GameState = { ...state, players, hands, discard };
         for (const effect of getCardDef(cardIdName(inner.cardId)).effects) {
@@ -614,7 +640,7 @@ export function advanceAge(state: GameState): GameState {
 
   const age = (state.age + 1) as Age;
   const hands = dealHands(state.ageDecks[age as 2 | 3], state.playerCount);
-  const players = state.players.map((p) => ({ ...p, freeBuildUsedThisAge: false }));
+  const players = state.players.map((p) => ({ ...p }));
   return {
     ...state,
     age,

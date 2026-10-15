@@ -1,5 +1,5 @@
 import { formatClueCount } from "@boardgames/core/games/codenames/clue-rules";
-import type { TurnEnd, TurnRecord } from "@boardgames/core/games/codenames/types";
+import type { AppealRuling, TurnEnd, TurnRecord } from "@boardgames/core/games/codenames/types";
 import type { LogAction, LogBlock, LogVariant } from "../../../components/action-log";
 import { RESULT_TEXT, seatLabel, teamName } from "./labels";
 
@@ -13,7 +13,18 @@ const END_TEXT: Record<TurnEnd, string> = {
   "guess-timeout": "Ran out of time guessing",
 };
 
-/** One block per turn, oldest first (ActionLog shows newest first). */
+const RULING_TEXT: Record<AppealRuling, string> = {
+  allowed: "allowed",
+  refused: "refused",
+  unanswered: "no answer — it stands",
+  withdrawn: "withdrawn",
+};
+
+/**
+ * One block per turn, oldest first (ActionLog shows newest first). Clue
+ * questions appear only where the view carries them: to the spymasters during
+ * play, to everyone after the game.
+ */
 export function mapCodenamesLog(
   turns: readonly TurnRecord[],
   words: readonly string[],
@@ -21,6 +32,18 @@ export function mapCodenamesLog(
 ): LogBlock[] {
   return turns.map((turn, t) => {
     const actions: LogAction[] = [];
+    (turn.appeals ?? []).forEach((a, i) => {
+      actions.push({
+        key: `a${i}`,
+        icon: "⚖",
+        variant: a.ruling === "refused" ? "warning" : "info",
+        spans: [
+          `${seatLabel(a.by, names)} asked ${seatLabel(a.judge, names)} about `,
+          { text: a.word.toUpperCase(), bold: true },
+          ` (${a.clash.toUpperCase()} on the table) — ${RULING_TEXT[a.ruling]}`,
+        ],
+      });
+    });
     if (turn.clue) {
       actions.push({
         key: "clue",

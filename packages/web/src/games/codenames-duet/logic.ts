@@ -41,7 +41,6 @@ export function toGridCard(card: DuetCardView, pickable: boolean, showKey: boole
     word: card.word,
     cover: card.found ? "green" : deadForBoth ? "tan" : null,
     keyTone: !card.found && showKey && card.mine ? KEY_TONE[card.mine] : null,
-    marks: [],
     badges: deadForBoth
       ? []
       : card.bystanderFor.map((s) => ({ label: SIDE_NAMES[s].slice(-1), tone: "tan" })),
@@ -244,7 +243,6 @@ export function buildDuetReview(game: DuetGame): ReviewModel {
           word: w,
           cover,
           keyTone,
-          marks: [],
           badges:
             cover === null
               ? sides.map((s) => ({ label: SIDE_NAMES[s].slice(-1), tone: "tan" }))

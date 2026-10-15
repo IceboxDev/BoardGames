@@ -16,20 +16,20 @@ function selectAllDiscards(state: GameState, except?: number): GameState {
 
 describe("Halikarnassos pending", () => {
   function stateWithStagePending(): GameState {
-    // Player 0 (Halikarnassos A, stage 1 built) builds stage 2 (3 ore,
-    // play-discarded) mid-age on turn 3. The discard pile has picks.
+    // Player 0 (Halikarnassos A, stage 1 built) builds stage 2 (glass +
+    // papyrus, play-discarded) mid-age on turn 3. The discard pile has picks.
     const state = makeTestState(
       [
         {
           wonder: "halikarnassos",
           stagesBuilt: 1,
-          tableau: ["Foundry", "Ore Vein"],
+          tableau: ["Foundry", "Glassworks", "Press"],
           hand: ["Altar", "Baths"],
         },
         { wonder: "babylon", hand: ["Theater", "Stockade"] },
         { wonder: "olympia", hand: ["Loom", "Press"] },
       ],
-      { turn: 3, discard: idsFor(["Tavern", "Foundry", "Pawnshop"]) },
+      { turn: 3, discard: idsFor(["Tavern", "Foundry", "Well"]) },
     );
     let next = applySelection(state, 0, {
       type: "build-wonder",
@@ -56,7 +56,7 @@ describe("Halikarnassos pending", () => {
     // Foundry is already in the tableau; this turn's discards joined the pile.
     expect(names).not.toContain("Foundry");
     expect(names).toContain("Tavern");
-    expect(names).toContain("Pawnshop");
+    expect(names).toContain("Well");
     expect(names).toContain("Theater");
     expect(actions.some((a) => a.type === "skip-pending")).toBe(true);
   });
@@ -117,7 +117,7 @@ describe("Babylon seventh card", () => {
     const revealed = applyReveal(selectAllDiscards(turnSixState()));
     const leftover = revealed.hands[0][0];
     expect(cardIdName(leftover)).toBe("Baths"); // Altar was discarded first
-    // Baths costs 1 stone — unaffordable for Babylon (clay); discard it instead.
+    // Baths costs 1 stone — Babylon makes wood; discard it instead.
     const next = applyPendingAction(revealed, 0, {
       type: "play-seventh",
       action: { type: "discard", cardId: leftover },
@@ -154,15 +154,15 @@ describe("Babylon seventh card", () => {
   });
 
   it("resolves before a Halikarnassos pick so the 7th discard is available", () => {
-    // Player 1 (Halikarnassos A, 3 ore on board) builds the play-discarded
+    // Player 1 (Halikarnassos A, glass + papyrus on board) builds the play-discarded
     // stage on turn 6 while player 0 (Babylon B) holds the 7th card.
     const state = makeTestState(
       [
-        { wonder: "babylon", side: "B", stagesBuilt: 2, hand: ["Baths", "Pawnshop"] },
+        { wonder: "babylon", side: "B", stagesBuilt: 2, hand: ["Baths", "Well"] },
         {
           wonder: "halikarnassos",
           stagesBuilt: 1,
-          tableau: ["Foundry", "Ore Vein"],
+          tableau: ["Foundry", "Glassworks", "Press"],
           hand: ["Altar", "Theater"],
         },
         { wonder: "olympia", hand: ["Loom", "Press"] },
@@ -180,9 +180,9 @@ describe("Babylon seventh card", () => {
 
     expect(next.pendingQueue.map((p) => p.kind)).toEqual(["babylon-seventh", "halikarnassos"]);
 
-    // Babylon discards Pawnshop as the 7th card...
+    // Babylon discards Well as the 7th card...
     const leftover = next.hands[0][0];
-    expect(cardIdName(leftover)).toBe("Pawnshop");
+    expect(cardIdName(leftover)).toBe("Well");
     next = applyPendingAction(next, 0, {
       type: "play-seventh",
       action: { type: "discard", cardId: leftover },
@@ -191,13 +191,11 @@ describe("Babylon seventh card", () => {
     // ...and Halikarnassos can now pick it out of the pile.
     expect(getActivePlayer(next)).toBe(1);
     const picks = getLegalActions(next, 1).filter((a) => a.type === "pick-discard");
-    const pawnshop = picks.find(
-      (a) => a.type === "pick-discard" && cardIdName(a.cardId) === "Pawnshop",
-    );
-    expect(pawnshop).toBeDefined();
-    if (pawnshop?.type !== "pick-discard") throw new Error("unreachable");
-    next = applyPendingAction(next, 1, pawnshop);
-    expect(next.players[1].tableau.map(cardIdName)).toContain("Pawnshop");
+    const well = picks.find((a) => a.type === "pick-discard" && cardIdName(a.cardId) === "Well");
+    expect(well).toBeDefined();
+    if (well?.type !== "pick-discard") throw new Error("unreachable");
+    next = applyPendingAction(next, 1, well);
+    expect(next.players[1].tableau.map(cardIdName)).toContain("Well");
     expect(next.age).toBe(2);
   });
 });

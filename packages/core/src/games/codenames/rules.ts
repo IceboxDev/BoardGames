@@ -8,10 +8,11 @@
 import { rngFrom, rngStateFromSeed } from "../../lib/rng";
 import { codenamesModelOf } from "./ai/models";
 import { dealKey, dealWords, type KeyEntry } from "./board";
-import { type Clue, cleanClueWord, clueProblem, guessLimit } from "./clue-rules";
-import type { ClueNote, GuessNote } from "./notes";
+import { type Clue, cleanClueWord, clueProblem, clueVerdict, guessLimit } from "./clue-rules";
+import type { AiCost, ClueNote, GuessNote } from "./notes";
 import { operativesOf, otherTeam, roleOf, spymasterOf, type Team, teamOf } from "./seating";
 import {
+  type AppealRuling,
   type CodenamesAction,
   type CodenamesBeats,
   type CodenamesState,
@@ -50,6 +51,11 @@ export function createGame(input: NewGameInput): CodenamesState {
     phase: "clue",
     turns: [{ team: startingTeam, clue: null, guesses: [], end: null }],
     marks: [],
+    notes: [],
+    appeal: null,
+    away: [],
+    standIns: [],
+    reclaims: [],
     chat: [],
     clueTimerSec: input.clueTimerSec,
     guessTimerSec: input.guessTimerSec,
@@ -133,6 +139,33 @@ export function canEndTurn(state: CodenamesState, seat: number): boolean {
   return canGuess(state, seat) && currentTurn(state).guesses.length > 0;
 }
 
+/** The seat that rules on the current team's clue questions: the other spymaster. */
+export function judgeOf(state: CodenamesState): number {
+  return spymasterOf(otherTeam(state.currentTeam));
+}
+
+/** Whether `seat` (a person) must allow or refuse the clue question in progress. */
+export function canRule(state: CodenamesState, seat: number): boolean {
+  return state.appeal !== null && state.appeal.judge === seat && !isAiSeat(state, seat);
+}
+
+/** Whether `seat` (a person) may take back the clue question it asked. */
+export function canWithdraw(state: CodenamesState, seat: number): boolean {
+  return state.appeal !== null && state.appeal.by === seat && !isAiSeat(state, seat);
+}
+
+/** A person operative at a live table: may pin the team's clues to cards. */
+export function canNote(state: CodenamesState, seat: number): boolean {
+  return (
+    state.phase !== "over" &&
+    Number.isInteger(seat) &&
+    seat >= 0 &&
+    seat < state.seatCount &&
+    roleOf(seat) === "operative" &&
+    !isAiSeat(state, seat)
+  );
+}
+
 /** Spymasters keep a straight face: team chat is for operatives. */
 export function canChat(state: CodenamesState, seat: number): boolean {
   return seat >= 0 && seat < state.seatCount && roleOf(seat) === "operative";
@@ -153,6 +186,7 @@ function endTurn(state: CodenamesState, end: TurnEnd): CodenamesState {
     currentTeam: next,
     phase: "clue",
     marks: [],
+    appeal: null,
     deadlineTs: null,
     aiQueue: [],
   };
@@ -166,6 +200,7 @@ function finish(state: CodenamesState, winner: Team, end: TurnEnd): CodenamesSta
     turns,
     phase: "over",
     marks: [],
+    appeal: null,
     deadlineTs: null,
     aiQueue: [],
     aiThinking: null,
@@ -177,10 +212,107 @@ function finish(state: CodenamesState, winner: Team, end: TurnEnd): CodenamesSta
   };
 }
 
-export function clueProblemFor(state: CodenamesState, seat: number, clue: Clue): string | null {
+/** Why `seat` can't put a clue (to the table or to the other spymaster) right now. */
+function cluePhaseProblem(state: CodenamesState, seat: number): string | null {
   if (state.phase !== "clue") return "It isn't time for a clue.";
   if (seat !== currentSpymaster(state)) return "Only the team's spymaster gives the clue.";
-  return clueProblem(clue.word, faceDownWords(state), state.language);
+  if (state.appeal !== null) return "Wait for the other spymaster's answer first.";
+  return null;
+}
+
+/**
+ * Why `clue` can't be given as it stands, or `null`. A clue that only shares
+ * spelling with a table word can't be given outright either — it is asked
+ * about first (`askProblemFor`).
+ */
+export function clueProblemFor(state: CodenamesState, seat: number, clue: Clue): string | null {
+  return (
+    cluePhaseProblem(state, seat) ?? clueProblem(clue.word, faceDownWords(state), state.language)
+  );
+}
+
+/** Why `clue` can't be asked about, or `null`: only a spelling-only clash goes to the judge. */
+export function askProblemFor(state: CodenamesState, seat: number, clue: Clue): string | null {
+  const phase = cluePhaseProblem(state, seat);
+  if (phase !== null) return phase;
+  const verdict = clueVerdict(clue.word, faceDownWords(state), state.language);
+  if (verdict.kind === "hard") return verdict.message;
+  if (verdict.kind === "ok") return "That clue is fine as it is — just give it.";
+  return null;
+}
+
+/**
+ * The spymaster asks the other spymaster about a spelling-only clash
+ * (rulebook, "Don't be too strict": "If the opposing spymaster allows it,
+ * the clue is valid"). The clue timer stops while they wait; a refusal gives
+ * the time back.
+ */
+export function askClue(
+  state: CodenamesState,
+  seat: number,
+  clue: Clue,
+  note: ClueNote | null,
+  now: number,
+): CodenamesState {
+  const problem = askProblemFor(state, seat, clue);
+  if (problem !== null) throw new Error(problem);
+  const verdict = clueVerdict(clue.word, faceDownWords(state), state.language);
+  if (verdict.kind !== "soft") throw new Error("nothing to ask about");
+  return {
+    ...state,
+    appeal: {
+      by: seat,
+      judge: judgeOf(state),
+      clue: { word: cleanClueWord(clue.word), count: clue.count },
+      note,
+      clash: verdict.clash,
+      deadlineTs: now + state.beats.appealWait,
+      clueMsLeft: state.deadlineTs === null ? null : Math.max(0, state.deadlineTs - now),
+    },
+    deadlineTs: null,
+  };
+}
+
+/**
+ * Close the clue question. Allowed (or unanswered — silence is consent): the
+ * clue is given. Refused or withdrawn: the spymaster thinks again, with the
+ * clue time they had left.
+ */
+export function resolveAppeal(
+  state: CodenamesState,
+  ruling: AppealRuling,
+  reason: string | null,
+  now: number,
+  /** What an AI judge's ruling cost, kept with the record. */
+  cost: AiCost | null = null,
+): CodenamesState {
+  const appeal = state.appeal;
+  if (appeal === null || state.phase !== "clue") throw new Error("no clue question is open");
+  const turn = currentTurn(state);
+  const record = {
+    word: appeal.clue.word,
+    clash: appeal.clash,
+    by: appeal.by,
+    judge: appeal.judge,
+    ruling,
+    reason,
+    ...(cost ? { cost } : {}),
+  };
+  const turns = state.turns.slice(0, -1);
+  const stands = ruling === "allowed" || ruling === "unanswered";
+  turns.push({
+    ...turn,
+    appeals: [...(turn.appeals ?? []), record],
+    ...(stands ? { clue: appeal.clue } : {}),
+    ...(stands && appeal.note ? { note: appeal.note } : {}),
+  });
+  if (stands) return { ...state, turns, appeal: null, phase: "guessing", deadlineTs: null };
+  return {
+    ...state,
+    turns,
+    appeal: null,
+    deadlineTs: appeal.clueMsLeft === null ? null : now + appeal.clueMsLeft,
+  };
 }
 
 export function applyClue(
@@ -208,11 +340,17 @@ export function attachGuessNote(state: CodenamesState, note: GuessNote): Codenam
   return { ...state, turns };
 }
 
-/** Face-down cards from `targets`, distinct — a person's clue targets as kept. */
+/**
+ * The clue-giving team's face-down agents from `targets`, distinct — a
+ * person's clue targets as kept. A clue can only mean the team's own cards.
+ */
 export function cleanTargets(state: CodenamesState, targets: readonly number[]): number[] {
   return targets.filter(
     (card, i) =>
-      Number.isInteger(card) && state.revealed[card] === false && targets.indexOf(card) === i,
+      Number.isInteger(card) &&
+      state.revealed[card] === false &&
+      state.key[card] === state.currentTeam &&
+      targets.indexOf(card) === i,
   );
 }
 
@@ -239,6 +377,8 @@ export function applyGuess(state: CodenamesState, seat: number, card: number): C
     revealed,
     turns,
     marks: state.marks.filter((m) => m.card !== card),
+    // A covered card is settled: the team's guesses about it go with it.
+    notes: state.notes.filter((n) => n.card !== card),
     aiQueue: state.aiQueue.filter((c) => c !== card),
   };
 
@@ -266,15 +406,57 @@ export function applyTimeout(state: CodenamesState): CodenamesState {
   return state;
 }
 
+/**
+ * Each operative has ONE pointer — "this is the one I'd touch" — so the
+ * team's cards read as a vote. Pointing at another card moves it; pointing
+ * at the same card again takes it off.
+ */
 export function applyMark(state: CodenamesState, seat: number, card: number): CodenamesState {
   if (!canGuess(state, seat)) throw new Error("only the guessing team's operatives point");
   if (state.revealed[card] !== false) throw new Error("that card can't be pointed at");
-  const has = state.marks.some((m) => m.card === card && m.seat === seat);
+  const had = state.marks.some((m) => m.card === card && m.seat === seat);
+  const others = state.marks.filter((m) => m.seat !== seat);
+  return { ...state, marks: had ? others : [...others, { card, seat }] };
+}
+
+/** Why `seat` can't pin the clue of turn `turn` to `card`, or `null`. */
+export function noteProblem(
+  state: CodenamesState,
+  seat: number,
+  card: number,
+  turn: number,
+): string | null {
+  if (!canNote(state, seat)) return "only your team's operatives pin notes";
+  if (!Number.isInteger(card) || state.revealed[card] !== false) {
+    return "notes go on face-down cards";
+  }
+  const record = Number.isInteger(turn) ? state.turns[turn] : undefined;
+  if (!record || record.clue === null || record.team !== teamOf(seat)) {
+    return "that isn't one of your team's clues";
+  }
+  return null;
+}
+
+/**
+ * Pin the team's clue from turn `turn` to `card` — or unpin it: a note is
+ * the team's, so any of its operatives may take one off.
+ */
+export function applyNote(
+  state: CodenamesState,
+  seat: number,
+  card: number,
+  turn: number,
+): CodenamesState {
+  const problem = noteProblem(state, seat, card, turn);
+  if (problem !== null) throw new Error(problem);
+  const team = teamOf(seat);
+  const same = (n: { card: number; turn: number; seat: number }) =>
+    n.card === card && n.turn === turn && teamOf(n.seat) === team;
   return {
     ...state,
-    marks: has
-      ? state.marks.filter((m) => !(m.card === card && m.seat === seat))
-      : [...state.marks, { card, seat }],
+    notes: state.notes.some(same)
+      ? state.notes.filter((n) => !same(n))
+      : [...state.notes, { card, turn, seat }],
   };
 }
 
@@ -289,13 +471,19 @@ export function applyChat(state: CodenamesState, seat: number, text: string): Co
 }
 
 /**
- * Every enumerable move for a person at `seat` — touching or pointing at a
- * face-down card, and stopping. Clues and chat are free text, validated on
- * their own (`machine.ts`); AI seats never act through here.
+ * Every enumerable move for a person at `seat` — ruling on or withdrawing a
+ * clue question, touching or pointing at a face-down card, and stopping.
+ * Clues, notes and chat carry free values and are validated on their own
+ * (`machine.ts`); AI seats never act through here.
  */
 export function legalActionsFor(state: CodenamesState, seat: number): CodenamesAction[] {
-  if (isAiSeat(state, seat) || !canGuess(state, seat)) return [];
+  if (isAiSeat(state, seat)) return [];
   const actions: CodenamesAction[] = [];
+  if (canRule(state, seat)) {
+    actions.push({ kind: "rule-clue", allow: true }, { kind: "rule-clue", allow: false });
+  }
+  if (canWithdraw(state, seat)) actions.push({ kind: "withdraw-clue" });
+  if (!canGuess(state, seat)) return actions;
   state.revealed.forEach((up, card) => {
     if (!up) actions.push({ kind: "guess", card });
   });

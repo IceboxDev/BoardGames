@@ -45,6 +45,11 @@ export type GameScreenMobileRails = "sheet" | "none";
 interface GameScreenProps {
   /** Background class applied to the root container (e.g. "bg-black"). */
   background?: string;
+  /**
+   * A CSS `background-image` under the whole board (a table surface, with any
+   * darkening layers in front of it), drawn over `background`.
+   */
+  backdrop?: string;
   /** Extra classes on the content area (e.g. "mx-auto max-w-2xl"). Gap and padding are built-in. */
   contentClassName?: string;
   /** History log content (right rail). GameScreen provides the rail chrome. */
@@ -98,6 +103,7 @@ type OpenRail = "left" | "right" | null;
 
 export default function GameScreen({
   background,
+  backdrop,
   contentClassName,
   sidebar,
   leftSidebar,
@@ -139,7 +145,12 @@ export default function GameScreen({
     <div
       ref={setRoot}
       className={cn("relative z-raised flex min-h-0 flex-1 gap-2 p-2", background)}
-      style={zoom !== 1 ? { zoom } : undefined}
+      style={{
+        ...(zoom !== 1 ? { zoom } : {}),
+        ...(backdrop
+          ? { backgroundImage: backdrop, backgroundSize: "cover", backgroundPosition: "center" }
+          : {}),
+      }}
       data-zoom={zoom !== 1 ? zoom.toFixed(3) : undefined}
     >
       {/* PC-first layout: the left rail + board sit on top; the fan / controls

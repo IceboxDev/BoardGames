@@ -97,6 +97,7 @@ function duetTable(state: DuetState): TableShape {
   return {
     words: state.words,
     faceDown: (card) => state.found[card] === false,
+    ours: (card) => state.key[card]?.[state.giver] === "agent",
     language: state.language,
   };
 }

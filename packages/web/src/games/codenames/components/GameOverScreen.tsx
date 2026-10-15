@@ -12,10 +12,16 @@ export default function GameOverScreen({
   view,
   names,
   actions,
+  waitingForHost = false,
+  error = null,
 }: {
   view: CodenamesPlayerView;
   names: readonly (string | null)[];
   actions: readonly GameOverAction[];
+  /** A room guest: the host decides whether there is another game. */
+  waitingForHost?: boolean;
+  /** Why a rematch couldn't start (someone left the table). */
+  error?: string | null;
 }) {
   const model = useMemo(
     () =>
@@ -48,6 +54,16 @@ export default function GameOverScreen({
       detail={`${how} · Red ${result.agentsFound[0]} · Blue ${result.agentsFound[1]} · ${view.turns.length} turns`}
       actions={actions}
       model={model}
+      notice={
+        error
+          ? { text: error, tone: "error" }
+          : waitingForHost
+            ? {
+                text: "Waiting for the host — they can start a rematch at this table",
+                tone: "info",
+              }
+            : null
+      }
     />
   );
 }

@@ -652,7 +652,15 @@ export function toSpectatorView(state: BgaFoldState): BgaSpectatorView | null {
   };
 }
 
-// Tableau category via our own card DB (names match BGA for base cards).
+/** BGA's spellings of the four card names ours spell differently. */
+export const BGA_CARD_NAMES: Readonly<Record<string, string>> = {
+  Apothocary: "Apothecary",
+  Bazaar: "Bazar",
+  "Craftsmen Guild": "Craftsmens Guild",
+  Pawnshop: "Well",
+};
+
+// Tableau category via our own card DB.
 const COLOR_TO_CATEGORY: Record<string, string> = {
   brown: "raw",
   grey: "man",
@@ -663,6 +671,6 @@ const COLOR_TO_CATEGORY: Record<string, string> = {
   purple: "gui",
 };
 function categoryOf(name: string): string {
-  const color = CARD_BY_NAME.get(name)?.color;
+  const color = CARD_BY_NAME.get(BGA_CARD_NAMES[name] ?? name)?.color;
   return color ? (COLOR_TO_CATEGORY[color] ?? "") : "";
 }

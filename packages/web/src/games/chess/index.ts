@@ -13,6 +13,8 @@ const replayComponent = lazy(() => import("./components/GameReplay")) as LazyExo
 
 export default {
   component: lazy(() => import("./Chess")),
+  extraMode: "trainer",
+  extraModePath: "solo/trainer",
   rulesUrl,
   lobbyConfigComponent: lazy(() => import("./ChessLobbyConfig")),
   replayComponent,

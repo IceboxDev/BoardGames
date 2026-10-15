@@ -3,6 +3,7 @@ import { getCardDef } from "./cards";
 import { getEdificeDef } from "./edifice";
 import type { CardEffect, GameState, PlayerState, ScienceSymbol, WonderStageEffect } from "./types";
 import { cardIdName, leftOf, rightOf, SCIENCE_SYMBOLS } from "./types";
+import { getWonderDef } from "./wonders";
 
 export interface ScoreBreakdown {
   military: number;
@@ -101,48 +102,14 @@ function endGamePoints(
         effect.amount *
         scopeTargets(state, playerIndex, effect.scopes).reduce((sum, p) => sum + p.stagesBuilt, 0)
       );
-    case "points-per-defeat":
-      return (
-        effect.amount *
-        scopeTargets(state, playerIndex, effect.scopes).reduce(
-          (sum, p) => sum + p.militaryTokens.filter((t) => t < 0).length,
-          0,
-        )
-      );
+    case "points-if-wonder-complete": {
+      const player = state.players[playerIndex];
+      const stages = getWonderDef(player.wonderId).sides[player.side].stages.length;
+      return player.stagesBuilt === stages ? effect.amount : 0;
+    }
     default:
       return 0;
   }
-}
-
-/**
- * Olympia B stage 3: copy the most valuable guild owned by either neighbor,
- * evaluated as if it sat on this player's board. Copying the Scientists Guild
- * is worth the science-score delta of one extra wildcard.
- */
-function bestCopiedGuildValue(state: GameState, playerIndex: number): number {
-  const player = state.players[playerIndex];
-  const neighbors = [
-    state.players[leftOf(playerIndex, state.playerCount)],
-    state.players[rightOf(playerIndex, state.playerCount)],
-  ];
-  let best = 0;
-  for (const neighbor of neighbors) {
-    for (const id of neighbor.tableau) {
-      const def = getCardDef(cardIdName(id));
-      if (def.color !== "purple") continue;
-      let value = 0;
-      for (const effect of def.effects) {
-        if (effect.kind === "science-wildcard") {
-          const { counts, wildcards } = scienceProfile(player);
-          value += scoreScience(counts, wildcards + 1) - scoreScience(counts, wildcards);
-        } else {
-          value += endGamePoints(effect, state, playerIndex);
-        }
-      }
-      best = Math.max(best, value);
-    }
-  }
-  return best;
 }
 
 export function scoreFinal(state: GameState): ScoreBreakdown[] {
@@ -160,9 +127,6 @@ export function scoreFinal(state: GameState): ScoreBreakdown[] {
       else if (source === "yellow") commercial += points;
       else if (source === "purple") guilds += points;
       else if (source === "wonder") wonder += points;
-    }
-    if (builtStageEffects(player).some((e) => e.kind === "copy-guild")) {
-      guilds += bestCopiedGuildValue(state, i);
     }
 
     const { counts, wildcards } = scienceProfile(player);

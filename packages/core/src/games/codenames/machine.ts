@@ -16,12 +16,14 @@ import type {
   CodenamesAiAgent,
   GuessInput,
   GuessOutput,
+  JudgeInput,
+  JudgeOutput,
   PublicTurn,
   SpymasterTurn,
 } from "./ai/agent";
-import { fallbackClue, fallbackCodenamesAgent, fallbackGuess } from "./ai/fallback";
+import { fallbackClue, fallbackCodenamesAgent, fallbackGuess, fallbackJudge } from "./ai/fallback";
 import { DEFAULT_CODENAMES_MODEL } from "./ai/models";
-import { type Clue, ClueCountSchema, cleanClueWord, clueProblem } from "./clue-rules";
+import { type Clue, ClueCountSchema, cleanClueWord, clueVerdict } from "./clue-rules";
 import { type CodenamesConfig, codenamesManifest } from "./manifest";
 import {
   aiCostOf,
@@ -35,6 +37,7 @@ import {
   personClueNote,
 } from "./notes";
 import { buildPlayerView } from "./player-view";
+import { applyReclaims, handOver, handOverProblem, markAway, markBack } from "./presence";
 import type { CodenamesReplayLog } from "./record";
 import {
   agentsLeft,
@@ -43,9 +46,14 @@ import {
   applyEndTurn,
   applyGuess,
   applyMark,
+  applyNote,
   applyTimeout,
+  askClue,
+  askProblemFor,
   attachGuessNote,
   canChat,
+  canRule,
+  canWithdraw,
   cleanTargets,
   clueProblemFor,
   createGame,
@@ -56,17 +64,24 @@ import {
   guessingIsAi,
   isAiSeat,
   legalActionsFor,
+  noteProblem,
+  resolveAppeal,
 } from "./rules";
 import { teamOf } from "./seating";
 import {
+  type AppealRuling,
+  AskClueActionSchema,
   ChatActionSchema,
+  type ClueAppeal,
   type CodenamesAction,
   type CodenamesMachineEvent,
   type CodenamesPlayerView,
   type CodenamesResult,
   type CodenamesState,
   GiveClueActionSchema,
+  HandOverActionSchema,
   type KeyEntry,
+  NoteActionSchema,
   type Team,
   type ViewPhase,
 } from "./types";
@@ -87,6 +102,8 @@ import {
 /** The Mastermind thinks at medium effort and test-reads four ideas: give it room. */
 export const AI_CLUE_DEADLINE_MS = 90_000;
 export const AI_GUESS_DEADLINE_MS = 45_000;
+/** A clue question is a one-line ruling: an AI judge that takes longer is replaced. */
+export const AI_JUDGE_DEADLINE_MS = 20_000;
 
 /** Resolve `run`, or `fallback()` when it throws or misses the deadline. */
 export function raceWithFallback<T>(
@@ -192,6 +209,11 @@ export function buildGuessInput(state: CodenamesState): GuessInput {
 export interface SettledClue {
   clue: Clue;
   note: ClueNote;
+  /**
+   * Set when the clue only shares spelling with this face-down word: it goes
+   * to the opposing spymaster before it is given (only with `appeals`).
+   */
+  clash?: string;
 }
 
 /** An AI operative's touches and its reading of the clue. */
@@ -205,6 +227,8 @@ export interface TableShape {
   words: readonly string[];
   /** Still face down for this clue (Duet: not settled for this side). */
   faceDown: (card: number) => boolean;
+  /** One of the clue-giver's own agents — the only cards a clue can mean. */
+  ours: (card: number) => boolean;
   language: CodenamesState["language"];
 }
 
@@ -246,6 +270,8 @@ const RawPickNoteSchema = z.object({
 });
 
 function clueNoteOf(raw: z.infer<typeof RawClueOutputSchema>, table: TableShape): ClueNote {
+  // A clue means the giver's own face-down agents — never a card to avoid.
+  const ownFaceDown = (card: number) => table.faceDown(card) && table.ours(card);
   const considered = (raw.considered ?? []).flatMap((c) => {
     const parsed = RawConsideredSchema.safeParse(c);
     if (!parsed.success) return [];
@@ -253,11 +279,11 @@ function clueNoteOf(raw: z.infer<typeof RawClueOutputSchema>, table: TableShape)
       {
         word: cleanClueWord(parsed.data.word).slice(0, 30),
         count: parsed.data.count,
-        targets: cleanCards(parsed.data.targets ?? [], table.faceDown).slice(0, 9),
+        targets: cleanCards(parsed.data.targets ?? [], ownFaceDown).slice(0, 9),
       },
     ];
   });
-  const targets = cleanCards(raw.targets ?? [], table.faceDown);
+  const targets = cleanCards(raw.targets ?? [], ownFaceDown);
   const links = (raw.links ?? []).flatMap((l) => {
     const parsed = RawLinkSchema.safeParse(l);
     if (!parsed.success || !targets.includes(parsed.data.card)) return [];
@@ -267,7 +293,7 @@ function clueNoteOf(raw: z.infer<typeof RawClueOutputSchema>, table: TableShape)
   return {
     targets,
     links,
-    leftover: cleanCards(raw.leftover ?? [], (c) => table.faceDown(c) && !targets.includes(c)),
+    leftover: cleanCards(raw.leftover ?? [], (c) => ownFaceDown(c) && !targets.includes(c)),
     reasoning: cleanNoteText(raw.reasoning),
     considered: considered.slice(0, MAX_CONSIDERED_CLUES),
     testRead: raw.testRead ? cleanCards(raw.testRead, table.faceDown) : null,
@@ -277,18 +303,28 @@ function clueNoteOf(raw: z.infer<typeof RawClueOutputSchema>, table: TableShape)
   };
 }
 
-/** An agent's clue → a legal clue and its note, or the fallback's. */
+/**
+ * An agent's clue → a legal clue and its note, or the fallback's. With
+ * `appeals` (classic Codenames), a clue that only shares spelling with a
+ * table word is kept and flagged (`clash`) — the AI asks about it exactly as
+ * a person would; without (Duet), it is refused like any other clash.
+ */
 export function settleClue(
   raw: unknown,
   table: TableShape,
   fallback: () => ClueOutput,
+  appeals = false,
 ): SettledClue {
   const faceDownWords = table.words.filter((_, i) => table.faceDown(i));
   const parsed = RawClueOutputSchema.safeParse(raw);
-  if (parsed.success && clueProblem(parsed.data.word, faceDownWords, table.language) === null) {
+  const verdict = parsed.success
+    ? clueVerdict(parsed.data.word, faceDownWords, table.language)
+    : null;
+  if (parsed.success && (verdict?.kind === "ok" || (appeals && verdict?.kind === "soft"))) {
     return {
       clue: { word: cleanClueWord(parsed.data.word), count: parsed.data.count },
       note: clueNoteOf(parsed.data, table),
+      ...(verdict.kind === "soft" ? { clash: verdict.clash } : {}),
     };
   }
   const fb = fallback();
@@ -339,11 +375,81 @@ export function settlePicks(
   };
 }
 
-/** Table shape for classic: every face-down card. */
+/** A judge's answer, as the machine keeps it. */
+export interface SettledRuling {
+  allow: boolean;
+  reason: string | null;
+  cost: ReturnType<typeof cleanCost>;
+}
+
+const RawRulingSchema = z.object({
+  allow: z.boolean(),
+  reason: z.unknown().optional(),
+  cost: z.unknown().optional(),
+});
+
+/** An agent's ruling → allow or refuse with a short reason, or the fallback judge's. */
+export function settleRuling(raw: unknown, fallback: () => JudgeOutput): SettledRuling {
+  const parsed = RawRulingSchema.safeParse(raw);
+  const source = parsed.success ? parsed.data : fallback();
+  const reason = cleanNoteText(source.reason);
+  return {
+    allow: source.allow,
+    reason: reason ? reason.slice(0, 200) : null,
+    cost: cleanCost(source.cost),
+  };
+}
+
+/** What the AI judge is shown: the two words, nothing of the key. */
+export function buildJudgeInput(state: CodenamesState): JudgeInput {
+  const appeal = state.appeal;
+  return {
+    model: (appeal && state.ai[appeal.judge]) ?? DEFAULT_CODENAMES_MODEL,
+    language: state.language,
+    clue: appeal?.clue.word ?? "",
+    clash: appeal?.clash ?? "",
+  };
+}
+
+/**
+ * Close the clue question. An AI spymaster told no gives its next-best idea
+ * that needs no question (from the clues it weighed), else the stand-in's —
+ * no second question and no second model call, so a refusal costs a beat.
+ */
+export function ruleOnClue(
+  game: CodenamesState,
+  ruling: AppealRuling,
+  reason: string | null,
+  cost: SettledRuling["cost"] = null,
+): CodenamesState {
+  const appeal = game.appeal;
+  const next = resolveAppeal(game, ruling, reason, Date.now(), cost);
+  if (appeal === null || next.phase !== "clue" || !isAiSeat(game, appeal.by)) return next;
+  return aiClueAfterRefusal(next, appeal);
+}
+
+function aiClueAfterRefusal(game: CodenamesState, refused: ClueAppeal): CodenamesState {
+  const table = classicTable(game);
+  const faceDownWords = game.words.filter((_, i) => !game.revealed[i]);
+  const alternative = (refused.note?.considered ?? []).find(
+    (c) =>
+      c.word !== refused.clue.word &&
+      clueVerdict(c.word, faceDownWords, game.language).kind === "ok",
+  );
+  const settled = settleClue(alternative ?? null, table, () => fallbackClue(buildClueInput(game)));
+  // The refused answer's calls were spent all the same: keep them on the clue given.
+  const note: ClueNote = refused.note
+    ? { ...settled.note, cost: refused.note.cost, traceIds: refused.note.traceIds }
+    : settled.note;
+  return applyClue(game, refused.by, settled.clue, note);
+}
+
+/** Table shape for classic: every face-down card; the clue-giving team's agents are its own. */
 function classicTable(state: CodenamesState): TableShape {
   return {
     words: state.words,
     faceDown: (card) => state.revealed[card] === false,
+    ours: (card) => state.key[card] === state.currentTeam,
     language: state.language,
   };
 }
@@ -361,7 +467,20 @@ function aiActors(agent: CodenamesAiAgent) {
         AI_CLUE_DEADLINE_MS,
         "codenames",
       );
-      return settleClue(raw, classicTable(input.state), fallback);
+      return settleClue(raw, classicTable(input.state), fallback, true);
+    }),
+
+    judgeClue: fromPromise(async ({ input }: { input: { state: CodenamesState } }) => {
+      await new Promise((resolve) => setTimeout(resolve, 0));
+      const judgeInput = buildJudgeInput(input.state);
+      const fallback = () => fallbackJudge(judgeInput);
+      const raw = await raceWithFallback<unknown>(
+        () => (agent.judgeClue ? agent.judgeClue(judgeInput) : Promise.resolve(fallback())),
+        fallback,
+        AI_JUDGE_DEADLINE_MS,
+        "codenames",
+      );
+      return settleRuling(raw, fallback);
     }),
 
     computeGuess: fromPromise(async ({ input }: { input: { state: CodenamesState } }) => {
@@ -412,6 +531,7 @@ export const codenamesMachine = setup({
   delays: {
     aiStart: ({ context }) => context.game.beats.aiStart,
     aiGuess: ({ context }) => context.game.beats.aiGuess,
+    appealTimeout: ({ context }) => msUntil(context.game.appeal?.deadlineTs ?? null),
     // The deadline lives in the state (set once per phase), so re-entering
     // the waiting state after a guess resumes the same countdown.
     timeout: ({ context }) => msUntil(context.game.deadlineTs),
@@ -424,6 +544,9 @@ export const codenamesMachine = setup({
     inClue: ({ context }) => context.game.phase === "clue",
     inGuessing: ({ context }) => context.game.phase === "guessing",
     spymasterIsAi: ({ context }) => isAiSeat(context.game, currentSpymaster(context.game)),
+    appealPending: ({ context }) => context.game.appeal !== null,
+    judgeIsAi: ({ context }) =>
+      context.game.appeal !== null && isAiSeat(context.game, context.game.appeal.judge),
     guessersAreAi: ({ context }) => guessingIsAi(context.game),
     clueTimerOn: ({ context }) => context.game.clueTimerSec > 0,
     guessTimerOn: ({ context }) => context.game.guessTimerSec > 0,
@@ -433,10 +556,32 @@ export const codenamesMachine = setup({
       const e = actionOf(event, "give-clue");
       return e !== null && clueProblemFor(context.game, e.player, e.action.clue) === null;
     },
+    isAskClue: ({ context, event }) => {
+      const e = actionOf(event, "ask-clue");
+      return e !== null && askProblemFor(context.game, e.player, e.action.clue) === null;
+    },
+    isAppealMove: ({ context, event }) => {
+      const rule = actionOf(event, "rule-clue");
+      if (rule) return canRule(context.game, rule.player);
+      const withdraw = actionOf(event, "withdraw-clue");
+      return withdraw !== null && canWithdraw(context.game, withdraw.player);
+    },
     isGuessMove: ({ event }) =>
       event.type === "PLAYER_ACTION" &&
       (event.action.kind === "guess" || event.action.kind === "end-turn"),
     isMark: ({ event }) => actionOf(event, "mark") !== null,
+    isHandOver: ({ context, event }) => {
+      const e = actionOf(event, "hand-over");
+      return (
+        e !== null && handOverProblem(context.game, e.player, e.action.seat, Date.now()) === null
+      );
+    },
+    isNote: ({ context, event }) => {
+      const e = actionOf(event, "note");
+      return (
+        e !== null && noteProblem(context.game, e.player, e.action.card, e.action.turn) === null
+      );
+    },
     isChat: ({ context, event }) => {
       const e = actionOf(event, "chat");
       return e !== null && canChat(context.game, e.player);
@@ -484,6 +629,60 @@ export const codenamesMachine = setup({
       }));
     }),
 
+    askClue: assign(({ context, event }) => {
+      const e = actionOf(event, "ask-clue");
+      if (!e) return {};
+      const targets = e.action.targets ?? [];
+      const note = targets.length > 0 ? personClueNote(targets) : null;
+      return safeApply("codenames", () => ({
+        game: askClue(context.game, e.player, e.action.clue, note, Date.now()),
+      }));
+    }),
+
+    applyAppealMove: assign(({ context, event }) => {
+      if (event.type !== "PLAYER_ACTION") return {};
+      const { action } = event;
+      return safeApply("codenames", () => {
+        if (action.kind === "rule-clue") {
+          return { game: ruleOnClue(context.game, action.allow ? "allowed" : "refused", null) };
+        }
+        if (action.kind === "withdraw-clue") {
+          return { game: ruleOnClue(context.game, "withdrawn", null) };
+        }
+        return {};
+      });
+    }),
+
+    // No answer in time: "If no one notices that a clue is invalid, it counts as valid."
+    appealUnanswered: assign(({ context }) =>
+      safeApply("codenames", () => ({ game: ruleOnClue(context.game, "unanswered", null) })),
+    ),
+
+    markJudgeThinking: assign(({ context }) => ({
+      game: { ...context.game, aiThinking: context.game.appeal?.judge ?? null },
+    })),
+
+    recordAiRuling: assign(({ context, event }) => {
+      const output = (event as { output?: SettledRuling }).output;
+      const ruling =
+        output ?? settleRuling(null, () => fallbackJudge(buildJudgeInput(context.game)));
+      return safeApply("codenames", () => ({
+        game: ruleOnClue(
+          context.game,
+          ruling.allow ? "allowed" : "refused",
+          ruling.reason,
+          ruling.cost,
+        ),
+      }));
+    }),
+
+    recordFallbackRuling: assign(({ context }) => {
+      const ruling = settleRuling(null, () => fallbackJudge(buildJudgeInput(context.game)));
+      return safeApply("codenames", () => ({
+        game: ruleOnClue(context.game, ruling.allow ? "allowed" : "refused", ruling.reason),
+      }));
+    }),
+
     applyGuessMove: assign(({ context, event }) => {
       if (event.type !== "PLAYER_ACTION") return {};
       const { action, player } = event;
@@ -499,6 +698,34 @@ export const codenamesMachine = setup({
       if (!e) return {};
       return safeApply("codenames", () => ({
         game: applyMark(context.game, e.player, e.action.card),
+      }));
+    }),
+
+    trackConnection: assign(({ context, event }) => {
+      if (event.type !== "SEAT_CONNECTION") return {};
+      return {
+        game: event.connected
+          ? markBack(context.game, event.seat)
+          : markAway(context.game, event.seat, Date.now()),
+      };
+    }),
+
+    handOver: assign(({ context, event }) => {
+      const e = actionOf(event, "hand-over");
+      if (!e) return {};
+      return safeApply("codenames", () => ({ game: handOver(context.game, e.action.seat) }));
+    }),
+
+    // A person who came back while their stand-in was mid-move gets the seat now.
+    applyReclaims: assign(({ context }) =>
+      context.game.reclaims.length === 0 ? {} : { game: applyReclaims(context.game) },
+    ),
+
+    applyNote: assign(({ context, event }) => {
+      const e = actionOf(event, "note");
+      if (!e) return {};
+      return safeApply("codenames", () => ({
+        game: applyNote(context.game, e.player, e.action.card, e.action.turn),
       }));
     }),
 
@@ -533,9 +760,13 @@ export const codenamesMachine = setup({
         output?.clue ? { ...output.clue, ...output.note } : null,
         classicTable(game),
         fallback,
+        true,
       );
+      // Same rules for everyone: a spelling-only clash is asked about, not given.
       return safeApply("codenames", () => ({
-        game: applyClue(game, seat, settled.clue, settled.note),
+        game: settled.clash
+          ? askClue(game, seat, settled.clue, settled.note, Date.now())
+          : applyClue(game, seat, settled.clue, settled.note),
       }));
     }),
 
@@ -605,13 +836,18 @@ export const codenamesMachine = setup({
         PLAYER_ACTION: [
           { guard: "isChat", actions: "appendChat" },
           { guard: "isMark", actions: "applyMark" },
+          { guard: "isNote", actions: "applyNote" },
+          // A seat that isn't the one being waited on: no re-route, nothing interrupted.
+          { guard: "isHandOver", actions: "handOver" },
         ],
+        SEAT_CONNECTION: { actions: "trackConnection" },
         START: { target: "active", actions: "initGame" },
         RESET: { target: "idle" },
       },
 
       states: {
         route: {
+          entry: "applyReclaims",
           always: [
             { guard: "isOver", target: "#codenames.gameOver" },
             { guard: "inClue", target: "clue" },
@@ -625,6 +861,7 @@ export const codenamesMachine = setup({
           states: {
             decide: {
               always: [
+                { guard: "appealPending", target: "appeal" },
                 { guard: "spymasterIsAi", target: "aiWaiting" },
                 // Armed on the way in, so the `timeout` delay reads the deadline.
                 { guard: "clueTimerOn", target: "timed", actions: "armClueTimer" },
@@ -633,22 +870,75 @@ export const codenamesMachine = setup({
             },
             waiting: {
               on: {
-                PLAYER_ACTION: {
-                  guard: "isGiveClue",
-                  actions: "applyClue",
-                  target: "#codenames.active.route",
-                },
+                PLAYER_ACTION: [
+                  { guard: "isGiveClue", actions: "applyClue", target: "#codenames.active.route" },
+                  { guard: "isAskClue", actions: "askClue", target: "#codenames.active.route" },
+                  // Waiting on a person: handing a seat over may hand the move to the AI.
+                  { guard: "isHandOver", actions: "handOver", target: "#codenames.active.route" },
+                ],
               },
             },
             timed: {
               on: {
+                PLAYER_ACTION: [
+                  { guard: "isGiveClue", actions: "applyClue", target: "#codenames.active.route" },
+                  { guard: "isAskClue", actions: "askClue", target: "#codenames.active.route" },
+                  // Waiting on a person: handing a seat over may hand the move to the AI.
+                  { guard: "isHandOver", actions: "handOver", target: "#codenames.active.route" },
+                ],
+              },
+              after: { timeout: { actions: "timeOut", target: "#codenames.active.route" } },
+            },
+            // A clue that only shares spelling with a table word, put to the
+            // other spymaster. The clue timer is stopped (its time left kept on
+            // the question); the asker may withdraw at any point.
+            appeal: {
+              initial: "decide",
+              on: {
                 PLAYER_ACTION: {
-                  guard: "isGiveClue",
-                  actions: "applyClue",
+                  guard: "isAppealMove",
+                  actions: "applyAppealMove",
                   target: "#codenames.active.route",
                 },
               },
-              after: { timeout: { actions: "timeOut", target: "#codenames.active.route" } },
+              states: {
+                decide: {
+                  always: [{ guard: "judgeIsAi", target: "aiWaiting" }, { target: "awaiting" }],
+                },
+                awaiting: {
+                  on: {
+                    PLAYER_ACTION: {
+                      guard: "isHandOver",
+                      actions: "handOver",
+                      target: "#codenames.active.route",
+                    },
+                  },
+                  after: {
+                    appealTimeout: {
+                      actions: "appealUnanswered",
+                      target: "#codenames.active.route",
+                    },
+                  },
+                },
+                aiWaiting: {
+                  entry: "markJudgeThinking",
+                  after: { aiStart: { target: "aiCalling" } },
+                },
+                aiCalling: {
+                  invoke: {
+                    src: "judgeClue",
+                    input: ({ context }) => ({ state: context.game }),
+                    onDone: {
+                      actions: ["clearThinking", "recordAiRuling"],
+                      target: "#codenames.active.route",
+                    },
+                    onError: {
+                      actions: ["clearThinking", "recordFallbackRuling"],
+                      target: "#codenames.active.route",
+                    },
+                  },
+                },
+              },
             },
             aiWaiting: {
               entry: "markSpymasterThinking",
@@ -683,20 +973,26 @@ export const codenamesMachine = setup({
             },
             waiting: {
               on: {
-                PLAYER_ACTION: {
-                  guard: "isGuessMove",
-                  actions: "applyGuessMove",
-                  target: "#codenames.active.route",
-                },
+                PLAYER_ACTION: [
+                  {
+                    guard: "isGuessMove",
+                    actions: "applyGuessMove",
+                    target: "#codenames.active.route",
+                  },
+                  { guard: "isHandOver", actions: "handOver", target: "#codenames.active.route" },
+                ],
               },
             },
             timed: {
               on: {
-                PLAYER_ACTION: {
-                  guard: "isGuessMove",
-                  actions: "applyGuessMove",
-                  target: "#codenames.active.route",
-                },
+                PLAYER_ACTION: [
+                  {
+                    guard: "isGuessMove",
+                    actions: "applyGuessMove",
+                    target: "#codenames.active.route",
+                  },
+                  { guard: "isHandOver", actions: "handOver", target: "#codenames.active.route" },
+                ],
               },
               after: { timeout: { actions: "timeOut", target: "#codenames.active.route" } },
             },
@@ -787,6 +1083,39 @@ function validateCodenamesAction(
     );
   }
 
+  if (kind === "ask-clue") {
+    const parsed = parseActionSync(AskClueActionSchema, raw.action);
+    if (!parsed.ok) return rejectAction(parsed.reason);
+    if (isAiSeat(game, player)) return rejectAction("that seat is played by the AI");
+    const problem = askProblemFor(game, player, parsed.value.clue);
+    if (problem !== null) return rejectAction(problem);
+    const targets = cleanTargets(game, parsed.value.targets ?? []);
+    return acceptAction(
+      toEvent(player, {
+        kind: "ask-clue",
+        clue: parsed.value.clue,
+        ...(targets.length > 0 ? { targets } : {}),
+      }),
+    );
+  }
+
+  if (kind === "note") {
+    const parsed = parseActionSync(NoteActionSchema, raw.action);
+    if (!parsed.ok) return rejectAction(parsed.reason);
+    const { card, turn } = parsed.value;
+    const problem = noteProblem(game, player, card, turn);
+    if (problem !== null) return rejectAction(problem);
+    return acceptAction(toEvent(player, { kind: "note", card, turn }));
+  }
+
+  if (kind === "hand-over") {
+    const parsed = parseActionSync(HandOverActionSchema, raw.action);
+    if (!parsed.ok) return rejectAction(parsed.reason);
+    const problem = handOverProblem(game, player, parsed.value.seat, Date.now());
+    if (problem !== null) return rejectAction(problem);
+    return acceptAction(toEvent(player, { kind: "hand-over", seat: parsed.value.seat }));
+  }
+
   if (kind === "chat") {
     const parsed = parseActionSync(ChatActionSchema, raw.action);
     if (!parsed.ok) return rejectAction(parsed.reason);
@@ -873,7 +1202,8 @@ export const codenamesSpec: GameMachineSpec<
       seed: game.seed,
       language: game.language,
       seatCount: game.seatCount,
-      ai: [...game.ai],
+      // Who sat down as AI — a stand-in's seat stays its person's.
+      ai: game.ai.map((tier, seat) => (game.standIns.includes(seat) ? null : tier)),
       words: [...game.words],
       key: [...game.key],
       startingTeam: game.startingTeam,

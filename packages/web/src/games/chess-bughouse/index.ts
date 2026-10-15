@@ -10,6 +10,7 @@ const replayComponent = lazy(() => import("./components/GameReplay")) as LazyExo
 
 export default {
   component: lazy(() => import("./Bughouse")),
+  extraMode: "trainer",
   rulesUrl,
   lobbyConfigComponent: lazy(() => import("./BughouseLobbyConfig")),
   replayComponent,

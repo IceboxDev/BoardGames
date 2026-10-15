@@ -40,6 +40,8 @@ export interface MultiplayerRoomState<TView, TAction, TResult> {
   toggleReady: () => void;
   swapSeats: (a: number, b: number) => void;
   shuffleSeats: () => void;
+  /** Host-only, after the game: play again at once (seats moved `rotateBy` places first). */
+  rematchRoom: (rotateBy?: number) => void;
 
   // Room chat (Sky Team briefing today; available to any game that wants it)
   chatMessages: ChatMessage[];
@@ -117,6 +119,7 @@ export function useMultiplayerRoom<TView = unknown, TAction = unknown, TResult =
     toggleReady: session.toggleReady,
     swapSeats: session.swapSeats,
     shuffleSeats: session.shuffleSeats,
+    rematchRoom: session.rematchRoom,
 
     chatMessages: session.chatMessages,
     sendChat: session.sendChat,

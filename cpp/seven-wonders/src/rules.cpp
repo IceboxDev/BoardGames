@@ -12,6 +12,20 @@ int activePlayer(const GameState& st) {
   return -1;
 }
 
+// Olympia's free builds (mirrors rules.ts olympiaBuildsFree): the first card of
+// each colour (Day side), the first and the last card of each age (Night side).
+// Offered only for a card that costs something — a free card needs no help.
+static bool olympiaBuildsFree(const GameState& st, const PlayerState& p, const Card& def) {
+  bool costs = def.bankCoins > 0;
+  for (int r = 0; r < NUM_RESOURCES; r++)
+    if (def.resCost[r]) costs = true;
+  if (!costs) return false;
+  if (hasBuiltStageEffect(p, EffectKind::FreeFirstOfColor) && countColor(p, def.color) == 0)
+    return true;
+  if (hasBuiltStageEffect(p, EffectKind::FreeFirstOfAge) && st.turn == 1) return true;
+  return hasBuiltStageEffect(p, EffectKind::FreeLastOfAge) && st.turn == TURNS_PER_AGE;
+}
+
 // Enumerate every discard / play-card / build-wonder for one hand card.
 static void buildActionsForCard(const GameState& st, int player, int handIdx, bool seventh,
                                 MoveBuffer& out) {
@@ -50,7 +64,7 @@ static void buildActionsForCard(const GameState& st, int player, int handIdx, bo
         m.seventh = seventh;
         out.push(m);
       }
-      if (hasBuiltStageEffect(p, EffectKind::FreeBuildPerAge) && !p.freeBuildUsedThisAge) {
+      if (olympiaBuildsFree(st, p, def)) {
         Move m;
         m.kind = MoveKind::PlayCard;
         m.card = uint8_t(handIdx);

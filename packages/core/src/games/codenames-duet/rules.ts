@@ -231,11 +231,14 @@ export function attachGuessNote(state: DuetState, note: GuessNote): DuetState {
   return { ...state, turns };
 }
 
-/** Distinct cards not yet found — a person's clue targets as kept. */
+/** Distinct agents on the clue-giver's side not yet found — a person's clue targets as kept. */
 export function cleanTargets(state: DuetState, targets: readonly number[]): number[] {
   return targets.filter(
     (card, i) =>
-      Number.isInteger(card) && state.found[card] === false && targets.indexOf(card) === i,
+      Number.isInteger(card) &&
+      state.found[card] === false &&
+      state.key[card]?.[state.giver] === "agent" &&
+      targets.indexOf(card) === i,
   );
 }
 

@@ -12,6 +12,7 @@ const replayComponent = lazy(() => import("./components/GameReplay")) as LazyExo
 
 export default {
   component: lazy(() => import("./Go")),
+  extraMode: "companion",
   rulesUrl,
   lobbyConfigComponent: lazy(() => import("./GoLobbyConfig")),
   replayComponent,

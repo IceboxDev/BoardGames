@@ -43,6 +43,8 @@ import { calendarFeedRoutes } from "./auth-routes/calendar-feed.ts";
 import { calendarFeedPublicRoutes } from "./auth-routes/calendar-feed-public.ts";
 import { adminCalendarLocksRoutes, calendarLocksRoutes } from "./auth-routes/calendar-locks.ts";
 import { calendarRsvpsRoutes } from "./auth-routes/calendar-rsvps.ts";
+import { chessFarmRoutes } from "./auth-routes/chess-farm.ts";
+import { chessTrainerRoutes } from "./auth-routes/chess-trainer.ts";
 import { collectionRoutes } from "./auth-routes/collection.ts";
 import { collectionVocabRoutes } from "./auth-routes/collection-vocab.ts";
 import { dndCampaignRoutes } from "./auth-routes/dnd-campaigns.ts";
@@ -69,7 +71,7 @@ import { peekContentStore } from "./lib/quiztopia/content-store.ts";
 import { clientIp, rateLimit } from "./lib/rate-limit.ts";
 import { LATEST_VERSION } from "./migrations/registry.ts";
 import { persistenceRoutes } from "./persistence/routes.ts";
-import { handleWsClose, handleWsMessage, wsAuth } from "./sessions/manager.ts";
+import { handleWsClose, handleWsMessage, liveRoomGames, wsAuth } from "./sessions/manager.ts";
 import { ClientMessageParseError, parseClientMessage } from "./sessions/parse-client-message.ts";
 import {
   handleChat,
@@ -78,6 +80,7 @@ import {
   handleJoinRoom,
   handleKickPlayer,
   handleLeaveRoom,
+  handleRematchRoom,
   handleShuffleSeats,
   handleStartRoom,
   handleSwapSeats,
@@ -181,6 +184,8 @@ app.get("/api/health", async (c) => {
     // boot finishes), so a stale trainer client can be told apart from a
     // stale deploy.
     quiztopiaContent: peekContentStore()?.version ?? null,
+    // Room games in progress — a deploy ends them (see scripts/check-live-games.mjs).
+    liveGames: liveRoomGames(),
     db,
   };
   return c.json(body, db.ok ? 200 : 503);
@@ -366,6 +371,31 @@ app.use(
 );
 app.route("/api/trainers/geography", geographyRoutes);
 
+// Chess opening trainer: imported lichess games arrive in batches and opening
+// trees are saved whole (several MB for a big one), hence the larger body cap.
+app.use(
+  "/api/trainers/chess/*",
+  requireAuth,
+  requireOnline,
+  bodyLimit({
+    maxSize: 8 * 1024 * 1024,
+    onError: (c) => errorResponse(c, 413, "Body too large", "PAYLOAD_TOO_LARGE"),
+  }),
+  rateLimit({ name: "chess-trainer-write", windowMs: 60_000, max: 120, skipSafeMethods: true }),
+);
+app.route("/api/trainers/chess", chessTrainerRoutes);
+
+// The chess analysis farm (a worker on ws21, bearer token, no cookie): claims
+// evaluation jobs and returns results. See auth-routes/chess-farm.ts.
+app.use(
+  "/api/chess-farm/*",
+  bodyLimit({
+    maxSize: 1024 * 1024,
+    onError: (c) => errorResponse(c, 413, "Body too large", "PAYLOAD_TOO_LARGE"),
+  }),
+);
+app.route("/api/chess-farm", chessFarmRoutes);
+
 // BGA bridge sessions (create / join-by-code / SSE spectate). Play-area
 // feature, gated like the games it mirrors.
 app.use("/api/bga/*", requireAuth, requireOnline);
@@ -435,6 +465,9 @@ function handleRoomMessage(ws: import("hono/ws").WSContext, msg: ClientToServerM
       return true;
     case "shuffle-seats":
       handleShuffleSeats(ws, msg);
+      return true;
+    case "rematch-room":
+      handleRematchRoom(ws, msg);
       return true;
     case "chat":
       handleChat(ws, msg);

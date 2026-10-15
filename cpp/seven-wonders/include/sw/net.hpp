@@ -18,9 +18,9 @@ namespace sw {
 
 // ── Architecture (mirror these in the Python trainer) ────────────────────────
 inline constexpr int PER_SEAT_FEATS = 19;
-inline constexpr int FEAT_DIM = PER_SEAT_FEATS * N /*95*/ + NUM_CARD_TYPES_CT /*78 hand*/ +
-                                3 /*age*/ + 6 /*turn*/ + 5 /*misc*/;  // = 187
-inline constexpr int POLICY_DIM = NUM_CARD_TYPES_CT * 4;              // (cardType, code) = 312
+inline constexpr int FEAT_DIM = PER_SEAT_FEATS * N /*95*/ + NUM_CARD_TYPES_CT /*80 hand*/ +
+                                3 /*age*/ + 6 /*turn*/ + 5 /*misc*/;  // = 189
+inline constexpr int POLICY_DIM = NUM_CARD_TYPES_CT * 4;              // (cardType, code) = 320
 inline constexpr int VALUE_DIM = N;                                   // per-seat rank reward
 inline constexpr int H1 = 128;
 inline constexpr int H2 = 128;

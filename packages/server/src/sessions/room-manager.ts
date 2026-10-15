@@ -10,6 +10,7 @@ import type { WSContext } from "hono/ws";
 import {
   endSession,
   endSoloSessionsForWs,
+  isSessionOver,
   type PlayerConnection,
   reconnectPlayer,
   type SessionSeat,
@@ -32,6 +33,13 @@ const CODE_LENGTH = 6;
  * before the game is ended and the room closed.
  */
 export const ROOM_RECONNECT_GRACE_MS = 120_000;
+
+/**
+ * How long a lobby seat is held for someone whose connection dropped — a
+ * refresh or a phone locking — before it opens up again (or, for the host,
+ * before the room closes). A deliberate leave doesn't wait.
+ */
+export const LOBBY_RECONNECT_GRACE_MS = 30_000;
 
 /**
  * Room codes are a capability — possessing one lets you take a seat — so they
@@ -81,6 +89,10 @@ export interface Room {
   seatOfSlot: (number | undefined)[];
   /** Ends the game if nobody has come back — armed while no person is connected. */
   graceTimer: ReturnType<typeof setTimeout> | null;
+  /** Lobby only: slotIndex → the timer that frees a dropped player's seat. */
+  lobbyTimers: Map<number, ReturnType<typeof setTimeout>>;
+  /** The options the last game started with — a rematch plays with them again. */
+  lastConfig?: unknown;
 }
 
 const rooms = new Map<string, Room>();
@@ -209,6 +221,7 @@ export function handleCreateRoom(
     sessionId: null,
     seatOfSlot: [],
     graceTimer: null,
+    lobbyTimers: new Map(),
   };
 
   rooms.set(code, room);
@@ -242,8 +255,14 @@ export function handleJoinRoom(ws: WSContext, msg: { roomCode: string; playerNam
 
   // One seat per user: if this account already holds a slot in the room,
   // don't hand it a second one (also stops a second tab from shadow-joining).
-  if (room.slotUserIds.includes(userId)) {
-    sendError(ws, "You are already in this room");
+  // A seat held for them after a dropped connection is theirs to take back.
+  const heldSlot = room.slotUserIds.indexOf(userId);
+  if (heldSlot !== -1) {
+    if (room.slots[heldSlot]?.connected) {
+      sendError(ws, "You are already in this room");
+      return;
+    }
+    reclaimLobbySlot(ws, room, heldSlot);
     return;
   }
 
@@ -299,13 +318,44 @@ function handleReconnect(ws: WSContext, room: Room, userId: string): void {
   if (slot.kind === "human") slot.connected = true;
   room.clients.set(ws, slotIndex);
   wsToRoom.set(ws, room.code);
+  if (slotIndex === 0) room.hostWs = ws;
   cancelGrace(room);
 
+  // The client lost its room identity with the old socket (a refresh): tell
+  // it again which room and slot it is in, or host controls and chat go dead.
+  send(ws, {
+    type: "room-joined",
+    roomCode: room.code,
+    roomState: buildRoomState(room),
+    yourSlot: slotIndex,
+  });
   broadcastRoomUpdate(room);
   if (room.sessionId) {
     reconnectPlayer(room.sessionId, ws, seat);
     seatConnectionChanged(room.sessionId, seat, true);
   }
+}
+
+/** A lobby player whose connection dropped comes back to the seat held for them. */
+function reclaimLobbySlot(ws: WSContext, room: Room, slotIndex: number): void {
+  const slot = room.slots[slotIndex];
+  if (slot?.kind !== "human") return;
+  cancelLobbyTimer(room, slotIndex);
+  const existingRoom = wsToRoom.get(ws);
+  if (existingRoom && existingRoom !== room.code) handleLeaveRoom(ws, { roomCode: existingRoom });
+  endSoloSessionsForWs(ws);
+
+  slot.connected = true;
+  room.clients.set(ws, slotIndex);
+  wsToRoom.set(ws, room.code);
+  if (slotIndex === 0) room.hostWs = ws;
+  send(ws, {
+    type: "room-joined",
+    roomCode: room.code,
+    roomState: buildRoomState(room),
+    yourSlot: slotIndex,
+  });
+  broadcastRoomUpdate(room);
 }
 
 /** A player leaves. Before the game their slot opens; during it, they may come back. */
@@ -326,11 +376,16 @@ export function handleLeaveRoom(ws: WSContext, msg: { roomCode: string }): void 
     return;
   }
 
+  freeLobbySlot(room, slotIndex);
+}
+
+/** A lobby seat is given up: the host's closes the room, anyone else's opens. */
+function freeLobbySlot(room: Room, slotIndex: number): void {
+  cancelLobbyTimer(room, slotIndex);
   if (slotIndex === 0) {
     closeRoom(room, "Host left the room");
     return;
   }
-
   room.slots[slotIndex] = { kind: "open", ready: false, connected: false };
   room.slotUserIds[slotIndex] = undefined;
   broadcastRoomUpdate(room);
@@ -501,6 +556,7 @@ export function handleKickPlayer(
     }
   }
 
+  cancelLobbyTimer(room, msg.slotIndex);
   room.slots[msg.slotIndex] = { kind: "open", ready: false, connected: false };
   room.slotUserIds[msg.slotIndex] = undefined;
   broadcastRoomUpdate(room);
@@ -536,8 +592,15 @@ export function handleStartRoom(ws: WSContext, msg: { roomCode: string; config: 
     return;
   }
 
-  // Seats count humans AND AI against the manifest; the host's options are
-  // parsed by the game's own schema inside `startRoomSession`.
+  launchRoomGame(ws, room, manifest, msg.config);
+}
+
+/**
+ * Seat the room and start its game. Seats count humans AND AI against the
+ * manifest; the options are parsed by the game's own schema inside
+ * `startRoomSession` (a refusal is reported to `ws`, the host).
+ */
+function launchRoomGame(ws: WSContext, room: Room, manifest: GameManifest, config: unknown): void {
   const { seats, slotOfSeat } = seatRoom(room, manifest);
   const players: PlayerConnection[] = [];
   for (const [clientWs, slotIndex] of room.clients) {
@@ -549,7 +612,7 @@ export function handleStartRoom(ws: WSContext, msg: { roomCode: string; config: 
     gameSlug: room.gameSlug,
     seats,
     players,
-    rawConfig: msg.config,
+    rawConfig: config,
     roomCode: room.code,
   });
   if (!started.ok) {
@@ -557,10 +620,82 @@ export function handleStartRoom(ws: WSContext, msg: { roomCode: string; config: 
     return;
   }
   room.sessionId = started.sessionId;
+  room.lastConfig = config;
   room.seatOfSlot = [];
   slotOfSeat.forEach((slotIndex, seat) => {
     room.seatOfSlot[slotIndex] = seat;
   });
+}
+
+/**
+ * The seat whose player moves to `seat` when a table of `n` rotates by `by`:
+ * the one `by` places further down, wrapping round within the seats that are
+ * `by` apart. Seats `by` apart stay together, so at an odd Codenames table
+ * (teams by seat parity, `by` 2) every player keeps their team.
+ */
+export function rotatedFrom(seat: number, by: number, n: number): number {
+  return seat + by < n ? seat + by : seat % by;
+}
+
+/**
+ * Rotate the filled seats `by` places (`rotatedFrom`). Open slots rank after
+ * the filled ones, so the ranks stay a permutation for the lobby's swaps and
+ * shuffles. Exported for tests.
+ */
+export function rotateSeats(room: Pick<Room, "slots" | "seatOrder">, by: number): void {
+  const order = roomSeating(room.slots, room.seatOrder);
+  const n = order.length;
+  if (n === 0 || by <= 0) return;
+  order.forEach((_, seat) => {
+    const slot = order[rotatedFrom(seat, by, n)] as number;
+    room.seatOrder[slot] = seat;
+  });
+  let next = n;
+  room.slots.forEach((slot, i) => {
+    if (slot.kind === "open") room.seatOrder[i] = next++;
+  });
+}
+
+/**
+ * Host only, after the game: play again at once with the same people, AI and
+ * options — optionally rotating the seats first (`rotateBy`). Everyone who
+ * played must still be connected: a seat left empty would stall the new game.
+ */
+export function handleRematchRoom(
+  ws: WSContext,
+  msg: { roomCode: string; rotateBy: number },
+): void {
+  const room = rooms.get(msg.roomCode);
+  if (!room) {
+    sendError(ws, `Room ${msg.roomCode} not found`);
+    return;
+  }
+  if (room.hostWs !== ws) {
+    sendError(ws, "Only the host can start a rematch");
+    return;
+  }
+  if (!room.sessionId || !isSessionOver(room.sessionId)) {
+    sendError(ws, "Finish this game before starting another");
+    return;
+  }
+  const manifest = getManifest(room.gameSlug);
+  if (!manifest) {
+    sendError(ws, `Unknown game: ${room.gameSlug}`);
+    return;
+  }
+  const gone = room.slots.filter((s) => s.kind === "human" && !s.connected);
+  if (gone.length > 0) {
+    const who = gone.map((s) => s.playerName ?? "A player").join(", ");
+    sendError(ws, `${who} left the table — a rematch needs everyone who played`);
+    return;
+  }
+
+  if (msg.rotateBy > 0) rotateSeats(room, msg.rotateBy);
+  endSession(room.sessionId);
+  room.sessionId = null;
+  room.seatOfSlot = [];
+  broadcastRoomUpdate(room);
+  launchRoomGame(ws, room, manifest, room.lastConfig);
 }
 
 // ---------------------------------------------------------------------------
@@ -620,6 +755,7 @@ export function handleChat(ws: WSContext, msg: { roomCode: string; text: string 
 
 function closeRoom(room: Room, reason: string): void {
   cancelGrace(room);
+  for (const slotIndex of [...room.lobbyTimers.keys()]) cancelLobbyTimer(room, slotIndex);
   for (const clientWs of room.clients.keys()) {
     send(clientWs, { type: "room-closed", roomCode: room.code, reason });
     wsToRoom.delete(clientWs);
@@ -631,6 +767,31 @@ function closeRoom(room: Room, reason: string): void {
 function cancelGrace(room: Room): void {
   if (room.graceTimer) clearTimeout(room.graceTimer);
   room.graceTimer = null;
+}
+
+function cancelLobbyTimer(room: Room, slotIndex: number): void {
+  const timer = room.lobbyTimers.get(slotIndex);
+  if (timer) clearTimeout(timer);
+  room.lobbyTimers.delete(slotIndex);
+}
+
+/** A lobby player's connection dropped: hold their seat for a while before giving it up. */
+function holdLobbySlot(room: Room, slotIndex: number): void {
+  const slot = room.slots[slotIndex];
+  if (slot?.kind !== "human") return;
+  slot.connected = false;
+  broadcastRoomUpdate(room);
+  cancelLobbyTimer(room, slotIndex);
+  const userId = room.slotUserIds[slotIndex];
+  const timer = setTimeout(() => {
+    room.lobbyTimers.delete(slotIndex);
+    const now = room.slots[slotIndex];
+    if (room.sessionId || rooms.get(room.code) !== room) return;
+    if (now?.kind !== "human" || now.connected || room.slotUserIds[slotIndex] !== userId) return;
+    freeLobbySlot(room, slotIndex);
+  }, LOBBY_RECONNECT_GRACE_MS);
+  timer.unref?.();
+  room.lobbyTimers.set(slotIndex, timer);
 }
 
 /** A seated player dropped out of a started game; arm the grace timer if nobody is left. */
@@ -659,22 +820,23 @@ export function handleRoomWsClose(ws: WSContext): void {
     return;
   }
 
-  // In the lobby a dropped connection is a leave: the slot frees up (or the
-  // room closes if it was the host's).
-  if (!room.sessionId) {
-    handleLeaveRoom(ws, { roomCode });
-    return;
-  }
-
   const slotIndex = room.clients.get(ws);
   room.clients.delete(ws);
   wsToRoom.delete(ws);
-  if (slotIndex !== undefined) markDisconnected(room, slotIndex);
+  if (slotIndex === undefined) return;
+
+  // In the lobby a dropped connection holds the seat for a short while (a
+  // refresh shouldn't cost a seat, or the host the whole room).
+  if (!room.sessionId) holdLobbySlot(room, slotIndex);
+  else markDisconnected(room, slotIndex);
 }
 
 /** Test hook: forget every room. */
 export function resetRoomsForTests(): void {
-  for (const room of rooms.values()) cancelGrace(room);
+  for (const room of rooms.values()) {
+    cancelGrace(room);
+    for (const slotIndex of [...room.lobbyTimers.keys()]) cancelLobbyTimer(room, slotIndex);
+  }
   rooms.clear();
   wsToRoom.clear();
 }

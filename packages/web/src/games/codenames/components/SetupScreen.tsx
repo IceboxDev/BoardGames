@@ -12,8 +12,10 @@ export interface CodenamesSetup extends TableOptions {
   modelId: string;
 }
 
-// Solo: you play for Red — as its spymaster (AI teammates guess) or as an
-// operative (an AI spymaster clues for you) — against an all-AI Blue team.
+// Solo: you play for Red — as its spymaster (an AI operative guesses) or as
+// its operative (an AI spymaster clues for you) — against an all-AI Blue team.
+// Always the four-seat table: extra AI operatives would only add seats to
+// watch, never a decision for you (a bigger table is a room's choice).
 export default function SetupScreen({ onStart }: { onStart: (setup: CodenamesSetup) => void }) {
   const [role, setRole] = useState<SoloRole>("operative");
   const [options, setOptions] = useState<TableOptions>({
@@ -26,8 +28,7 @@ export default function SetupScreen({ onStart }: { onStart: (setup: CodenamesSet
     <PvAISetupScreen
       title="Codenames"
       manifest={codenamesManifest}
-      playerCounts={[4, 6]}
-      defaultPlayerCount={4}
+      playerCounts={[4]}
       onStart={(players, modelId) => onStart({ ...options, role, players, modelId })}
       extraControls={
         <div className="flex flex-col items-center gap-4">

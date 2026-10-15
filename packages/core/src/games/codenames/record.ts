@@ -22,6 +22,20 @@ export const TurnRecordSchema = z.object({
   // Optional: games saved before notes existed have none.
   note: ClueNoteSchema.optional(),
   guessNotes: z.array(GuessNoteSchema).optional(),
+  // Optional: the clue questions this turn (absent before they existed, or when none were asked).
+  appeals: z
+    .array(
+      z.object({
+        word: z.string().max(30),
+        clash: z.string().max(60),
+        by: z.number().int(),
+        judge: z.number().int(),
+        ruling: z.enum(["allowed", "refused", "unanswered", "withdrawn"]),
+        reason: z.string().max(600).nullable(),
+        cost: AiCostSchema.optional(),
+      }),
+    )
+    .optional(),
 });
 
 export const CodenamesReplayLogSchema = z.object({

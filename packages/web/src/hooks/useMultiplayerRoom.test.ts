@@ -31,6 +31,7 @@ function makeSession(overrides: Partial<GameSession<unknown, unknown, unknown>> 
     toggleReady: vi.fn(),
     swapSeats: vi.fn(),
     shuffleSeats: vi.fn(),
+    rematchRoom: vi.fn(),
     ...overrides,
   } as GameSession<unknown, unknown, unknown>;
 }

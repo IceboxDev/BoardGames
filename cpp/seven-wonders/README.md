@@ -76,8 +76,8 @@ script.
   seat runs its own bandit over its legal moves; the joint move descends a shared tree.
   Per-seat rank reward in [0,1] (general-sum). `sw7 eval` → ~98% vs random.
 - **M1 — AlphaZero-style self-play** (perfect information):
-  - `src/features.cpp` — seat-relative feature encoding (187 floats).
-  - `src/net.cpp` — MLP inference (policy over `cardType×action` = 312, per-seat value
+  - `src/features.cpp` — seat-relative feature encoding (189 floats).
+  - `src/net.cpp` — MLP inference (policy over `cardType×action` = 320, per-seat value
     5-vector), weights loaded from a flat binary file (no ML deps in C++).
   - `mcts.cpp` PUCT mode — net priors + net value at leaves (no rollouts → ~2.4× faster
     than M0).

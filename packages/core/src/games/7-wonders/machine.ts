@@ -11,8 +11,15 @@ import {
   type SevenWondersStrategyId,
 } from "./ai/agent";
 import { countShields, scienceProfile } from "./board";
-import { applyPendingAction, applyReveal, applySelection, createInitialState } from "./game-engine";
+import {
+  applyPendingAction,
+  applyReveal,
+  applySelection,
+  applySideChoice,
+  createInitialState,
+} from "./game-engine";
 import { type SevenWondersConfig, sevenWondersManifest } from "./manifest";
+import { ownProductionChoices } from "./payment";
 import { getActivePlayer, getLegalActions } from "./rules";
 import type { ScoreBreakdown } from "./scoring";
 import { determineWinner, scoreFinal } from "./scoring";
@@ -24,10 +31,12 @@ import type {
   GameState,
   LogEntry,
   PendingAction,
+  ResourceType,
   RevealedPlay,
   ScienceSymbol,
   Selection,
   SevenWondersAction,
+  SideMode,
   WonderId,
 } from "./types";
 
@@ -51,7 +60,7 @@ export type SevenWondersEvent =
       /** Per seat: an AI strategy, or `null` for a person. Its length is the player count. */
       strategies: (SevenWondersStrategyId | null)[];
       seed?: number;
-      sideMode?: "A" | "B" | "random";
+      sideMode?: SideMode;
       edifice?: boolean;
     }
   | { type: "PLAYER_ACTION"; playerIndex: number; action: SevenWondersAction }
@@ -74,6 +83,10 @@ export interface SevenWondersPlayerBoardView {
   scienceWildcards: number;
   handCount: number;
   hasSelected: boolean;
+  /** Points if the game ended now — every input is public. */
+  score: ScoreBreakdown;
+  /** Own production, one entry per unit; several resources = choose one. */
+  production: ResourceType[][];
 }
 
 export interface SevenWondersPlayerBoardEdifice {
@@ -186,6 +199,7 @@ export const sevenWondersMachine = setup({
 
   guards: {
     isGameOver: ({ context }) => context.gameState.phase === "game-over",
+    isChoosingSides: ({ context }) => context.gameState.phase === "choosing-sides",
     isRevealing: ({ context }) => context.gameState.phase === "revealing",
     isPending: ({ context }) => context.gameState.phase === "pending",
     pendingIsAi: ({ context }) => {
@@ -215,12 +229,19 @@ export const sevenWondersMachine = setup({
     initGame: assign(({ event }) => {
       if (event.type !== "START") return {};
       return safeApply("7-wonders", () => {
-        const gs = createInitialState({
+        let gs = createInitialState({
           playerCount: event.strategies.length,
           seed: event.seed ?? randomSeed(),
           sideMode: event.sideMode ?? "random",
           edifice: event.edifice,
         });
+        // AI seats take the side the seed dealt them; people choose theirs.
+        if (gs.phase === "choosing-sides") {
+          for (const [i, s] of event.strategies.entries()) {
+            if (s !== null)
+              gs = applySideChoice(gs, i, { type: "choose-side", side: gs.players[i].side });
+          }
+        }
         const humanPlayers = event.strategies.flatMap((s, i) => (s === null ? [i] : []));
         return {
           gameState: gs,
@@ -251,6 +272,13 @@ export const sevenWondersMachine = setup({
         }
         return { gameState: state, pendingAiSelections: null };
       });
+    }),
+
+    applySideChoice: assign(({ context, event }) => {
+      if (event.type !== "PLAYER_ACTION") return {};
+      return safeApply("7-wonders", () => ({
+        gameState: applySideChoice(context.gameState, event.playerIndex, event.action),
+      }));
     }),
 
     applyReveal: assign(({ context }) => {
@@ -288,6 +316,7 @@ export const sevenWondersMachine = setup({
         routing: {
           always: [
             { guard: "isGameOver", target: "#sevenWonders.gameOver" },
+            { guard: "isChoosingSides", target: "choosingSides" },
             { guard: "isPending", target: "pendingAction" },
             { guard: "isRevealing", target: "revealing" },
             { target: "selecting" },
@@ -348,6 +377,12 @@ export const sevenWondersMachine = setup({
                 done: { type: "final" },
               },
             },
+          },
+        },
+
+        choosingSides: {
+          on: {
+            PLAYER_ACTION: { target: "routing", actions: "applySideChoice" },
           },
         },
 
@@ -431,6 +466,12 @@ export function buildPlayerView(ctx: SevenWondersContext, player: number): Seven
   const seated = player >= 0 && player < gs.playerCount;
   const pending = gs.pendingQueue[0] ?? null;
   const showDiscard = seated && pending?.kind === "halikarnassos" && pending.playerIndex === player;
+  const scores = scoreFinal(gs);
+  // While sides are chosen, "selected" means "has chosen", and hands stay
+  // face down — at the table they are dealt after the boards are set.
+  const choosing = gs.phase === "choosing-sides";
+  const picked = (i: number) =>
+    choosing ? (gs.sideChoices?.[i] ?? null) !== null : gs.selections[i] !== null;
   return {
     phase: gs.phase,
     age: gs.age,
@@ -439,8 +480,8 @@ export function buildPlayerView(ctx: SevenWondersContext, player: number): Seven
     me: seated
       ? {
           index: player,
-          hand: gs.hands[player],
-          hasSelected: gs.selections[player] !== null,
+          hand: choosing ? [] : gs.hands[player],
+          hasSelected: picked(player),
         }
       : null,
     players: gs.players.map((p, i) => {
@@ -448,7 +489,8 @@ export function buildPlayerView(ctx: SevenWondersContext, player: number): Seven
       return {
         index: i,
         wonderId: p.wonderId,
-        side: p.side,
+        // While sides are chosen every board shows Day: no pick shows before all are in.
+        side: choosing ? "A" : p.side,
         stagesBuilt: p.stagesBuilt,
         coins: p.coins,
         shields: countShields(p),
@@ -457,7 +499,9 @@ export function buildPlayerView(ctx: SevenWondersContext, player: number): Seven
         scienceCounts: science.counts,
         scienceWildcards: science.wildcards,
         handCount: gs.hands[i].length,
-        hasSelected: gs.selections[i] !== null,
+        hasSelected: picked(i),
+        score: scores[i],
+        production: ownProductionChoices(gs, i),
       };
     }),
     discardCount: gs.discard.length,
@@ -598,7 +642,8 @@ export const sevenWondersSpec: GameMachineSpec<
     const gs = snapshot.context.gameState;
     if (gs?.phase !== "game-over") return null;
     return {
-      formatVersion: 1,
+      // 2: the 2020 second edition's cards and boards (1 was the 2010 edition).
+      formatVersion: 2,
       seed: gs.seed,
       strategies: snapshot.context.strategies,
       actionLog: gs.actionLog,

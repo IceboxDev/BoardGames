@@ -1,7 +1,7 @@
 import type { Rng } from "../../lib/rng";
 import { shuffle } from "../../lib/rng";
 import { CARDS, GUILDS } from "./cards";
-import type { Age, CardId, WonderId } from "./types";
+import type { Age, CardId, SideMode, WonderId } from "./types";
 import { makeCardId, WONDER_IDS } from "./types";
 
 /** All physical card instances for one age at a given player count. */
@@ -50,11 +50,11 @@ export interface WonderAssignment {
 export function assignWonders(
   playerCount: number,
   rng: Rng,
-  sideMode: "A" | "B" | "random",
+  sideMode: SideMode,
 ): WonderAssignment[] {
   const ids = shuffle(WONDER_IDS, rng).slice(0, playerCount);
   return ids.map((wonderId) => ({
     wonderId,
-    side: sideMode === "random" ? (rng() < 0.5 ? "A" : "B") : sideMode,
+    side: sideMode === "random" || sideMode === "choose" ? (rng() < 0.5 ? "A" : "B") : sideMode,
   }));
 }

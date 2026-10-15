@@ -2,7 +2,11 @@ import {
   CHARACTERS,
   EDITION_NAME,
 } from "@boardgames/core/games/blood-on-the-clocktower/characters";
+import { botcManifest } from "@boardgames/core/games/blood-on-the-clocktower/manifest";
 import type { BotcRecord, CompanionRecord } from "@boardgames/core/protocol";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { MatchHistory } from "../../components/match-history";
 import CompanionMatchHistory from "../../components/match-history/CompanionMatchHistory";
 import {
   type CompanionRow,
@@ -10,6 +14,7 @@ import {
   recordLength,
 } from "../../components/match-history/companion-columns";
 import type { MatchColumn } from "../../components/match-history/MatchResultsTable";
+import { SegmentedControl } from "../../components/ui";
 import { formatShortDate } from "../../lib/date-format";
 import { TYPE_TEXT } from "./companion/labels";
 import { CharacterIcon } from "./companion/ui";
@@ -102,16 +107,49 @@ function detail({ record }: CompanionRow<BotcRecord>) {
   };
 }
 
+type HistoryTab = "online" | "companion";
+
+/**
+ * Two histories behind one tab strip: the online games this member sat in
+ * (any seat — the server's match history), and the table games they ran as
+ * Storyteller with the phone companion (plus the online games they ran,
+ * which the server also files there).
+ */
 export default function ClocktowerMatchHistory({ onBack }: { onBack: () => void }) {
+  const [tab, setTab] = useState<HistoryTab>("online");
+  const navigate = useNavigate();
   return (
-    <CompanionMatchHistory
-      slug="blood-on-the-clocktower"
-      select={select}
-      columns={columns}
-      summary={summary}
-      detail={detail}
-      emptyDescription="Games you run in the Storyteller companion land here once a team wins."
-      onBack={onBack}
-    />
+    <div className="flex flex-col gap-4">
+      <div className="mx-auto w-full max-w-4xl px-6 pt-8">
+        <SegmentedControl<HistoryTab>
+          selectionMode="tabs"
+          aria-label="History type"
+          options={[
+            { value: "online", label: "Online games" },
+            { value: "companion", label: "Run as Storyteller" },
+          ]}
+          value={tab}
+          onChange={setTab}
+        />
+      </div>
+      {tab === "online" ? (
+        <MatchHistory
+          gameSlug="blood-on-the-clocktower"
+          manifest={botcManifest}
+          onBack={onBack}
+          onSelectReplay={(id) => navigate(`/play/blood-on-the-clocktower/match-history/${id}`)}
+        />
+      ) : (
+        <CompanionMatchHistory
+          slug="blood-on-the-clocktower"
+          select={select}
+          columns={columns}
+          summary={summary}
+          detail={detail}
+          emptyDescription="Games you run as the Storyteller — with the companion or online — land here once a team wins."
+          onBack={onBack}
+        />
+      )}
+    </div>
   );
 }

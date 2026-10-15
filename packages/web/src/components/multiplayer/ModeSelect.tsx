@@ -1,31 +1,35 @@
 import type { ReactNode } from "react";
-import type { SoloMode } from "../../games/types";
+import type { ExtraMode, SoloMode } from "../../games/types";
 import { ComingSoonBadge } from "../game/badges";
 import {
   ArrowRightIcon,
   BookIcon,
-  BotIcon,
+  CampaignIcon,
   ClockIcon,
+  CoachIcon,
   CompanionIcon,
+  ScoreSheetIcon,
   SolverIcon,
   TrainerIcon,
   TrophyIcon,
+  UserIcon,
   UsersIcon,
 } from "../icons";
 import { SetupHeader, SetupLayout } from "../setup";
 import { Button, type CoreTone, SelectableCard } from "../ui";
 
-// The left card's whole identity, per solo group (`SoloMode`). Nothing about
-// it is per game, so every game in a group shows the identical card.
-const SOLO_MODES: Record<
-  SoloMode,
+// A mode card's whole identity, per kind. The solo card is the game's solo
+// group (`SoloMode`), the other its `ExtraMode`; nothing about either
+// is per game, so every game showing a kind shows the identical card.
+const MODE_CARDS: Record<
+  ExtraMode,
   { label: string; icon: ReactNode; tone: CoreTone; description: string }
 > = {
-  ai: {
-    label: "Play vs AI",
-    icon: <BotIcon className="h-7 w-7" />,
+  singleplayer: {
+    label: "Singleplayer",
+    icon: <UserIcon className="h-7 w-7" />,
     tone: "sky",
-    description: "Computer players take the other seats",
+    description: "Play a game on your own",
   },
   trainer: {
     label: "Trainer",
@@ -37,7 +41,7 @@ const SOLO_MODES: Record<
     label: "Companion",
     icon: <CompanionIcon className="h-7 w-7" />,
     tone: "rose",
-    description: "Run the physical game at your table",
+    description: "Help with a game played at a table or on BGA",
   },
   solver: {
     label: "Solver",
@@ -45,11 +49,50 @@ const SOLO_MODES: Record<
     tone: "accent",
     description: "Analyse a game: odds, proofs and misplays",
   },
+  coach: {
+    label: "Coach",
+    icon: <CoachIcon className="h-7 w-7" />,
+    tone: "amber",
+    description: "Play the AI with hints and graded moves",
+  },
+  "score-sheet": {
+    label: "Score Sheet",
+    icon: <ScoreSheetIcon className="h-7 w-7" />,
+    tone: "rose",
+    description: "Score a game played at your table",
+  },
+  campaign: {
+    label: "Campaign",
+    icon: <CampaignIcon className="h-7 w-7" />,
+    tone: "accent",
+    description: "Work through scenarios that unlock as you win",
+  },
 };
+
+const NOT_WIRED = () => {};
+
+/** A mode card the game doesn't offer yet: a real `<button disabled>` (no hover, focus or click) badged "Coming soon". */
+function ComingSoonCard({ delay, children }: { delay: number; children: ReactNode }) {
+  return (
+    <div className="relative grid">
+      {children}
+      <div
+        className="animate-card-fade-up absolute top-3 right-3"
+        style={{ animationDelay: `${delay}ms` }}
+      >
+        <ComingSoonBadge />
+      </div>
+    </div>
+  );
+}
 
 interface ModeSelectProps {
   title: string;
   soloMode: SoloMode;
+  /** The mode beside `soloMode`. */
+  extraMode: ExtraMode;
+  /** Opens the extra mode; absent = not wired yet (disabled, badged "Coming soon"). */
+  onExtra?: () => void;
   onSolo: () => void;
   onMultiplayer: () => void;
   /** No online rooms yet: the same Multiplayer card, inert and greyed, badged "Coming soon". */
@@ -62,6 +105,8 @@ interface ModeSelectProps {
 export function ModeSelect({
   title,
   soloMode,
+  extraMode,
+  onExtra,
   onSolo,
   onMultiplayer,
   multiplayerComingSoon = false,
@@ -69,7 +114,42 @@ export function ModeSelect({
   onMatchHistory,
   onTournament,
 }: ModeSelectProps) {
-  const solo = SOLO_MODES[soloMode];
+  const solo = MODE_CARDS[soloMode];
+  const extra = MODE_CARDS[extraMode];
+
+  const soloCard = (delay: number) => (
+    <SelectableCard
+      tone={solo.tone}
+      icon={solo.icon}
+      title={solo.label}
+      description={solo.description}
+      onClick={onSolo}
+      animationDelay={delay}
+    />
+  );
+  const extraCard = (delay: number) =>
+    onExtra ? (
+      <SelectableCard
+        tone={extra.tone}
+        icon={extra.icon}
+        title={extra.label}
+        description={extra.description}
+        onClick={onExtra}
+        animationDelay={delay}
+      />
+    ) : (
+      <ComingSoonCard delay={delay}>
+        <SelectableCard
+          tone={extra.tone}
+          icon={extra.icon}
+          title={extra.label}
+          description={extra.description}
+          onClick={NOT_WIRED}
+          disabled
+          animationDelay={delay}
+        />
+      </ComingSoonCard>
+    );
 
   return (
     <SetupLayout>
@@ -88,42 +168,33 @@ export function ModeSelect({
         </Button>
       )}
 
-      {/* Primary actions — generous spacing */}
-      <div className="mx-auto grid w-full max-w-xl grid-cols-1 gap-5 sm:grid-cols-2">
-        <SelectableCard
-          tone={solo.tone}
-          icon={solo.icon}
-          title={solo.label}
-          description={solo.description}
-          onClick={onSolo}
-          animationDelay={0}
-        />
-        {/* One Multiplayer card for every game; a game without rooms gets the
-            same card disabled (a real <button disabled>, so no hover, no
-            focus, no click) with a badge saying why. */}
-        <div className="relative grid">
-          <SelectableCard
-            tone="emerald"
-            icon={<UsersIcon className="h-7 w-7" />}
-            title="Multiplayer"
-            description="Create a room and play online with friends"
-            onClick={onMultiplayer}
-            disabled={multiplayerComingSoon}
-            animationDelay={60}
-          />
-          {multiplayerComingSoon && (
-            <div
-              className="animate-card-fade-up absolute top-3 right-3"
-              style={{ animationDelay: "60ms" }}
-            >
-              <ComingSoonBadge />
-            </div>
-          )}
-        </div>
+      {/* Primary actions, always [other mode, Singleplayer, Multiplayer]: a
+          game whose solo group is Trainer / Companion / Solver shows that first
+          and Singleplayer (its extra mode) in the middle. */}
+      <div className="mx-auto grid w-full max-w-3xl grid-cols-1 gap-5 sm:grid-cols-3">
+        {soloMode === "singleplayer" ? (
+          <>
+            {extraCard(0)}
+            {soloCard(60)}
+          </>
+        ) : (
+          <>
+            {soloCard(0)}
+            {extraCard(60)}
+          </>
+        )}
+        {/* One Multiplayer card for every game; disabled while the game has no rooms. */}
+        {multiplayerComingSoon ? (
+          <ComingSoonCard delay={120}>
+            <MultiplayerCard onClick={onMultiplayer} disabled />
+          </ComingSoonCard>
+        ) : (
+          <MultiplayerCard onClick={onMultiplayer} />
+        )}
       </div>
 
       {/* Secondary actions — separated with breathing room */}
-      <div className="mx-auto mt-10 w-full max-w-xl">
+      <div className="mx-auto mt-10 w-full max-w-3xl">
         <div className="mb-4 h-px bg-gradient-to-r from-transparent via-line to-transparent" />
         <div className={`grid w-full grid-cols-1 gap-3 ${onTournament ? "sm:grid-cols-2" : ""}`}>
           <SelectableCard
@@ -134,7 +205,7 @@ export function ModeSelect({
             description="Review your past games"
             trailing={<ArrowRightIcon className="h-4 w-4" />}
             onClick={onMatchHistory}
-            animationDelay={120}
+            animationDelay={180}
           />
           {onTournament && (
             <SelectableCard
@@ -145,11 +216,25 @@ export function ModeSelect({
               description="Watch AI strategies battle each other"
               trailing={<ArrowRightIcon className="h-4 w-4" />}
               onClick={onTournament}
-              animationDelay={180}
+              animationDelay={240}
             />
           )}
         </div>
       </div>
     </SetupLayout>
+  );
+}
+
+function MultiplayerCard({ onClick, disabled }: { onClick: () => void; disabled?: boolean }) {
+  return (
+    <SelectableCard
+      tone="emerald"
+      icon={<UsersIcon className="h-7 w-7" />}
+      title="Multiplayer"
+      description="Create a room and play online with friends"
+      onClick={onClick}
+      disabled={disabled}
+      animationDelay={120}
+    />
   );
 }

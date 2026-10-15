@@ -1,12 +1,27 @@
+import { lazy, Suspense } from "react";
+import { Route, Routes } from "react-router-dom";
+import { BoardFallback } from "../../components/RouteFallback";
 import type { GameComponentProps } from "../types";
 import Companion from "./companion/Companion";
 
+const OnlineClocktower = lazy(() => import("./online/OnlineClocktower"));
+
 /**
- * Blood on the Clocktower entry point. Only the Storyteller companion
- * (`/play/blood-on-the-clocktower/solo`) exists today; the multiplayer card
- * on the mode picker is inert until online rooms are built.
+ * Blood on the Clocktower: the Companion card opens the Storyteller companion
+ * for a table game (`/play/blood-on-the-clocktower/solo`), Singleplayer the
+ * online game against stand-in bots (`solo/bots`); rooms play online.
  */
 export default function ClocktowerGame({ source }: GameComponentProps) {
-  if (source === "solo") return <Companion />;
-  return null;
+  const online = (
+    <Suspense fallback={<BoardFallback />}>
+      <OnlineClocktower source={source} />
+    </Suspense>
+  );
+  if (source !== "solo") return online;
+  return (
+    <Routes>
+      <Route path="bots" element={online} />
+      <Route path="*" element={<Companion />} />
+    </Routes>
+  );
 }

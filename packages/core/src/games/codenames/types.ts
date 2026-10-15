@@ -3,7 +3,7 @@ import type { RngCarrier } from "../../lib/rng";
 import type { CodenamesAiModel } from "./ai/models";
 import type { KeyEntry } from "./board";
 import { type Clue, ClueSchema } from "./clue-rules";
-import type { ClueNote, GuessNote } from "./notes";
+import type { AiCost, ClueNote, GuessNote } from "./notes";
 import type { Role, Team } from "./seating";
 import type { Language } from "./words";
 
@@ -24,6 +24,24 @@ export const GiveClueActionSchema = z.object({
   /** The cards the spymaster means (optional; secret until the game is over). */
   targets: z.array(z.number().int().min(0).max(24)).max(9).optional(),
 });
+/** A clue that only shares spelling with a table word: ask the other spymaster first. */
+export const AskClueActionSchema = z.object({
+  kind: z.literal("ask-clue"),
+  clue: ClueSchema,
+  targets: z.array(z.number().int().min(0).max(24)).max(9).optional(),
+});
+/** Pin one of the team's clues to a face-down card (again: unpin it). */
+export const NoteActionSchema = z.object({
+  kind: z.literal("note"),
+  card: z.number().int().min(0).max(24),
+  /** Index into the game's turns: the turn whose clue is pinned. */
+  turn: z.number().int().min(0).max(999),
+});
+/** Let the AI play an absent person's seat until they're back (`presence.ts`). */
+export const HandOverActionSchema = z.object({
+  kind: z.literal("hand-over"),
+  seat: z.number().int().min(0).max(7),
+});
 export const ChatActionSchema = z.object({
   kind: z.literal("chat"),
   text: z.string().trim().min(1).max(MAX_CHAT_LENGTH),
@@ -31,10 +49,23 @@ export const ChatActionSchema = z.object({
 
 export type CodenamesAction =
   | { kind: "give-clue"; clue: Clue; targets?: number[] }
+  /** Ask the opposing spymaster whether a spelling-only clash may stand. */
+  | { kind: "ask-clue"; clue: Clue; targets?: number[] }
+  /** The opposing spymaster's answer to an `ask-clue`. */
+  | { kind: "rule-clue"; allow: boolean }
+  /** The asking spymaster takes the question back. */
+  | { kind: "withdraw-clue" }
   | { kind: "guess"; card: number }
   | { kind: "end-turn" }
-  /** Toggle a teammate-visible pointer on a card — a suggestion, binding nothing. */
+  /**
+   * Put the seat's one pointer on a card (a suggestion, binding nothing);
+   * on the card it already points at, take it off.
+   */
   | { kind: "mark"; card: number }
+  /** Toggle a sticky note: the team's clue from turn `turn`, pinned to a card. */
+  | { kind: "note"; card: number; turn: number }
+  /** Let the AI play an absent person's seat until they come back. */
+  | { kind: "hand-over"; seat: number }
   | { kind: "chat"; text: string };
 
 // ---------------------------------------------------------------------------
@@ -46,6 +77,27 @@ export interface GuessRecord {
   /** The seat that touched the card. */
   by: number;
   result: KeyEntry;
+}
+
+/** How a clue question ended. */
+export type AppealRuling =
+  | "allowed" // the other spymaster allowed it
+  | "refused"
+  | "unanswered" // no answer in time: silence is consent
+  | "withdrawn"; // the asker took it back
+
+/** One question a spymaster put to the other — as secret as the key until the game is over. */
+export interface AppealRecord {
+  word: string;
+  /** The face-down word it shares spelling with. */
+  clash: string;
+  by: number;
+  judge: number;
+  ruling: AppealRuling;
+  /** An AI judge's reason, in a sentence. */
+  reason: string | null;
+  /** What an AI judge's call cost. */
+  cost?: AiCost;
 }
 
 /** Why a turn ended. */
@@ -67,6 +119,29 @@ export interface TurnRecord {
   note?: ClueNote;
   /** One per AI guessing call this turn. */
   guessNotes?: GuessNote[];
+  /** Clues asked about this turn (spymasters only until the game is over). */
+  appeals?: AppealRecord[];
+}
+
+/** The clue question in progress. */
+export interface ClueAppeal {
+  by: number;
+  judge: number;
+  clue: Clue;
+  /** What the clue means: a person's tapped targets, or the AI's whole note. */
+  note: ClueNote | null;
+  clash: string;
+  /** When silence counts as consent. */
+  deadlineTs: number;
+  /** Clue-timer time left when the question was asked, given back on a refusal. */
+  clueMsLeft: number | null;
+}
+
+/** A team's sticky note: the clue of turn `turn`, pinned to `card` by `seat`. */
+export interface StickyNote {
+  card: number;
+  turn: number;
+  seat: number;
 }
 
 export interface ChatMessage {
@@ -94,9 +169,11 @@ export interface CodenamesBeats {
   aiStart: number;
   /** Between an AI operative's touches. */
   aiGuess: number;
+  /** How long a clue question waits for a person's ruling before it stands. */
+  appealWait: number;
 }
 
-export const DEFAULT_BEATS: CodenamesBeats = { aiStart: 700, aiGuess: 1400 };
+export const DEFAULT_BEATS: CodenamesBeats = { aiStart: 700, aiGuess: 1400, appealWait: 45_000 };
 
 export interface CodenamesState extends RngCarrier {
   seed: number;
@@ -112,8 +189,18 @@ export interface CodenamesState extends RngCarrier {
   phase: GamePhase;
   /** The live turn is the last entry. */
   turns: TurnRecord[];
-  /** Live pointers for the current turn: card → seats pointing at it. */
+  /** Live pointers for the current turn, at most one per seat. */
   marks: { card: number; seat: number }[];
+  /** Sticky notes on face-down cards; they outlive the turn. */
+  notes: StickyNote[];
+  /** A clue question waiting for the other spymaster. */
+  appeal: ClueAppeal | null;
+  /** People whose connection dropped, and since when (`presence.ts`). */
+  away: { seat: number; since: number }[];
+  /** Seats an AI stand-in plays for an absent person (`ai[seat]` holds its tier). */
+  standIns: number[];
+  /** Stand-in seats whose person is back, handed over once the AI's move is done. */
+  reclaims: number[];
   chat: ChatMessage[];
   clueTimerSec: number;
   guessTimerSec: number;
@@ -139,6 +226,8 @@ export type CodenamesMachineEvent =
       beats?: Partial<CodenamesBeats>;
     }
   | { type: "PLAYER_ACTION"; player: number; action: CodenamesAction }
+  /** A room seat's connection dropped or returned (rooms only). */
+  | { type: "SEAT_CONNECTION"; seat: number; connected: boolean }
   | { type: "RESET" };
 
 // ---------------------------------------------------------------------------
@@ -153,8 +242,21 @@ export interface CardView {
   revealed: KeyEntry | null;
   /** The key under it — spymasters, and everyone once the game is over. */
   key: KeyEntry | null;
-  /** Seats of the viewer's team pointing at it (this turn). */
+  /** Seats of the viewer's team pointing at it (this turn); operatives only. */
   marks: number[];
+  /** The viewer's team's sticky notes on it; operatives only. */
+  notes: { turn: number; seat: number }[];
+}
+
+/** A clue question as one seat sees it: the word only for the two spymasters. */
+export interface AppealView {
+  by: number;
+  judge: number;
+  word: string | null;
+  clash: string | null;
+  /** The asker's own number. */
+  count: Clue["count"] | null;
+  deadlineTs: number;
 }
 
 export interface SeatView {
@@ -164,6 +266,14 @@ export interface SeatView {
   ai: boolean;
   /** The AI tier playing it, or null for a person. */
   tier: CodenamesAiModel | null;
+  /** The person's connection dropped (at `awaySince`). */
+  awaySince: number | null;
+  /** From when anyone else may hand the seat to the AI. */
+  handoverAt: number | null;
+  /** An AI is playing it for its absent person (`tier` is the stand-in's). */
+  standIn: boolean;
+  /** The person is back; the stand-in hands over once its move is done. */
+  returning: boolean;
 }
 
 export interface CodenamesPlayerView {
@@ -190,6 +300,16 @@ export interface CodenamesPlayerView {
   canChat: boolean;
   /** Whether this seat gives the clue now. */
   mustGiveClue: boolean;
+  /** The clue question in progress, if any. */
+  appeal: AppealView | null;
+  /** Whether this seat must allow or refuse a clue now. */
+  mustRuleClue: boolean;
+  /** Whether this seat may take its question back. */
+  canWithdrawClue: boolean;
+  /** Whether this seat may pin sticky notes (a person, an operative, the game live). */
+  canNote: boolean;
+  /** Whether this seat (a person at a live table) may hand an absent seat to the AI. */
+  canHandOver: boolean;
   /** Whether this seat may touch cards now. */
   canGuess: boolean;
   canEndTurn: boolean;

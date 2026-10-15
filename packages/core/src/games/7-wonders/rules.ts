@@ -1,9 +1,16 @@
-import { hasBuiltStageEffect, tableauNames } from "./board";
+import { countColor, hasBuiltStageEffect, tableauNames } from "./board";
 import { getCardDef } from "./cards";
 import { getEdificeDef } from "./edifice";
 import { solvePayments } from "./payment";
-import type { BuildWonderAction, CardId, GameState, Payment, SevenWondersAction } from "./types";
-import { cardIdName } from "./types";
+import type {
+  BuildWonderAction,
+  CardDef,
+  CardId,
+  GameState,
+  Payment,
+  SevenWondersAction,
+} from "./types";
+import { cardIdName, TURNS_PER_AGE } from "./types";
 import { getWonderDef } from "./wonders";
 
 /** -1 while everyone selects simultaneously; the pending player's index otherwise. */
@@ -18,6 +25,22 @@ type BuildAction =
   | { type: "play-card"; cardId: CardId; payment: Payment }
   | BuildWonderAction
   | { type: "discard"; cardId: CardId };
+
+/**
+ * Olympia's free builds: the first card of each colour (Day side), the first
+ * and the last card of each age (Night side). Offered only for a card that
+ * costs something — a free card needs no help.
+ */
+function olympiaBuildsFree(state: GameState, playerIndex: number, def: CardDef): boolean {
+  const { coins = 0, resources = {} } = def.cost;
+  if (coins === 0 && Object.values(resources).every((n) => !n)) return false;
+  const player = state.players[playerIndex];
+  if (hasBuiltStageEffect(player, "free-first-of-color") && countColor(player, def.color) === 0) {
+    return true;
+  }
+  if (hasBuiltStageEffect(player, "free-first-of-age") && state.turn === 1) return true;
+  return hasBuiltStageEffect(player, "free-last-of-age") && state.turn === TURNS_PER_AGE;
+}
 
 /** Every way `playerIndex` could resolve one card: play (chain/pay/free), wonder stage, discard. */
 function buildActionsForCard(state: GameState, playerIndex: number, cardId: CardId): BuildAction[] {
@@ -36,7 +59,7 @@ function buildActionsForCard(state: GameState, playerIndex: number, cardId: Card
       for (const payment of payments ?? []) {
         actions.push({ type: "play-card", cardId, payment });
       }
-      if (hasBuiltStageEffect(player, "free-build-per-age") && !player.freeBuildUsedThisAge) {
+      if (olympiaBuildsFree(state, playerIndex, def)) {
         actions.push({ type: "play-card", cardId, payment: { kind: "free-build" } });
       }
     }
@@ -73,6 +96,13 @@ function buildActionsForCard(state: GameState, playerIndex: number, cardId: Card
 }
 
 export function getLegalActions(state: GameState, playerIndex: number): SevenWondersAction[] {
+  if (state.phase === "choosing-sides") {
+    if (state.sideChoices?.[playerIndex] !== null) return [];
+    return [
+      { type: "choose-side", side: "A" },
+      { type: "choose-side", side: "B" },
+    ];
+  }
   if (state.phase === "selecting") {
     if (state.selections[playerIndex] !== null) return [];
     return state.hands[playerIndex].flatMap((cardId) =>

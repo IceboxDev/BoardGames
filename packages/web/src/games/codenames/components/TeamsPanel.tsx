@@ -6,8 +6,67 @@ import { hasHumanTeammate, seatLabel, TEAM_BG, TEAM_TEXT, teamName } from "../lo
 import { TeamChat } from "./TeamChat";
 
 // The left rail: each team's agents still hidden (as a row of agent pips),
-// its roster (who is spymaster, who is thinking), and — only when there is
-// another person on the viewer's team to talk to — the team chat.
+// its roster (who is spymaster, who is thinking, who dropped out and who an
+// AI is standing in for), and — only when there is another person on the
+// viewer's team to talk to — the team chat.
+
+/** A roster row's right-hand status: thinking, presence, else the role. */
+function SeatStatus({
+  seat,
+  thinking,
+}: {
+  seat: CodenamesPlayerView["seats"][number];
+  thinking: boolean;
+}) {
+  if (thinking) {
+    return (
+      <span className="flex shrink-0 gap-0.5" title="Thinking…">
+        {[0, 1, 2].map((i) => (
+          <span
+            key={i}
+            className="h-1 w-1 animate-bounce rounded-full bg-amber-300"
+            style={{ animationDelay: `${i * 140}ms` }}
+          />
+        ))}
+      </span>
+    );
+  }
+  if (seat.returning) {
+    return (
+      <span
+        className="shrink-0 text-3xs font-semibold text-sky-300"
+        title="Back — takes the seat from the AI after its move"
+      >
+        back next move
+      </span>
+    );
+  }
+  if (seat.standIn) {
+    return (
+      <span
+        className="shrink-0 text-3xs font-semibold text-sky-300"
+        title="An AI is playing this seat until its player is back"
+      >
+        AI stand-in
+      </span>
+    );
+  }
+  if (seat.awaySince !== null) {
+    return (
+      <span
+        className="shrink-0 text-3xs font-semibold text-amber-300"
+        title="Their connection dropped"
+      >
+        away
+      </span>
+    );
+  }
+  return (
+    <span className="shrink-0 text-3xs text-fg-muted">
+      {seat.role === "spymaster" ? "Spymaster" : "Operative"}
+    </span>
+  );
+}
 
 export function TeamsPanel({
   view,
@@ -116,25 +175,12 @@ function TeamCard({
                 className={cn(
                   "min-w-0 flex-1 truncate",
                   s.seat === view.seat ? "font-bold text-fg-strong" : "text-fg-secondary",
+                  s.awaySince !== null && !s.standIn && "opacity-60",
                 )}
               >
                 {seatLabel(s.seat, names)}
               </span>
-              {view.aiThinking === s.seat ? (
-                <span className="flex shrink-0 gap-0.5" title="Thinking…">
-                  {[0, 1, 2].map((i) => (
-                    <span
-                      key={i}
-                      className="h-1 w-1 animate-bounce rounded-full bg-amber-300"
-                      style={{ animationDelay: `${i * 140}ms` }}
-                    />
-                  ))}
-                </span>
-              ) : (
-                <span className="shrink-0 text-3xs text-fg-muted">
-                  {s.role === "spymaster" ? "Spymaster" : "Operative"}
-                </span>
-              )}
+              <SeatStatus seat={s} thinking={view.aiThinking === s.seat} />
             </li>
           ))}
       </ul>

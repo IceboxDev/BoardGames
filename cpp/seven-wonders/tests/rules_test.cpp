@@ -64,17 +64,51 @@ TEST_CASE("rules: chain build short-circuits resource payments") {
   CHECK_EQ(countFor(b, 0, MoveKind::PlayCard, PayKind::Resources), 0);
 }
 
-TEST_CASE("rules: Olympia A free-build offered once per age") {
-  GameState st = blankState(Olympia, 0);  // A: stage 2 = free-build-per-age
-  st.players[0].stagesBuilt = 2;           // stages 0,1 built -> free-build available
-  setHand(st, 0, {"Aqueduct"});
+TEST_CASE("rules: Olympia A builds the first card of each colour free") {
+  GameState st = blankState(Olympia, 0);  // A: stage 2 = free-first-of-color
+  st.players[0].stagesBuilt = 2;
+  setHand(st, 0, {"Aqueduct", "Altar"});  // blue, 3 stone (unaffordable) / blue, costs nothing
   MoveBuffer b;
   legalActions(st, 0, b);
   CHECK_EQ(countFor(b, 0, MoveKind::PlayCard, PayKind::FreeBuild), 1);
+  CHECK_EQ(countFor(b, 1, MoveKind::PlayCard, PayKind::FreeBuild), 0);  // free card: no offer
 
-  st.players[0].freeBuildUsedThisAge = true;
+  give(st, 0, "Lumber Yard");  // another colour doesn't matter
+  legalActions(st, 0, b);
+  CHECK_EQ(countFor(b, 0, MoveKind::PlayCard, PayKind::FreeBuild), 1);
+
+  give(st, 0, "Theater");  // a blue card already on the board
   legalActions(st, 0, b);
   CHECK_EQ(countFor(b, 0, MoveKind::PlayCard, PayKind::FreeBuild), 0);
+
+  st.players[0] = PlayerState{};  // power not built yet
+  st.players[0].wonderId = Olympia;
+  st.players[0].stagesBuilt = 1;
+  legalActions(st, 0, b);
+  CHECK_EQ(countFor(b, 0, MoveKind::PlayCard, PayKind::FreeBuild), 0);
+}
+
+TEST_CASE("rules: Olympia B builds the first and the last card of each age free") {
+  GameState st = blankState(Olympia, 1);  // B: stage 1 = first of age, stage 2 = last of age
+  setHand(st, 0, {"Aqueduct"});
+  MoveBuffer b;
+  auto offered = [&](int stages, int turn) {
+    st.players[0].stagesBuilt = uint8_t(stages);
+    st.turn = uint8_t(turn);
+    legalActions(st, 0, b);
+    return countFor(b, 0, MoveKind::PlayCard, PayKind::FreeBuild);
+  };
+  CHECK_EQ(offered(0, 1), 0);
+  CHECK_EQ(offered(1, 1), 1);
+  CHECK_EQ(offered(1, 3), 0);
+  CHECK_EQ(offered(1, 6), 0);
+  CHECK_EQ(offered(2, 1), 1);
+  CHECK_EQ(offered(2, 6), 1);
+  CHECK_EQ(offered(2, 4), 0);
+
+  give(st, 0, "Baths");  // Aqueduct now chains: chain only, no free-build
+  CHECK_EQ(offered(2, 6), 0);
+  CHECK_EQ(countFor(b, 0, MoveKind::PlayCard, PayKind::Chain), 1);
 }
 
 TEST_CASE("rules: no wonder move once all stages built") {

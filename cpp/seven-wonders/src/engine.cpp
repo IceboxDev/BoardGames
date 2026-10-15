@@ -173,7 +173,6 @@ void applyReveal(GameState& st) {
     removeHandAt(st, i, sel.card);
     if (sel.kind == MoveKind::PlayCard) {
       addTableauCard(st.players[i], selCard[i]);
-      if (sel.pay == PayKind::FreeBuild) st.players[i].freeBuildUsedThisAge = true;
     } else if (sel.kind == MoveKind::BuildWonder) {
       st.players[i].stagesBuilt++;
     } else {  // Discard
@@ -278,7 +277,6 @@ void applyPendingAction(GameState& st, int player, const Move& m) {
       }
       if (m.kind == MoveKind::PlayCard) {
         if (m.pay == PayKind::Resources) p.coins -= cardType(card).bankCoins;
-        if (m.pay == PayKind::FreeBuild) p.freeBuildUsedThisAge = true;
         addTableauCard(p, card);
         const Card& c = cardType(card);
         for (int e = 0; e < c.numEffects; e++) p.coins += instantCoins(c.effects[e], st, player);
@@ -363,7 +361,6 @@ static void advanceAge(GameState& st) {
     st.handCount[p] = 7;
     for (int k = 0; k < 7; k++) st.hands[p][k] = deck[p * 7 + k];
   }
-  for (int i = 0; i < N; i++) st.players[i].freeBuildUsedThisAge = false;
   st.turn = 1;
   st.phase = Phase::Selecting;
 }

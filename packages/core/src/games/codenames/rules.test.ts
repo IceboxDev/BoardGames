@@ -8,11 +8,17 @@ import {
   applyEndTurn,
   applyGuess,
   applyMark,
+  applyNote,
   applyTimeout,
+  askClue,
+  askProblemFor,
+  clueProblemFor,
   createGame,
   guessersOf,
   guessesLeft,
   legalActionsFor,
+  noteProblem,
+  resolveAppeal,
 } from "./rules";
 import { operativesOf, roleOf, teamOf } from "./seating";
 import type { CodenamesState, Team } from "./types";
@@ -189,5 +195,112 @@ describe("timers, pointers and chat", () => {
     const state = game();
     expect(() => applyChat(state, 0, "hi")).toThrow();
     expect(applyChat(state, 3, "  hi ").chat).toEqual([{ seat: 3, team: 1, text: "hi", turn: 0 }]);
+  });
+});
+
+/** A clue that only shares spelling with a face-down word: `<word>zq`. */
+function softClue(state: CodenamesState, count = 1) {
+  const word = state.words.find((w, i) => !state.revealed[i] && w.length >= 4) as string;
+  return { word: `${word}zq`, count } as const;
+}
+
+describe("pointers: one per operative", () => {
+  it("moves with the seat's latest pick and leaves teammates' alone", () => {
+    let state = withClue(game([null, null, null, null, null, null]));
+    const [a, b] = guessersOf(state, state.currentTeam) as [number, number];
+    const [x, y] = cardsOf(state, "bystander") as [number, number];
+    state = applyMark(state, a, x);
+    state = applyMark(state, b, x);
+    state = applyMark(state, a, y);
+    expect(state.marks).toEqual([
+      { card: x, seat: b },
+      { card: y, seat: a },
+    ]);
+  });
+});
+
+describe("sticky notes", () => {
+  /** One finished turn for the starter, so its clue (turn 0) can be pinned. */
+  function afterOneTurn() {
+    let state = withClue(game());
+    const guesser = guessersOf(state, state.currentTeam)[0] as number;
+    const covered = cardsOf(state, "bystander")[0] as number;
+    state = applyGuess(state, guesser, covered);
+    return { state, op: guesser, team: teamOf(guesser), covered };
+  }
+
+  it("pin and unpin a team clue on a face-down card — even on the other team's turn", () => {
+    const { state, op } = afterOneTurn();
+    expect(state.currentTeam).not.toBe(teamOf(op));
+    const card = cardsOf(state, "bystander")[0] as number;
+    const pinned = applyNote(state, op, card, 0);
+    expect(pinned.notes).toEqual([{ card, turn: 0, seat: op }]);
+    expect(applyNote(pinned, op, card, 0).notes).toEqual([]);
+  });
+
+  it("only the team's operatives, only its own clues, only face-down cards", () => {
+    const { state, op, team, covered } = afterOneTurn();
+    const card = cardsOf(state, "bystander")[1] as number;
+    const enemyOp = operativesOf((1 - team) as Team, state.seatCount)[0] as number;
+    expect(noteProblem(state, team, card, 0)).not.toBeNull(); // own spymaster
+    expect(noteProblem(state, enemyOp, card, 0)).not.toBeNull(); // not their clue
+    expect(noteProblem(state, op, covered, 0)).not.toBeNull();
+    expect(noteProblem(state, op, card, 1)).not.toBeNull(); // the live turn has no clue yet
+    expect(noteProblem(state, op, card, 0)).toBeNull();
+  });
+
+  it("outlive the turn, and go when their card is covered", () => {
+    let { state, op } = afterOneTurn();
+    const card = cardsOf(state, "bystander")[0] as number;
+    state = applyNote(state, op, card, 0);
+    state = withClue(state);
+    const other = guessersOf(state, state.currentTeam)[0] as number;
+    expect(state.notes).toHaveLength(1);
+    state = applyGuess(state, other, card);
+    expect(state.notes).toEqual([]);
+  });
+});
+
+describe("clue questions", () => {
+  it("only a spelling clash is asked about; nothing else is given meanwhile", () => {
+    const state = game();
+    const sm = state.currentTeam;
+    expect(askProblemFor(state, sm, { word: "zqx", count: 1 })).toMatch(/fine as it is/);
+    expect(askProblemFor(state, 1 - sm, softClue(state))).toMatch(/spymaster/);
+    const asked = askClue(state, sm, softClue(state), null, 1000);
+    expect(asked.appeal).toMatchObject({ by: sm, judge: 1 - sm, deadlineTs: 46_000 });
+    expect(clueProblemFor(asked, sm, { word: "zqx", count: 1 })).toMatch(/answer/);
+  });
+
+  it("allowed: the clue is given and the question recorded", () => {
+    const state = game();
+    const sm = state.currentTeam;
+    const clue = softClue(state, 2);
+    const given = resolveAppeal(askClue(state, sm, clue, null, 0), "allowed", null, 5);
+    expect(given.phase).toBe("guessing");
+    expect(given.turns.at(-1)?.clue).toEqual(clue);
+    expect(given.turns.at(-1)?.appeals?.[0]).toMatchObject({ word: clue.word, ruling: "allowed" });
+  });
+
+  it("refused: back to thinking, with the clue time that was left", () => {
+    const state = { ...game(), deadlineTs: 10_000 };
+    const sm = state.currentTeam;
+    const asked = askClue(state, sm, softClue(state), null, 4_000);
+    expect(asked.deadlineTs).toBeNull();
+    const back = resolveAppeal(asked, "refused", null, 30_000);
+    expect(back.phase).toBe("clue");
+    expect(back.appeal).toBeNull();
+    expect(back.deadlineTs).toBe(36_000);
+    expect(back.turns.at(-1)?.clue).toBeNull();
+  });
+
+  it("the judge rules and the asker withdraws — people only", () => {
+    const asked = askClue(game(), 0, softClue(game()), null, 0);
+    const sm = asked.currentTeam;
+    expect(legalActionsFor(asked, 1 - sm)).toEqual([
+      { kind: "rule-clue", allow: true },
+      { kind: "rule-clue", allow: false },
+    ]);
+    expect(legalActionsFor(asked, sm)).toEqual([{ kind: "withdraw-clue" }]);
   });
 });

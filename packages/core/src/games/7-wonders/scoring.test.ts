@@ -34,7 +34,7 @@ describe("scoreFinal categories", () => {
         wonder: "giza",
         stagesBuilt: 2, // 3 + 5 wonder points
         coins: 8, // floor(8/3) = 2
-        tableau: ["Altar", "Baths"], // 2 + 3 civilian
+        tableau: ["Altar", "Baths"], // 3 + 3 civilian
         militaryTokens: [1, -1, 3], // 3
       },
       { wonder: "babylon" },
@@ -43,9 +43,9 @@ describe("scoreFinal categories", () => {
     const b = scoreFinal(state)[0];
     expect(b.wonder).toBe(8);
     expect(b.coins).toBe(2);
-    expect(b.civilian).toBe(5);
+    expect(b.civilian).toBe(6);
     expect(b.military).toBe(3);
-    expect(b.total).toBe(8 + 2 + 5 + 3);
+    expect(b.total).toBe(8 + 2 + 6 + 3);
   });
 
   it("scores commercial end-game effects (Haven per own brown, Arena per own stage)", () => {
@@ -130,13 +130,26 @@ describe("guild scoring", () => {
     expect(scoreFinal(state)[0].guilds).toBe(6);
   });
 
-  it("Strategists Guild counts neighbor defeat tokens", () => {
+  it("Decorators Guild scores 7 only with every wonder stage built", () => {
+    const at = (stagesBuilt: number) =>
+      scoreFinal(
+        makeTestState([
+          { wonder: "rhodes", side: "B", stagesBuilt, coins: 0, tableau: ["Decorators Guild"] },
+          { wonder: "babylon" },
+          { wonder: "olympia" },
+        ]),
+      )[0].guilds;
+    expect(at(1)).toBe(0);
+    expect(at(2)).toBe(7); // Rhodes Night has two stages
+  });
+
+  it("Ludus scores 1 per own red card", () => {
     const state = makeTestState([
-      { wonder: "giza", coins: 0, tableau: ["Strategists Guild"] },
-      { wonder: "babylon", militaryTokens: [-1, -1, 5] },
-      { wonder: "olympia", militaryTokens: [-1] },
+      { wonder: "giza", coins: 0, tableau: ["Ludus", "Stockade", "Walls", "Castrum"] },
+      { wonder: "babylon", tableau: ["Barracks"] },
+      { wonder: "olympia" },
     ]);
-    expect(scoreFinal(state)[0].guilds).toBe(3);
+    expect(scoreFinal(state)[0].commercial).toBe(3);
   });
 
   it("Scientists Guild acts as a science wildcard", () => {
@@ -152,41 +165,6 @@ describe("guild scoring", () => {
     const b = scoreFinal(state)[0];
     expect(b.science).toBe(13); // (1,1,1) + wildcard
     expect(b.guilds).toBe(0); // value lands in the science category
-  });
-
-  it("Olympia B copies the best neighbor guild, evaluated on its own board", () => {
-    const state = makeTestState([
-      {
-        wonder: "olympia",
-        side: "B",
-        stagesBuilt: 3, // stage 3 = copy-guild
-        coins: 0,
-        tableau: [],
-      },
-      // Left neighbor owns Workers Guild (browns counted around Olympia).
-      { wonder: "babylon", tableau: ["Workers Guild", "Lumber Yard"] },
-      { wonder: "giza", tableau: ["Sawmill", "Ore Vein"] },
-    ]);
-    const b = scoreFinal(state)[0];
-    // Copied Workers Guild: Olympia's neighbors have 1 + 2 browns = 3 points.
-    expect(b.guilds).toBe(3);
-  });
-
-  it("copying the Scientists Guild is worth the extra-wildcard delta", () => {
-    const state = makeTestState([
-      {
-        wonder: "olympia",
-        side: "B",
-        stagesBuilt: 3,
-        coins: 0,
-        tableau: ["Apothecary", "Workshop", "Scriptorium"],
-      },
-      { wonder: "babylon", tableau: ["Scientists Guild"] },
-      { wonder: "giza" },
-    ]);
-    const b = scoreFinal(state)[0];
-    expect(b.science).toBe(10); // own (1,1,1)
-    expect(b.guilds).toBe(3); // 13 - 10 delta from the copied wildcard
   });
 });
 

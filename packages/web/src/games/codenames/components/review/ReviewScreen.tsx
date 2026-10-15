@@ -84,6 +84,7 @@ export function ReviewScreen({
   onBack,
   model,
   aside,
+  notice,
 }: {
   title: string;
   tone: ResultTone;
@@ -94,6 +95,8 @@ export function ReviewScreen({
   model: ReviewModel;
   /** Extra panel above the turn list (Duet's timer). */
   aside?: React.ReactNode;
+  /** A line under the result: a room waiting on its host, a refused rematch. */
+  notice?: { text: string; tone: "info" | "error" } | null;
 }) {
   const [shown, setShown] = useState<number | null>(null);
   const last = model.turns.length - 1;
@@ -152,6 +155,24 @@ export function ReviewScreen({
           )}
         />
       </header>
+
+      {notice && (
+        <p
+          role={notice.tone === "error" ? "alert" : "status"}
+          className={cn(
+            "flex shrink-0 items-center gap-2 px-4 pt-3 text-xs lg:px-8",
+            notice.tone === "error" ? "text-amber-300" : "text-fg-secondary",
+          )}
+        >
+          {notice.tone === "info" && (
+            <span className="relative flex h-2 w-2 shrink-0" aria-hidden>
+              <span className="absolute inset-0 animate-ping rounded-full bg-accent-400 opacity-60" />
+              <span className="relative h-2 w-2 rounded-full bg-accent-400" />
+            </span>
+          )}
+          {notice.text}
+        </p>
+      )}
 
       {model.highlights.length > 0 && (
         <div className="flex shrink-0 gap-2 overflow-x-auto px-4 pt-3 lg:px-8">

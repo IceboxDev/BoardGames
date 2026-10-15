@@ -10,9 +10,18 @@
  *
  *   - one token of letters (an apostrophe or hyphen inside is fine), ≤ 30
  *   - not equal to a face-up word after folding case, accents, ß and umlauts
+ *   - not sharing a stem with a face-up word (simple inflections per language),
+ *     not an irregular form of one (BROKEN, MICE) and not its other spelling
+ *     (THEATRE / THEATER)
  *   - neither starts/ends with a face-up word nor is the start/end of one
- *     (compounds), when the shorter of the two is at least 3 letters
- *   - not sharing a stem with a face-up word (simple inflections per language)
+ *     (compounds), when the shorter of the two is at least 3 letters — also
+ *     once one derivational prefix is stripped from either word
+ *
+ * The first three are a **form** of the table word: never a clue. The last is
+ * only **spelling** — SPARROW holds ROW, LAND ends ENGLAND — and the rulebook
+ * ("Don't be too strict") leaves that to the opposing spymaster: Codenames
+ * asks them (`clueVerdict`), Duet has no one to ask and stays strict
+ * (`clueProblem`).
  *
  * Covered (revealed) cards are off the table and no longer restrict clues.
  */
@@ -154,44 +163,234 @@ function compoundClash(fa: string, fb: string): boolean {
   return short.length >= MIN_OVERLAP && (long.startsWith(short) || long.endsWith(short));
 }
 
+/** Endings that make a form of a word ("any form of a visible word", rulebook). */
+const FORM_ENDINGS: Record<Language, readonly string[]> = {
+  en: ["s", "es", "d", "ed", "ing", "er", "ers", "est", "ly", "y"],
+  de: [
+    "e",
+    "en",
+    "n",
+    "er",
+    "ern",
+    "es",
+    "s",
+    "st",
+    "t",
+    "te",
+    "ten",
+    "ung",
+    "ungen",
+    "chen",
+    "lein",
+  ],
+};
+
+const VOWEL_START = /^[aeiouy]/;
+
 /**
- * Whether two words clash under the clue rules: the same word, a compound
- * part, a shared stem — also once a derivational prefix is stripped from
- * either ("subatomic" clashes with ATOM).
+ * Whether the longer of two folded words is the shorter plus an ending —
+ * HORSE → HORSES, RUN → RUNNING (a doubled consonant), MAKE → MAKING (a
+ * dropped e), PARTY → PARTIES. The stem trimmer alone misses these.
  */
-export function wordsClash(a: string, b: string, language: Language): boolean {
-  const fa = foldWord(a);
-  const fb = foldWord(b);
-  if (compoundClash(fa, fb)) return true;
-  if (stemOf(a, language) === stemOf(b, language)) return true;
-  for (const va of withoutPrefixes(fa, language)) {
-    for (const vb of withoutPrefixes(fb, language)) {
-      if (va === fa && vb === fb) continue;
-      if (compoundClash(va, vb) || stemOf(va, language) === stemOf(vb, language)) return true;
-    }
+function isInflection(fa: string, fb: string, language: Language): boolean {
+  const [short, long] = fa.length <= fb.length ? [fa, fb] : [fb, fa];
+  if (short.length < MIN_OVERLAP || short === long) return false;
+  for (const end of FORM_ENDINGS[language]) {
+    if (long === short + end) return true;
+    if (language !== "en" || !VOWEL_START.test(end)) continue;
+    if (long === short + short.slice(-1) + end) return true;
+    if (short.endsWith("e") && long === short.slice(0, -1) + end) return true;
+    if (short.endsWith("y") && long === `${short.slice(0, -1)}i${end}`) return true;
   }
   return false;
 }
 
 /**
+ * English words whose forms aren't the word plus an ending: irregular verbs
+ * (the rulebook's own example — "until BREAK is covered up by a card, you
+ * can't say break, broken…") and plurals. One group per `|`; two words of a
+ * group are forms of one word. A `~` marks a form that is also a word of its
+ * own (FOUND a city, a SAW, a ROSE): only spelling ties it to the group, so
+ * it goes to the opposing spymaster instead of being refused.
+ */
+const IRREGULAR_EN = `arise arose arisen|awake awoke awoken|bear ~bore borne ~born|beat beaten|become became|begin began begun|bend bent|bind ~bound|bite ~bit bitten|bleed bled|blow blew blown|break broke broken|breed bred|bring brought|build built|burn burnt|buy bought|catch caught|choose chose chosen|cling clung|come came|creep crept|deal dealt|dig dug|do did done|draw drew drawn|dream dreamt|drink drank drunk|drive drove driven|eat ate eaten|fall ~fell fallen|feed ~fed|feel ~felt|fight fought|find ~found|flee fled|fling flung|fly flew flown flies|forbid forbade forbidden|forget forgot forgotten|forgive forgave forgiven|freeze froze frozen|get got gotten|give gave given|go went gone goes|grind ~ground|grow grew grown|hang hung|have had has|hear heard|hide hid hidden|hold held|keep kept|kneel knelt|know knew known|lay laid|lead led|lean leant|leap leapt|learn learnt|leave ~left|lend lent|lie ~lay lain|light ~lit|lose lost|make made|mean meant|meet met|pay paid|prove proven|ride rode ridden|ring rang rung|rise ~rose risen|run ran|say said|see ~saw seen|seek sought|sell sold|send sent|sew sewn|shake shook shaken|shine shone|shoot shot|show shown|shrink shrank shrunk|sing sang sung|sink sank sunk|sit sat|sleep slept|slide slid|sling slung|speak spoke spoken|speed sped|spend spent|spin spun|spit ~spat|spring sprang sprung|stand stood|steal ~stole stolen|stick stuck|sting stung|stink stank stunk|stride strode stridden|strike struck stricken|string strung|strive strove striven|swear swore sworn|sweep swept|swim swam swum|swing swung|take took taken|teach taught|tear tore torn|tell told|think thought|throw threw thrown|tread trod trodden|understand understood|wake woke woken|wear wore worn|weave wove woven|weep wept|win won|wind ~wound|write wrote written|child children|foot feet|goose geese|louse lice|man men|mouse mice|ox oxen|person people|tooth teeth|woman women|knife knives|leaf leaves|life lives|loaf loaves|wife wives|wolf wolves|half halves|calf calves|shelf shelves|thief thieves|elf elves|cactus cacti|fungus fungi|nucleus nuclei|crisis crises|thesis theses|phenomenon phenomena|criterion criteria|good better best|bad worse worst|far farther further`;
+
+interface IrregularEntry {
+  group: number;
+  /** Also a word of its own: a clash with it is spelling, not a form. */
+  homograph: boolean;
+}
+
+function irregularTable(source: string): ReadonlyMap<string, IrregularEntry[]> {
+  const table = new Map<string, IrregularEntry[]>();
+  for (const [group, words] of source.split("|").entries()) {
+    for (const raw of words.split(" ")) {
+      const word = raw.replace("~", "");
+      table.set(word, [...(table.get(word) ?? []), { group, homograph: raw.startsWith("~") }]);
+    }
+  }
+  return table;
+}
+
+const IRREGULAR: Record<Language, ReadonlyMap<string, IrregularEntry[]>> = {
+  en: irregularTable(IRREGULAR_EN),
+  de: new Map(),
+};
+
+/**
+ * Whether two folded words are forms of one irregular word: `"form"` for
+ * BROKEN and BREAK, `"spelling"` when one of them is a word of its own too
+ * (FOUND and FIND), null when they aren't.
+ */
+function irregularClash(fa: string, fb: string, language: Language): Clash | null {
+  const table = IRREGULAR[language];
+  const entriesOf = (w: string) => [
+    ...(table.get(w) ?? []),
+    ...(stemOf(w, language) !== w ? (table.get(stemOf(w, language)) ?? []) : []),
+  ];
+  const eb = entriesOf(fb);
+  let clash: Clash | null = null;
+  for (const a of entriesOf(fa)) {
+    for (const b of eb) {
+      if (a.group !== b.group) continue;
+      if (!a.homograph && !b.homograph) return "form";
+      clash = "spelling";
+    }
+  }
+  return clash;
+}
+
+/** Words the respelling below would wrongly merge with another word (TIMBRE is not TIMBER). */
+const DISTINCT_SPELLINGS = new Set(["timbre", "timbres", "prise", "prised", "prises", "prising"]);
+
+/**
+ * One spelling of a word that is spelled two ways — British and American
+ * English ("you can't use t-h-e-a-t-r-e when THEATER is on the table.
+ * Theatre and theater are different forms of the same word"). Both words are
+ * brought to the American spelling before they are compared.
+ */
+function oneSpelling(folded: string, language: Language): string {
+  if (language !== "en" || folded.length < 5 || DISTINCT_SPELLINGS.has(folded)) return folded;
+  return folded
+    .replace(/([^aeiou])re(s|d)?$/, "$1er$2") // theatre, centres, fibred
+    .replace(/our(s|ed|ing|ite|ites|able)?$/, "or$1") // colour, flavoured, favourite
+    .replace(/is(e|es|ed|ing|ation|ations|er|ers)$/, "iz$1") // organise, realisation
+    .replace(/ys(e|es|ed|ing)$/, "yz$1") // analyse
+    .replace(/ogue(s)?$/, "og$1") // catalogue
+    .replace(/([aeiou])ll(ed|ing|er|ers)$/, "$1l$2"); // travelled, modelling
+}
+
+/**
+ * How two words clash under the clue rules:
+ *   - `"form"`: the same word, a shared inflection stem, the word plus an
+ *     inflection ending (HORSES, RUNNING, MAKING for HORSE, RUN, MAKE), an
+ *     irregular form (BROKEN for BREAK, MICE for MOUSE) or the other spelling
+ *     of it (THEATRE for THEATER, COLOUR for COLOR)
+ *   - `"spelling"`: one starts or ends the other (SPARROW and ROW), also once
+ *     a derivational prefix is stripped from either (SUBATOMIC and ATOM)
+ *   - `null`: no clash
+ */
+export type Clash = "form" | "spelling";
+
+export function clashOf(a: string, b: string, language: Language): Clash | null {
+  const fa = foldWord(a);
+  const fb = foldWord(b);
+  if (fa === fb || stemOf(a, language) === stemOf(b, language) || isInflection(fa, fb, language)) {
+    return "form";
+  }
+  const irregular = irregularClash(fa, fb, language);
+  if (irregular === "form") return "form";
+  const sa = oneSpelling(fa, language);
+  const sb = oneSpelling(fb, language);
+  if (
+    (sa !== fa || sb !== fb) &&
+    (sa === sb || stemOf(sa, language) === stemOf(sb, language) || isInflection(sa, sb, language))
+  ) {
+    return "form";
+  }
+  if (irregular === "spelling" || compoundClash(fa, fb)) return "spelling";
+  for (const va of withoutPrefixes(fa, language)) {
+    for (const vb of withoutPrefixes(fb, language)) {
+      if (va === fa && vb === fb) continue;
+      // Behind a prefix even a whole word is only spelling: RELATE holds LATE.
+      if (compoundClash(va, vb) || stemOf(va, language) === stemOf(vb, language)) {
+        return "spelling";
+      }
+    }
+  }
+  return null;
+}
+
+/**
+ * Whether two words clash under the clue rules at all: a form or a spelling
+ * clash. The deal uses it to keep HORSE and HORSESHOE off one board.
+ */
+export function wordsClash(a: string, b: string, language: Language): boolean {
+  return clashOf(a, b, language) !== null;
+}
+
+/** What is wrong with the word as a single token, or `null` when it is one. */
+function tokenProblem(word: string): string | null {
+  const trimmed = word.normalize("NFKC").trim();
+  if (trimmed.length === 0) return "Type a clue first.";
+  if (trimmed.length > MAX_CLUE_LENGTH) return `A clue is at most ${MAX_CLUE_LENGTH} letters.`;
+  if (!TOKEN.test(trimmed)) return "A clue is one word — letters only, no spaces or digits.";
+  return null;
+}
+
+/**
  * Why `word` can't be a clue on a table showing `faceUpWords`, or `null` when
- * it can. The message is shown to the spymaster as-is.
+ * it can. Strict: a spelling clash is refused too (Duet, the AI fallback).
+ * The message is shown to the spymaster as-is.
  */
 export function clueProblem(
   word: string,
   faceUpWords: readonly string[],
   language: Language,
 ): string | null {
-  const trimmed = word.normalize("NFKC").trim();
-  if (trimmed.length === 0) return "Type a clue first.";
-  if (trimmed.length > MAX_CLUE_LENGTH) return `A clue is at most ${MAX_CLUE_LENGTH} letters.`;
-  if (!TOKEN.test(trimmed)) return "A clue is one word — letters only, no spaces or digits.";
+  const verdict = clueVerdict(word, faceUpWords, language);
+  if (verdict.kind === "ok") return null;
+  if (verdict.kind === "hard") return verdict.message;
+  return `"${cleanClueWord(word)}" is too close to ${verdict.clash.toUpperCase()}, which is on the table.`;
+}
+
+/**
+ * A clue against the table, as Codenames rules on it:
+ *   - `ok`: give it
+ *   - `hard`: never a clue — not one word, or a form of a table word
+ *   - `soft`: only spelling ties it to `clash`, a face-down word; the
+ *     opposing spymaster may allow it (rulebook, "Don't be too strict")
+ */
+export type ClueVerdict =
+  | { kind: "ok" }
+  | { kind: "hard"; message: string }
+  | { kind: "soft"; message: string; clash: string };
+
+export function clueVerdict(
+  word: string,
+  faceUpWords: readonly string[],
+  language: Language,
+): ClueVerdict {
+  const token = tokenProblem(word);
+  if (token !== null) return { kind: "hard", message: token };
+  const clean = cleanClueWord(word);
+  let soft: string | null = null;
   for (const faceUp of faceUpWords) {
-    if (wordsClash(trimmed, faceUp, language)) {
-      return `"${trimmed}" is too close to ${faceUp.toUpperCase()}, which is on the table.`;
+    const clash = clashOf(clean, faceUp, language);
+    if (clash === "form") {
+      return {
+        kind: "hard",
+        message: `"${clean}" is too close to ${faceUp.toUpperCase()}, which is on the table.`,
+      };
     }
+    if (clash === "spelling" && soft === null) soft = faceUp;
   }
-  return null;
+  if (soft === null) return { kind: "ok" };
+  return {
+    kind: "soft",
+    clash: soft,
+    message: `"${clean}" shares its spelling with ${soft.toUpperCase()}, which is on the table.`,
+  };
 }
 
 /** The clue as it is recorded: trimmed, single-spaced, original casing kept. */

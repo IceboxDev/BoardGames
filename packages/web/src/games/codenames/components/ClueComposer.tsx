@@ -1,6 +1,8 @@
 import {
   type ClueCount,
+  type ClueVerdict,
   clueProblem,
+  clueVerdict,
   formatClueCount,
   MAX_CLUE_COUNT,
   MAX_CLUE_LENGTH,
@@ -18,6 +20,30 @@ import { cn } from "../../../lib/cn";
 // The spymaster may tap their own cards on the board to mark what the clue
 // means: the number follows the marked cards until it is set by hand, and the
 // marks are kept (secretly) for the end-of-game review.
+//
+// With `ask` (classic Codenames), a word that only shares spelling with a
+// table word (SPARROW with ROW out) isn't refused: the button becomes "Ask
+// <the other spymaster>", as the rulebook has it. Without (Duet: no one to
+// ask), every clash is refused.
+
+/** Putting a spelling-only clash to the opposing spymaster. */
+export interface ClueAsk {
+  /** Who rules, as the button names them ("Blue"). */
+  judge: string;
+  onAsk: (word: string, count: ClueCount) => void;
+  /** The word the judge just refused this turn, to say why the composer is back. */
+  refused?: string | null;
+}
+
+/** Duet's rule: any clash is refused, spelling included. */
+function strictVerdict(
+  word: string,
+  faceDownWords: readonly string[],
+  language: Language,
+): ClueVerdict {
+  const problem = clueProblem(word, faceDownWords, language);
+  return problem === null ? { kind: "ok" } : { kind: "hard", message: problem };
+}
 
 export function ClueComposer({
   faceDownWords,
@@ -25,6 +51,7 @@ export function ClueComposer({
   chosenWords,
   onSubmit,
   showUnlimited = true,
+  ask,
 }: {
   faceDownWords: readonly string[];
   language: Language;
@@ -33,11 +60,18 @@ export function ClueComposer({
   onSubmit: (word: string, count: ClueCount) => void;
   /** Duet's number is only information, so ∞ adds nothing there. */
   showUnlimited?: boolean;
+  ask?: ClueAsk;
 }) {
   const [word, setWord] = useState("");
   const [count, setCount] = useState<ClueCount>(1);
   const [countSetByHand, setCountSetByHand] = useState(false);
-  const problem = word.trim() ? clueProblem(word, faceDownWords, language) : null;
+  const verdict: ClueVerdict | null = !word.trim()
+    ? null
+    : ask
+      ? clueVerdict(word, faceDownWords, language)
+      : strictVerdict(word, faceDownWords, language);
+  const problem = verdict?.kind === "hard" ? verdict.message : null;
+  const asking = verdict?.kind === "soft" && ask !== undefined;
 
   useEffect(() => {
     if (!countSetByHand && chosenWords.length > 0) {
@@ -57,6 +91,14 @@ export function ClueComposer({
 
   const hint = problem ? (
     <span className="text-amber-300">{problem}</span>
+  ) : asking && verdict?.kind === "soft" ? (
+    <span className="text-amber-200">
+      {verdict.message} The rulebook lets {ask?.judge} allow it — ask quietly.
+    </span>
+  ) : ask?.refused && !word.trim() ? (
+    <span className="text-amber-300">
+      {ask.judge} refused {ask.refused.toUpperCase()} — think of another word.
+    </span>
   ) : chosenWords.length > 0 ? (
     <span>
       Meant: <span className="font-semibold text-fg-primary">{chosenWords.join(" · ")}</span>
@@ -72,7 +114,8 @@ export function ClueComposer({
       onSubmit={(e) => {
         e.preventDefault();
         if (!word.trim() || problem) return;
-        onSubmit(word.trim(), count);
+        if (asking) ask?.onAsk(word.trim(), count);
+        else onSubmit(word.trim(), count);
         setWord("");
         setCountSetByHand(false);
       }}
@@ -121,8 +164,12 @@ export function ClueComposer({
             onClick={() => step(1)}
           />
         </div>
-        <Button type="submit" variant="primary" disabled={!word.trim() || problem !== null}>
-          Give clue
+        <Button
+          type="submit"
+          variant={asking ? "secondary" : "primary"}
+          disabled={!word.trim() || problem !== null}
+        >
+          {asking ? `Ask ${ask?.judge}` : "Give clue"}
         </Button>
       </div>
       <p className="w-full truncate text-center text-3xs text-fg-secondary">{hint}</p>

@@ -18,9 +18,9 @@ static int baseAgeCount(int age) {
 }
 
 TEST_CASE("data: table sizes") {
-  CHECK_EQ(NUM_CARD_TYPES, 78);
+  CHECK_EQ(NUM_CARD_TYPES, 80);
   CHECK_EQ(NUM_CARD_TYPES, NUM_CARD_TYPES_CT);  // compile-time constant stays in sync
-  CHECK_EQ(NUM_NAMES, 75);
+  CHECK_EQ(NUM_NAMES, 77);
 }
 
 TEST_CASE("data: deck size is 7*N per age (N=5)") {

@@ -1,373 +1,245 @@
 import type { SevenWondersPlayerView } from "@boardgames/core/games/7-wonders/machine";
-import type {
-  CardId,
-  LogEntry,
-  Payment,
-  SevenWondersAction,
-} from "@boardgames/core/games/7-wonders/types";
+import type { CardId, SevenWondersAction, WonderId } from "@boardgames/core/games/7-wonders/types";
+import { leftOf, rightOf } from "@boardgames/core/games/7-wonders/types";
 import { useCallback, useEffect, useMemo, useState } from "react";
 import ActionLog from "../../../components/action-log/ActionLog";
 import { CardFan } from "../../../components/card-fan";
 import GameScreen from "../../../components/game-layout/GameScreen";
-import { Button, Chip } from "../../../components/ui";
-import { AGE_LABEL, SCIENCE_GLYPH } from "../card-utils";
+import { useMediaQuery, WIDE_BOARD_QUERY } from "../../../hooks/useMediaQuery";
 import { mapSevenWondersLog } from "../log-mapper";
-import { CardFaceHand } from "./CardFace";
+import { SHEET_URL } from "../logic/card-art";
+import { attentionFor, navKeys, seatLabels, seatsFrom, type ViewId } from "../logic/table";
+import { useDraftInteraction } from "../logic/useDraftInteraction";
+import CardArt from "./CardArt";
+import CityNavigator from "./CityNavigator";
 import DiscardPickerOverlay from "./DiscardPickerOverlay";
-import EdificePanel from "./EdificePanel";
-import MilitaryBanner from "./MilitaryBanner";
+import HandActions, { HandCard } from "./HandActions";
 import PaymentModal from "./PaymentModal";
-import PlayerPanel from "./PlayerPanel";
-import TableauDisplay from "./TableauDisplay";
-import WonderBoard from "./WonderBoard";
-
-type InnerAction =
-  | { type: "play-card"; cardId: CardId; payment: Payment }
-  | {
-      type: "build-wonder";
-      cardId: CardId;
-      payment: { kind: "resources"; left: number; right: number };
-      participate?: boolean;
-    }
-  | { type: "discard"; cardId: CardId };
+import ChainsView from "./views/ChainsView";
+import CityView from "./views/CityView";
+import EdificeView from "./views/EdificeView";
+import OverviewView from "./views/OverviewView";
+import TableView from "./views/TableView";
+import WarReveal from "./WarReveal";
 
 interface GameBoardProps {
   view: SevenWondersPlayerView;
   myIndex: number;
   legalActions: SevenWondersAction[];
   onAction: (action: SevenWondersAction) => void;
+  /** Seat names in seat order (rooms: people's names; solo: You / AI names). */
+  seatNames?: readonly string[];
   isGameOver?: boolean;
   onShowResults?: () => void;
+  /** Game over: open the results on their own once the last war has been shown. */
+  autoShowResults?: boolean;
+  /** Tests / the dev lab: open on a given view. */
+  initialView?: ViewId;
+  /** Dev lab: replay the latest war on mount. */
+  replayWar?: boolean;
 }
 
+const VIEW_KEY = "7-wonders:view";
+const FIT = { width: 1900, height: 1000 } as const;
+const VIEWS: readonly ViewId[] = ["city", "table", "overview", "edifice", "chains"];
+/**
+ * The table under the board: quiet and dark like every other game's, a
+ * faint warm lamp-glow from above the only flourish — the cards and boards
+ * carry the painting, the background never competes with them.
+ */
+const TABLE_BACKDROP =
+  "radial-gradient(ellipse 70% 55% at 50% 0%, rgb(217 165 32 / 0.07), transparent 70%)";
+
+function rememberedView(): ViewId {
+  try {
+    const v = sessionStorage.getItem(VIEW_KEY);
+    return VIEWS.includes(v as ViewId) ? (v as ViewId) : "city";
+  } catch {
+    return "city";
+  }
+}
+
+/**
+ * The game as views — your city, any other city, the table, the overview,
+ * the Edifice projects — chosen from the navigator in the left panel, above
+ * the hand that every card game shares. The hand and its buttons stay put on
+ * every view; the views are for looking.
+ */
 export default function GameBoard({
   view,
   myIndex,
   legalActions,
   onAction,
-  isGameOver,
+  seatNames,
+  isGameOver = false,
   onShowResults,
+  autoShowResults = false,
+  initialView,
+  replayWar = false,
 }: GameBoardProps) {
-  const [selectedCardId, setSelectedCardId] = useState<CardId | null>(null);
-  const [participateNext, setParticipateNext] = useState(false);
-  const [paymentPick, setPaymentPick] = useState<{
-    cardId: CardId;
-    intent: "play" | "wonder";
-    options: Payment[];
-    participate: boolean;
-  } | null>(null);
-
-  const me = view.me;
-  const myBoard = view.players[myIndex];
+  const wide = useMediaQuery(WIDE_BOARD_QUERY);
+  const ix = useDraftInteraction({ view, myIndex, legalActions, onAction, isGameOver });
   const n = view.playerCount;
+  const me = Math.max(0, myIndex);
 
-  const pending = view.phase === "pending" ? view.pending : null;
-  const pendingMine = pending?.playerIndex === myIndex;
-  const babylonMode = pendingMine && pending?.kind === "babylon-seventh";
-  const halikarnassosMode = pendingMine && pending?.kind === "halikarnassos";
-  const canAct = !isGameOver && view.phase === "selecting" && me !== null && !me.hasSelected;
-
-  const labelFor = useCallback((i: number) => (i === myIndex ? "You" : `P${i + 1}`), [myIndex]);
-
-  // During the Babylon 7th-card pick, legal actions arrive wrapped in
-  // play-seventh — unwrap for the shared button flow and re-wrap on send.
-  const effectiveActions = useMemo<InnerAction[]>(() => {
-    if (babylonMode) {
-      return legalActions.flatMap((a) => (a.type === "play-seventh" ? [a.action] : []));
-    }
-    return legalActions.flatMap((a) =>
-      a.type === "play-card" || a.type === "build-wonder" || a.type === "discard" ? [a] : [],
-    );
-  }, [legalActions, babylonMode]);
-
-  const sendInner = useCallback(
-    (action: InnerAction) => {
-      setSelectedCardId(null);
-      setPaymentPick(null);
-      onAction(babylonMode ? { type: "play-seventh", action } : action);
-    },
-    [onAction, babylonMode],
+  // People by name; AI seats (whose names all read "… (AI)") by their wonder.
+  const wonders = view.players.map((p) => p.wonderId).join("|");
+  const names = useMemo(
+    () => seatLabels(wonders.split("|") as WonderId[], myIndex, seatNames),
+    [wonders, myIndex, seatNames],
   );
 
-  // Clear a stale selection when the hand rotates.
-  const hand = me?.hand ?? [];
-  useEffect(() => {
-    if (selectedCardId && !hand.includes(selectedCardId)) setSelectedCardId(null);
-  }, [hand, selectedCardId]);
-
-  // Surface each new end-of-age military resolution once.
-  const militaryEntries = useMemo(
-    () =>
-      view.actionLog.filter(
-        (e): e is Extract<LogEntry, { type: "military" }> => e.type === "military",
-      ),
-    [view.actionLog],
-  );
-  const [seenMilitary, setSeenMilitary] = useState(() => militaryEntries.length);
-  useEffect(() => {
-    if (militaryEntries.length <= seenMilitary) return;
-    const timer = setTimeout(() => setSeenMilitary(militaryEntries.length), 6000);
-    return () => clearTimeout(timer);
-  }, [militaryEntries.length, seenMilitary]);
-  const bannerEntry =
-    militaryEntries.length > seenMilitary ? militaryEntries[militaryEntries.length - 1] : null;
-
-  const selectable = canAct || babylonMode;
-  const playOptions = selectedCardId
-    ? effectiveActions.flatMap((a) =>
-        a.type === "play-card" && a.cardId === selectedCardId ? [a.payment] : [],
-      )
-    : [];
-  // Distinct wonder-stage payments (both participate and non-participate build
-  // actions share a payment; dedupe so the option list isn't doubled).
-  const wonderOptions = selectedCardId
-    ? dedupePayments(
-        effectiveActions.flatMap((a) =>
-          a.type === "build-wonder" && a.cardId === selectedCardId ? [a.payment] : [],
-        ),
-      )
-    : [];
-  const currentEdifice = view.edifices?.[view.age - 1];
-  const alreadyJoined =
-    currentEdifice !== undefined &&
-    (view.playerEdifice?.[myIndex]?.participation ?? []).includes(currentEdifice.age);
-  const canParticipate =
-    !!selectedCardId &&
-    effectiveActions.some(
-      (a) => a.type === "build-wonder" && a.cardId === selectedCardId && a.participate,
-    );
-  const canDiscard = selectedCardId
-    ? effectiveActions.some((a) => a.type === "discard" && a.cardId === selectedCardId)
-    : false;
-
-  const pickWithOptions = (intent: "play" | "wonder", options: Payment[]) => {
-    if (!selectedCardId) return;
-    const participate = intent === "wonder" && participateNext && canParticipate;
-    if (options.length === 1) {
-      const payment = options[0];
-      if (intent === "play") {
-        sendInner({ type: "play-card", cardId: selectedCardId, payment });
-      } else if (payment.kind === "resources") {
-        sendInner({ type: "build-wonder", cardId: selectedCardId, payment, participate });
-      }
-      return;
-    }
-    setPaymentPick({ cardId: selectedCardId, intent, options, participate });
-  };
-
-  const opponents = Array.from({ length: n - 1 }, (_, k) => {
-    const idx = (myIndex + 1 + k) % n;
-    const neighborSide = k === 0 ? ("left" as const) : k === n - 2 ? ("right" as const) : undefined;
-    return { idx, neighborSide };
+  const [current, setCurrent] = useState<ViewId>(() => {
+    const v = initialView ?? rememberedView();
+    return v === "edifice" && !view.edifices ? "city" : v;
   });
+  const [citySeat, setCitySeat] = useState(me);
 
-  const statusText = isGameOver
-    ? "Game over"
-    : halikarnassosMode
-      ? "Pick a card from the discard pile"
-      : babylonMode
-        ? "Play your 7th card (Babylon)"
-        : pending && !pendingMine
-          ? `${labelFor(pending.playerIndex)} is resolving ${
-              pending.kind === "halikarnassos" ? "Halikarnassos" : "Babylon"
-            }…`
-          : view.phase === "revealing"
-            ? "Revealing…"
-            : me?.hasSelected
-              ? "Waiting for the other players…"
-              : "Select a card from your hand";
+  const select = useCallback(
+    (next: ViewId, seat?: number) => {
+      setCurrent(next);
+      if (next === "city") setCitySeat(seat ?? me);
+      try {
+        sessionStorage.setItem(VIEW_KEY, next);
+      } catch {
+        // A private window may refuse storage; the view still switches.
+      }
+    },
+    [me],
+  );
+
+  // Keys: the rail in order — 1 Table, 2 Overview, 3 Chains, 4 Edifice (when
+  // in play), then the cities, yours first (`navKeys`);
+  // B / W / D act on the picked-up card, Esc puts it back.
+  const { build, wonder, discard, cancel, selected } = ix;
+  const choosing = Boolean(ix.paymentPick || ix.halikarnassosMode);
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if (e.ctrlKey || e.metaKey || e.altKey) return;
+      const target = e.target as HTMLElement | null;
+      if (target && ["INPUT", "SELECT", "TEXTAREA"].includes(target.tagName)) return;
+      if (document.querySelector("[role='dialog']")) return;
+      const k = e.key.toLowerCase();
+      // A choice is waiting (peeked away): Esc belongs to the peek, and the card is spoken for.
+      if (choosing && ["escape", "b", "w", "d"].includes(k)) return;
+      if (k === "escape" && selected) return cancel();
+      if (selected && k === "b") return build();
+      if (selected && k === "w") return wonder();
+      if (selected && k === "d") return discard();
+      const keys = navKeys(Boolean(view.edifices));
+      for (const [v, key] of Object.entries(keys.views)) {
+        if (k === key) return select(v as ViewId);
+      }
+      const seats = seatsFrom(myIndex, n);
+      const i = seats.findIndex((_, j) => keys.city(j) === k);
+      if (i >= 0) select("city", seats[i]);
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [select, myIndex, n, view.edifices, selected, build, wonder, discard, cancel, choosing]);
+
+  // The art sheet, fetched before the first hand needs it.
+  useEffect(() => {
+    const link = document.createElement("link");
+    link.rel = "preload";
+    link.as = "image";
+    link.href = SHEET_URL;
+    document.head.appendChild(link);
+    return () => link.remove();
+  }, []);
+
+  // The final war plays out on the board; a beat after it closes, the count.
+  const [warOpen, setWarOpen] = useState(false);
+  useEffect(() => {
+    if (!isGameOver || !autoShowResults || warOpen || !onShowResults) return;
+    const t = setTimeout(onShowResults, 1600);
+    return () => clearTimeout(t);
+  }, [isGameOver, autoShowResults, warOpen, onShowResults]);
+
+  const attention = attentionFor(view, myIndex, isGameOver);
+  const log = useMemo(
+    () => mapSevenWondersLog(view.actionLog, myIndex, names),
+    [view.actionLog, myIndex, names],
+  );
+
+  const navigator = (
+    <CityNavigator
+      view={view}
+      myIndex={myIndex}
+      names={names}
+      current={current}
+      citySeat={citySeat}
+      attention={attention}
+      onSelect={select}
+      compact={!wide}
+    />
+  );
 
   return (
     <>
       <GameScreen
-        sidebar={<ActionLog blocks={mapSevenWondersLog(view.actionLog, myIndex)} />}
-        leftSidebar={
-          <div className="flex flex-col gap-2 text-xs text-fg-secondary">
-            <p className="text-sm font-bold text-fg-primary">
-              {AGE_LABEL[view.age]} · Turn {view.turn}/6
-            </p>
-            {myBoard && (
-              <>
-                <p>🪙 {myBoard.coins} coins</p>
-                <p>🛡️ {myBoard.shields} shields</p>
-                <p>
-                  ⚔️ tokens:{" "}
-                  {myBoard.militaryTokens.length === 0
-                    ? "none"
-                    : myBoard.militaryTokens.map((t) => (t > 0 ? `+${t}` : `${t}`)).join(" ")}
-                </p>
-                <p>
-                  {(Object.keys(SCIENCE_GLYPH) as Array<keyof typeof SCIENCE_GLYPH>)
-                    .map((s) => `${SCIENCE_GLYPH[s]}${myBoard.scienceCounts[s]}`)
-                    .join(" ")}
-                  {myBoard.scienceWildcards > 0 ? ` ❓${myBoard.scienceWildcards}` : ""}
-                </p>
-              </>
-            )}
-            <p>🗑️ discard: {view.discardCount}</p>
-          </div>
-        }
-        leftSidebarTitle="Status"
+        background="bg-surface-950"
+        backdrop={TABLE_BACKDROP}
+        fitTo={FIT}
+        leftSidebar={wide ? navigator : undefined}
+        leftSidebarLabel="Cities"
+        sidebar={<ActionLog blocks={log} />}
         fan={
-          hand.length > 0 ? (
+          ix.hand.length > 0 ? (
             <CardFan
-              cards={hand}
-              getCardId={(id) => id}
-              renderCard={(id) => (
-                <CardFaceHand cardId={id} selected={id === selectedCardId} disabled={!selectable} />
-              )}
-              renderPreview={(id) => <CardFaceHand cardId={id} />}
-              onCardClick={(id) => selectable && setSelectedCardId(id)}
-              disabled={!selectable}
+              cards={ix.hand}
+              getCardId={(id: CardId) => id}
+              renderCard={(id) => <HandCard ix={ix} cardId={id} />}
+              renderPreview={(id) => <CardArt cardId={id} variant="showcase" />}
+              onCardClick={(id) => ix.select(id)}
+              disabled={!ix.selectable}
             />
-          ) : undefined
+          ) : (
+            // An empty hand keeps its slot (and the buttons above it): the board never moves.
+            <span aria-hidden />
+          )
         }
-        fanActions={
-          <div className="flex items-center justify-center gap-2">
-            {isGameOver && onShowResults ? (
-              <Button
-                variant="tinted"
-                tone="orange"
-                size="md"
-                onClick={onShowResults}
-                className="px-8"
-              >
-                View Final Results
-              </Button>
-            ) : selectable && selectedCardId ? (
-              <>
-                <Button
-                  variant="tinted"
-                  tone="emerald"
-                  size="xs"
-                  disabled={playOptions.length === 0}
-                  onClick={() => pickWithOptions("play", playOptions)}
-                >
-                  Build
-                </Button>
-                <Button
-                  variant="tinted"
-                  tone="orange"
-                  size="xs"
-                  disabled={wonderOptions.length === 0}
-                  onClick={() => pickWithOptions("wonder", wonderOptions)}
-                >
-                  Wonder stage
-                </Button>
-                {currentEdifice && currentEdifice.status === "project" && !alreadyJoined && (
-                  <Chip
-                    pressed={participateNext}
-                    tone="amber"
-                    variant="outlined"
-                    size="sm"
-                    disabled={!canParticipate}
-                    onClick={() => setParticipateNext((v) => !v)}
-                    title={`Participate in ${currentEdifice.card}`}
-                  >
-                    🏛 Join{participateNext ? " ✓" : ""}
-                  </Chip>
-                )}
-                <Button
-                  variant="secondary"
-                  size="xs"
-                  disabled={!canDiscard}
-                  onClick={() =>
-                    selectedCardId && sendInner({ type: "discard", cardId: selectedCardId })
-                  }
-                >
-                  Discard +3🪙
-                </Button>
-                <Button variant="link" size="xs" onClick={() => setSelectedCardId(null)}>
-                  Cancel
-                </Button>
-              </>
-            ) : (
-              <span className="text-sm text-fg-secondary">{statusText}</span>
-            )}
-          </div>
-        }
+        fanActions={<HandActions ix={ix} isGameOver={isGameOver} onShowResults={onShowResults} />}
       >
-        {view.edifices && <EdificePanel view={view} myIndex={myIndex} />}
-        <div className="flex flex-wrap gap-2">
-          {opponents.map(({ idx, neighborSide }) => (
-            <PlayerPanel
-              key={idx}
-              player={view.players[idx]}
-              label={`P${idx + 1}`}
-              neighborSide={n > 2 ? neighborSide : undefined}
-              isSelecting={view.phase === "selecting"}
-            />
-          ))}
-        </div>
-        {myBoard && (
-          <div className="mt-auto rounded-lg border border-line bg-surface-900/70 p-3">
-            <div className="mb-2 flex items-center justify-between">
-              <span className="text-sm font-semibold text-fg-primary">Your city</span>
-              {view.phase === "selecting" && me?.hasSelected && (
-                <span className="text-xs text-emerald-400">✓ picked</span>
-              )}
-            </div>
-            <div className="flex flex-wrap gap-4">
-              <div className="min-w-64 flex-1">
-                <WonderBoard player={myBoard} />
-              </div>
-              <div className="min-w-56 flex-[2]">
-                <TableauDisplay tableau={myBoard.tableau} />
-              </div>
-            </div>
-          </div>
+        {!wide && navigator}
+        {current === "city" && <CityView ix={ix} seat={citySeat} names={names} />}
+        {current === "table" && (
+          <TableView ix={ix} names={names} onOpen={(seat) => select("city", seat)} />
         )}
+        {current === "overview" && (
+          <OverviewView ix={ix} names={names} onOpen={(seat) => select("city", seat)} />
+        )}
+        {current === "edifice" && <EdificeView ix={ix} names={names} />}
+        {current === "chains" && <ChainsView ix={ix} />}
       </GameScreen>
 
-      {paymentPick && (
+      {ix.paymentPick && (
         <PaymentModal
-          cardId={paymentPick.cardId}
-          intent={paymentPick.intent}
-          options={paymentPick.options}
-          onPick={(payment) => {
-            if (paymentPick.intent === "play") {
-              sendInner({ type: "play-card", cardId: paymentPick.cardId, payment });
-            } else if (payment.kind === "resources") {
-              sendInner({
-                type: "build-wonder",
-                cardId: paymentPick.cardId,
-                payment,
-                participate: paymentPick.participate,
-              });
-            }
-          }}
-          onClose={() => setPaymentPick(null)}
+          cardId={ix.paymentPick.cardId}
+          intent={ix.paymentPick.intent}
+          options={ix.paymentPick.options}
+          leftName={names[leftOf(me, n)]}
+          rightName={names[rightOf(me, n)]}
+          onPick={ix.pay}
+          onClose={ix.closePayment}
         />
       )}
 
-      {halikarnassosMode && (
+      {ix.halikarnassosMode && (
         <DiscardPickerOverlay
-          pickActions={legalActions.flatMap((a) => (a.type === "pick-discard" ? [a] : []))}
+          pickActions={ix.discardPicks}
           onPick={onAction}
           onSkip={() => onAction({ type: "skip-pending" })}
         />
       )}
 
-      {bannerEntry && (
-        <MilitaryBanner
-          entry={bannerEntry}
-          labelFor={labelFor}
-          onDismiss={() => setSeenMilitary(militaryEntries.length)}
-        />
-      )}
+      <WarReveal
+        view={view}
+        myIndex={myIndex}
+        names={names}
+        force={replayWar}
+        onOpenChange={setWarOpen}
+      />
     </>
   );
-}
-
-/** Distinct resource-payment splits (drops participate/non-participate dupes). */
-function dedupePayments(payments: Payment[]): Payment[] {
-  const seen = new Set<string>();
-  const out: Payment[] = [];
-  for (const p of payments) {
-    const key = p.kind === "resources" ? `r:${p.left}:${p.right}` : p.kind;
-    if (seen.has(key)) continue;
-    seen.add(key);
-    out.push(p);
-  }
-  return out;
 }

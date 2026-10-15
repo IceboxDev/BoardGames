@@ -6,6 +6,7 @@ import baseRulesUrl from "./assets/rules.pdf";
 
 export default {
   component: lazy(() => import("./SevenWonders")),
+  extraMode: "companion",
   // The rulebook plus the two reference sheets that ship with it.
   rulesUrl: [
     { label: "Rules", url: baseRulesUrl },

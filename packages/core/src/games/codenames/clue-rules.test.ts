@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { clueProblem, foldWord, guessLimit, stemOf, wordsClash } from "./clue-rules";
+import { clueProblem, clueVerdict, foldWord, guessLimit, stemOf, wordsClash } from "./clue-rules";
 
 describe("foldWord", () => {
   it("folds case, umlauts, ß and accents", () => {
@@ -67,5 +67,88 @@ describe("stems and guess limits", () => {
     expect(guessLimit(2)).toBe(3);
     expect(guessLimit(0)).toBeNull();
     expect(guessLimit("unlimited")).toBeNull();
+  });
+});
+
+describe("clue verdicts (classic: the other spymaster may allow spelling)", () => {
+  it("a form of a table word is never a clue", () => {
+    expect(clueVerdict("horse", ["horse"], "en").kind).toBe("hard");
+    expect(clueVerdict("horses", ["horse"], "en").kind).toBe("hard");
+    expect(clueVerdict("running", ["run"], "en").kind).toBe("hard");
+    expect(clueVerdict("making", ["make"], "en").kind).toBe("hard");
+    expect(clueVerdict("parties", ["party"], "en").kind).toBe("hard");
+    expect(clueVerdict("two words", ["horse"], "en").kind).toBe("hard");
+  });
+
+  it("spelling alone goes to the opposing spymaster — the rulebook's own examples", () => {
+    expect(clueVerdict("sparrow", ["row"], "en")).toMatchObject({ kind: "soft", clash: "row" });
+    expect(clueVerdict("land", ["England"], "en")).toMatchObject({
+      kind: "soft",
+      clash: "England",
+    });
+    expect(clueVerdict("horseshoe", ["horse"], "en").kind).toBe("soft");
+    // Behind a derivational prefix a whole word is only spelling: RELATE holds LATE.
+    expect(clueVerdict("relate", ["late"], "en").kind).toBe("soft");
+  });
+
+  // Every example on the rulebook's "Valid clues" pages (CGE, 2015, pp. 6–7),
+  // as the engine rules on it. "soft" = the opposing spymaster decides.
+  it.each([
+    // "You can't say any form of a visible word … break, broken, breakage, or breakdown."
+    ["break", "break", "hard"],
+    ["broken", "break", "hard"],
+    ["breakage", "break", "soft"],
+    ["breakdown", "break", "soft"],
+    // "You can't say part of a compound word … horse, shoe, unhorsed, or snowshoe."
+    ["horse", "horseshoe", "soft"],
+    ["shoe", "horseshoe", "soft"],
+    // "Theatre and theater are different forms of the same word."
+    ["theatre", "theater", "hard"],
+    // "Gland is not a valid clue for ENGLAND" (letters, not meaning).
+    ["gland", "England", "soft"],
+    // "Don't be too strict … island is a valid clue for ENGLAND. Even land … sparrow … ROW."
+    ["island", "England", "ok"],
+    ["land", "England", "soft"],
+    ["sparrow", "row", "soft"],
+    // "You can give the clue k-n-i-g-h-t even when NIGHT is one of the codenames."
+    ["knight", "night", "soft"],
+    // Letters and numbers are fine when they mean something: X for RAY, eight for OCTOPUS.
+    ["x", "ray", "ok"],
+    ["eight", "octopus", "ok"],
+    ["strudel", "Berlin", "ok"],
+  ] as const)("rulebook: %s with %s on the table is %s", (clue, table, kind) => {
+    expect(clueVerdict(clue, [table], "en").kind).toBe(kind);
+  });
+
+  it("an irregular form that is a word of its own goes to the opposing spymaster", () => {
+    expect(clueVerdict("mice", ["mouse"], "en").kind).toBe("hard");
+    expect(clueVerdict("went", ["go"], "en").kind).toBe("hard");
+    expect(clueVerdict("better", ["good"], "en").kind).toBe("hard");
+    expect(clueVerdict("knives", ["knife"], "en").kind).toBe("hard");
+    expect(clueVerdict("left", ["leave"], "en").kind).toBe("soft");
+    // FOUND a city, a carpenter's SAW, a ROSE: only spelling ties them to FIND, SEE, RISE.
+    expect(clueVerdict("found", ["find"], "en").kind).toBe("soft");
+    expect(clueVerdict("saw", ["see"], "en").kind).toBe("soft");
+    expect(clueVerdict("rise", ["rose"], "en").kind).toBe("soft");
+  });
+
+  it("the other spelling of a word is the same word: COLOUR, ORGANISE, ANALYSE", () => {
+    expect(clueVerdict("colour", ["color"], "en").kind).toBe("hard");
+    expect(clueVerdict("organised", ["organize"], "en").kind).toBe("hard");
+    expect(clueVerdict("analyse", ["analyze"], "en").kind).toBe("hard");
+    expect(clueVerdict("centres", ["center"], "en").kind).toBe("hard");
+    expect(clueVerdict("catalogue", ["catalog"], "en").kind).toBe("hard");
+    expect(clueVerdict("travelled", ["travel"], "en").kind).toBe("hard");
+    // …but TIMBRE (a sound) is not TIMBER (wood).
+    expect(clueVerdict("timbre", ["timber"], "en").kind).toBe("ok");
+  });
+
+  it("a hard clash anywhere on the table wins over a soft one", () => {
+    expect(clueVerdict("rows", ["sparrow", "row"], "en").kind).toBe("hard");
+  });
+
+  it("clean words are fine, and the strict check still refuses spelling", () => {
+    expect(clueVerdict("saddle", ["horse"], "en")).toEqual({ kind: "ok" });
+    expect(clueProblem("sparrow", ["row"], "en")).toMatch(/ROW/);
   });
 });

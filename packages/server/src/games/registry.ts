@@ -9,6 +9,7 @@
  */
 
 import { sevenWondersSpec, withSevenWondersAgent } from "@boardgames/core/games/7-wonders/machine";
+import { botcSpec } from "@boardgames/core/games/blood-on-the-clocktower/machine";
 import { chessSpec, withChessAgent } from "@boardgames/core/games/chess/machine";
 import { bughouseSpec, withBughouseAgent } from "@boardgames/core/games/chess-bughouse/machine";
 import { codenamesSpec, withCodenamesAgent } from "@boardgames/core/games/codenames/machine";
@@ -36,6 +37,7 @@ import { getDb } from "../db.ts";
 import { aiAvailable } from "../lib/ai";
 import { getContentStore } from "../lib/quiztopia/content-store.ts";
 import { recordGameReviews } from "../lib/quiztopia/game-reviews.ts";
+import { botcAfterGameOver } from "./botc-records.ts";
 import { engineAgent } from "./chess-agent.ts";
 import { llmCodenamesAgent } from "./codenames-agent.ts";
 import { connect4AiOffload } from "./connect4-ai-pool.ts";
@@ -139,6 +141,9 @@ const SERVER_GAMES: readonly ServerGame[] = [
     spec: codenamesSpec,
     createMachine: () =>
       aiAvailable() ? withCodenamesAgent(llmCodenamesAgent) : codenamesSpec.machine,
+    // A missing spymaster or a team's only guesser stalls the table: after a
+    // short wait anyone left may hand the seat to an AI stand-in (`presence.ts`).
+    observesConnections: true,
     // The game's AI bill in one line; the saved replay keeps it (`aiCost`) too.
     afterGameOver: async (ended) => {
       logAiCost(
@@ -158,6 +163,13 @@ const SERVER_GAMES: readonly ServerGame[] = [
         DuetReplayLogSchema.safeParse(ended.replayLog).data?.aiCost,
       );
     },
+  },
+  {
+    ...plain(botcSpec),
+    // Seats come and go all evening: a dropped Storyteller pauses the vote clock.
+    observesConnections: true,
+    // The Storyteller's own Clocktower history gets the game too.
+    afterGameOver: botcAfterGameOver,
   },
   plain(durakSpec),
   plain(explodingKittensSpec),

@@ -15,6 +15,24 @@ export function hasHumanTeammate(view: CodenamesPlayerView): boolean {
   );
 }
 
+/**
+ * Whether another person guesses beside the viewer — someone to point a card
+ * out to before touching it. A seat the AI keeps warm for an absent person
+ * counts: they're coming back.
+ */
+export function hasFellowOperative(view: CodenamesPlayerView): boolean {
+  return (
+    view.team !== null &&
+    view.seats.some(
+      (s) =>
+        s.team === view.team &&
+        s.role === "operative" &&
+        s.seat !== view.seat &&
+        (!s.ai || s.standIn),
+    )
+  );
+}
+
 export function teamName(team: Team): string {
   return TEAM_NAMES[team];
 }

@@ -62,6 +62,13 @@ export function getOwnProduction(state: GameState, playerIndex: number): Product
   return entries;
 }
 
+/** Own production as choose-one resource sets, one per unit (for display). */
+export function ownProductionChoices(state: GameState, playerIndex: number): ResourceType[][] {
+  return getOwnProduction(state, playerIndex).map(({ mask }) =>
+    RESOURCE_TYPES.filter((r) => (mask & RESOURCE_BIT[r]) !== 0),
+  );
+}
+
 /**
  * What neighbors can buy from this player: the wonder's initial resource and
  * brown/grey card production only. Yellow-card and wonder-stage production

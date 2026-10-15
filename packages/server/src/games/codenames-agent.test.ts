@@ -115,3 +115,37 @@ describe("codenames agent — one idea per size", () => {
     expect(ideaSizes(1)).toEqual([1]);
   });
 });
+
+describe("codenames agent — what a clue can mean", () => {
+  const fresh: ClueInput = { ...input, history: [] };
+
+  it("drops a target that isn't ours: CYCLONE 3 with KITE (a bystander) is CYCLONE 2", () => {
+    const c = toCandidate(raw(["fox", "worm", "onion"]), fresh);
+    expect(c?.clue.count).toBe(2);
+    expect(c?.targets).toEqual([0, 1]);
+    expect(c?.links.map((l) => l.card)).toEqual([0, 1]);
+  });
+
+  it("drops a target the spymaster itself rated a stretch", () => {
+    const c = toCandidate(
+      {
+        ...raw([]),
+        targets: [
+          { word: "fox", why: "obvious", strength: "obvious" },
+          { word: "worm", why: "fair", strength: "fair" },
+          { word: "match", why: "water-flute idea", strength: "stretch" },
+        ],
+      },
+      fresh,
+    );
+    expect(c?.clue.count).toBe(2);
+    expect(c?.targets).toEqual([0, 1]);
+  });
+
+  it("a candidate that names only cards it can't mean is no clue — not a 0", () => {
+    expect(toCandidate(raw(["onion"]), fresh)).toBeNull();
+    expect(toCandidate(raw(["nonsense"]), fresh)).toBeNull();
+    // A deliberate 0 (no targets named) stays a 0.
+    expect(toCandidate(raw([]), fresh)?.clue.count).toBe(0);
+  });
+});

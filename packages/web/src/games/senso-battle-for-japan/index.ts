@@ -8,6 +8,7 @@ const replayComponent = lazy(() => import("./components/GameReplay")) as LazyExo
 
 export default {
   component: lazy(() => import("./Senso")),
+  extraMode: "coach",
   rulesUrl,
   replayComponent,
   tournamentResults: () => import("./tournament-results.generated"),

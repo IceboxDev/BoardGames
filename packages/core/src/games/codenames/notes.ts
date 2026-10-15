@@ -106,12 +106,20 @@ export function cleanTraceIds(raw: unknown): string[] {
 
 /** Every AI call a game's notes recorded, summed. */
 export function aiCostOf(
-  turns: readonly { note?: ClueNote; guessNotes?: readonly GuessNote[] }[],
+  turns: readonly {
+    note?: ClueNote;
+    guessNotes?: readonly GuessNote[];
+    appeals?: readonly { cost?: AiCost }[];
+  }[],
 ): AiCost {
   let calls = 0;
   let usd = 0;
   for (const t of turns) {
-    for (const cost of [t.note?.cost, ...(t.guessNotes ?? []).map((n) => n.cost)]) {
+    for (const cost of [
+      t.note?.cost,
+      ...(t.guessNotes ?? []).map((n) => n.cost),
+      ...(t.appeals ?? []).map((a) => a.cost),
+    ]) {
       if (!cost) continue;
       calls += cost.calls;
       usd += cost.usd;

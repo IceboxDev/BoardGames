@@ -5,7 +5,8 @@ import {
   type ChessResult,
 } from "@boardgames/core/games/chess/schemas";
 import type { SeatRequest } from "@boardgames/core/machines/seats";
-import { useMemo } from "react";
+import { lazy, Suspense, useMemo } from "react";
+import { Route, Routes } from "react-router-dom";
 import { BoardFallback } from "../../components/RouteFallback";
 import { type SoloStart, useSessionFlow } from "../../hooks/useSessionFlow";
 import type { GameComponentProps } from "../types";
@@ -24,12 +25,35 @@ function toSoloStart(setup: ChessSetup): SoloStart {
   };
 }
 
+const ChessTrainer = lazy(() => import("./trainer/ChessTrainer"));
+
+/**
+ * Solo routes: the opening trainer at `solo/trainer/*` (the mode picker's
+ * Trainer card), a game against Stockfish everywhere else.
+ */
+export default function Chess({ source }: GameComponentProps) {
+  if (source !== "solo") return <ChessGame source={source} />;
+  return (
+    <Routes>
+      <Route
+        path="trainer/*"
+        element={
+          <Suspense fallback={<BoardFallback />}>
+            <ChessTrainer />
+          </Suspense>
+        }
+      />
+      <Route path="*" element={<ChessGame source="solo" />} />
+    </Routes>
+  );
+}
+
 /**
  * Chess, solo against Stockfish and in rooms. The board only ever offers the
  * moves the server listed; meta actions (offers, takebacks, resign) come from
  * the same list.
  */
-export default function Chess({ source }: GameComponentProps) {
+function ChessGame({ source }: GameComponentProps) {
   const flow = useSessionFlow<unknown, ChessAction, ChessResult, ChessSetup>(source, {
     toSoloStart,
   });

@@ -7,6 +7,7 @@
 
 import type { GameManifest } from "../machines/manifest";
 import { sevenWondersManifest } from "./7-wonders/manifest";
+import { botcManifest } from "./blood-on-the-clocktower/manifest";
 import { chessManifest } from "./chess/manifest";
 import { bughouseManifest } from "./chess-bughouse/manifest";
 import { codenamesManifest } from "./codenames/manifest";
@@ -29,6 +30,7 @@ import { resistanceManifest } from "./the-resistance/manifest";
 
 export const GAME_MANIFESTS: readonly GameManifest[] = [
   sevenWondersManifest,
+  botcManifest,
   chessManifest,
   bughouseManifest,
   connect4Manifest,
