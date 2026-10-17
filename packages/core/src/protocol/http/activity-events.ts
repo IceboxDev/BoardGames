@@ -126,6 +126,15 @@ export const ActivityMetaSchemas = {
     maybe: z.number().optional(),
   }),
   "picks-locked": z.object({ date: Night, on: On }),
+  /**
+   * Admin cleared a night's game votes — everyone's, or one person's when
+   * `targetUserId` is set; `removed` = rows deleted.
+   */
+  "game-votes-reset": z.object({
+    date: Night,
+    removed: z.number().int().optional(),
+    targetUserId: z.string().optional(),
+  }),
   "night-locked": z.object({
     date: Night,
     hostName: z.string().optional(),

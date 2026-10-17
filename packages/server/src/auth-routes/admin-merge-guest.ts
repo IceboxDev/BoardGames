@@ -141,6 +141,7 @@ export const GUEST_MERGE_COVERAGE = {
     "chess_lichess_links.user_id",
     "chess_imported_games.user_id",
     "chess_repertoires.user_id",
+    "chess_trainer_library.user_id",
     // Who queued a farm evaluation (SET NULL; the shared eval survives).
     "chess_eval_jobs.requested_by",
   ],
@@ -148,7 +149,10 @@ export const GUEST_MERGE_COVERAGE = {
 
 /** `(date_key, user_id)`-keyed tables whose rows simply move; duplicates keep the target's. */
 const MOVE_OR_IGNORE: readonly { table: string; columns: readonly string[] }[] = [
-  { table: "game_requests", columns: ["date_key", "game_slug", "reaction", "created_at"] },
+  {
+    table: "game_requests",
+    columns: ["date_key", "game_slug", "reaction", "created_at", "headcount"],
+  },
   { table: "exit_game_votes", columns: ["date_key", "exit_slug", "created_at"] },
   { table: "user_availability_days", columns: ["date_key", "status", "updated_at"] },
   { table: "admin_away_days", columns: ["date_key", "marked_by", "created_at"] },

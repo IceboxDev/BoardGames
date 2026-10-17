@@ -16,7 +16,7 @@ const line = (uci: string, cp: number) => ({
 const result = (over: Partial<PositionEval>): PositionEval => ({
   fen: START_FEN,
   kind: "user",
-  spec: "BEST_MOVE_V1",
+  spec: "BEST_MOVE_V2",
   best: "e2e4",
   lines: [line("e2e4", 20)],
   lc0: null,

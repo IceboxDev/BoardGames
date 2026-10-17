@@ -18,6 +18,7 @@ const person = (name: string, over: Partial<Attendee> = {}): Attendee => ({
   votes: { hype: 0, teach: 0, learn: 0 },
   bringing: [],
   seat: null,
+  staleVotes: null,
   ...over,
 });
 

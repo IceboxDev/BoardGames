@@ -54,6 +54,12 @@ interface GameScreenProps {
   contentClassName?: string;
   /** History log content (right rail). GameScreen provides the rail chrome. */
   sidebar?: ReactNode;
+  /** The right rail's heading and phone sheet name. Default "History". */
+  sidebarTitle?: string;
+  /** The right rail's width: `history` (`--layout-history-rail-w`, default) or
+   *  `explorer` (`--layout-explorer-rail-w`, for a table such as the chess
+   *  trainer's move explorer). */
+  sidebarWidth?: "history" | "explorer";
   /** Left rail content (score, status, approach track, …). Spans the board
    *  height, not the fan row. */
   leftSidebar?: ReactNode;
@@ -61,6 +67,9 @@ interface GameScreenProps {
    *  "Approach"). Also names the rail's phone sheet unless `leftSidebarLabel`
    *  overrides it. */
   leftSidebarTitle?: string;
+  /** The left rail's width: `board` (`--layout-board-rail-w`, default) or
+   *  `wide` (`--layout-history-rail-w`, for a folder tree with counts). */
+  leftSidebarWidth?: "board" | "wide";
   /** Name for the left rail's phone button + sheet when the wide rail should
    *  carry no heading (a panel that draws its own). Defaults to
    *  `leftSidebarTitle`, then "Score". */
@@ -106,9 +115,12 @@ export default function GameScreen({
   backdrop,
   contentClassName,
   sidebar,
+  sidebarTitle = HISTORY_LABEL,
+  sidebarWidth = "history",
   leftSidebar,
   leftSidebarTitle,
   leftSidebarLabel,
+  leftSidebarWidth = "board",
   fan,
   fanActions,
   actionBar,
@@ -162,7 +174,8 @@ export default function GameScreen({
           {railsInRow && leftSidebar && (
             <aside
               className={cn(
-                "flex w-board-rail shrink-0 flex-col overflow-y-auto rounded-card-xl bg-surface-900/60 p-4",
+                "flex shrink-0 flex-col overflow-y-auto rounded-card-xl bg-surface-900/60 p-4",
+                leftSidebarWidth === "wide" ? "w-history-rail" : "w-board-rail",
                 DEBUG_LAYOUT && "border-2 border-fuchsia-400 bg-fuchsia-400/10",
               )}
             >
@@ -194,7 +207,7 @@ export default function GameScreen({
         {showRailBar && (
           <RailBar
             leftLabel={leftSidebar != null ? leftLabel : null}
-            historyLabel={sidebar != null ? HISTORY_LABEL : null}
+            historyLabel={sidebar != null ? sidebarTitle : null}
             onOpen={setOpenRail}
           />
         )}
@@ -236,12 +249,13 @@ export default function GameScreen({
       {railsInRow && sidebar && (
         <aside
           className={cn(
-            "flex w-history-rail shrink-0 flex-col overflow-y-auto rounded-card-xl bg-surface-900/60 p-4",
+            "flex shrink-0 flex-col overflow-y-auto rounded-card-xl bg-surface-900/60 p-4",
+            sidebarWidth === "explorer" ? "w-explorer-rail" : "w-history-rail",
             DEBUG_LAYOUT && "border-2 border-cyan-400 bg-cyan-400/10",
           )}
         >
           <Eyebrow as="h3" size="lg" tone="neutral" className="mb-3 font-bold">
-            {HISTORY_LABEL}
+            {sidebarTitle}
           </Eyebrow>
           {sidebar}
         </aside>
@@ -252,7 +266,7 @@ export default function GameScreen({
         </Drawer>
       )}
       {openRail === "right" && sidebar != null && (
-        <Drawer side="bottom" title={HISTORY_LABEL} onClose={() => setOpenRail(null)}>
+        <Drawer side="bottom" title={sidebarTitle} onClose={() => setOpenRail(null)}>
           {sidebar}
         </Drawer>
       )}

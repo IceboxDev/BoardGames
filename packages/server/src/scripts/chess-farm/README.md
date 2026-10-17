@@ -8,6 +8,8 @@ posts results into the shared cache (`chess_position_evals`).
 ## Files
 
 - `worker.ts`: claim, analyse (`pipeline.ts`), then complete. One job at a time, every thread on it.
+- `follow-ups.ts`: after each job the worker queues what it leads to (the opponent position after your best move when it needs padding, your positions after each reply played in your games — read through `GET /api/chess-farm/games`) with `POST /enqueue`, and claims them next (`prefer`, depth first). Stockfish's hash still holds most of their search. `FARM_FOLLOW_UPS=0` turns it off.
+- `hash-test.ts`: measures that: a follow-up searched with the parent's hash vs from a cleared one.
 - `pipeline.ts`: the BEST_MOVE_V1 steps, in this order:
   1. lichess cloud lookup
   2. ChessDB candidates
@@ -17,13 +19,20 @@ posts results into the shared cache (`chess_position_evals`).
 - `sample-positions.ts`: picks calibration positions from a member's imported games (staging DB).
 - `uci.ts`, `lookups.ts`: the UCI process wrapper, and the lichess / ChessDB clients.
 
+## Two machines, one queue
+
+- **ws21** (`FARM_KINDS=user`) searches only your positions: single-PV to depth 50 on every tier (`policy.json`, cap 6× the calibrated median nodes), candidates via `searchmoves`, Lc0 tie-breaks.
+- **The AWS fleet** (`FARM_KINDS=opp`, `aws/`) searches only opponent positions: MultiPV 3 to depth 40 (`aws-policy.json`), 2 threads, no Lc0. Free-plan `c7i-flex.large` instances, at most 8 (16-vCPU quota).
+- They feed each other through follow-ups: a finished position of yours queues the opponent position after your move (for the fleet), a finished opponent position queues your replies after its engine moves (for ws21).
+- **Fleet:** `aws/fleet.sh up 8` on the laptop (AWS profile `boardgames`; builds Stockfish at boot), then on ws21 `~/chess-farm/aws-attach.sh $(…ips)`. Each instance reaches ws21's API through a reverse SSH tunnel ws21 opens (`farm-tunnel@<ip>` user unit); nothing on ws21 is exposed. An instance stops itself after an idle hour (`fleet.sh start` + attach again — the IPs change); `fleet.sh down` removes everything.
+
 ## Running on ws21 (no repo checkout needed)
 
 The scripts are bundled to standalone ESM and copied to `~/chess-farm/`:
 
 ```bash
 E=node_modules/.pnpm/esbuild@*/node_modules/esbuild/bin/esbuild
-cd packages/server && ../../$E src/scripts/chess-farm/{worker,calibrate}.ts --bundle \
+cd packages/server && ../../$E src/scripts/chess-farm/{worker,calibrate,hash-test}.ts --bundle \
   --platform=node --format=esm --target=node22 --outdir=dist-farm --out-extension:.js=.mjs
 scp dist-farm/*.mjs ws21:chess-farm/
 ```
@@ -50,14 +59,37 @@ make -j profile-build ARCH=x86-64-avx512icl
 
 ### Lc0
 
-Lc0 needs the CUDA toolkit (`sudo pacman -S cuda cudnn`) and meson (`pipx install meson`). Then:
+No sudo needed. CUDA 13.4 + cuDNN 9.27 are NVIDIA's redist tarballs unpacked into
+`~/.local/cuda-13.4` (`cuda_nvcc cuda_cudart cuda_crt cccl libnvvm libcublas libcurand
+cuda_nvrtc cuda_profiler_api libnvjitlink` + `cudnn`, from
+`developer.download.nvidia.com/compute/{cuda,cudnn}/redist/`), with `lib64 -> lib`.
+meson comes from `pipx install meson`. Then, in `~/chess-farm/src/lc0` at tag `v0.33.0-rc0`:
 
 ```bash
-git clone https://github.com/LeelaChessZero/lc0 && cd lc0 && git checkout v0.33.0-rc0
-./build.sh   # cuda backend
+D=~/.local/cuda-13.4; export PATH=$D/bin:$PATH
+meson setup build --buildtype=release -Db_lto=true -Dplain_cuda=true -Dcudnn=false \
+  -Donnx=false -Dopencl=false -Dgtest=false -Dcc_cuda=120 -Dnative_cuda=false \
+  -Dcudnn_libdirs=$D/lib -Dcudnn_include=$D/include
+ninja -C build && cp build/lc0 ~/chess-farm/bin/lc0-v0.33.0-rc0
 ```
 
-The network is `BT4-it332` from lczero.org.
+`~/chess-farm/bin/lc0` is a wrapper that sets `LD_LIBRARY_PATH` to the CUDA libs. The
+network is `BT4-1024x15x32h-swa-6147500-policytune-332.pb.gz` (BT4-it332) in
+`~/chess-farm/nets/`, from storage.lczero.org. On the RTX 5090, `cuda-fp16` runs ~16k
+nodes/s (default minibatch; plain `cuda` is 6× slower), so a 1M-node tie-break takes about a
+minute. Its `WL` in `VerboseMoveStats` is from the side to move.
+
+### systemd
+
+ws21 never sleeps, so it also runs the API the worker talks to: the user unit
+`boardgames-server.service` runs this repo's server (`tsx src/index.ts`, port 3001, the
+staging database from `packages/server/.env`, which has `CHESS_FARM_TOKEN`), and
+`FARM_URL=http://localhost:3001`. Members' browsers queue positions through whichever server
+they use — the database is shared. The server refuses to start on a database migrated past
+its code, so pull ws21's checkout when a migration lands.
+
+The worker is the user unit `chess-farm.service` (`~/.config/systemd/user/`; lingering is on):
+`systemctl --user start chess-farm`, logs with `journalctl --user -u chess-farm -f`.
 
 ## Calibrate before a big run
 

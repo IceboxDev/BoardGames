@@ -8,6 +8,8 @@ import { START_FEN } from "@boardgames/core/games/chess/engine/fen";
 import {
   EvalRequestResponseSchema,
   FarmClaimResponseSchema,
+  FarmEnqueueResponseSchema,
+  FarmGamesPageSchema,
   type PositionEval,
 } from "@boardgames/core/protocol";
 import { type Client, createClient } from "@libsql/client";
@@ -15,6 +17,7 @@ import { Hono } from "hono";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import type { AppEnv } from "../auth/types.ts";
 import { LEASE_MS } from "../lib/chess-trainer/farm-store.ts";
+import { insertGames } from "../lib/chess-trainer/store.ts";
 import { runMigrations } from "../migrations/migrator.ts";
 
 const db = vi.hoisted(() => ({ current: null as Client | null }));
@@ -56,15 +59,23 @@ const ask = async (items: { fen: string; kind: "user" | "opp"; reach: number }[]
   EvalRequestResponseSchema.parse(
     await (await post("/api/trainers/chess/evals", { items })).json(),
   );
-const claim = async (worker = "ws21", max = 8) =>
-  FarmClaimResponseSchema.parse(await (await post("/api/chess-farm/claim", { worker, max })).json())
-    .jobs;
+const claim = async (
+  worker = "ws21",
+  max = 8,
+  prefer?: string[],
+  kinds?: ("user" | "opp")[],
+  order?: "reach" | "deep",
+) =>
+  FarmClaimResponseSchema.parse(
+    await (await post("/api/chess-farm/claim", { worker, max, prefer, kinds, order })).json(),
+  ).jobs;
+const AFTER_D4 = "rnbqkbnr/pppppppp/8/8/3P4/8/PPP1PPPP/RNBQKBNR b KQkq - 0 1";
 
 function result(fen: string, best: string, over: Partial<PositionEval> = {}): PositionEval {
   return {
     fen,
     kind: "user",
-    spec: "BEST_MOVE_V1",
+    spec: "BEST_MOVE_V2",
     best,
     lines: [{ uci: best, cp: 20, mate: null, depth: 50, seldepth: 70, nodes: 6e9, pv: [best] }],
     lc0: null,
@@ -186,5 +197,176 @@ describe("chess analysis farm", () => {
       headers: { authorization: `Bearer ${TOKEN}` },
     });
     expect(await status.json()).toMatchObject({ failed: 1, queued: 0 });
+  });
+
+  it("hands out the most-reached positions first, preferred ones breaking ties", async () => {
+    await ask([
+      { fen: START_FEN, kind: "user", reach: 90 },
+      { fen: AFTER_E4, kind: "opp", reach: 5 },
+      { fen: AFTER_D4, kind: "opp", reach: 5 },
+    ]);
+    const jobs = await claim("ws21", 3, [AFTER_D4.replace(" 0 1", " 0 3"), AFTER_E4]);
+    expect(jobs.map((j) => [j.fen, j.requestedBy])).toEqual([
+      [START_FEN, ME],
+      [AFTER_D4, ME],
+      [AFTER_E4, ME],
+    ]);
+  });
+
+  it("hands a deep worker its own follow-ups, then the deepest position", async () => {
+    const AFTER_E4_E5 = "rnbqkbnr/pppp1ppp/8/4p3/4P3/8/PPPP1PPP/RNBQKBNR w KQkq - 0 2";
+    await ask([
+      { fen: START_FEN, kind: "user", reach: 90 },
+      { fen: AFTER_E4_E5, kind: "user", reach: 2 },
+      { fen: AFTER_D4, kind: "user", reach: 5 },
+    ]);
+    const deep = await claim("aws-1", 3, [START_FEN], ["user"], "deep");
+    expect(deep.map((j) => j.fen)).toEqual([START_FEN, AFTER_E4_E5, AFTER_D4]);
+  });
+
+  it("doesn't count a stopped worker's release as an attempt", async () => {
+    await ask([{ fen: START_FEN, kind: "user", reach: 9 }]);
+    for (let i = 0; i < 4; i++) {
+      const [job] = await claim();
+      const body = {
+        worker: "ws21",
+        id: job?.id,
+        error: "worker stopped",
+        retry: true,
+        released: true,
+      };
+      expect((await post("/api/chess-farm/fail", body)).status).toBe(200);
+    }
+    expect((await claim())[0]?.attempts).toBe(1);
+  });
+
+  it("hands a search the node limit cut short to another worker, never back to its own", async () => {
+    await ask([{ fen: START_FEN, kind: "user", reach: 9 }]);
+    const [job] = await claim("ws21", 1);
+    const body = {
+      worker: "ws21",
+      id: job?.id,
+      error: "node limit on ws21: node limit at depth 39 (needs 50)",
+      retry: true,
+    };
+    expect((await post("/api/chess-farm/fail", body)).status).toBe(200);
+    expect(await claim("ws21", 1)).toHaveLength(0);
+    expect((await claim("aws-1", 1, [], ["user"], "deep"))[0]?.fen).toBe(START_FEN);
+  });
+
+  it("stores Stockfish's best, not a near-equal move a worker picked", async () => {
+    await ask([{ fen: START_FEN, kind: "user", reach: 9 }]);
+    const [job] = await claim();
+    const line = (uci: string, cp: number) => ({
+      uci,
+      cp,
+      mate: null,
+      depth: 50,
+      seldepth: 70,
+      nodes: 6e9,
+      pv: [uci],
+    });
+    const sent = result(START_FEN, "d2d4", {
+      lines: [line("e2e4", 31), line("d2d4", 30)],
+      ties: ["e2e4", "d2d4"],
+    });
+    expect(
+      (await post("/api/chess-farm/complete", { worker: "ws21", id: job?.id, result: sent }))
+        .status,
+    ).toBe(200);
+    const back = await ask([{ fen: START_FEN, kind: "user", reach: 9 }]);
+    expect(back.results[START_FEN]).toMatchObject({ best: "e2e4", ties: ["e2e4"] });
+  });
+
+  it("refuses a result short of its depth", async () => {
+    await ask([{ fen: START_FEN, kind: "user", reach: 9 }]);
+    const [job] = await claim();
+    const short = result(START_FEN, "e2e4", {
+      depth: 39,
+      lines: [
+        { uci: "e2e4", cp: 20, mate: null, depth: 39, seldepth: 60, nodes: 2e10, pv: ["e2e4"] },
+      ],
+    });
+    const r = await post("/api/chess-farm/complete", {
+      worker: "ws21",
+      id: job?.id,
+      result: short,
+    });
+    expect(r.status).toBe(422);
+  });
+
+  it("never queues a deviation leaf (an opponent position no game of yours reached)", async () => {
+    const r = await ask([
+      { fen: AFTER_D4, kind: "opp", reach: 0 },
+      { fen: AFTER_E4, kind: "opp", reach: 2 },
+    ]);
+    expect(r.queued).toBe(1);
+    const jobs = await claim();
+    expect(jobs.map((j) => j.fen)).toEqual([AFTER_E4]);
+  });
+
+  it("never leases one position to two workers", async () => {
+    await ask([{ fen: START_FEN, kind: "user", reach: 9 }]);
+    expect(await claim("aws-1", 1, [], ["user"], "deep")).toHaveLength(1);
+    expect(await claim("ws21", 1, [], ["user"])).toHaveLength(0);
+  });
+
+  it("queues a worker's follow-ups for the member, skipping what is already known", async () => {
+    await ask([{ fen: START_FEN, kind: "user", reach: 5 }]);
+    const [job] = await claim();
+    await post("/api/chess-farm/complete", {
+      worker: "ws21",
+      id: job?.id,
+      result: result(START_FEN, "e2e4"),
+    });
+    const r = await post("/api/chess-farm/enqueue", {
+      requestedBy: ME,
+      items: [
+        { fen: START_FEN, kind: "user", reach: 5 },
+        { fen: AFTER_E4, kind: "opp", reach: 5 },
+      ],
+    });
+    expect(FarmEnqueueResponseSchema.parse(await r.json()).queued).toEqual([AFTER_E4]);
+    expect((await claim()).map((j) => [j.fen, j.requestedBy])).toEqual([[AFTER_E4, ME]]);
+  });
+
+  it("serves a member's games by colour to the worker only", async () => {
+    await insertGames(client, ME, [
+      {
+        id: "abcd1234",
+        color: "w",
+        uci: "e2e4 e7e5",
+        playedAt: 1000,
+        speed: "blitz",
+        rated: true,
+        result: "win",
+        opponent: "someone",
+        opponentRating: 1500,
+      },
+    ]);
+    const url = `/api/chess-farm/games?user=${ME}&color=w`;
+    expect((await app().request(url)).status).toBe(401);
+    const page = FarmGamesPageSchema.parse(
+      await (await app().request(url, { headers: { authorization: `Bearer ${TOKEN}` } })).json(),
+    );
+    expect(page).toEqual({
+      games: [{ id: "abcd1234", uci: "e2e4 e7e5", result: "win" }],
+      next: null,
+    });
+  });
+
+  it("gives each worker only its kinds: your moves to ws21, opponents' to the fleet", async () => {
+    await ask([
+      { fen: START_FEN, kind: "user", reach: 90 },
+      { fen: AFTER_E4, kind: "opp", reach: 5 },
+      { fen: AFTER_D4, kind: "opp", reach: 1 },
+    ]);
+    const fleet = await claim("aws-1", 8, undefined, ["opp"]);
+    expect(fleet.map((j) => j.kind)).toEqual(["opp", "opp"]);
+    const ws21 = await claim("ws21", 8, undefined, ["user"]);
+    expect(ws21.map((j) => [j.kind, j.fen])).toEqual([["user", START_FEN]]);
+    // A restarted fleet worker takes back only its own kind.
+    expect((await claim("aws-1", 8, undefined, ["user"])).length).toBe(0);
+    expect((await claim("aws-1", 8, undefined, ["opp"])).length).toBe(2);
   });
 });

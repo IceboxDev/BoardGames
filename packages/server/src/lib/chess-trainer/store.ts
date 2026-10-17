@@ -1,11 +1,18 @@
 /**
- * The chess opening trainer's tables (migration 0055): the member's linked
- * lichess account, their imported games and their opening trees.
+ * The chess opening trainer's tables (migrations 0055, 0057): the member's
+ * linked lichess account, their imported games, their opening trees and their
+ * folder library.
  */
 import {
   type ImportedGame,
   TrainerSpeedSchema,
 } from "@boardgames/core/games/chess/trainer/imported-game";
+import {
+  EMPTY_LIBRARY,
+  type Library,
+  LibrarySchema,
+} from "@boardgames/core/games/chess/trainer/library";
+import { legalPrefix } from "@boardgames/core/games/chess/trainer/position-index";
 import {
   type RepertoireTree,
   RepertoireTreeSchema,
@@ -114,7 +121,11 @@ export async function deleteLink(db: Client, userId: string): Promise<void> {
 
 const ROWS_PER_INSERT = 100;
 
-/** Store games, ignoring ones already stored. Returns how many were new. */
+/**
+ * Store games, ignoring ones already stored. Returns how many were new. Each
+ * game keeps only its legal moves from the start, checked here once, so the
+ * trainer can index stored games without replaying every move's legality.
+ */
 export async function insertGames(
   db: Client,
   userId: string,
@@ -132,7 +143,7 @@ export async function insertGames(
         userId,
         g.id,
         g.color,
-        g.uci,
+        legalPrefix(g.uci).join(" "),
         g.playedAt,
         g.speed,
         g.rated ? 1 : 0,
@@ -300,4 +311,45 @@ export async function deleteRepertoire(db: Client, userId: string, id: string): 
     args: [id, userId],
   });
   return res.rowsAffected > 0;
+}
+
+const LibraryRowSchema = z.object({ doc_json: jsonColumn(LibrarySchema), version: z.number() });
+
+/** The member's folders and lines (empty, version 0, before the first save). */
+export async function readLibrary(
+  db: Client,
+  userId: string,
+): Promise<{ library: Library; version: number }> {
+  const res = await db.execute({
+    sql: "SELECT doc_json, version FROM chess_trainer_library WHERE user_id = ?",
+    args: [userId],
+  });
+  const row = res.rows[0];
+  if (!row) return { library: EMPTY_LIBRARY, version: 0 };
+  const r = parseRow(LibraryRowSchema, row, "chess_trainer_library");
+  return { library: r.doc_json, version: r.version };
+}
+
+/** Save the library, if nobody saved since `expectedVersion` (0 = never saved). */
+export async function writeLibrary(
+  db: Client,
+  userId: string,
+  expectedVersion: number,
+  library: Library,
+): Promise<{ ok: true; version: number } | { ok: false }> {
+  const doc = JSON.stringify(library);
+  const res =
+    expectedVersion === 0
+      ? await db.execute({
+          sql: `INSERT INTO chess_trainer_library (user_id, doc_json) VALUES (?, ?)
+                ON CONFLICT (user_id) DO NOTHING`,
+          args: [userId, doc],
+        })
+      : await db.execute({
+          sql: `UPDATE chess_trainer_library
+                SET doc_json = ?, version = version + 1, updated_at = datetime('now')
+                WHERE user_id = ? AND version = ?`,
+          args: [doc, userId, expectedVersion],
+        });
+  return res.rowsAffected === 1 ? { ok: true, version: expectedVersion + 1 } : { ok: false };
 }

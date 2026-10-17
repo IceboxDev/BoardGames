@@ -83,16 +83,15 @@ function Token({ s, onClick }: { s: SquareSeat; onClick?: (() => void) | undefin
             👻
           </span>
         )}
-        {s.hand && (
+        {s.hand?.up && (
           <span
-            title={s.hand.up ? "Hand raised" : "Hand down"}
+            title={s.hand.locked ? "Voted" : "Hand raised"}
             className={cn(
-              "absolute -top-1 -left-1 rounded-full px-1 text-base",
-              s.hand.up ? "bg-amber-400 text-surface-950" : "bg-surface-800 text-fg-muted",
+              "absolute -top-1 -left-1 rounded-full bg-amber-400 px-1 text-base text-surface-950",
               s.hand.locked && "ring-2 ring-fg-strong/60",
             )}
           >
-            {s.hand.up ? "✋" : "·"}
+            ✋
           </span>
         )}
         <span
@@ -137,6 +136,7 @@ export function TownSquare({
   center,
   onSeatClick,
   clockAt,
+  night = false,
   ariaLabel = "Town square",
 }: {
   seats: readonly SquareSeat[];
@@ -145,6 +145,8 @@ export function TownSquare({
   onSeatClick?: (seat: number) => void;
   /** The vote's clock hand points at this chair index. */
   clockAt?: number | null;
+  /** The town sleeps: the square goes dark. */
+  night?: boolean;
   ariaLabel?: string;
 }) {
   const n = seats.length;
@@ -171,6 +173,17 @@ export function TownSquare({
         }
       >
         <BoardLayer name="square">
+          <circle
+            cx={CENTER}
+            cy={CENTER}
+            r={RADIUS + TOKEN / 2}
+            fill="currentColor"
+            className={cn(
+              "transition-[fill-opacity] duration-1000",
+              night ? "text-purple-950" : "text-amber-200",
+            )}
+            fillOpacity={night ? 0.4 : 0.03}
+          />
           <circle
             cx={CENTER}
             cy={CENTER}

@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { BotcConfigSchema } from "../manifest.ts";
-import { tickVote } from "./apply.ts";
+import { applyOnline, tickVote } from "./apply.ts";
 import { nextBotPlan, runBotPlan } from "./bots.ts";
 import { createOnlineGame } from "./create.ts";
 import type { BotcOnline } from "./state.ts";
@@ -14,12 +14,17 @@ function table(players: number, edition: "trouble-brewing" | "bad-moon-rising", 
 }
 
 /** Run the bots on a fake clock until nobody has anything to do (or `limit` beats). */
-function run(game: BotcOnline, bots: number[], limit = 5000) {
+function run(
+  game: BotcOnline,
+  bots: number[],
+  limit = 5000,
+  until: (g: BotcOnline) => boolean = () => false,
+) {
   let now = 1_000_000;
   let beats = 0;
   const skip = new Set<number>();
   let skipAt = -1;
-  while (beats < limit) {
+  while (beats < limit && !until(game)) {
     game = tickVote(game, now);
     if (skipAt !== game.log.length) skip.clear();
     const plan = nextBotPlan(game, bots, skip);
@@ -39,7 +44,24 @@ function run(game: BotcOnline, bots: number[], limit = 5000) {
     game = ran.game;
     beats += 1;
   }
-  return { game, beats };
+  return { game, beats, now };
+}
+
+/** The last entry `ok` accepts (no `findLast` in this lib target). */
+function lastOf<T>(list: readonly T[], ok: (x: T) => boolean): T | undefined {
+  for (let i = list.length - 1; i >= 0; i--) {
+    const x = list[i];
+    if (x !== undefined && ok(x)) return x;
+  }
+  return undefined;
+}
+
+type Logged = { seat: number; at: number; kind: string; action: Record<string, unknown> };
+function logOf(game: BotcOnline): Logged[] {
+  return game.log.map((l) => {
+    const action = l.action as Record<string, unknown>;
+    return { seat: l.seat, at: l.at, kind: String(action.kind), action };
+  });
 }
 
 describe("stand-in bots", () => {
@@ -52,10 +74,11 @@ describe("stand-in bots", () => {
         const { game } = run(start, bots);
         expect(game.stage).toBe("over");
         expect(game.companion?.phase.kind).toBe("ended");
-        // The Demon kills and the town executes: the game ends before the town runs out.
+        // It ends by play, not by stalling: days pass, and not endlessly (Bad Moon
+        // Rising's protections make long games, but never twice the town).
         const days = game.timeline.filter((t) => / dawns\.$/.test(t.text)).length;
         expect(days).toBeGreaterThan(0);
-        expect(days).toBeLessThanOrEqual(players);
+        expect(days).toBeLessThanOrEqual(players * 2);
       });
     }
   }
@@ -78,5 +101,67 @@ describe("stand-in bots", () => {
     const a = run(table(8, "trouble-brewing", 5), [0, 1, 2, 3, 4, 5, 6, 7, 8]).game;
     const b = run(table(8, "trouble-brewing", 5), [0, 1, 2, 3, 4, 5, 6, 7, 8]).game;
     expect(b.timeline.map((t) => t.text)).toEqual(a.timeline.map((t) => t.text));
+  });
+
+  describe("pacing: the day is held on timers the town can see", () => {
+    const { game } = run(table(8, "trouble-brewing", 5), [0, 1, 2, 3, 4, 5, 6, 7, 8]);
+    const log = logOf(game);
+
+    it("talk comes before nominations: the discussion timer runs out first", () => {
+      const opens = log.filter((l) => l.kind === "nominations" && l.action.open === true);
+      expect(opens.length).toBeGreaterThan(0);
+      for (const open of opens) {
+        const discussion = lastOf(
+          log,
+          (l) => l.kind === "timer" && l.action.timer === "discussion" && l.at <= open.at,
+        );
+        expect(discussion).toBeDefined();
+        expect(open.at - (discussion?.at ?? 0)).toBeGreaterThanOrEqual(60_000);
+      }
+    });
+
+    it("a nomination is heard out before the clock starts, and hands rise only as it runs", () => {
+      const starts = log.filter((l) => l.kind === "start-vote");
+      expect(starts.length).toBeGreaterThan(0);
+      for (const start of starts) {
+        const nomination = lastOf(log, (l) => l.kind === "nominate" && l.at <= start.at);
+        expect(start.at - (nomination?.at ?? 0)).toBeGreaterThanOrEqual(10_000);
+        const raised = log.filter(
+          (l) => l.kind === "hand" && l.at > (nomination?.at ?? 0) && l.at < start.at,
+        );
+        expect(raised).toEqual([]);
+      }
+    });
+
+    it("every night falls on a quiet moment before anyone is woken", () => {
+      for (const fall of game.timeline.filter((t) => / falls\./.test(t.text))) {
+        const wake = log.find((l) => l.kind === "wake" && l.at >= fall.at);
+        if (wake) expect(wake.at - fall.at).toBeGreaterThanOrEqual(3500);
+      }
+    });
+  });
+
+  it("a person who says they're ready moves the day on without waiting out the timer", () => {
+    const everyone = [0, 1, 2, 3, 4, 5, 6, 7];
+    const discussing = (g: BotcOnline) => g.day.timer?.kind === "discussion";
+    const { game } = run(table(7, "trouble-brewing", 4), everyone, 5000, discussing);
+    expect(discussing(game)).toBe(true);
+    const timer = game.day.timer;
+    if (!timer) throw new Error("no timer");
+
+    // Seat 3 is a person from here on: the Storyteller waits out the timer…
+    const bots = everyone.filter((s) => s !== 3);
+    // (The bot players are skipped, to read the Storyteller's plan alone.)
+    const players = new Set(bots.filter((s) => s !== 0));
+    const waiting = nextBotPlan(game, bots, players);
+    expect(waiting?.actions[0]).toMatchObject({ kind: "nominations", open: true });
+    expect(waiting?.at).toBe(timer.endsAt);
+
+    // …until they say they're ready.
+    const ready = applyOnline(game, 3, { kind: "ready", ready: true }, timer.startedAt + 5000);
+    if (!ready.ok) throw new Error(ready.reason);
+    const early = nextBotPlan(ready.game, bots, players);
+    expect(early?.actions[0]).toMatchObject({ kind: "nominations", open: true });
+    expect(early?.at).toBeLessThan(timer.endsAt);
   });
 });

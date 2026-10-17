@@ -35,6 +35,7 @@ export default function Codenames({ source }: GameComponentProps) {
 
   // Rooms label people by name; AI seats (and solo) by their role.
   const names = flow.seats.map((s) => (source === "mp" && s.kind === "human" ? s.name : null));
+  const images = flow.seats.map((s) => s.image);
   if (flow.phase === "finished")
     return (
       <GameOverScreen
@@ -45,5 +46,13 @@ export default function Codenames({ source }: GameComponentProps) {
         error={source === "mp" ? flow.error : null}
       />
     );
-  return <GameBoard view={flow.view} names={names} onAction={flow.sendAction} error={flow.error} />;
+  return (
+    <GameBoard
+      view={flow.view}
+      names={names}
+      images={images}
+      onAction={flow.sendAction}
+      error={flow.error}
+    />
+  );
 }

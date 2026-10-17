@@ -3,6 +3,8 @@ import {
   ChessGamesQuerySchema,
   ChessUploadGamesBodySchema,
   CreateRepertoireBodySchema,
+  LibraryResponseSchema,
+  UpdateLibraryBodySchema,
   UpdateRepertoireBodySchema,
 } from "./trainer-chess.ts";
 
@@ -46,12 +48,40 @@ describe("chess trainer protocol", () => {
     const body = CreateRepertoireBodySchema.parse({ name: " My e4 ", color: "w", settings: {} });
     expect(body.name).toBe("My e4");
     expect(body.settings).toEqual({
-      handpickMoves: 3,
+      handpickMoves: 0,
       engineDepth: 18,
-      evalSpec: "BEST_MOVE_V1",
+      evalSpec: "BEST_MOVE_V2",
       speeds: [],
       minReplies: 3,
     });
     expect(UpdateRepertoireBodySchema.safeParse({ name: "x" }).success).toBe(false);
+  });
+
+  it("parses a library and refuses a bad line or a missing version", () => {
+    const library = {
+      formatVersion: 1,
+      roots: {
+        w: [
+          {
+            kind: "folder",
+            id: "sicilian",
+            name: "vs Sicilian",
+            children: [{ kind: "line", id: "alapin01", name: "Alapin", moves: "e2e4 c7c5 c2c3" }],
+          },
+        ],
+        b: [],
+      },
+    };
+    expect(LibraryResponseSchema.parse({ library, version: 3 }).version).toBe(3);
+    const badLine = UpdateLibraryBodySchema.safeParse({
+      expectedVersion: 0,
+      library: {
+        ...library,
+        roots: { w: [{ kind: "line", id: "alapin01", name: "x", moves: "e2e4 Nf3" }], b: [] },
+      },
+    });
+    expect(badLine.error?.issues[0]?.path).toEqual(["library", "roots", "w", 0, "moves"]);
+    const noVersion = UpdateLibraryBodySchema.safeParse({ library });
+    expect(noVersion.error?.issues[0]?.path).toEqual(["expectedVersion"]);
   });
 });

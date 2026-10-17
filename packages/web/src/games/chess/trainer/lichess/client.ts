@@ -168,8 +168,15 @@ const ExplorerSchema = z.object({
   ),
 });
 
+/** A database move with its results (White wins, draws, Black wins). */
+export interface ExplorerMove extends PopularMove {
+  readonly white: number;
+  readonly draws: number;
+  readonly black: number;
+}
+
 /** The lichess database's moves here (every rating, every speed), most played first. */
-export async function explorerMoves(fen: string, token: string): Promise<PopularMove[]> {
+export async function explorerMoves(fen: string, token: string): Promise<ExplorerMove[]> {
   const url = new URL(`${EXPLORER}/lichess`);
   url.search = new URLSearchParams({
     variant: "standard",
@@ -181,7 +188,13 @@ export async function explorerMoves(fen: string, token: string): Promise<Popular
   const res = await queued(url.toString(), token);
   if (!res.ok) throw new Error(`explorer failed (${res.status})`);
   return ExplorerSchema.parse(await res.json())
-    .moves.map((m) => ({ uci: m.uci, games: m.white + m.draws + m.black }))
+    .moves.map((m) => ({
+      uci: m.uci,
+      games: m.white + m.draws + m.black,
+      white: m.white,
+      draws: m.draws,
+      black: m.black,
+    }))
     .sort((a, b) => b.games - a.games);
 }
 
@@ -200,7 +213,7 @@ export async function cloudEval(
   fen: string,
   multipv: number,
   token: string,
-): Promise<EngineLine[] | null> {
+): Promise<(EngineLine & { pv: string[] })[] | null> {
   const url = new URL(`${LICHESS}/api/cloud-eval`);
   url.search = new URLSearchParams({ fen, multiPv: String(multipv) }).toString();
   const res = await queued(url.toString(), token);
@@ -217,6 +230,7 @@ export async function cloudEval(
         cp: pv.cp === undefined ? null : sign * pv.cp,
         mate: pv.mate === undefined ? null : sign * pv.mate,
         depth: body.depth,
+        pv: pv.moves.split(" ").filter(Boolean),
       },
     ];
   });

@@ -15,6 +15,15 @@ export type RoomSlotKind = z.infer<typeof RoomSlotKindSchema>;
 export const RoomSlotSchema = z.object({
   kind: RoomSlotKindSchema,
   playerName: z.string().optional(),
+  /**
+   * A person's profile picture, served by the server (`/api/avatars/:userId`,
+   * versioned). Set by the server from the seat's account — a client never
+   * names one — and absent when they have no picture: show their initials.
+   */
+  avatarUrl: z
+    .string()
+    .regex(/^\/api\/avatars\/[^/?#]+\?v=[\w-]+$/)
+    .optional(),
   aiStrategy: z.string().optional(),
   ready: z.boolean(),
   connected: z.boolean(),

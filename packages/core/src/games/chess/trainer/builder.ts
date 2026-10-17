@@ -9,13 +9,20 @@
  *   route — transpositions count). The very first opponent move of the game
  *   (Black's reply to your first move, or White's first move) is exactly
  *   that; anywhere else, fewer than `minReplies` distinct moves are padded by
- *   `padReplies` (engine best, most popular, 2nd best, 2nd most popular, …).
+ *   `padReplies` (most popular, engine best, 2nd most popular, 2nd best, …).
+ *   With the analysis farm, every opponent position is also sent for the
+ *   engine's top three — so a played reply that is its best can be marked —
+ *   without the build waiting for it.
  * - **How far:** a game *follows* the tree from the start until its own move
  *   differs from the tree's. A position is expanded while some following game
  *   reaches it. An opponent move no following game took (padding, or a move
- *   only seen in games that had already left the tree) gets just your reply,
- *   and stops there. A game that never leaves keeps its line growing to its
- *   last move.
+ *   only seen in games that had already left the tree) gets your reply and
+ *   the opponent's replies to it (`extension` 3: those are leaves). A game
+ *   that never leaves keeps its line growing to its last move.
+ * - **Line ends:** where your games reached a position of yours but none
+ *   played the tree's move, the line goes three steps further without them
+ *   (`extension` on the nodes): 1 the opponent's replies to your move, 2 your
+ *   answer to each, 3 the opponent's replies to those — the leaves.
  *
  * The build is resumable and cheap to repeat: everything slow (engine lines,
  * database moves, your choices) is cached on the nodes, so a rebuild with the
@@ -29,6 +36,7 @@ import { legalMoves } from "../engine/movegen";
 import { toSan } from "../engine/san";
 import type { Color, Move, Position } from "../engine/types";
 import { moveToUci } from "../engine/uci";
+import { BEST_MOVE_SPEC, finalDepth } from "./eval-policy";
 import { padReplies } from "./padding";
 import { MAX_PLIES, type PositionIndex } from "./position-index";
 import type {
@@ -70,7 +78,7 @@ export interface TreeProviders {
    * settings name a spec and this exists. `reach` = your games following the
    * tree into the position (it decides how deep the farm searches).
    */
-  evaluate?(fen: string, kind: "user" | "opp", reach: number): Promise<NodeEval>;
+  evaluate?(fen: string, kind: "user" | "opp", reach: number, stage?: number): Promise<NodeEval>;
 }
 
 export interface BuildProgress {
@@ -112,6 +120,8 @@ interface Work {
   queued: boolean;
   determined: boolean;
   deviations: Map<string, number>;
+  /** 0 on a game line; 1–3 a line end's extension (see the header). */
+  ext: number;
 }
 
 const firstOpponentPly = (color: Color) => (color === "w" ? 1 : 0);
@@ -174,6 +184,7 @@ export async function buildTree(
       queued: false,
       determined: false,
       deviations: new Map(),
+      ext: 0,
     };
     works.set(key, w);
     return w;
@@ -191,15 +202,23 @@ export async function buildTree(
     return move ? toSan(w.pos, move, w.legal) : uci;
   };
 
-  const spec = settings.evalSpec;
+  // The farm's current definition: nodes evaluated under an older one are asked again.
+  const spec = settings.evalSpec ? BEST_MOVE_SPEC : null;
   let awaiting = 0;
 
   const engineFor = async (w: Work, multipv: number): Promise<EngineLine[]> => {
     if (spec && providers.evaluate) {
       const node = w.node;
-      if (node.engine && node.evalSpec === spec) return node.engine;
+      // Reused only when final: a shallower result (an older farm's capped
+      // search) is asked for again, and the build follows whatever replaces it.
+      if (
+        node.engine &&
+        node.evalSpec === spec &&
+        (node.engine[0]?.depth ?? 0) >= finalDepth(node.side, w.inbox.length)
+      )
+        return node.engine;
       engineCalls++;
-      const r = await providers.evaluate(node.fen, node.side, w.inbox.length);
+      const r = await providers.evaluate(node.fen, node.side, w.inbox.length, w.ext);
       node.engine = r.lines.slice(0, 12);
       node.evalSpec = spec;
       if (r.source) node.evalSource = r.source;
@@ -291,6 +310,16 @@ export async function buildTree(
         (node.ply === firstOpponentPly(color) && observed.length > 0)
       ) {
         replies = observed.map((uci) => ({ uci, source: "played" }));
+        // With the farm, these get the engine's verdict too (is a played reply
+        // its best?) — without holding the tree up: the build carries on from
+        // the played replies and the result arrives in a later pass.
+        if (spec && providers.evaluate) {
+          try {
+            await engineFor(w, settings.minReplies);
+          } catch (err) {
+            if (!(err instanceof EvalPending)) throw err;
+          }
+        }
       } else {
         const engine = await engineFor(w, settings.minReplies + observed.length);
         const popular = await popularFor(w);
@@ -309,10 +338,15 @@ export async function buildTree(
         games: countOf(r.uci),
         following: 0,
       }));
-      // Every reply gets your answer, whether or not a following game reaches it.
-      for (const r of replies) {
-        const child = childOf(w, r.uci);
-        if (child && !child.determined) enqueue(child);
+      // Every reply gets your answer, whether or not a following game reaches it —
+      // except at the extension's last step: those replies are the leaves.
+      if (w.ext !== 3) {
+        for (const r of replies) {
+          const child = childOf(w, r.uci);
+          if (!child) continue;
+          if (w.ext === 1 && child.ext === 0 && child.inbox.length === 0) child.ext = 2;
+          if (!child.determined) enqueue(child);
+        }
       }
     }
     node.status = "done";
@@ -367,6 +401,26 @@ export async function buildTree(
     }
   };
 
+  /**
+   * After your position is worked out: a line end (your games reached it, none
+   * played the tree's move) starts the extension; an extension answer, or your
+   * answer to a reply no following game took, leads to a last opponent
+   * position whose replies are leaves.
+   */
+  const extend = (w: Work) => {
+    const node = w.node;
+    if (node.side !== "user" || node.status !== "done") return;
+    const move = node.moves[0];
+    if (!move) return;
+    const lineEnd = w.ext === 0 && node.following > 0 && move.following === 0;
+    const offLine = w.ext === 0 && node.following === 0;
+    if (!lineEnd && !offLine && w.ext !== 2) return;
+    const child = childOf(w, move.uci);
+    if (!child || child.ext !== 0 || child.inbox.length > 0 || child.determined) return;
+    child.ext = lineEnd ? 1 : 3;
+    enqueue(child);
+  };
+
   const root = workFor(parseFen(START_FEN), 0);
   root.inbox = games.flatMap((g, gi) => (g.moves.length > 0 ? [(gi << PLY_BITS) >>> 0] : []));
   enqueue(root);
@@ -394,6 +448,7 @@ export async function buildTree(
         node.following += w.inbox.length;
       }
       if (node.status === "awaiting-eval") node.following += w.inbox.length;
+      if (w.ext > 0) node.extension = w.ext;
       if (w.deviations.size > 0) {
         node.deviations = [...w.deviations]
           .map(([uci, n]) => ({ uci, san: sanOf(w, uci), games: n }))
@@ -438,7 +493,10 @@ export async function buildTree(
     const w = queue.shift() as Work;
     w.queued = false;
     const ready = await determine(w);
-    if (ready) consume(w);
+    if (ready) {
+      consume(w);
+      extend(w);
+    }
     processed++;
     options.onProgress?.(progress());
     if (options.onCheckpoint && processed % every === 0)

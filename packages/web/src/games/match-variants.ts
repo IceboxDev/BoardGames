@@ -362,6 +362,54 @@ const VARIANTS: Record<string, GameVariantConfig> = {
       { value: "Even phases only", label: "Even phases only" },
     ],
   },
+  // The Hunger's double-sided board picks the mode (rulebook "Rookie Mode" /
+  // "Elder Mode"): Rookie (side A) also scores in the Mountains, Elder (side
+  // B) is the book's standard game. Elder first, as the book's default.
+  "the-hunger": {
+    label: "Mode",
+    mode: "single",
+    options: [
+      { value: "Elder Mode", label: "Elder Mode (side B)" },
+      { value: "Rookie Mode", label: "Rookie Mode (side A)" },
+    ],
+  },
+  // Carnegie's project tabs are double-sided and the rulebook lets each player
+  // use either side of each tab; the group plays beginners on the A sides only.
+  // The book's free choice first.
+  carnegie: {
+    label: "Project tabs",
+    mode: "single",
+    options: [
+      { value: "Free choice", label: "Free choice (either side)" },
+      { value: "A only", label: "A sides only (beginner)" },
+    ],
+  },
+  // FlipToons: Season 2 is a standalone sequel that also combines with the
+  // original (up to 8 players), and both Big Button promos work with either
+  // season — so every box is a checkbox. The original is pre-checked as the
+  // usual base; a Season 2-only game unchecks it.
+  fliptoons: {
+    label: "Boxes in play",
+    mode: "multi",
+    default: "Season 1",
+    options: [
+      { value: "Season 1", label: "FlipToons (Season 1)" },
+      { value: "Season 2", label: "Season 2" },
+      { value: "Big Button", label: "Big Button" },
+      { value: "Big Button 2", label: "Big Button 2" },
+    ],
+  },
+  // Questline's one expansion, the Solstice mini-expansion (six more classes).
+  // The base game is always in play, so it is pre-checked, like 7 Wonders.
+  questline: {
+    label: "Edition",
+    mode: "multi",
+    default: "Base",
+    options: [
+      { value: "Base", label: "Base game" },
+      { value: "Solstice", label: "Solstice" },
+    ],
+  },
 };
 
 /** Every slug with a variant config — for invariant tests over the whole table. */

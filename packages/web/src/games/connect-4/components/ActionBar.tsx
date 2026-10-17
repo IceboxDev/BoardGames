@@ -1,8 +1,8 @@
 import type { Action } from "@boardgames/core/games/connect-4/types";
 import type { ReactNode } from "react";
-import { SoundToggle } from "../../../components/game-layout";
+import { GameActionBar, SoundToggle } from "../../../components/game-layout";
 import { FlagIcon, GaugeIcon, LightbulbIcon } from "../../../components/icons";
-import { Button, Surface, useConfirm } from "../../../components/ui";
+import { Button, useConfirm } from "../../../components/ui";
 import type { Assists } from "../logic/useAssists";
 
 interface Props {
@@ -34,63 +34,60 @@ export function ActionBar({ legal, send, assists, muted, onToggleMute, extra }: 
   };
 
   return (
-    <Surface
-      variant="raised"
-      padding="sm"
-      className="grid min-h-12 shrink-0 grid-cols-[1fr_auto_1fr] items-center gap-2"
+    <GameActionBar
+      start={
+        <>
+          <SoundToggle muted={muted} onToggle={onToggleMute} />
+          {assists.evalAvailable && (
+            <Button
+              size="xs"
+              variant="ghost"
+              onClick={assists.toggleEval}
+              aria-pressed={assists.evalOn}
+              title="Show the solver's verdict on the position (E)"
+            >
+              <GaugeIcon className="h-3.5 w-3.5" />
+              {assists.evalOn ? "Eval on" : "Eval"}
+            </Button>
+          )}
+        </>
+      }
+      end={
+        <>
+          {extra}
+          {resign && (
+            <Button size="xs" variant="ghost" onClick={onResign} title="Give up this game">
+              <FlagIcon />
+              Resign
+            </Button>
+          )}
+        </>
+      }
     >
-      <div className="flex items-center gap-1">
-        <SoundToggle muted={muted} onToggle={onToggleMute} />
-        {assists.evalAvailable && (
-          <Button
-            size="xs"
-            variant="ghost"
-            onClick={assists.toggleEval}
-            aria-pressed={assists.evalOn}
-            title="Show the solver's verdict on the position (E)"
-          >
-            <GaugeIcon className="h-3.5 w-3.5" />
-            {assists.evalOn ? "Eval on" : "Eval"}
-          </Button>
-        )}
-      </div>
-
-      <div className="flex flex-wrap items-center justify-center gap-2">
-        {next && (
-          <Button
-            size="xs"
-            variant="primary"
-            onClick={() => send(next)}
-            title="Start the next game now"
-          >
-            Next game
-          </Button>
-        )}
-        {assists.requestHint && (
-          <Button
-            size="xs"
-            variant="tinted"
-            tone="emerald"
-            onClick={assists.requestHint}
-            loading={assists.hintBusy}
-            title="Light up the best column (H)"
-          >
-            <LightbulbIcon className="h-3.5 w-3.5" />
-            Hint
-          </Button>
-        )}
-      </div>
-
-      <div className="flex items-center justify-end gap-2">
-        {extra}
-        {resign && (
-          <Button size="xs" variant="ghost" onClick={onResign} title="Give up this game">
-            <FlagIcon />
-            Resign
-          </Button>
-        )}
-      </div>
+      {next && (
+        <Button
+          size="xs"
+          variant="primary"
+          onClick={() => send(next)}
+          title="Start the next game now"
+        >
+          Next game
+        </Button>
+      )}
+      {assists.requestHint && (
+        <Button
+          size="xs"
+          variant="tinted"
+          tone="emerald"
+          onClick={assists.requestHint}
+          loading={assists.hintBusy}
+          title="Light up the best column (H)"
+        >
+          <LightbulbIcon className="h-3.5 w-3.5" />
+          Hint
+        </Button>
+      )}
       {confirmDialog}
-    </Surface>
+    </GameActionBar>
   );
 }

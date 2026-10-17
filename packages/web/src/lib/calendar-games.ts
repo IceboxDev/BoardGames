@@ -7,6 +7,7 @@ import {
   GameReactionBodySchema,
   OkResponseSchema,
   type ReactionKind,
+  ResetGameVotesBodySchema,
 } from "@boardgames/core/protocol";
 import { apiFetch } from "./api-fetch.ts";
 
@@ -35,6 +36,17 @@ export async function setGameReaction(
     method: "POST",
     body: { date, slug, reaction, on },
     request: GameReactionBodySchema,
+    response: OkResponseSchema,
+  });
+}
+
+/** Admin: clear every game vote cast for the night. */
+/** Admin: clear the night's game votes — everyone's, or one person's. */
+export async function adminResetGameVotes(date: string, userId?: string) {
+  return apiFetch("/api/admin/calendar/reset-votes", {
+    method: "POST",
+    body: userId ? { date, userId } : { date },
+    request: ResetGameVotesBodySchema,
     response: OkResponseSchema,
   });
 }

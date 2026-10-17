@@ -1,9 +1,10 @@
 import { describe, expect, it } from "vitest";
 import {
   allocateDepths,
-  BEST_MOVE_V1,
+  BEST_MOVE,
   type Calibration,
   candidates,
+  finalDepth,
   nodesAt,
   pickBest,
   projectSeconds,
@@ -21,7 +22,13 @@ const lc0 = (uci: string, w: number, d: number, l: number, visits = 100) => ({
   visits,
 });
 
-describe("BEST_MOVE_V1", () => {
+describe("BEST_MOVE_V2", () => {
+  it("counts an evaluation final only at depth 50 for you, 40 for the opponent", () => {
+    expect([finalDepth("user", 300), finalDepth("user", 0), finalDepth("opp", 5)]).toEqual([
+      50, 50, 40,
+    ]);
+  });
+
   it("puts positions in tiers by reach", () => {
     expect([25, 20, 19, 3, 2, 1, 0].map((r) => tierOf(r).name)).toEqual([
       "trunk",
@@ -57,8 +64,18 @@ describe("BEST_MOVE_V1", () => {
     });
   });
 
-  it("breaks a tie by Lc0's win minus loss, then fewer draws", () => {
-    const sf = [cp("a", 0), cp("b", -10), cp("c", -40)];
+  it("lets Stockfish decide unless it scores moves exactly the same", () => {
+    const lc0Likes = [lc0("a", 0.1, 0.8, 0.1), lc0("b", 0.2, 0.7, 0.1), lc0("c", 0.5, 0.2, 0.3)];
+    // One centipawn apart is not a tie: Stockfish's best stands.
+    expect(pickBest([cp("a", 0), cp("b", -1), cp("c", -40)], lc0Likes)).toMatchObject({
+      best: "a",
+      ties: ["a"],
+      byLc0: false,
+    });
+  });
+
+  it("breaks an exact tie by Lc0's win minus loss, then fewer draws", () => {
+    const sf = [cp("a", 0), cp("b", 0), cp("c", -40)];
     const r = pickBest(sf, [
       lc0("a", 0.1, 0.8, 0.1),
       lc0("b", 0.2, 0.7, 0.1),
@@ -103,7 +120,7 @@ describe("budget", () => {
 
   it("fits the budget by lowering leaf, rare, main and opponents — never the trunk", () => {
     const work = { user: { trunk: 300, main: 1500, rare: 3500, leaf: 2500 }, opp: 2200 };
-    const full = projectSeconds(cal, work, BEST_MOVE_V1.tiers, 40);
+    const full = projectSeconds(cal, work, BEST_MOVE.tiers, 40);
     const budget = 90 * 3600;
     expect(full).toBeGreaterThan(budget);
     const plan = allocateDepths(cal, work, budget);
@@ -120,6 +137,6 @@ describe("budget", () => {
       { user: { trunk: 10, main: 10, rare: 10, leaf: 10 }, opp: 10 },
       90 * 3600,
     );
-    expect(plan.tiers.map((t) => t.depth)).toEqual([50, 50, 50, 38]);
+    expect(plan.tiers.map((t) => t.depth)).toEqual([50, 50, 50, 50]);
   });
 });

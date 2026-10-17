@@ -14,6 +14,7 @@ import {
   OkResponseSchema,
   PicksLockBodySchema,
   PrivateNightUpdateBodySchema,
+  ResetGameVotesBodySchema,
   SlugListSchema,
   UnlockBodySchema,
 } from "@boardgames/core/protocol";
@@ -223,9 +224,9 @@ calendarLocksRoutes.post("/games/reaction", zJsonBody(GameReactionBodySchema), a
       return errorResponse(c, 409, "that game doesn't fit this night", "GAME_NOT_PLAYABLE");
     }
     await getDb().execute({
-      sql: `INSERT OR IGNORE INTO game_requests (date_key, user_id, game_slug, reaction)
-            VALUES (?, ?, ?, ?)`,
-      args: [date, user.id, slug, reaction],
+      sql: `INSERT OR IGNORE INTO game_requests (date_key, user_id, game_slug, reaction, headcount)
+            VALUES (?, ?, ?, ?, ?)`,
+      args: [date, user.id, slug, reaction, view.headcount],
     });
   } else {
     await getDb().execute({
@@ -764,6 +765,38 @@ adminCalendarLocksRoutes.delete("/lock", zJsonBody(UnlockBodySchema), async (c) 
   );
   logActivity(user.id, "night-unlocked", { date });
 
+  return c.json(OkResponseSchema.parse({ ok: true }));
+});
+
+// ── Admin: reset a night's game votes ─────────────────────────────────
+//
+// Clears the hype / teach / learn votes cast for the night — everyone's, so
+// the group can pick again from scratch (the lineup drifted, the headcount
+// changed, a test vote crept in), or one person's (`userId`: their picks
+// predate who's coming now). Only `game_requests` — RSVPs, the guest list and
+// the EXIT box vote are untouched. Irreversible, so the client confirms first.
+adminCalendarLocksRoutes.post("/reset-votes", zJsonBody(ResetGameVotesBodySchema), async (c) => {
+  const user = c.get("user");
+  const { date, userId } = c.req.valid("json");
+  const db = getDb();
+
+  const lock = await loadNightLock(db, date);
+  if (!lock) {
+    return errorResponse(c, 400, "date is not locked");
+  }
+  const result = await db.execute(
+    userId
+      ? {
+          sql: "DELETE FROM game_requests WHERE date_key = ? AND user_id = ?",
+          args: [date, userId],
+        }
+      : { sql: "DELETE FROM game_requests WHERE date_key = ?", args: [date] },
+  );
+  logActivity(user.id, "game-votes-reset", {
+    date,
+    removed: result.rowsAffected,
+    ...(userId ? { targetUserId: userId } : {}),
+  });
   return c.json(OkResponseSchema.parse({ ok: true }));
 });
 

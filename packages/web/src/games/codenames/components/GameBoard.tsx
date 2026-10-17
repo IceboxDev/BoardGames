@@ -58,6 +58,8 @@ interface GameBoardProps {
   view: CodenamesPlayerView;
   /** People's names by seat (rooms); null = label by role. */
   names: readonly (string | null)[];
+  /** People's profile pictures by seat; null = their initials. */
+  images: readonly (string | null)[];
   onAction: (action: CodenamesAction) => void;
   error: string | null;
 }
@@ -95,7 +97,7 @@ function typing(target: EventTarget | null): boolean {
   );
 }
 
-export default function GameBoard({ view, names, onAction, error }: GameBoardProps) {
+export default function GameBoard({ view, names, images, onAction, error }: GameBoardProps) {
   // A spymaster can hide the key to see the board the way their team does.
   const [showKey, setShowKey] = useState(true);
   const [oneTapPreferred, setOneTap] = useOneTapTouch();
@@ -150,6 +152,7 @@ export default function GameBoard({ view, names, onAction, error }: GameBoardPro
     return seats.map((seat) => ({
       key: String(seat),
       name: seatLabel(seat, names),
+      image: images[seat] ?? null,
       mine: seat === view.seat,
     }));
   };
@@ -334,7 +337,12 @@ export default function GameBoard({ view, names, onAction, error }: GameBoardPro
       leftSidebarTitle="Codenames"
       leftSidebarLabel="Teams"
       leftSidebar={
-        <TeamsPanel view={view} names={names} onChat={(text) => onAction({ kind: "chat", text })} />
+        <TeamsPanel
+          view={view}
+          names={names}
+          images={images}
+          onChat={(text) => onAction({ kind: "chat", text })}
+        />
       }
       sidebar={
         <ActionLog

@@ -1,0 +1,22 @@
+# ws21 user unit: one farm worker per hardware thread (`chess-farm@1..24`), each a
+# single-thread search (core's `SEARCH`). Lane 1 also runs Lc0 on the GPU and
+# serves it to the other lanes and the fleet (`lane-1.env`: LC0_PATH, LC0_WEIGHTS,
+# LC0_BACKEND, LC0_SERVE_PORT=3002, LC0_URL= ); the rest use LC0_URL from farm.env.
+# Install as ~/.config/systemd/user/chess-farm@.service.
+[Unit]
+Description=Chess analysis farm worker, lane %i
+After=network-online.target boardgames-server.service
+Wants=boardgames-server.service
+
+[Service]
+WorkingDirectory=%h/chess-farm
+EnvironmentFile=%h/chess-farm/farm.env
+EnvironmentFile=-%h/chess-farm/lane-%i.env
+Environment=FARM_WORKER=ws21-%i
+ExecStart=/usr/bin/node worker.mjs
+Restart=on-failure
+RestartSec=60
+Nice=5
+
+[Install]
+WantedBy=default.target

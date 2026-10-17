@@ -63,10 +63,12 @@ export default function RsvpModal({ date, locks, onClose }: Props) {
     setRsvpMutation,
     togglePicksLockMutation,
     kickMutation,
+    resetVotesMutation,
     definiteCount,
     tentativeCount,
     reactions,
     topSlugs,
+    runnerUpSlugs,
     attendees,
     ownedSlugs,
     newSlugs,
@@ -106,6 +108,18 @@ export default function RsvpModal({ date, locks, onClose }: Props) {
   }, [lock, userId, viewerRsvp, setRsvpMutation.mutate, picksLocked, isAdmin, isHost, isPrivate]);
 
   const headingDate = formatDayKey(date, "weekday");
+
+  const resetVotes = async () => {
+    const ok = await confirm({
+      title: "Reset everyone's game votes?",
+      description: `Every hype, teach and learn vote for ${headingDate} is cleared, so the group picks again from scratch. RSVPs stay as they are. This can't be undone.`,
+      confirmLabel: "Reset votes",
+      variant: "danger",
+    });
+    if (ok) resetVotesMutation.mutate(undefined);
+  };
+  // The row confirms first (it names the person and their vote count).
+  const resetPersonVotes = (userId: string) => resetVotesMutation.mutate({ userId });
 
   // A sealed night whose vote winner is D&D takes over the modal: one quest on
   // the table, a party roster, no bringing. Gated on picks-locked so the normal
@@ -171,7 +185,11 @@ export default function RsvpModal({ date, locks, onClose }: Props) {
   // A private night has no auto-yes: no answer is exactly that.
   const effectiveRsvp: RsvpStatus | undefined = isPrivate ? viewerRsvp : (viewerRsvp ?? "yes");
 
-  const error = setRsvpMutation.error ? "Couldn't update RSVP. Try again." : null;
+  const error = setRsvpMutation.error
+    ? "Couldn't update RSVP. Try again."
+    : resetVotesMutation.error
+      ? "Couldn't reset the votes. Try again."
+      : null;
   const busy = setRsvpMutation.isPending;
 
   const picksLockToggle = canTogglePicksLock ? (
@@ -425,6 +443,11 @@ export default function RsvpModal({ date, locks, onClose }: Props) {
               kickingUserId={
                 kickMutation.isPending ? (kickMutation.variables?.userId ?? null) : null
               }
+              onResetVotes={isAdmin && !hostPicks ? resetPersonVotes : undefined}
+              resettingUserId={
+                (resetVotesMutation.isPending && resetVotesMutation.variables?.userId) || null
+              }
+              headcount={playerWindow.lo}
               seats={isPrivate ? seats : null}
               showVotes={!hostPicks}
             />
@@ -443,6 +466,9 @@ export default function RsvpModal({ date, locks, onClose }: Props) {
               games={availableGames}
               reactions={reactions}
               topSlugs={topSlugs}
+              runnerUpSlugs={runnerUpSlugs}
+              onResetVotes={isAdmin && !hostPicks ? resetVotes : undefined}
+              resettingVotes={resetVotesMutation.isPending}
               lineup={
                 hostPicks
                   ? { hostName: lock?.host?.name ?? null, attendees, viewerCanPick: viewerCanReact }

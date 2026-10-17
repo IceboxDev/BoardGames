@@ -6,7 +6,10 @@ import {
   slayerShot,
   virginNomination,
 } from "@boardgames/core/games/blood-on-the-clocktower/decisions";
-import type { Request } from "@boardgames/core/games/blood-on-the-clocktower/online/state";
+import type {
+  DayTimerKind,
+  Request,
+} from "@boardgames/core/games/blood-on-the-clocktower/online/state";
 import { useState } from "react";
 import { Button, Eyebrow, Select } from "../../../../components/ui";
 import { useStoryteller } from "../context";
@@ -366,6 +369,51 @@ function NominateFor() {
 }
 
 /** The day: who's on the block, the vote, claims to rule on, and the win checks. */
+const TIMERS: readonly { timer: DayTimerKind; seconds: number; label: string }[] = [
+  { timer: "discussion", seconds: 120, label: "Discussion 2:00" },
+  { timer: "nominations", seconds: 60, label: "Nominations 1:00" },
+  { timer: "defence", seconds: 15, label: "Defence 0:15" },
+  { timer: "dusk", seconds: 10, label: "Dusk 0:10" },
+];
+
+/** A countdown the whole town sees, and who has said they're ready to move on. */
+function TimerCard() {
+  const { view, st } = useStoryteller();
+  const ready = view.day.ready ?? [];
+  return (
+    <section className="flex flex-col gap-2">
+      <Eyebrow>Timer</Eyebrow>
+      <div className="flex flex-wrap gap-1.5">
+        {TIMERS.map((t) => (
+          <Button
+            key={t.timer}
+            size="xs"
+            variant={view.day.timer?.kind === t.timer ? "tinted" : "ghost"}
+            tone={view.day.timer?.kind === t.timer ? "sky" : undefined}
+            onClick={() => st({ kind: "timer", timer: t.timer, seconds: t.seconds })}
+          >
+            {t.label}
+          </Button>
+        ))}
+        {view.day.timer && (
+          <Button
+            size="xs"
+            variant="ghost"
+            onClick={() => st({ kind: "timer", timer: "custom", seconds: null })}
+          >
+            Clear
+          </Button>
+        )}
+      </div>
+      <p className="text-xs text-fg-muted">
+        {ready.length === 0
+          ? "Nobody has said they're ready yet."
+          : `Ready: ${ready.map((s) => view.names[s] ?? `Player ${s}`).join(", ")}.`}
+      </p>
+    </section>
+  );
+}
+
 export function DayScript() {
   const { view, st } = useStoryteller();
   const state = view.companion;
@@ -443,6 +491,7 @@ export function DayScript() {
           </div>
         </div>
       ))}
+      <TimerCard />
       <BlockCard />
       <section className="flex flex-col gap-2">
         <Eyebrow>Nomination</Eyebrow>

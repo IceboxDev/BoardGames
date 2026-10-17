@@ -1,11 +1,12 @@
 /**
- * BEST_MOVE_V1 on the farm (see core/games/chess/trainer/eval-policy.ts):
+ * BEST_MOVE on the farm (see core/games/chess/trainer/eval-policy.ts):
  *
  *   your move  lichess cloud if it is already as deep as the tier asks; else
  *              candidates (ChessDB's ranking, or a quick MultiPV-3 search),
  *              Stockfish single-PV to the tier depth on the best and each
  *              candidate (`searchmoves`), Lc0 on the GPU at the same time for
- *              the tie-break and the "contested" check.
+ *              the tie-break and the "contested" check (a cloud hit asks
+ *              Lc0 only when its lines tie: ~1 min of GPU per position).
  *   opponent   lichess cloud with 3 lines at the opponent depth, else
  *              Stockfish MultiPV 3 to that depth.
  */
@@ -13,8 +14,8 @@ import { parseFen } from "@boardgames/core/games/chess/engine/fen";
 import { legalMoves } from "@boardgames/core/games/chess/engine/movegen";
 import { moveToUci } from "@boardgames/core/games/chess/engine/uci";
 import {
+  BEST_MOVE,
   BEST_MOVE_SPEC,
-  BEST_MOVE_V1,
   candidates,
   type Lc0Move,
   pickBest,
@@ -30,8 +31,6 @@ import { finalLines, type InfoLine, parseLc0MoveStat, type UciEngine } from "./u
 export interface FarmPolicy {
   readonly tiers: readonly Tier[];
   readonly oppDepth: number;
-  /** Node cap per target depth (from calibration); a search stops at whichever comes first. */
-  readonly nodeCap: (depth: number) => number;
   readonly prepassDepth: number;
   readonly lc0Nodes: number;
   /** Most extra candidates searched to full depth per position. */
@@ -40,19 +39,45 @@ export interface FarmPolicy {
   readonly lookups: boolean;
 }
 
-export const defaultPolicy = (nps: number): FarmPolicy => ({
-  tiers: BEST_MOVE_V1.tiers,
-  oppDepth: BEST_MOVE_V1.opp.depth,
-  // Uncalibrated: at most ten minutes of search per run.
-  nodeCap: () => Math.round(nps * 600),
+export const defaultPolicy = (): FarmPolicy => ({
+  tiers: BEST_MOVE.tiers,
+  oppDepth: BEST_MOVE.opp.depth,
   prepassDepth: 24,
-  lc0Nodes: BEST_MOVE_V1.lc0Nodes,
+  lc0Nodes: BEST_MOVE.lc0Nodes,
   maxCandidates: 2,
-  lookups: true,
+  lookups: false,
 });
 
+/**
+ * The node limit stopped a search short of its target depth. Nothing is
+ * stored and nothing below the position is queued: an unfinished result could
+ * name a move the full search wouldn't, sending the farm down a dead line.
+ * The worker gives the job back for a worker that can finish it.
+ */
+export class ShortSearch extends Error {
+  constructor(
+    readonly reached: number,
+    readonly target: number,
+  ) {
+    super(`node limit at depth ${reached} (needs ${target})`);
+  }
+}
+
+/** Throw unless every searched line reached `target`. */
+function final(lines: readonly { depth: number }[], target: number): void {
+  const reached = Math.min(...lines.map((l) => l.depth));
+  if (reached < target) throw new ShortSearch(reached, target);
+}
+
+/** Where a worker gets Lc0's root statistics: its own GPU, or ws21's (`lc0-remote.ts`). */
+export interface Lc0Source {
+  rootStats(fen: string, nodes: number): Promise<Lc0Move[]>;
+  /** A failure fails the job (retried) instead of storing a result without the tie-break. */
+  readonly required?: boolean;
+}
+
 /** Lc0 behind a queue: one search at a time on the GPU. */
-export class Lc0Lane {
+export class Lc0Lane implements Lc0Source {
   private tail: Promise<unknown> = Promise.resolve();
   constructor(readonly engine: UciEngine) {}
 
@@ -72,7 +97,7 @@ export class Lc0Lane {
 
 export interface FarmEngines {
   readonly sf: UciEngine;
-  readonly lc0: Lc0Lane | null;
+  readonly lc0: Lc0Source | null;
   /** e.g. "stockfish dev-20261013-5c4cef0b + lc0 0.33 BT4-it332". */
   readonly label: string;
 }
@@ -108,7 +133,9 @@ async function sfLines(
   multipv: number,
 ): Promise<FarmLine[]> {
   engines.sf.setOption("MultiPV", multipv);
-  const r = await engines.sf.search(fen, go, { timeoutMs: 6 * 3600_000 });
+  // No limit but the depth, however long it takes; a stuck engine shows as one
+  // that stops answering `isready`.
+  const r = await engines.sf.search(fen, go, { checkEveryMs: 5 * 60_000 });
   if (multipv !== 1) engines.sf.setOption("MultiPV", 1);
   return finalLines(r.infos).map(toLine);
 }
@@ -119,6 +146,9 @@ export async function analyse(
   policy: FarmPolicy,
 ): Promise<PositionEval> {
   const start = Date.now();
+  // Nothing carried over from the previous position: identical on every worker.
+  engines.sf.send("ucinewgame");
+  await engines.sf.ready();
   const legal = new Set(legalMoves(parseFen(job.fen)).map(moveToUci));
   if (legal.size === 0) throw new Error("no legal moves");
   const base = {
@@ -151,13 +181,9 @@ export async function analyse(
       }
     }
     const depth = policy.oppDepth;
-    const lines = await sfLines(
-      engines,
-      job.fen,
-      `depth ${depth} nodes ${policy.nodeCap(depth) * 2}`,
-      want,
-    );
+    const lines = await sfLines(engines, job.fen, `depth ${depth}`, want);
     if (lines.length === 0) throw new Error("Stockfish gave no lines");
+    final(lines, depth);
     return done({
       best: lines[0]?.uci as string,
       lines,
@@ -171,7 +197,11 @@ export async function analyse(
 
   // ── Your move ──
   const target = tierOf(job.reach, policy.tiers).depth;
-  const lc0Promise = engines.lc0?.rootStats(job.fen, policy.lc0Nodes) ?? Promise.resolve([]);
+  const askLc0 = (): Promise<Lc0Move[]> =>
+    (engines.lc0?.rootStats(job.fen, policy.lc0Nodes) ?? Promise.resolve([])).catch((err) => {
+      if (engines.lc0?.required) throw err;
+      return [];
+    });
 
   const choose = (lines: FarmLine[], lc0: Lc0Move[], source: PositionEval["source"]) => {
     const searched: Scored[] = lines.map((l) => ({ uci: l.uci, cp: l.cp, mate: l.mate }));
@@ -190,7 +220,9 @@ export async function analyse(
   if (policy.lookups) {
     const cloud = await lichessCloud(job.fen, 3, legal);
     if (cloud && cloud.length > 0 && (cloud[0]?.depth ?? 0) >= target) {
-      return choose(cloud.map(fromLookup), await lc0Promise.catch(() => []), "lichess-cloud");
+      const lines = cloud.map(fromLookup);
+      const tied = pickBest(lines).ties.length > 1;
+      return choose(lines, tied ? await askLc0() : [], "lichess-cloud");
     }
   }
 
@@ -212,13 +244,16 @@ export async function analyse(
     cands = candidates(pre.map((l) => ({ uci: l.uci, cp: l.cp, mate: l.mate })));
   }
 
-  const cap = policy.nodeCap(target);
-  const main = await sfLines(engines, job.fen, `depth ${target} nodes ${cap}`, 1);
+  const main = await sfLines(engines, job.fen, `depth ${target}`, 1);
   if (main.length === 0) throw new Error("Stockfish gave no line");
   const lines: FarmLine[] = [main[0] as FarmLine];
   for (const c of cands.filter((u) => u !== main[0]?.uci).slice(0, policy.maxCandidates)) {
-    const alt = await sfLines(engines, job.fen, `depth ${target} nodes ${cap} searchmoves ${c}`, 1);
+    const alt = await sfLines(engines, job.fen, `depth ${target} searchmoves ${c}`, 1);
     if (alt[0]) lines.push(alt[0]);
   }
-  return choose(lines, await lc0Promise.catch(() => []), "farm");
+  // Every line to the full depth, or the comparison (and the move) isn't final.
+  final(lines, target);
+  // Lc0 breaks a tie and nothing else (one GPU for every worker).
+  const tied = pickBest(lines.map((l) => ({ uci: l.uci, cp: l.cp, mate: l.mate }))).ties.length > 1;
+  return choose(lines, tied ? await askLc0() : [], "farm");
 }

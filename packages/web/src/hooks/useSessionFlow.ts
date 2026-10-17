@@ -4,6 +4,7 @@ import { roomSeating } from "@boardgames/core/protocol";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import type { GameOverAction } from "../components/game-over/GameOverLayout";
+import { useCurrentUser } from "./useCurrentUser";
 import type { GameSource } from "./useGameShell";
 import { useGameShell } from "./useGameShell";
 import { useSoloGameHistory } from "./useSoloGameHistory";
@@ -22,6 +23,12 @@ export interface SeatInfo {
   /** A person's room name ("You" in a solo game), or an AI's strategy label. */
   readonly name: string;
   readonly kind: "human" | "ai";
+  /**
+   * A person's profile picture (for `<Avatar image>`): the room seat's
+   * server-served URL, or in a solo game this player's own. `null` for AI
+   * seats and people without one.
+   */
+  readonly image: string | null;
 }
 
 /** A solo game's seats (this player holds every human seat) and options. */
@@ -102,6 +109,7 @@ export function useSessionFlow<TView, TAction, TResult, TSetup = never>(
 ): SessionFlow<TView, TAction, TResult, TSetup> {
   const navigate = useNavigate();
   const { def, game, mp } = useGameShell<TView, TAction, TResult>();
+  const myImage = useCurrentUser().user?.image ?? null;
   const active = source === "mp" ? mp : game;
 
   const [lastStart, setLastStart] = useState<SoloStart | null>(null);
@@ -156,7 +164,7 @@ export function useSessionFlow<TView, TAction, TResult, TSetup = never>(
   const seats = useMemo((): SeatInfo[] => {
     const ai = (strategy: string | undefined): SeatInfo => {
       const info = def.manifest?.strategies.find((s) => s.id === strategy);
-      return { name: info ? `${info.label} (AI)` : "AI", kind: "ai" };
+      return { name: info ? `${info.label} (AI)` : "AI", kind: "ai", image: null };
     };
     if (source === "mp") {
       const room = mp.roomState;
@@ -165,13 +173,13 @@ export function useSessionFlow<TView, TAction, TResult, TSetup = never>(
         const slot = room.slots[slotIndex];
         return slot?.kind === "ai"
           ? ai(slot.aiStrategy)
-          : { name: slot?.playerName ?? "Player", kind: "human" };
+          : { name: slot?.playerName ?? "Player", kind: "human", image: slot?.avatarUrl ?? null };
       });
     }
     return (lastStart?.seats ?? []).map((seat) =>
-      seat.kind === "ai" ? ai(seat.strategy) : { name: "You", kind: "human" },
+      seat.kind === "ai" ? ai(seat.strategy) : { name: "You", kind: "human", image: myImage },
     );
-  }, [source, mp.roomState, lastStart, def.manifest]);
+  }, [source, mp.roomState, lastStart, def.manifest, myImage]);
   const seatNames = useMemo(() => seats.map((s) => s.name), [seats]);
 
   const autoStartNow =

@@ -121,3 +121,31 @@ export function scoreText(fen: string, line: { cp: number | null; mate: number |
   const cp = sign * (line.cp ?? 0);
   return `${cp >= 0 ? "+" : ""}${(cp / 100).toFixed(1)}`;
 }
+
+/** Every tree position reachable from `roots` through the tree's own moves (roots included). */
+export function reachableFrom(tree: RepertoireTree, roots: readonly string[]): Set<string> {
+  const seen = new Set<string>();
+  const stack = roots.filter((k) => tree.nodes[k]);
+  while (stack.length > 0) {
+    const key = stack.pop() as string;
+    if (seen.has(key)) continue;
+    seen.add(key);
+    const node = tree.nodes[key];
+    if (!node) continue;
+    for (const m of node.moves) {
+      const next = keyAfter(node.fen, m.uci);
+      if (next && tree.nodes[next] && !seen.has(next)) stack.push(next);
+    }
+  }
+  return seen;
+}
+
+/** The tree's leaves: positions whose moves lead nowhere further in the tree (where lines end, for now). */
+export function isLeaf(tree: RepertoireTree, key: string): boolean {
+  const node = tree.nodes[key];
+  if (!node) return false;
+  return !node.moves.some((m) => {
+    const next = keyAfter(node.fen, m.uci);
+    return next !== null && next !== key && tree.nodes[next] !== undefined;
+  });
+}

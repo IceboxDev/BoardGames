@@ -284,7 +284,11 @@ export default function App() {
             q.queryKey[0] !== "geography" &&
             // Hint state must come from the server: a hint dismissed on another
             // device must not flash back from this browser's snapshot.
-            q.queryKey[0] !== "onboarding",
+            q.queryKey[0] !== "onboarding" &&
+            // The chess trainer's trees are big and versioned: a stale copy
+            // from disk would only meet "saved from another tab" on its first
+            // save. Always from the server.
+            q.queryKey[0] !== "chess-trainer",
           // A save queued behind another in its scope sits "paused"; the
           // default would persist it, and a reload would then replay a
           // whole-object PUT with no mutationFn bound. Trainer saves are

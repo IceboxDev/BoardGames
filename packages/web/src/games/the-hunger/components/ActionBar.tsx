@@ -3,7 +3,8 @@ import { bonusDef } from "@boardgames/core/games/the-hunger/content/bonus-tokens
 import { cardDef } from "@boardgames/core/games/the-hunger/content/cards";
 import { missionDef } from "@boardgames/core/games/the-hunger/content/missions";
 import { drawCount, hasHuman } from "@boardgames/core/games/the-hunger/rules";
-import { Button, Surface } from "../../../components/ui";
+import { GameActionBar } from "../../../components/game-layout";
+import { Button } from "../../../components/ui";
 import type { ViewId } from "../logic/attention";
 import type { HungerInteraction } from "../logic/interaction";
 import { cardName, EFFECT_LABEL, spaceLabel } from "../logic/labels";
@@ -23,17 +24,9 @@ interface Props {
  */
 export default function ActionBar({ ix, current, onGo }: Props) {
   return (
-    <Surface
-      variant="raised"
-      padding="sm"
-      className="grid min-h-12 shrink-0 grid-cols-[1fr_auto_1fr] items-center gap-2"
-    >
-      <span aria-hidden />
-      <div className="flex flex-wrap items-center justify-center gap-2">
-        <StepControls ix={ix} current={current} onGo={onGo} />
-      </div>
-      <div className="flex justify-end">
-        {ix.undo && (
+    <GameActionBar
+      end={
+        ix.undo && (
           <Button
             size="xs"
             variant="secondary"
@@ -42,9 +35,11 @@ export default function ActionBar({ ix, current, onGo }: Props) {
           >
             ↶ Undo
           </Button>
-        )}
-      </div>
-    </Surface>
+        )
+      }
+    >
+      <StepControls ix={ix} current={current} onGo={onGo} />
+    </GameActionBar>
   );
 }
 

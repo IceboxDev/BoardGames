@@ -1,9 +1,9 @@
 /**
  * The opponent-reply rule of an opening tree: every move played against you
  * in the position, and — when that's fewer than `min` — more, alternating the
- * engine's choices with the database's most popular moves (best, most popular,
- * 2nd best, 2nd most popular, …), skipping repeats, until there are `min` or
- * the legal moves run out.
+ * database's most popular moves with the engine's choices (most popular, best,
+ * 2nd most popular, 2nd best, …), skipping repeats, until there are `min` or
+ * the legal moves run out. (The trainer then shows them in the engine's order.)
  */
 
 export type ReplySource = "played" | "engine" | "popular";
@@ -31,11 +31,11 @@ export function padReplies(
   const target = Math.min(min, legal.size);
   const longest = Math.max(engine.length, popular.length);
   for (let i = 0; i < longest && out.length < target; i++) {
-    const e = engine[i];
-    if (e !== undefined) add(e, "engine");
-    if (out.length >= target) break;
     const p = popular[i];
     if (p !== undefined) add(p, "popular");
+    if (out.length >= target) break;
+    const e = engine[i];
+    if (e !== undefined) add(e, "engine");
   }
   return out;
 }

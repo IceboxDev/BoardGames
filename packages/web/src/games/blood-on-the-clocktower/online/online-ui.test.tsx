@@ -2,6 +2,10 @@ import { nightQueue, nightStepId } from "@boardgames/core/games/blood-on-the-clo
 import { BotcConfigSchema } from "@boardgames/core/games/blood-on-the-clocktower/manifest";
 import type { OnlineAction } from "@boardgames/core/games/blood-on-the-clocktower/online/actions";
 import { applyOnline } from "@boardgames/core/games/blood-on-the-clocktower/online/apply";
+import {
+  nextBotPlan,
+  runBotPlan,
+} from "@boardgames/core/games/blood-on-the-clocktower/online/bots";
 import { createOnlineGame } from "@boardgames/core/games/blood-on-the-clocktower/online/create";
 import type { BotcOnline } from "@boardgames/core/games/blood-on-the-clocktower/online/state";
 import { viewFor } from "@boardgames/core/games/blood-on-the-clocktower/online/view";
@@ -131,5 +135,59 @@ describe("the online screens", () => {
     });
     const delivered = t.game().inbox[fortuneTeller]?.at(-1)?.payload;
     expect(delivered?.kind).toBe("yes-no");
+  });
+
+  it("names the part of the day, counts it down, and takes a player's Ready", () => {
+    // Let the stand-in bots play to the first discussion, then look as Ann.
+    let game = table().game();
+    let now = Date.now() - 600_000;
+    const everyone = game.names.map((_, i) => i);
+    for (let beats = 0; beats < 2000 && game.day.timer?.kind !== "discussion"; beats++) {
+      const plan = nextBotPlan(game, everyone);
+      if (!plan) break;
+      now = Math.max(now, plan.at);
+      game = runBotPlan(game, plan, now).game;
+    }
+    expect(game.day.timer?.kind).toBe("discussion");
+    // The countdown runs in real time from here.
+    const timer = game.day.timer;
+    if (!timer) throw new Error("no timer");
+    const fresh = { ...timer, startedAt: Date.now(), endsAt: Date.now() + 60_000 };
+    game = { ...game, day: { ...game.day, timer: fresh } };
+    let current = game;
+    const send = (seat: number, action: OnlineAction) => {
+      const r = applyOnline(current, seat, action, Date.now());
+      if (!r.ok) throw new Error(r.reason);
+      current = r.game;
+    };
+    const api = (): BotcOnlineApi => ({
+      view: viewFor(current, 1),
+      act: (a) => send(1, a),
+      st: () => {},
+      error: null,
+      endActions: [],
+    });
+    const screenOf = () => (
+      <BotcOnlineContext.Provider value={api()}>
+        <PlayerScreen />
+      </BotcOnlineContext.Provider>
+    );
+    const { rerender } = render(screenOf());
+
+    const track = screen.getByTestId("phase-track");
+    expect(track.dataset.part).toBe("discussion");
+    expect(track.querySelector("[aria-current=step]")?.textContent).toMatch(/Discussion/);
+    expect(within(track).getByText(/^[01]:\d\d$/)).toBeTruthy();
+    // The day is announced, with the night's news.
+    expect(screen.getByRole("status").textContent).toMatch(/Day 1/);
+
+    // The bar's buttons sit in its centre column.
+    const bar = screen.getByTestId("game-action-bar");
+    const readyButton = within(bar).getByRole("button", { name: "Ready for nominations" });
+    expect(readyButton.parentElement?.className).toContain("justify-center");
+    fireEvent.click(readyButton);
+    expect(current.day.ready).toEqual([1]);
+    rerender(screenOf());
+    expect(within(bar).getByRole("button", { name: "✓ Ready" })).toBeTruthy();
   });
 });

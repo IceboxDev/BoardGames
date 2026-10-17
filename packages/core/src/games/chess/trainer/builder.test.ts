@@ -83,13 +83,13 @@ describe("padReplies", () => {
       "d",
     ]);
   });
-  it("alternates engine and popular, skipping repeats", () => {
+  it("alternates popular and engine (most popular first), skipping repeats", () => {
     expect(padReplies(["a"], ["a", "c"], ["a", "d"], legal)).toEqual([
       { uci: "a", source: "played" },
-      { uci: "c", source: "engine" },
       { uci: "d", source: "popular" },
+      { uci: "c", source: "engine" },
     ]);
-    expect(padReplies([], ["b", "c"], ["d"], legal).map((r) => r.uci)).toEqual(["b", "d", "c"]);
+    expect(padReplies([], ["b", "c"], ["d"], legal).map((r) => r.uci)).toEqual(["d", "b", "c"]);
   });
   it("stops at the number of legal moves", () => {
     expect(padReplies([], ["a", "b"], ["b", "a"], new Set(["a", "b"])).length).toBe(2);
@@ -140,12 +140,15 @@ describe("buildTree", () => {
     // Two played replies + padding: engine best (Nc6) is already there, so popular d6.
     expect(movesAt(tree, "e4 e5 Nf3")).toEqual(["Nc6:played", "Nf6:played", "d6:popular"]);
     expect(movesAt(tree, "e4 c5 Nf3")).toEqual(["d6:played", "Nc6:engine", "a6:popular"]);
-    // A padded reply gets your answer, and the line stops there.
+    // A padded reply gets your answer and the opponent's replies to it: the leaves.
     const padded = tree.nodes[keyAfter("e4 e5 Nf3 d6")];
     expect(padded?.moves).toHaveLength(1);
     expect(padded?.following).toBe(0);
+    expect(padded?.extension).toBeUndefined();
     const reply = padded?.moves[0]?.san ?? "";
-    expect(tree.nodes[keyAfter(`e4 e5 Nf3 d6 ${reply}`)]).toBeUndefined();
+    const last = tree.nodes[keyAfter(`e4 e5 Nf3 d6 ${reply}`)];
+    expect(last?.extension).toBe(3);
+    expect(last?.moves).toHaveLength(3);
     // g1 never left the tree: its line runs to its last move.
     expect(tree.nodes[keyAfter("e4 e5 Nf3 Nc6 Bb5")]?.ended).toBe(1);
     expect(tree.nodes[keyAfter("e4 e5 Nf3 Nc6 Bb5")]?.moves).toHaveLength(3);
@@ -237,6 +240,103 @@ describe("buildTree", () => {
     expect(mate?.ended).toBe(1);
   });
 
+  it("asks the farm about well-played opponent positions without waiting for it", async () => {
+    const index = PositionIndex.build([
+      game("a", "e4 e5 Nf3 Nc6"),
+      game("b", "e4 c5 Nf3 d6"),
+      game("c", "e4 e6 d4 d5"),
+    ]);
+    const asked: { fen: string; kind: string }[] = [];
+    const farm: TreeProviders = {
+      ...fakeProviders([], E4),
+      engineLines: () => Promise.reject(new Error("the farm answers, not the browser")),
+      evaluate: async (fen, kind) => {
+        // Your first move is known; everything else is still on the farm.
+        if (
+          kind === "user" &&
+          asked.length === 0 &&
+          fen.includes(" w ") &&
+          fen.startsWith("rnbqkbnr/pppppppp/8/8/8/8")
+        ) {
+          return { lines: [{ uci: "e2e4", cp: 30, mate: null, depth: 50 }], source: "farm" };
+        }
+        asked.push({ fen, kind });
+        throw new EvalPending();
+      },
+    };
+    const tree = await buildTree(index, "w", settings({ handpickMoves: 0 }), null, farm);
+    const afterE4 = Object.values(tree.nodes).find((n) => n.ply === 1);
+    // Three replies were played: the position is complete, the engine's verdict still asked for.
+    expect(afterE4?.status).toBe("done");
+    expect(afterE4?.moves.map((m) => `${m.san}:${m.source}`).sort()).toEqual([
+      "c5:played",
+      "e5:played",
+      "e6:played",
+    ]);
+    expect(asked.some((a) => a.kind === "opp" && a.fen === afterE4?.fen)).toBe(true);
+  });
+
+  it("extends a line end three steps: their replies, your answers, their replies (the leaves)", async () => {
+    // Your game reached 1.e4 e5 and played 2.Bc4; the tree's move is 2.Nf3.
+    const index = PositionIndex.build([game("a", "e4 e5 Bc4 Nf6")]);
+    const tree = await buildTree(
+      index,
+      "w",
+      settings({ handpickMoves: 0 }),
+      null,
+      fakeProviders([], E4),
+    );
+    expect(movesAt(tree, "e4 e5")).toEqual(["Nf3:engine"]);
+    const one = tree.nodes[keyAfter("e4 e5 Nf3")];
+    expect(one?.extension).toBe(1);
+    expect(one?.moves).toHaveLength(3);
+    let positions = 1;
+    for (const reply of one?.moves ?? []) {
+      const two = tree.nodes[keyAfter(`e4 e5 Nf3 ${reply.san}`)];
+      expect(two?.extension).toBe(2);
+      expect(two?.moves).toHaveLength(1);
+      const answer = two?.moves[0]?.san ?? "";
+      const three = tree.nodes[keyAfter(`e4 e5 Nf3 ${reply.san} ${answer}`)];
+      expect(three?.extension).toBe(3);
+      expect(three?.moves).toHaveLength(3);
+      // Its replies are the leaves: no position of yours below them.
+      for (const leaf of three?.moves ?? []) {
+        expect(
+          tree.nodes[keyAfter(`e4 e5 Nf3 ${reply.san} ${answer} ${leaf.san}`)],
+        ).toBeUndefined();
+      }
+      positions += 2;
+    }
+    expect(positions).toBe(7);
+    // Black's first reply is never padded: nothing else is extended.
+    expect(Object.values(tree.nodes).filter((n) => n.extension !== undefined)).toHaveLength(7);
+  });
+
+  it("asks again about a stored result short of its depth, and drops the line it led to", async () => {
+    const index = PositionIndex.build([game("a", "e4 e5 Nf3"), game("b", "d4 d5 c4")]);
+    let deep = false;
+    const farm: TreeProviders = {
+      ...fakeProviders([], E4),
+      engineLines: () => Promise.reject(new Error("the farm answers, not the browser")),
+      evaluate: async (fen, kind) => {
+        if (kind === "user" && fen.startsWith("rnbqkbnr/pppppppp/8/8/8/8")) {
+          // A capped search first (depth 39, 1.d4), then the full one (1.e4).
+          return deep
+            ? { lines: [{ uci: "e2e4", cp: 30, mate: null, depth: 50 }], source: "farm" }
+            : { lines: [{ uci: "d2d4", cp: 25, mate: null, depth: 39 }], source: "farm" };
+        }
+        throw new EvalPending();
+      },
+    };
+    const opts = settings({ handpickMoves: 0 });
+    const short = await buildTree(index, "w", opts, null, farm);
+    expect(movesAt(short, "")).toEqual(["d4:engine"]);
+    deep = true;
+    const tree = await buildTree(index, "w", opts, short, farm);
+    expect(movesAt(tree, "")).toEqual(["e4:engine"]);
+    expect(tree.nodes[keyAfter("d4")]).toBeUndefined();
+  });
+
   it("parks positions the farm hasn't analysed and finishes once it has", async () => {
     const index = PositionIndex.build(whiteGames);
     const opts = settings({ handpickMoves: 0 });
@@ -272,7 +372,7 @@ describe("buildTree", () => {
       tree = await buildTree(index, "w", opts, tree, farm);
     }
     expect(tree.status).toBe("ready");
-    expect(tree.nodes[tree.root]).toMatchObject({ evalSpec: "BEST_MOVE_V1", evalSource: "farm" });
+    expect(tree.nodes[tree.root]).toMatchObject({ evalSpec: "BEST_MOVE_V2", evalSource: "farm" });
     expect(movesAt(tree, "")).toEqual(["e4:engine"]);
     // Same tree as the browser engine would give, decision for decision.
     const direct = await buildTree(

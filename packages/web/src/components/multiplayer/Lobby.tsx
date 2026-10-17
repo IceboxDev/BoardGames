@@ -6,7 +6,7 @@ import {
 } from "@boardgames/core/machines/manifest";
 import { type RoomSlot, type RoomState, roomSeating } from "@boardgames/core/protocol";
 import { ControlGroup, SetupLayout } from "../setup";
-import { Badge, Button, Chip, ErrorAlert, Select } from "../ui";
+import { Avatar, Badge, Button, Chip, ErrorAlert, Select } from "../ui";
 
 interface LobbyProps {
   roomCode: string;
@@ -359,6 +359,12 @@ function SlotRow({
       <div className="min-w-0 flex-1">
         {slot.kind === "human" ? (
           <div className="flex items-center gap-2">
+            <Avatar
+              name={slot.playerName ?? "Player"}
+              image={slot.avatarUrl}
+              size="xs"
+              className="h-6 w-6"
+            />
             <span className="truncate text-sm font-medium text-fg-strong">{slot.playerName}</span>
             {isSlotHost && <Badge tone="amber">Host</Badge>}
             {isMe && !isSlotHost && <Badge tone="emerald">You</Badge>}

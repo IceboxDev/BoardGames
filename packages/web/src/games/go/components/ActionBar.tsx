@@ -1,5 +1,6 @@
 import type { GoAction, GoPlayerView } from "@boardgames/core/games/go/view";
-import { Button, Surface, useConfirm } from "../../../components/ui";
+import { GameActionBar } from "../../../components/game-layout";
+import { Button, useConfirm } from "../../../components/ui";
 import { findAction } from "../logic/actions";
 
 interface Props {
@@ -34,13 +35,9 @@ export default function ActionBar({ view, legal, vsAi, send }: Props) {
   };
 
   return (
-    <Surface
-      variant="raised"
-      padding="sm"
-      className="grid min-h-12 shrink-0 grid-cols-[1fr_auto_1fr] items-center gap-2"
-    >
-      <div className="flex justify-start">
-        {undo && (
+    <GameActionBar
+      start={
+        undo && (
           <Button
             size="xs"
             variant="secondary"
@@ -53,76 +50,75 @@ export default function ActionBar({ view, legal, vsAi, send }: Props) {
           >
             ↶ {vsAi ? "Undo" : "Ask to undo"}
           </Button>
-        )}
-      </div>
-      <div className="flex flex-wrap items-center justify-center gap-2">
-        {allow && refuse && (
-          <>
-            <Button
-              size="xs"
-              variant="primary"
-              onClick={() => send(allow)}
-              title="Let your opponent take back their last move"
-            >
-              Allow undo
-            </Button>
-            <Button
-              size="xs"
-              variant="secondary"
-              onClick={() => send(refuse)}
-              title="Keep the move on the board"
-            >
-              Refuse
-            </Button>
-          </>
-        )}
-        {pass && (
-          <Button
-            size="xs"
-            variant={view.moves.at(-1)?.point === null ? "primary" : "secondary"}
-            onClick={() => send(pass)}
-            title={
-              view.moves.at(-1)?.point === null
-                ? "Your opponent passed — passing too ends the game and starts counting"
-                : "Pass your turn (two passes in a row end the game)"
-            }
-          >
-            Pass
-          </Button>
-        )}
-        {accept && (
-          <Button
-            size="xs"
-            variant="primary"
-            onClick={() => send(accept)}
-            title="Agree to the marked dead stones and count"
-          >
-            Accept score
-          </Button>
-        )}
-        {resume && (
-          <Button
-            size="xs"
-            variant="secondary"
-            onClick={() => send(resume)}
-            title={
-              view.scoring?.locked
-                ? "Keep playing — every stone now counts as alive, so capture what you think is dead"
-                : "Disagree? Resume play and settle it on the board"
-            }
-          >
-            Resume play
-          </Button>
-        )}
-      </div>
-      <div className="flex justify-end">
-        {resign && (
+        )
+      }
+      end={
+        resign && (
           <Button size="xs" variant="ghost" onClick={onResign} title="Concede the game">
             Resign
           </Button>
-        )}
-      </div>
+        )
+      }
+    >
+      {allow && refuse && (
+        <>
+          <Button
+            size="xs"
+            variant="primary"
+            onClick={() => send(allow)}
+            title="Let your opponent take back their last move"
+          >
+            Allow undo
+          </Button>
+          <Button
+            size="xs"
+            variant="secondary"
+            onClick={() => send(refuse)}
+            title="Keep the move on the board"
+          >
+            Refuse
+          </Button>
+        </>
+      )}
+      {pass && (
+        <Button
+          size="xs"
+          variant={view.moves.at(-1)?.point === null ? "primary" : "secondary"}
+          onClick={() => send(pass)}
+          title={
+            view.moves.at(-1)?.point === null
+              ? "Your opponent passed — passing too ends the game and starts counting"
+              : "Pass your turn (two passes in a row end the game)"
+          }
+        >
+          Pass
+        </Button>
+      )}
+      {accept && (
+        <Button
+          size="xs"
+          variant="primary"
+          onClick={() => send(accept)}
+          title="Agree to the marked dead stones and count"
+        >
+          Accept score
+        </Button>
+      )}
+      {resume && (
+        <Button
+          size="xs"
+          variant="secondary"
+          onClick={() => send(resume)}
+          title={
+            view.scoring?.locked
+              ? "Keep playing — every stone now counts as alive, so capture what you think is dead"
+              : "Disagree? Resume play and settle it on the board"
+          }
+        >
+          Resume play
+        </Button>
+      )}
       {confirmDialog}
-    </Surface>
+    </GameActionBar>
   );
 }

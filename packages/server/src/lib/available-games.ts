@@ -50,12 +50,14 @@ const RsvpForDateRowSchema = z.object({
   rsvped_at: z.string(),
 });
 
-/** `SELECT user_id, game_slug, reaction, created_at FROM game_requests WHERE date_key = ?`. */
+/** `SELECT user_id, game_slug, reaction, created_at, headcount FROM game_requests WHERE date_key = ?`. */
 const ReactionRowSchema = z.object({
   user_id: z.string(),
   game_slug: z.string(),
   reaction: z.enum(["hype", "teach", "learn"]),
   created_at: z.string(),
+  /** The headcount the vote was cast at (migration 0059); null on older votes. */
+  headcount: z.number().int().nullable(),
 });
 
 /**
@@ -162,6 +164,13 @@ export type AvailableGamesView = {
   /** Owned games that fit the night's headcount window — what may be voted for. */
   playableSlugs: ReadonlySet<string>;
   /**
+   * The headcount the night has to fit right now (the low end of the player
+   * window: confirmed players on an open night, the seat count on a private
+   * one). Stored with each vote, so admins can see which votes predate a
+   * change in who's coming.
+   */
+  headcount: number;
+  /**
    * Latest data-freshness timestamp across the lock, its RSVPs, its
    * reactions, and the picks-lock toggle. Drives `DTSTAMP` and
    * `LAST-MODIFIED` so the rendered ICS body stays byte-identical between
@@ -192,6 +201,10 @@ export function computePlayableSlugs(
   }
   return playable;
 }
+
+/** Games on the night's list, and the admin-only runner-ups shown after them. */
+const TOP_PICKS = 5;
+const RUNNER_UPS = 3;
 
 type RankableReaction = { hype: number; teach: number; learn: number };
 
@@ -327,7 +340,7 @@ export async function computeAvailableGamesPayload(opts: {
       args: [date],
     }),
     db.execute({
-      sql: "SELECT user_id, game_slug, reaction, created_at FROM game_requests WHERE date_key = ?",
+      sql: "SELECT user_id, game_slug, reaction, created_at, headcount FROM game_requests WHERE date_key = ?",
       args: [date],
     }),
     db.execute({
@@ -443,13 +456,16 @@ export async function computeAvailableGamesPayload(opts: {
       playableSlugs,
     },
     reactionRows,
-    5,
+    TOP_PICKS + RUNNER_UPS,
   );
   const reactions: Record<string, ReactionAggregate> = {};
   for (const [slug, agg] of Object.entries(lineup.aggregate)) {
     reactions[slug] = { ...agg, viewer: [] };
   }
   const votesByUser = new Map<string, { hype: number; teach: number; learn: number }>();
+  // Admins: each person's counted votes cast at another headcount than now.
+  const headcount = lo;
+  const staleByUser = new Map<string, { count: number; headcounts: Set<number> }>();
   // Whose per-person vote chips are worth showing: everyone listed on the
   // roster (open: coming + maybe; private: seated + waitlisted).
   const rosterVoters = new Set([...comingIds, ...maybeSet, ...participants.waitlisted]);
@@ -471,9 +487,24 @@ export async function computeAvailableGamesPayload(opts: {
         votesByUser.set(r.user_id, v);
       }
       v[r.reaction] += 1;
+      if (viewerIsAdmin && r.headcount !== null && r.headcount !== headcount) {
+        let st = staleByUser.get(r.user_id);
+        if (!st) {
+          st = { count: 0, headcounts: new Set() };
+          staleByUser.set(r.user_id, st);
+        }
+        st.count += 1;
+        st.headcounts.add(r.headcount);
+      }
     }
   }
-  const topSlugs = lineup.topSlugs;
+  const topSlugs = lineup.topSlugs.slice(0, TOP_PICKS);
+  // The games that just missed the cut — an admin's view of what's close.
+  // A host-pick lineup is a pick order, not a ranking, so it has none.
+  const runnerUpSlugs =
+    viewerIsAdmin && !(lock.isPrivate && lock.pickMode === "host")
+      ? lineup.topSlugs.slice(TOP_PICKS)
+      : [];
 
   // Resolve display names. Private nights list everyone invited so the host
   // can see who still owes an answer; the declined are the host's (and the
@@ -570,6 +601,11 @@ export async function computeAvailableGamesPayload(opts: {
     votes: { hype: number; teach: number; learn: number };
     bringing: string[];
     seat: SeatState | null;
+    staleVotes: { count: number; headcounts: number[] } | null;
+  };
+  const staleFor = (id: string) => {
+    const st = staleByUser.get(id);
+    return st ? { count: st.count, headcounts: [...st.headcounts].sort((a, b) => a - b) } : null;
   };
   const attendeeFor = (id: string, status: "definite" | "tentative"): AttendeeOut => {
     const isHost = id === hostUserId;
@@ -595,6 +631,7 @@ export async function computeAvailableGamesPayload(opts: {
       votes: votesByUser.get(id) ?? { hype: 0, teach: 0, learn: 0 },
       bringing: list,
       seat: participants.seatOf(id),
+      staleVotes: staleFor(id),
     };
   };
   const attendees: AttendeeOut[] = [];
@@ -639,6 +676,7 @@ export async function computeAvailableGamesPayload(opts: {
       participantIds: definiteIds,
       reactions,
       topSlugs,
+      runnerUpSlugs,
       attendees,
       picksLockedAt,
       isPrivate: lock.isPrivate,
@@ -672,6 +710,7 @@ export async function computeAvailableGamesPayload(opts: {
       waitlistUserIds: participants.waitlisted,
     },
     playableSlugs,
+    headcount,
     latestActivityAt,
   };
 }

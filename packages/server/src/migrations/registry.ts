@@ -61,6 +61,9 @@ import { companionRecords } from "./0053-companion-records.ts";
 import { replaySeatsModerator } from "./0054-replay-seats-moderator.ts";
 import { chessTrainer } from "./0055-chess-trainer.ts";
 import { chessFarm } from "./0056-chess-farm.ts";
+import { chessTrainerLibrary } from "./0057-chess-trainer-library.ts";
+import { chessEvalStage } from "./0058-chess-eval-stage.ts";
+import { gameRequestHeadcount } from "./0059-game-request-headcount.ts";
 import type { Migration } from "./types.ts";
 
 export const migrations: readonly Migration[] = [
@@ -120,6 +123,9 @@ export const migrations: readonly Migration[] = [
   replaySeatsModerator,
   chessTrainer,
   chessFarm,
+  chessTrainerLibrary,
+  chessEvalStage,
+  gameRequestHeadcount,
 ];
 
 /**

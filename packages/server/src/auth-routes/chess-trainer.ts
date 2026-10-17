@@ -10,6 +10,8 @@
 //   GET    /repertoires/:id      one tree in full
 //   PUT    /repertoires/:id      save a build / rename (409 when another tab saved first)
 //   DELETE /repertoires/:id
+//   GET    /library              the member's folders and saved lines
+//   PUT    /library              save them whole (409 when another tab saved first)
 //   POST   /evals {items}        deep evaluations for tree positions: known ones now, the rest queued
 //                                for the analysis farm (see chess-farm.ts)
 //
@@ -28,8 +30,10 @@ import {
   CreateRepertoireBodySchema,
   EvalRequestBodySchema,
   EvalRequestResponseSchema,
+  LibraryResponseSchema,
   RepertoireListSchema,
   RepertoireSchema,
+  UpdateLibraryBodySchema,
   UpdateRepertoireBodySchema,
 } from "@boardgames/core/protocol";
 import { z } from "zod";
@@ -43,9 +47,11 @@ import {
   insertGames,
   listRepertoires,
   readGamesPage,
+  readLibrary,
   readLink,
   readRepertoire,
   updateRepertoire,
+  writeLibrary,
   writeLink,
 } from "../lib/chess-trainer/store.ts";
 import { errorResponse, zJsonBody, zQuery } from "../lib/error-response.ts";
@@ -144,14 +150,29 @@ chessTrainerRoutes.delete("/repertoires/:id", async (c) => {
   return c.body(null, 204);
 });
 
+chessTrainerRoutes.get("/library", async (c) => {
+  return c.json(LibraryResponseSchema.parse(await readLibrary(getDb(), c.get("user").id)));
+});
+
+chessTrainerRoutes.put("/library", zJsonBody(UpdateLibraryBodySchema), async (c) => {
+  const user = c.get("user");
+  const { expectedVersion, library } = c.req.valid("json");
+  const result = await writeLibrary(getDb(), user.id, expectedVersion, library);
+  if (!result.ok) {
+    return errorResponse(c, 409, "Saved from another tab — reload it", "VERSION_CONFLICT");
+  }
+  return c.json(LibraryResponseSchema.parse({ library, version: result.version }));
+});
+
 chessTrainerRoutes.post("/evals", zJsonBody(EvalRequestBodySchema), async (c) => {
   const db = getDb();
-  const { results, queued } = await requestEvals(
-    db,
-    c.get("user").id,
-    BEST_MOVE_SPEC,
-    c.req.valid("json").items,
-  );
+  // An opponent position no game of yours reached, on no extension (stage 0), is a
+  // deviation leaf — where you left your tree: not analysed (the tree
+  // discourages going there). A line end's extension (stage 1–3) is.
+  const items = c.req
+    .valid("json")
+    .items.filter((i) => i.kind !== "opp" || i.reach > 0 || i.stage > 0);
+  const { results, queued } = await requestEvals(db, c.get("user").id, BEST_MOVE_SPEC, items);
   const { done: _d, failed: _f, ...farm } = await farmStats(db);
   return c.json(EvalRequestResponseSchema.parse({ results, queued, farm }));
 });

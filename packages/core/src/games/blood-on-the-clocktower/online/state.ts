@@ -137,6 +137,29 @@ export const VoteSchema = z.object({
 });
 export type Vote = z.infer<typeof VoteSchema>;
 
+/** What part of the day a Storyteller's timer marks. */
+export const DayTimerKindSchema = z.enum([
+  "discussion",
+  "nominations",
+  "defence",
+  "dusk",
+  "custom",
+]);
+export type DayTimerKind = z.infer<typeof DayTimerKindSchema>;
+
+/**
+ * A countdown everyone sees ("Discussion — 1:00"). It ends nothing by itself:
+ * it tells the town how long the Storyteller means to wait, and stays (run
+ * out) until the next one replaces it.
+ */
+export const DayTimerSchema = z.object({
+  kind: DayTimerKindSchema,
+  label: z.string().max(60),
+  startedAt: z.number(),
+  endsAt: z.number(),
+});
+export type DayTimer = z.infer<typeof DayTimerSchema>;
+
 /** The day's public bookkeeping (the companion keeps the truth of it). */
 export const OnlineDaySchema = z.object({
   nominationsOpen: z.boolean(),
@@ -144,6 +167,10 @@ export const OnlineDaySchema = z.object({
   nominators: z.array(RoomSeatSchema),
   nominees: z.array(RoomSeatSchema),
   vote: VoteSchema.nullable(),
+  /** The Storyteller's running countdown (optional: older saved games lack it). */
+  timer: DayTimerSchema.nullable().optional(),
+  /** Players who said they're ready to move on, since the timer was last set. */
+  ready: z.array(RoomSeatSchema).optional(),
 });
 export type OnlineDay = z.infer<typeof OnlineDaySchema>;
 
@@ -242,6 +269,8 @@ export const EMPTY_DAY: OnlineDay = {
   nominators: [],
   nominees: [],
   vote: null,
+  timer: null,
+  ready: [],
 };
 
 /** The replay a finished online game saves: the seed, every action, and the final state. */

@@ -7,6 +7,7 @@ import {
 } from "@boardgames/core/machines/manifest";
 import { type RoomSlot, type RoomState, roomSeating } from "@boardgames/core/protocol";
 import type { WSContext } from "hono/ws";
+import { playerAvatarUrl } from "../lib/player-avatars.ts";
 import {
   endSession,
   endSoloSessionsForWs,
@@ -127,6 +128,25 @@ function buildRoomState(room: Room): RoomState {
   };
 }
 
+/**
+ * Put the seat holder's profile picture on their slot. Looked up after the
+ * seat is taken (the handlers stay synchronous), so the picture arrives in a
+ * second room update; it is re-read on every return, so a new avatar shows at
+ * the next join. Nothing changes if the seat changed hands meanwhile.
+ */
+function attachAvatar(room: Room, slotIndex: number, userId: string): void {
+  void playerAvatarUrl(userId)
+    .then((url) => {
+      const slot = room.slots[slotIndex];
+      if (rooms.get(room.code) !== room || room.slotUserIds[slotIndex] !== userId) return;
+      if (slot?.kind !== "human" || slot.avatarUrl === (url ?? undefined)) return;
+      if (url) slot.avatarUrl = url;
+      else delete slot.avatarUrl;
+      broadcastRoomUpdate(room);
+    })
+    .catch((err: unknown) => console.error("[room] avatar lookup failed:", err));
+}
+
 function sendError(ws: WSContext, message: string): void {
   send(ws, { type: "error", message });
 }
@@ -232,6 +252,7 @@ export function handleCreateRoom(
     roomCode: code,
     roomState: buildRoomState(room),
   });
+  attachAvatar(room, 0, userId);
 }
 
 export function handleJoinRoom(ws: WSContext, msg: { roomCode: string; playerName: string }): void {
@@ -298,6 +319,7 @@ export function handleJoinRoom(ws: WSContext, msg: { roomCode: string; playerNam
     yourSlot: slotIndex,
   });
   broadcastRoomUpdate(room);
+  attachAvatar(room, slotIndex, userId);
 }
 
 function handleReconnect(ws: WSContext, room: Room, userId: string): void {
@@ -330,6 +352,7 @@ function handleReconnect(ws: WSContext, room: Room, userId: string): void {
     yourSlot: slotIndex,
   });
   broadcastRoomUpdate(room);
+  attachAvatar(room, slotIndex, userId);
   if (room.sessionId) {
     reconnectPlayer(room.sessionId, ws, seat);
     seatConnectionChanged(room.sessionId, seat, true);
@@ -356,6 +379,8 @@ function reclaimLobbySlot(ws: WSContext, room: Room, slotIndex: number): void {
     yourSlot: slotIndex,
   });
   broadcastRoomUpdate(room);
+  const userId = room.slotUserIds[slotIndex];
+  if (userId) attachAvatar(room, slotIndex, userId);
 }
 
 /** A player leaves. Before the game their slot opens; during it, they may come back. */

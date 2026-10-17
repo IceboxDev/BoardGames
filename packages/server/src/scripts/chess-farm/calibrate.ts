@@ -1,7 +1,7 @@
 /**
  * Phase 0 on the farm machine: time Stockfish (and Lc0) on real tree
  * positions from `sample-positions.ts`, check how many are already known to
- * lichess / ChessDB, and fit BEST_MOVE_V1's tier depths to the budget.
+ * lichess / ChessDB, and fit BEST_MOVE's tier depths to the budget.
  *
  *   SF_PATH=… [LC0_PATH=… LC0_WEIGHTS=…] tsx src/scripts/chess-farm/calibrate.ts \
  *     positions.json --out calibration.json --policy policy.json \
@@ -18,7 +18,7 @@ import { legalMoves } from "@boardgames/core/games/chess/engine/movegen";
 import { moveToUci } from "@boardgames/core/games/chess/engine/uci";
 import {
   allocateDepths,
-  BEST_MOVE_V1,
+  BEST_MOVE,
   type Calibration,
   candidates,
   projectSeconds,
@@ -158,7 +158,7 @@ async function main() {
     const cloud = await lichessCloud(p.fen, 1, legal);
     if (cloud?.[0]) {
       cloudAny++;
-      if (cloud[0].depth >= (p.kind === "opp" ? BEST_MOVE_V1.opp.depth : 45)) cloudDeep++;
+      if (cloud[0].depth >= (p.kind === "opp" ? BEST_MOVE.opp.depth : 45)) cloudDeep++;
     }
     const cdb = await chessdbMoves(p.fen, legal);
     if (cdb && cdb.length > 0) {
@@ -171,9 +171,7 @@ async function main() {
     }
   }
   // Extra full-depth searches per position, capped like the pipeline's.
-  const extra = candCounts.map((n) =>
-    Math.min(Math.max(0, n - 1), defaultPolicy(nps).maxCandidates),
-  );
+  const extra = candCounts.map((n) => Math.min(Math.max(0, n - 1), defaultPolicy().maxCandidates));
   const candidateFactor = extra.length > 0 ? extra.reduce((a, b) => a + b, 0) / extra.length : 1;
   candCounts.length > 0 ? candCounts.reduce((a, b) => a + b, 0) / candCounts.length - 1 : 0.5;
 
@@ -190,15 +188,15 @@ async function main() {
     );
     await engine.init({ VerboseMoveStats: true, UCI_ShowWDL: true, Threads: 2 });
     const fen = userSample[0]?.fen ?? "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1";
-    const r = await engine.search(fen, `nodes ${BEST_MOVE_V1.lc0Nodes}`, { timeoutMs: 3600_000 });
+    const r = await engine.search(fen, `nodes ${BEST_MOVE.lc0Nodes}`, { timeoutMs: 3600_000 });
     const stats = r.strings.map(parseLc0MoveStat).filter(Boolean);
     lc0 = {
-      nodes: BEST_MOVE_V1.lc0Nodes,
+      nodes: BEST_MOVE.lc0Nodes,
       seconds: r.ms / 1000,
-      nps: BEST_MOVE_V1.lc0Nodes / (r.ms / 1000),
+      nps: BEST_MOVE.lc0Nodes / (r.ms / 1000),
     };
     log(
-      `lc0 ${BEST_MOVE_V1.lc0Nodes} nodes in ${(r.ms / 1000).toFixed(1)} s; ${stats.length} root moves parsed`,
+      `lc0 ${BEST_MOVE.lc0Nodes} nodes in ${(r.ms / 1000).toFixed(1)} s; ${stats.length} root moves parsed`,
     );
     engine.quit();
   }
@@ -213,7 +211,7 @@ async function main() {
     opp: Math.round(input.workload.opp * scale * (1 - known)),
   };
   const cal: Calibration = { nps, nodesToDepth, multipv3Factor, candidateFactor };
-  const fullSpec = projectSeconds(cal, work, BEST_MOVE_V1.tiers, BEST_MOVE_V1.opp.depth);
+  const fullSpec = projectSeconds(cal, work, BEST_MOVE.tiers, BEST_MOVE.opp.depth);
   const plan = allocateDepths(cal, work, budgetHours * 3600);
 
   const report = {

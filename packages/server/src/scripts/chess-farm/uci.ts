@@ -125,41 +125,98 @@ export class UciEngine {
     this.send(`setoption name ${name} value ${value}`);
   }
 
+  /** The running search's deepest exact depth so far, and when the search began. */
+  progress: { depth: number; startedAt: number } | null = null;
+
   /**
    * Search `fen` with `go …`, collecting every exact score line, until
    * `bestmove`. `onInfo` sees each line (for live progress or early stops).
+   * With no `timeoutMs` the search runs as long as it needs; `checkEveryMs`
+   * asks the engine `isready` that often meanwhile (it answers mid-search) and
+   * fails the search when it doesn't answer within two minutes.
    */
   search(
     fen: string,
     go: string,
-    opts: { timeoutMs: number; onInfo?: (info: InfoLine) => void } = { timeoutMs: 3_600_000 },
+    opts: { timeoutMs?: number; checkEveryMs?: number; onInfo?: (info: InfoLine) => void } = {
+      timeoutMs: 3_600_000,
+    },
   ): Promise<SearchResult> {
     const infos: InfoLine[] = [];
     const strings: string[] = [];
     let bestmove: string | null = null;
     const start = Date.now();
+    this.progress = { depth: 0, startedAt: start };
     this.send(`position fen ${fen}`);
-    return this.until(
-      `go ${go}`,
-      (line) => {
+    return new Promise<SearchResult>((resolve, reject) => {
+      let asked: number | null = null;
+      let onReady = () => {};
+      const timers: ReturnType<typeof setTimeout>[] = [];
+      const finish = (err: Error | null) => {
+        for (const t of timers) clearTimeout(t);
+        this.listener = null;
+        this.progress = null;
+        if (!err) return resolve({ infos, strings, bestmove, ms: Date.now() - start });
+        // A search left running blocks the engine's next command (`ucinewgame`
+        // waits for it), so every later job on this engine would time out.
+        this.stop();
+        reject(err);
+      };
+      if (opts.timeoutMs !== undefined)
+        timers.push(
+          setTimeout(
+            () => finish(new Error(`${this.name}: timed out after go ${go}`)),
+            opts.timeoutMs,
+          ),
+        );
+      const every = opts.checkEveryMs;
+      if (every !== undefined) {
+        let answered = start;
+        const beat = setInterval(
+          () => {
+            const now = Date.now();
+            if (asked !== null && now - asked > 120_000)
+              finish(new Error(`${this.name}: stopped answering mid-search`));
+            else if (asked === null && now - answered >= every) {
+              asked = now;
+              this.send("isready");
+            }
+          },
+          Math.min(every, 30_000),
+        );
+        timers.push(beat);
+        onReady = () => {
+          answered = Date.now();
+        };
+      }
+      this.listener = (line) => {
+        if (line === "readyok") {
+          asked = null;
+          onReady();
+          return;
+        }
         if (line.startsWith("bestmove")) {
           const b = line.split(/\s+/)[1];
           bestmove = b && b !== "(none)" ? b : null;
-          return true;
+          return finish(null);
         }
         if (line.startsWith("info string ")) {
           strings.push(line.slice("info string ".length));
-          return false;
+          return;
         }
         const info = parseInfo(line);
         if (info && !info.bound) {
           infos.push(info);
+          if (this.progress && info.depth > this.progress.depth) this.progress.depth = info.depth;
           opts.onInfo?.(info);
         }
-        return false;
-      },
-      opts.timeoutMs,
-    ).then(() => ({ infos, strings, bestmove, ms: Date.now() - start }));
+      };
+      try {
+        this.send(`go ${go}`);
+      } catch (err) {
+        finish(err instanceof Error ? err : new Error(String(err)));
+      }
+    });
   }
 
   stop(): void {

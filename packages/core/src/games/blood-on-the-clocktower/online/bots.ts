@@ -26,7 +26,7 @@ import {
 } from "./actions.ts";
 import { applyOnline, chairOf, nameOf, roomSeatOf } from "./apply.ts";
 import { resolutionsFor } from "./resolutions.ts";
-import type { BotcOnline, RoomSeat } from "./state.ts";
+import type { BotcOnline, DayTimerKind, RoomSeat } from "./state.ts";
 import { type PlayerView, playerView } from "./view.ts";
 
 /** Bot town names, by room seat. */
@@ -58,14 +58,24 @@ export const BOT_NAMES = [
 const READ_MS = 900;
 const THINK_MS = 1600;
 const HAND_MS = 250;
-const NOMINATE_MS = 5000;
 const ST_MS = 1300;
-/** The Storyteller waits this long after a nomination before the clock starts. */
-const DEFEND_MS = 2500;
-/** Talk before the bot Storyteller opens nominations. */
-const DISCUSS_MS = 6000;
-/** A quiet day ends after this long. */
-const DAY_IDLE_MS = 30_000;
+/** After "Night N falls": the town has a moment before anyone is woken. */
+const NIGHTFALL_MS = 3500;
+/** The night's last beat before the town wakes. */
+const DAWN_MS = 2500;
+/** After dawn, before the discussion timer starts (the deaths sink in). */
+const MORNING_MS = 3000;
+
+// The bot Storyteller runs the day on timers everyone sees; it moves on when
+// one runs out, or sooner once every person in the town says they're ready.
+const DISCUSSION_S = 60;
+const NOMINATIONS_S = 60;
+/** Nominations stay open this much longer after each vote. */
+const MORE_NOMINATIONS_S = 30;
+/** A nomination's accusation and defence, before the clock starts. */
+const DEFENCE_S = 10;
+/** Between the last vote and nightfall. */
+const DUSK_S = 6;
 
 export type BotMove = PlayerAction | StorytellerMove;
 
@@ -241,29 +251,42 @@ function playerPlan(game: BotcOnline, seat: RoomSeat, last: number): BotPlan | n
     const lean = evil ? (fellows.has(vote.nominee) ? 0.05 : 0.7) : 0.45;
     const chance = me.alive || vote.kind === "exile" ? lean : lean * 0.3;
     if (vote.nominee === seat || roll(seed, seat, "hand", day, vote.nominee) >= chance) return null;
-    return plan(seat, [{ kind: "hand", up: true }], last + HAND_MS, at);
+    // A hand goes up as the clock hand comes round to it, so the town sees
+    // the vote happen voter by voter.
+    if (vote.status !== "running" || at !== vote.locked || vote.nextTickAt === null) return null;
+    const lift = 400 + Math.floor(roll(seed, seat, "lift", day, vote.nominee) * 600);
+    return plan(
+      seat,
+      [{ kind: "hand", up: true }],
+      Math.max(last + HAND_MS, vote.nextTickAt - lift),
+      at,
+    );
   }
 
-  // Say who you are, once a day, a little after dawn.
+  // Say who you are, once a day, during the discussion.
   const dawn = dawnAt(view);
+  const timer = view.day.timer ?? null;
   if (
     dawn !== null &&
     me.alive &&
     view.chatSettings.publicOpen &&
+    !view.day.nominationsOpen &&
     roll(seed, seat, "talk", day) < 0.6 &&
     !view.chat.some((m) => m.from === seat && m.at >= dawn)
   ) {
     const text = claimLine(view, seed);
-    if (text) {
-      const at = dawn + 1500 + Math.floor(roll(seed, seat, "talk-at", day) * 5000);
+    if (text && timer?.kind === "discussion") {
+      const span = Math.max(0, timer.endsAt - timer.startedAt - 8000);
+      const at = timer.startedAt + 3000 + Math.floor(roll(seed, seat, "talk-at", day) * span);
       return plan(seat, [{ kind: "chat", text }], Math.max(at, last + READ_MS));
     }
   }
 
-  // Maybe nominate someone, once the floor is clear.
+  // Maybe nominate someone while the nominations timer runs and the floor is clear.
   const settled = !vote || vote.result !== undefined;
   if (
     view.day.nominationsOpen &&
+    timer?.kind === "nominations" &&
     settled &&
     me.alive &&
     !view.day.nominators.includes(seat) &&
@@ -282,8 +305,11 @@ function playerPlan(game: BotcOnline, seat: RoomSeat, last: number): BotPlan | n
       .map((t) => t.seat);
     const [nominee] = pickSome(pool, 1, seed, `nominee:${seat}:${day}`);
     if (nominee !== undefined) {
-      const wait = NOMINATE_MS + Math.floor(roll(seed, seat, "nominate-at", day) * 4000);
-      return plan(seat, [{ kind: "nominate", nominee }], last + wait);
+      // Somewhere in the timer's window, never in its last seconds.
+      const span = Math.max(0, timer.endsAt - timer.startedAt - 12_000);
+      const offset = roll(seed, seat, "nominate-at", day, view.day.nominees.length) * span;
+      const at = Math.max(last + 2500, timer.startedAt + 6000 + Math.floor(offset));
+      if (at < timer.endsAt - 3000) return plan(seat, [{ kind: "nominate", nominee }], at);
     }
   }
   return null;
@@ -408,7 +434,91 @@ function judge(state: CompanionState): BotMove[] | null {
   }
 }
 
-function storytellerPlan(game: BotcOnline, last: number): BotPlan | null {
+/** When the current night fell (its "Night N falls." line), or `null`. */
+function nightfallAt(game: BotcOnline): number | null {
+  for (let i = game.timeline.length - 1; i >= 0; i--) {
+    const t = game.timeline[i];
+    if (t?.kind === "phase" && t.text.startsWith("Night ")) return t.at;
+  }
+  return null;
+}
+
+/** Every person playing in the town has said they're ready (never true with nobody to ask). */
+function everyoneReady(game: BotcOnline, bots: readonly RoomSeat[]): boolean {
+  const people = (game.companion?.players ?? []).flatMap((p) =>
+    p.roomSeat === undefined || p.left || bots.includes(p.roomSeat) ? [] : [p.roomSeat],
+  );
+  const ready = game.day.ready ?? [];
+  return people.length > 0 && people.every((s) => ready.includes(s));
+}
+
+const startTimer = (timer: DayTimerKind, seconds: number): BotMove => ({
+  kind: "timer",
+  timer,
+  seconds,
+});
+
+/** The day, on timers: discussion → nominations (each with its defence and vote) → dusk. */
+function dayPlan(
+  game: BotcOnline,
+  state: CompanionState,
+  last: number,
+  bots: readonly RoomSeat[],
+  beat: (actions: BotMove[] | null, at?: number) => BotPlan | null,
+): BotPlan | null {
+  const ruling = ruleOn(game, state);
+  if (ruling) return beat(ruling);
+  const end = judge(state);
+  if (end) return beat(end);
+
+  const day = game.day;
+  const timer = day.timer ?? null;
+  const ready = everyoneReady(game, bots);
+  /** When a timer's part of the day is over: it ran out, or everyone is ready. */
+  const after = (t: { endsAt: number }) =>
+    ready ? last + ST_MS : Math.max(last + ST_MS, t.endsAt);
+
+  const vote = day.vote;
+  if (vote?.status === "open") {
+    if (timer?.kind !== "defence") return beat([startTimer("defence", DEFENCE_S)], last + 600);
+    return beat([{ kind: "start-vote" }], after(timer));
+  }
+  if (vote?.status === "paused") return beat([{ kind: "resume-vote" }]);
+  if (vote?.status === "running") return null;
+  if (vote?.status === "done" && !vote.result) {
+    return beat([{ kind: "confirm-vote" }, startTimer("nominations", MORE_NOMINATIONS_S)]);
+  }
+
+  if (timer?.kind === "dusk") return beat([{ kind: "end-day" }], after(timer));
+  if (!day.nominationsOpen) {
+    if (timer?.kind === "discussion") {
+      return beat(
+        [{ kind: "nominations", open: true }, startTimer("nominations", NOMINATIONS_S)],
+        after(timer),
+      );
+    }
+    return beat([startTimer("discussion", DISCUSSION_S)], last + MORNING_MS);
+  }
+  if (timer?.kind !== "nominations") return beat([startTimer("nominations", NOMINATIONS_S)]);
+  // Nominations are over: close them, execute whoever is on the block, then dusk.
+  const executeFirst = state.day.aboutToDie && state.day.executed === undefined;
+  return beat(
+    [
+      { kind: "nominations", open: false },
+      ...(executeFirst
+        ? [{ kind: "execute" } as const]
+        : [{ kind: "announce", text: "Nobody is executed today." } as const]),
+      startTimer("dusk", DUSK_S),
+    ],
+    after(timer),
+  );
+}
+
+function storytellerPlan(
+  game: BotcOnline,
+  last: number,
+  bots: readonly RoomSeat[],
+): BotPlan | null {
   const st = STORYTELLER_SEAT;
   const beat = (actions: BotMove[] | null, at = last + ST_MS) =>
     actions ? plan(st, actions, at, -1) : null;
@@ -429,27 +539,15 @@ function storytellerPlan(game: BotcOnline, last: number): BotPlan | null {
   }
   const state = game.companion;
   if (!state) return null;
-  if (state.phase.kind === "night") return beat(nightBeat(game, state));
-  if (state.phase.kind !== "day") return null;
-
-  const ruling = ruleOn(game, state);
-  if (ruling) return beat(ruling);
-  const end = judge(state);
-  if (end) return beat(end);
-
-  const vote = game.day.vote;
-  if (vote?.status === "open") return beat([{ kind: "start-vote" }], last + DEFEND_MS);
-  if (vote?.status === "paused") return beat([{ kind: "resume-vote" }]);
-  if (vote?.status === "running") return null;
-  if (vote?.status === "done" && !vote.result) return beat([{ kind: "confirm-vote" }]);
-
-  if (!game.day.nominationsOpen) {
-    const dawn = dawnAt(game) ?? last;
-    return beat([{ kind: "nominations", open: true }], Math.max(last + ST_MS, dawn + DISCUSS_MS));
+  if (state.phase.kind === "night") {
+    const actions = nightBeat(game, state);
+    if (!actions) return null;
+    const fell = nightfallAt(game) ?? last;
+    const hold = actions[0]?.kind === "dawn" ? last + DAWN_MS : fell + NIGHTFALL_MS;
+    return beat(actions, Math.max(last + ST_MS, hold));
   }
-  // A quiet town: execute whoever is on the block, then dusk.
-  const executeFirst = state.day.aboutToDie && state.day.executed === undefined;
-  return beat(executeFirst ? [{ kind: "execute" }] : [{ kind: "end-day" }], last + DAY_IDLE_MS);
+  if (state.phase.kind !== "day") return null;
+  return dayPlan(game, state, last, bots, beat);
 }
 
 // ── The seam ────────────────────────────────────────────────────────────
@@ -469,7 +567,7 @@ export function nextBotPlan(
   for (const seat of bots) {
     if (skip.has(seat)) continue;
     const p =
-      seat === STORYTELLER_SEAT ? storytellerPlan(game, last) : playerPlan(game, seat, last);
+      seat === STORYTELLER_SEAT ? storytellerPlan(game, last, bots) : playerPlan(game, seat, last);
     if (!p) continue;
     if (!best || p.at < best.at || (p.at === best.at && (p.priority ?? 0) < (best.priority ?? 0))) {
       best = p;

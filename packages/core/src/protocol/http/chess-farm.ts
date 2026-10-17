@@ -4,11 +4,19 @@
  *
  *   Members: `POST /api/trainers/chess/evals` — cached results for a batch of
  *            positions, queueing the ones not known yet.
- *   Farm:    `/api/chess-farm/{claim,complete,fail,status}` behind a bearer token.
+ *   Farm:    `/api/chess-farm/{claim,complete,fail,enqueue,games,popular,status}` behind a
+ *            bearer token.
  */
 import { z } from "zod";
 
 export const FARM_CLAIM_MAX = 32;
+/** Positions a claim may ask for first (the worker's follow-ups, most wanted first). */
+export const FARM_PREFER_MAX = 64;
+/**
+ * A job given back because the node limit stopped its search short carries
+ * `error: FARM_NODE_LIMIT_PREFIX + worker + ": …"`; that worker never claims it again.
+ */
+export const FARM_NODE_LIMIT_PREFIX = "node limit on ";
 export const EVAL_REQUEST_MAX = 400;
 
 /** A FEN as the trainer stores it (board, side, castling, ep, clocks). */
@@ -20,6 +28,12 @@ const UciSchema = z.string().regex(/^[a-h][1-8][a-h][1-8][qrbn]?$/);
 
 export const EvalKindSchema = z.enum(["user", "opp"]);
 export type EvalKind = z.infer<typeof EvalKindSchema>;
+/**
+ * Where a position sits: 0 on one of your games' lines; 1–3 the short
+ * extension past a line end your games left (1 the opponent after your correct
+ * move, 2 your answers, 3 the opponent after those — nothing below).
+ */
+export const EvalStageSchema = z.number().int().min(0).max(3);
 
 export const EvalSourceSchema = z.enum(["farm", "lichess-dump", "lichess-cloud", "chessdb"]);
 
@@ -67,6 +81,7 @@ export const EvalRequestItemSchema = z.object({
   kind: EvalKindSchema,
   /** Your games reaching the position (decides its depth tier). */
   reach: z.number().int().min(0),
+  stage: EvalStageSchema.default(0),
 });
 export const EvalRequestBodySchema = z.object({
   items: z.array(EvalRequestItemSchema).min(1).max(EVAL_REQUEST_MAX),
@@ -93,6 +108,22 @@ export type EvalRequestResponse = z.infer<typeof EvalRequestResponseSchema>;
 export const FarmClaimBodySchema = z.object({
   worker: z.string().min(1).max(40),
   max: z.number().int().min(1).max(FARM_CLAIM_MAX),
+  /**
+   * Queued positions to take before anything else, in this order: the
+   * follow-ups of what the worker just searched, while its hash still holds them.
+   */
+  prefer: z.array(FenSchema).max(FARM_PREFER_MAX).optional(),
+  /**
+   * Only these kinds (a worker's role: ws21 takes `user`, the AWS fleet
+   * `opp`); every kind when absent.
+   */
+  kinds: z.array(EvalKindSchema).min(1).max(2).optional(),
+  /**
+   * `reach` (default): most games first, the preferred positions breaking ties —
+   * breadth first, the main lines done soonest. `deep`: the preferred positions
+   * first, then the deepest waiting one — a worker that finishes lines.
+   */
+  order: z.enum(["reach", "deep"]).optional(),
 });
 export const FarmJobSchema = z.object({
   id: z.number().int(),
@@ -101,6 +132,9 @@ export const FarmJobSchema = z.object({
   reach: z.number().int().min(0),
   spec: z.string(),
   attempts: z.number().int().min(0),
+  /** The member whose tree asked first (whose games the follow-ups come from). */
+  requestedBy: z.string().nullable(),
+  stage: EvalStageSchema.default(0),
 });
 export type FarmJob = z.infer<typeof FarmJobSchema>;
 export const FarmClaimResponseSchema = z.object({
@@ -120,8 +154,44 @@ export const FarmFailBodySchema = z.object({
   error: z.string().max(500),
   /** Put it back for another try (false = give up on it). */
   retry: z.boolean(),
+  /** The worker was stopped, nothing went wrong: back in the queue, the attempt not counted. */
+  released: z.boolean().optional(),
 });
 export const FarmOkSchema = z.object({ ok: z.literal(true) });
+
+/** The worker queues a finished position's follow-ups for the member who asked. */
+export const FarmEnqueueBodySchema = z.object({
+  requestedBy: z.string().min(1).max(64),
+  items: z.array(EvalRequestItemSchema).min(1).max(FARM_PREFER_MAX),
+});
+export const FarmEnqueueResponseSchema = z.object({
+  /** Positions now waiting (the rest were already evaluated). */
+  queued: z.array(FenSchema),
+  /** The ones already evaluated, so the worker can look for gaps below them. */
+  known: z.record(z.string(), PositionEvalSchema).optional(),
+});
+
+/** A member's games as one colour, for the worker's follow-ups (paged like the trainer's). */
+export const FarmGamesQuerySchema = z.object({
+  user: z.string().min(1).max(64),
+  color: z.enum(["w", "b"]),
+  cursor: z
+    .string()
+    .regex(/^\d+:[A-Za-z0-9]{8}$/)
+    .optional(),
+});
+export const FarmGamesPageSchema = z.object({
+  games: z.array(
+    z.object({ id: z.string(), uci: z.string(), result: z.enum(["win", "loss", "draw"]) }),
+  ),
+  next: z.string().nullable(),
+});
+/** The lichess explorer's most played moves at a position (for padding opponent replies). */
+export const FarmPopularQuerySchema = z.object({ fen: FenSchema });
+export const FarmPopularResponseSchema = z.object({
+  /** Most played first, castling as the king's move (`e1g1`). */
+  moves: z.array(z.object({ uci: UciSchema, games: z.number().int().nonnegative() })).max(12),
+});
 export const FarmStatusSchema = EvalRequestResponseSchema.shape.farm.extend({
   done: z.number().int().nonnegative(),
   failed: z.number().int().nonnegative(),

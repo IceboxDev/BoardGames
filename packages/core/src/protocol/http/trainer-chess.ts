@@ -9,6 +9,7 @@ import {
   TrainerSpeedSchema,
   UciLineSchema,
 } from "../../games/chess/trainer/imported-game.ts";
+import { LibrarySchema } from "../../games/chess/trainer/library.ts";
 import {
   RepertoireTreeSchema,
   TreeSettingsSchema,
@@ -106,4 +107,17 @@ export const UpdateRepertoireBodySchema = z.object({
   name: z.string().trim().min(1).max(60).optional(),
   settings: TreeSettingsSchema.optional(),
   tree: RepertoireTreeSchema.optional(),
+});
+
+/** The member's folders and saved lines (`library.ts`); `version` guards a second tab. */
+export const LibraryResponseSchema = z.object({
+  library: LibrarySchema,
+  /** 0 before the first save. */
+  version: z.number().int().min(0),
+});
+export type LibraryResponse = z.infer<typeof LibraryResponseSchema>;
+
+export const UpdateLibraryBodySchema = z.object({
+  expectedVersion: z.number().int().min(0),
+  library: LibrarySchema,
 });

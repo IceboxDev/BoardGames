@@ -15,9 +15,16 @@ export const BOARD_COLORS = {
   legalDot: "rgb(20 85 30 / 0.45)",
   check: "rgb(220 38 38 / 0.85)",
   cursor: "rgb(250 204 21)",
-  arrowBest: "rgb(21 128 61 / 0.75)",
-  arrowUser: "rgb(234 88 12 / 0.75)",
-  arrowAlt: "rgb(37 99 235 / 0.6)",
+  // Solid colours: an arrow is ONE filled shape drawn at ARROW_OPACITY, so the
+  // head and shaft never double up into darker seams.
+  arrowBest: "rgb(21 128 61)",
+  arrowUser: "rgb(234 88 12)",
+  arrowAlt: "rgb(37 99 235)",
+  // The opening trainer's move kinds (= Tailwind amber-400 / sky-400 /
+  // emerald-400, the explorer's dots): your pick, the engine's best, popular.
+  arrowPick: "rgb(251 191 36)",
+  arrowEngine: "rgb(56 189 248)",
+  arrowPopular: "rgb(52 211 153)",
   pickerScrim: "rgb(0 0 0 / 0.55)",
   pickerTile: "#f4ecdc",
 } as const;

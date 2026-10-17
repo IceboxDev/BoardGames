@@ -27,6 +27,10 @@ export interface ImportState {
   readonly stored: number;
   /** The account's game count on lichess (all variants), when known. */
   readonly total: number | null;
+  /** Games already stored when this pull began. */
+  readonly storedBefore: number;
+  /** The last pull read everything lichess had (not stopped, no error). */
+  readonly finished: boolean;
   readonly error: string | null;
   readonly start: (link: LichessLink) => void;
   readonly stop: () => void;
@@ -38,6 +42,8 @@ export function useLichessImport(token: string | null, onAuthLost: () => void): 
   const [progress, setProgress] = useState<ExportProgress | null>(null);
   const [stored, setStored] = useState(0);
   const [total, setTotal] = useState<number | null>(null);
+  const [storedBefore, setStoredBefore] = useState(0);
+  const [finished, setFinished] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const abortRef = useRef<AbortController | null>(null);
 
@@ -49,6 +55,8 @@ export function useLichessImport(token: string | null, onAuthLost: () => void): 
       setRunning(true);
       setError(null);
       setStored(0);
+      setStoredBefore(link.gamesCount);
+      setFinished(false);
       setProgress(null);
       void (async () => {
         try {
@@ -84,6 +92,7 @@ export function useLichessImport(token: string | null, onAuthLost: () => void): 
             if (pass.seen === 0 || pass.lastCreatedAt === null) break;
             since = pass.lastCreatedAt + 1;
           }
+          setFinished(true);
         } catch (err) {
           if (abort.signal.aborted) return;
           if (err instanceof LichessAuthError) {
@@ -105,5 +114,5 @@ export function useLichessImport(token: string | null, onAuthLost: () => void): 
     abortRef.current?.abort();
   }, []);
 
-  return { running, progress, stored, total, error, start, stop };
+  return { running, progress, stored, total, storedBefore, finished, error, start, stop };
 }

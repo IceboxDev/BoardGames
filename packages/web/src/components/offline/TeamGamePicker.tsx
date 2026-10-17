@@ -64,7 +64,9 @@ export function TeamGamePicker({ lineup, value, onChange }: Props) {
         )}
       </div>
 
-      <ul className="scrollbar-hide -mx-1 flex snap-x snap-mandatory gap-2 overflow-x-auto px-1 pb-1">
+      {/* The strip scrolls, so it crops anything painted outside a card: the
+          rings are inset, and scroll-px keeps a snapped card off the edge. */}
+      <ul className="scrollbar-hide -mx-1 flex scroll-px-1 snap-x snap-mandatory gap-2 overflow-x-auto px-1 pb-1">
         {strip.map((g, i) => {
           const on = g.slug === value;
           return (
@@ -80,8 +82,8 @@ export function TeamGamePicker({ lineup, value, onChange }: Props) {
                 className={cn(
                   "group flex-col items-stretch gap-1.5 rounded-card-md p-1 text-left transition",
                   on
-                    ? "bg-fill ring-2 ring-[var(--accent)]"
-                    : "ring-1 ring-line hover:bg-fill-soft",
+                    ? "bg-fill ring-2 ring-[var(--accent)] ring-inset"
+                    : "ring-1 ring-line ring-inset hover:bg-fill-soft",
                 )}
               >
                 <span className="relative block overflow-hidden rounded-card-md">

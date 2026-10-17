@@ -1,6 +1,6 @@
 // The chess trainer's routes: linking a lichess account (the token is checked
 // against lichess once, never stored), storing and paging imported games, and
-// saving opening trees with a version guard.
+// saving opening trees and the folder library with a version guard.
 //
 // Real migration chain, in-memory libsql, the real routes behind an auth stub.
 
@@ -9,6 +9,7 @@ import {
   ChessGamesPageSchema,
   ChessLinkResponseSchema,
   ChessUploadGamesResponseSchema,
+  LibraryResponseSchema,
   RepertoireSchema,
 } from "@boardgames/core/protocol";
 import { type Client, createClient } from "@libsql/client";
@@ -135,6 +136,16 @@ describe("chess trainer routes", () => {
     expect((await page(await send("GET", "/games?color=w", undefined, OTHER))).games).toEqual([]);
   });
 
+  it("keeps only a game's legal moves, checked once on import", async () => {
+    await link();
+    // 3.Ke3 is illegal (e1 can't reach e3): the game is kept up to it.
+    await send("POST", "/games", {
+      games: [{ ...game("ccccccc1", 5), uci: "e2e4 e7e5 e1e3 g1f3" }],
+    });
+    const stored = await page(await send("GET", "/games?color=w"));
+    expect(stored.games[0]?.uci).toBe("e2e4 e7e5");
+  });
+
   it("pages past the page size with a cursor", async () => {
     await link();
     const games = Array.from({ length: CHESS_GAMES_PAGE + 5 }, (_, i) =>
@@ -209,5 +220,45 @@ describe("chess trainer routes", () => {
     expect((await send("GET", `/repertoires/${created.id}`, undefined, OTHER)).status).toBe(404);
     expect((await send("DELETE", `/repertoires/${created.id}`, undefined, OTHER)).status).toBe(404);
     expect((await send("DELETE", `/repertoires/${created.id}`)).status).toBe(204);
+  });
+
+  it("keeps each member's folder library, guarded by its version", async () => {
+    const lib = async (userId = ME) =>
+      LibraryResponseSchema.parse(await (await send("GET", "/library", undefined, userId)).json());
+    expect(await lib()).toEqual({
+      library: { formatVersion: 1, roots: { w: [], b: [] } },
+      version: 0,
+    });
+
+    const mine = {
+      formatVersion: 1,
+      roots: {
+        w: [{ kind: "line", id: "alapin01", name: "Alapin", moves: "e2e4 c7c5 c2c3" }],
+        b: [],
+      },
+    };
+    const first = await send("PUT", "/library", { expectedVersion: 0, library: mine });
+    expect(first.status).toBe(200);
+    expect(LibraryResponseSchema.parse(await first.json()).version).toBe(1);
+    // A second tab that still thinks it's unsaved, or is a version behind, is refused.
+    expect((await send("PUT", "/library", { expectedVersion: 0, library: mine })).status).toBe(409);
+    const renamed = { ...mine, roots: { ...mine.roots, b: [] } };
+    expect((await send("PUT", "/library", { expectedVersion: 1, library: renamed })).status).toBe(
+      200,
+    );
+    expect((await send("PUT", "/library", { expectedVersion: 1, library: renamed })).status).toBe(
+      409,
+    );
+    expect((await lib()).version).toBe(2);
+    // Someone else's library is their own.
+    expect((await lib(OTHER)).version).toBe(0);
+    const bad = await send("PUT", "/library", {
+      expectedVersion: 2,
+      library: {
+        formatVersion: 1,
+        roots: { w: [{ kind: "line", id: "x", name: "", moves: "" }], b: [] },
+      },
+    });
+    expect(bad.status).toBe(400);
   });
 });

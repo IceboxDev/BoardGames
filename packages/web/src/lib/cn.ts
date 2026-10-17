@@ -49,7 +49,7 @@ const twMerge = extendTailwindMerge({
       ],
       "rounded-t": [{ "rounded-t": ["card-3xl"] }],
       aspect: [{ aspect: ["card", "photo"] }],
-      w: [{ w: ["board-rail", "history-rail"] }],
+      w: [{ w: ["board-rail", "history-rail", "explorer-rail"] }],
       h: [{ h: ["nav", "fan", "actions"] }],
       "min-h": [{ "min-h": ["below-nav"] }],
       pt: [{ pt: ["nav"] }],

@@ -8,16 +8,21 @@ import { z } from "zod";
 import { TrainerSpeedSchema } from "./imported-game";
 
 export const TreeSettingsSchema = z.object({
-  /** Your first N moves are yours to choose ("Best" or a move); later ones are the engine's. */
-  handpickMoves: z.number().int().min(0).max(20).default(3),
+  /**
+   * Your first N moves wait for you to choose ("Best" or a move); later ones
+   * are the engine's. The board screen sets moves by playing them instead, so
+   * new trees take 0 — nothing waits, and a choice you set anywhere still wins.
+   */
+  handpickMoves: z.number().int().min(0).max(20).default(0),
   /** Search depth for an in-browser engine choice (only without a deep spec). */
   engineDepth: z.number().int().min(8).max(30).default(18),
   /**
-   * The "best move" definition evaluations come from (`eval-policy.ts`):
-   * `BEST_MOVE_V1` = the analysis farm's deep search; `null` = the browser's
-   * Stockfish at `engineDepth`.
+   * Where evaluations come from: the analysis farm (any spec name — the farm's
+   * current one, `BEST_MOVE_SPEC`, is what a build asks for and keeps; trees
+   * saved under an older one are re-asked) or `null`, the browser's Stockfish
+   * at `engineDepth`.
    */
-  evalSpec: z.enum(["BEST_MOVE_V1"]).nullable().default("BEST_MOVE_V1"),
+  evalSpec: z.enum(["BEST_MOVE_V1", "BEST_MOVE_V2"]).nullable().default("BEST_MOVE_V2"),
   /** Only games of these speeds; empty = all. */
   speeds: z.array(TrainerSpeedSchema).max(6).default([]),
   /** Opponent replies a position should have (the first opponent move excepted). */
@@ -110,6 +115,8 @@ export const TreeNodeSchema = z.object({
     .optional(),
   /** Your positions: following games that left the tree here, by the move you played instead. */
   deviations: z.array(z.object({ uci: z.string(), san: z.string(), games: z.number() })).optional(),
+  /** A line end's extension, past your games (1–3; see `builder.ts`). */
+  extension: z.number().int().min(1).max(3).optional(),
   /** Following games that ended in this position. */
   ended: z.number().int().nonnegative().optional(),
   choice: UserChoiceSchema.optional(),

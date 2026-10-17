@@ -35,6 +35,7 @@ import { announcementRoutes } from "./auth-routes/announcements.ts";
 import { arrivalRoutes } from "./auth-routes/arrivals.ts";
 import { availabilityCountsRoutes } from "./auth-routes/availability-counts.ts";
 import { avatarRoutes } from "./auth-routes/avatar.ts";
+import { avatarImageRoutes } from "./auth-routes/avatars.ts";
 import { bgaIngestRoutes } from "./auth-routes/bga-ingest.ts";
 import { bgaSessionRoutes } from "./auth-routes/bga-sessions.ts";
 import { bggRoutes } from "./auth-routes/bgg.ts";
@@ -294,6 +295,11 @@ app.route("/api/onboarding", onboardingRoutes);
 // Arrival photos: plain requireAuth like the greeting that links to them.
 app.use("/api/arrivals/*", requireAuth);
 app.route("/api/arrivals", arrivalRoutes);
+
+// Players' pictures at game tables (room seats carry their URLs): plain
+// requireAuth — every member who can sit at a table may see who sits there.
+app.use("/api/avatars/*", requireAuth);
+app.route("/api/avatars", avatarImageRoutes);
 
 // Purchase vote: an offline-group feature like skills. Write-capped — a
 // player toggling votes is bursty but small.

@@ -1,10 +1,11 @@
-import { useMemo, useState } from "react";
+import { useEffect, useId, useMemo, useRef, useState } from "react";
 import { games as gameRegistry } from "../../games/registry";
 import type { GameDefinition } from "../../games/types";
 import { useCurrentUser } from "../../hooks/useCurrentUser.ts";
 import type { Attendee } from "../../lib/calendar-games";
+import { cn } from "../../lib/cn";
 import { isTeamCandidate, loadTeams } from "../../lib/teams";
-import { ShuffleIcon, XIcon } from "../icons";
+import { AlertIcon, CheckIcon, ClockIcon, MoreIcon, ShuffleIcon, UndoIcon, XIcon } from "../icons";
 import {
   Avatar,
   Badge,
@@ -16,6 +17,7 @@ import {
   Surface,
   useConfirm,
 } from "../ui";
+import { REACTION_KINDS } from "./ReactionButtons";
 import { TeamsPanel } from "./TeamsPanel";
 
 type Props = {
@@ -29,12 +31,25 @@ type Props = {
    * owns X but the 3-game bring cap pushed it out".
    */
   ownedSlugs?: string[];
-  /** Viewer is admin or the night's host — gates the row-level X (kick) button. */
+  /** Viewer is admin or the night's host — gates the row menu's "Remove from night". */
   canKick?: boolean;
   /** Called with the target userId when the host/admin clicks X. */
   onKick?: (userId: string) => void;
-  /** While a kick mutation is in flight, the targeted row shows a spinner instead of the X. */
+  /** While a kick mutation is in flight, the targeted row's menu shows a spinner. */
   kickingUserId?: string | null;
+  /**
+   * Admins: clear one person's votes for the night (from the row's menu).
+   * Absent for everyone else — and the server only reports outdated votes
+   * (`staleVotes`) to admins.
+   */
+  onResetVotes?: (userId: string) => void;
+  /** The row whose votes are being cleared shows a spinner. */
+  resettingUserId?: string | null;
+  /**
+   * The headcount the night has to fit now (the player window's low end) —
+   * shown in the header and against outdated votes.
+   */
+  headcount?: number;
   /**
    * Private night: the roster is grouped by seat — seated, waiting, invited
    * without an answer, declined — instead of the confirmed/maybe flat list,
@@ -63,6 +78,9 @@ export default function AttendeesView({
   canKick = false,
   onKick,
   kickingUserId = null,
+  onResetVotes,
+  resettingUserId = null,
+  headcount,
   seats = null,
   showVotes = true,
 }: Props) {
@@ -136,26 +154,38 @@ export default function AttendeesView({
         canKick={canKick && a.userId !== viewerId && !(seats && a.isHost)}
         onKick={onKick}
         isKicking={kickingUserId === a.userId}
+        onResetVotes={onResetVotes}
+        isResetting={resettingUserId === a.userId}
         showVotes={showVotes}
+        headcount={headcount ?? attendees.filter((x) => x.status === "definite").length}
       />
     </li>
   );
 
   return (
     <div className="scrollbar-thin flex h-full w-full max-w-3xl flex-col gap-2 overflow-y-auto px-1 py-2">
-      <div className="flex items-center justify-between gap-2 px-2">
-        <Eyebrow tone="sky">Who's coming</Eyebrow>
+      {/* Fixed-height header: the Teams button is a quiet ghost control, so
+          the list starts at the same place with or without it. */}
+      <div className="flex h-8 shrink-0 items-center justify-between gap-2 pl-2">
+        <Eyebrow tone="sky" className="flex items-baseline gap-2">
+          Who's coming
+          {!seats && headcount !== undefined && (
+            <span className="tabular-nums tracking-normal text-fg-muted">{headcount}</span>
+          )}
+        </Eyebrow>
         {teamCandidates >= 2 && (
           <Button
-            variant="tinted"
-            tone="sky"
+            variant="ghost"
             size="sm"
-            shape="pill"
             onClick={() => setMode("teams")}
+            title="Split tonight's players into teams"
             className="gap-1.5"
           >
             <ShuffleIcon className="h-3.5 w-3.5" />
-            {savedTeamCount > 0 ? `Teams (${savedTeamCount})` : "Make teams"}
+            Teams
+            {savedTeamCount > 0 && (
+              <span className="tabular-nums text-fg-muted">{savedTeamCount}</span>
+            )}
           </Button>
         )}
       </div>
@@ -195,7 +225,10 @@ function AttendeeRow({
   canKick,
   onKick,
   isKicking,
+  onResetVotes,
+  isResetting,
   showVotes,
+  headcount,
 }: {
   attendee: Attendee;
   slugToGame: Map<string, GameDefinition>;
@@ -203,15 +236,22 @@ function AttendeeRow({
   canKick: boolean;
   onKick?: (userId: string) => void;
   isKicking: boolean;
+  onResetVotes?: (userId: string) => void;
+  isResetting: boolean;
   showVotes: boolean;
+  headcount: number;
 }) {
   const { confirm, confirmDialog } = useConfirm();
   // On a private night the seat state replaces the open night's maybe /
   // hasn't-RSVP'd pills — it already says exactly where the person stands.
   const onSeatList = attendee.seat !== null;
+  const firstName = attendee.name.split(" ")[0] ?? attendee.name;
+  const totalVotes = attendee.votes.hype + attendee.votes.teach + attendee.votes.learn;
+  const canReset = !!onResetVotes && showVotes;
+  const busy = isKicking || isResetting;
 
   const handleKick = async () => {
-    if (!onKick || isKicking) return;
+    if (!onKick || busy) return;
     const ok = await confirm({
       title: `Remove ${attendee.name} from this game night?`,
       description: 'Their RSVP will be set to "Not going". They can RSVP again themselves.',
@@ -220,8 +260,24 @@ function AttendeeRow({
     if (ok) onKick(attendee.userId);
   };
 
+  const handleReset = async () => {
+    if (!onResetVotes || busy || totalVotes === 0) return;
+    const ok = await confirm({
+      title: `Clear ${firstName}'s ${totalVotes} ${totalVotes === 1 ? "vote" : "votes"}?`,
+      description:
+        "Their hype, teach and learn picks for this night are removed, so they can vote again for the table as it is now. Their RSVP stays. This can't be undone.",
+      confirmLabel: "Reset votes",
+      variant: "danger",
+    });
+    if (ok) onResetVotes(attendee.userId);
+  };
+
   return (
-    <Surface variant="raised" padding="none" className="flex items-start gap-3 px-3 py-3 sm:px-4">
+    <Surface
+      variant="raised"
+      padding="none"
+      className="relative flex items-start gap-3 py-3 pl-3 pr-2 sm:pl-4"
+    >
       <Avatar
         name={attendee.name}
         image={attendee.image}
@@ -229,7 +285,7 @@ function AttendeeRow({
         size="sm"
       />
 
-      <div className="flex min-w-0 flex-1 flex-col gap-1">
+      <div className="flex min-w-0 flex-1 flex-col gap-1.5">
         <div className="flex flex-wrap items-center gap-2">
           <span className="truncate text-sm font-semibold text-fg-strong">{attendee.name}</span>
           {attendee.isHost && (
@@ -285,10 +341,21 @@ function AttendeeRow({
         </div>
 
         {showVotes && (
-          <div className="flex flex-wrap items-center gap-1.5 text-2xs text-fg-secondary">
-            <VoteChip kind="hype" count={attendee.votes.hype} />
-            <VoteChip kind="teach" count={attendee.votes.teach} />
-            <VoteChip kind="learn" count={attendee.votes.learn} />
+          // One fixed-height line: the outdated pill fits inside it, so a
+          // row with the pill is exactly as tall as a row without.
+          <div className="flex h-5 items-center gap-2.5 whitespace-nowrap text-2xs text-fg-secondary">
+            {REACTION_KINDS.map(({ kind, label, Icon }) => (
+              <VoteCount
+                key={kind}
+                label={label}
+                count={attendee.votes[kind]}
+                Icon={Icon}
+                filled={kind === "hype" && attendee.votes[kind] > 0}
+              />
+            ))}
+            {attendee.staleVotes && (
+              <StalePill stale={attendee.staleVotes} total={totalVotes} headcount={headcount} />
+            )}
           </div>
         )}
 
@@ -297,25 +364,187 @@ function AttendeeRow({
         )}
       </div>
 
-      {/* Kick button: `sm` box with `xs` padding — the old spelling was
-          size="xs" plus an h-7 w-7 override that only worked by Tailwind
-          output-order luck. */}
-      {canKick && (
-        <IconButton
-          tone="rose"
-          shape="pill"
-          size="sm"
-          aria-label={`Remove ${attendee.name} from this game night`}
-          title={`Remove ${attendee.name} — sets their RSVP to "Not going"`}
-          disabled={isKicking}
-          onClick={handleKick}
-          className="p-1 bg-fill-soft"
-          icon={isKicking ? <Spinner size="xs" /> : <XIcon className="h-3.5 w-3.5" />}
+      {(canKick || canReset) && (
+        <RowMenu
+          label={`Manage ${attendee.name}`}
+          busy={busy}
+          items={[
+            ...(canReset
+              ? [
+                  {
+                    key: "reset",
+                    label: "Reset votes",
+                    hint: String(totalVotes),
+                    icon: <UndoIcon className="h-3.5 w-3.5" />,
+                    disabled: totalVotes === 0,
+                    onSelect: handleReset,
+                  },
+                ]
+              : []),
+            ...(canKick
+              ? [
+                  {
+                    key: "kick",
+                    label: "Remove from night",
+                    icon: <XIcon className="h-3.5 w-3.5" />,
+                    danger: true,
+                    onSelect: handleKick,
+                  },
+                ]
+              : []),
+          ]}
         />
       )}
 
       {confirmDialog}
     </Surface>
+  );
+}
+
+type RowMenuItem = {
+  key: string;
+  label: string;
+  /** Muted text at the end of the item (a count). */
+  hint?: string;
+  icon: React.ReactNode;
+  danger?: boolean;
+  disabled?: boolean;
+  onSelect: () => void;
+};
+
+/**
+ * The row's admin actions behind one quiet "…" button. Closes on Escape, on
+ * a click outside, and once an item is chosen (its confirm dialog takes over).
+ */
+function RowMenu({ label, busy, items }: { label: string; busy: boolean; items: RowMenuItem[] }) {
+  const [open, setOpen] = useState(false);
+  const rootRef = useRef<HTMLDivElement>(null);
+  const triggerRef = useRef<HTMLButtonElement>(null);
+  const menuId = useId();
+
+  useEffect(() => {
+    if (!open) return;
+    rootRef.current?.querySelector<HTMLButtonElement>("[role=menuitem]:not(:disabled)")?.focus();
+    const onPointer = (e: PointerEvent) => {
+      if (!rootRef.current?.contains(e.target as Node)) setOpen(false);
+    };
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key !== "Escape") return;
+      e.stopPropagation();
+      setOpen(false);
+      triggerRef.current?.focus();
+    };
+    document.addEventListener("pointerdown", onPointer);
+    document.addEventListener("keydown", onKey, true);
+    return () => {
+      document.removeEventListener("pointerdown", onPointer);
+      document.removeEventListener("keydown", onKey, true);
+    };
+  }, [open]);
+
+  return (
+    <div ref={rootRef} className="shrink-0">
+      <IconButton
+        ref={triggerRef}
+        size="md"
+        aria-label={label}
+        aria-haspopup="menu"
+        aria-expanded={open}
+        aria-controls={open ? menuId : undefined}
+        pressed={open}
+        disabled={busy}
+        onClick={() => setOpen((o) => !o)}
+        icon={busy ? <Spinner size="xs" /> : <MoreIcon className="h-[18px] w-[18px]" />}
+      />
+      {open && (
+        <Surface
+          id={menuId}
+          role="menu"
+          aria-label={label}
+          variant="panel"
+          padding="none"
+          className="absolute right-2 top-12 z-raised flex w-60 flex-col gap-0.5 bg-surface-800 p-1.5 shadow-xl"
+        >
+          {items.map((item) => (
+            <Button
+              key={item.key}
+              role="menuitem"
+              variant="ghost"
+              size="sm"
+              disabled={item.disabled}
+              onClick={() => {
+                setOpen(false);
+                item.onSelect();
+              }}
+              className={cn(
+                "h-9 w-full justify-start gap-2.5 px-2.5",
+                item.danger ? "text-rose-300 hover:text-rose-200" : "text-fg-primary",
+              )}
+            >
+              {item.icon}
+              <span>{item.label}</span>
+              {item.hint !== undefined && (
+                <span className="ml-auto tabular-nums text-fg-muted">{item.hint}</span>
+              )}
+            </Button>
+          ))}
+        </Surface>
+      )}
+    </div>
+  );
+}
+
+/** "Voted at 5 · now 7" — admins only: some of these votes predate who's coming now. */
+function StalePill({
+  stale,
+  total,
+  headcount,
+}: {
+  stale: NonNullable<Attendee["staleVotes"]>;
+  total: number;
+  headcount: number;
+}) {
+  const at = stale.headcounts.join("/");
+  const which = stale.count === total ? "All their votes" : `${stale.count} of ${total} votes`;
+  return (
+    <span
+      className="inline-flex h-5 items-center gap-1 rounded-full border border-amber-400/45 px-2 text-3xs font-semibold leading-none text-amber-200"
+      title={`${which} were cast when ${stale.headcounts.join(" or ")} were coming; ${headcount} are coming now.`}
+    >
+      <ClockIcon className="h-3 w-3" />
+      <span>
+        Voted at {at}
+        <span className="hidden sm:inline"> · now {headcount}</span>
+      </span>
+    </span>
+  );
+}
+
+function VoteCount({
+  label,
+  count,
+  Icon,
+  filled,
+}: {
+  label: string;
+  count: number;
+  Icon: (p: { filled: boolean }) => React.ReactElement;
+  filled: boolean;
+}) {
+  return (
+    <span
+      className={cn(
+        "inline-flex items-center gap-1 font-semibold tabular-nums",
+        count === 0 ? "text-fg-disabled" : "text-fg-primary",
+      )}
+      title={`${label}: ${count}`}
+    >
+      <span className="h-3.5 w-3.5">
+        <Icon filled={filled} />
+      </span>
+      {count}
+      <span className="sr-only">{label}</span>
+    </span>
   );
 }
 
@@ -343,7 +572,7 @@ function BringingList({
   return (
     <div className="flex flex-wrap gap-1.5">
       {attendee.isHost && (
-        <Badge tone="amber" shape="pill" size="xs" className="py-1">
+        <Badge tone="amber" shape="pill" size="xs" className="h-6">
           From their collection
         </Badge>
       )}
@@ -353,8 +582,7 @@ function BringingList({
         return (
           <span
             key={slug}
-            className="inline-flex max-w-full items-center gap-1.5 rounded-full bg-surface-800 px-2 py-1 text-2xs text-fg-primary ring-1 ring-[var(--accent)]/40"
-            style={{ "--accent": g.accentHex } as React.CSSProperties}
+            className="inline-flex h-6 max-w-full items-center gap-1.5 rounded-full bg-surface-800 pl-1 pr-2.5 text-2xs text-fg-primary"
           >
             <img
               src={g.thumbnail}
@@ -368,27 +596,6 @@ function BringingList({
         );
       })}
     </div>
-  );
-}
-
-function VoteChip({ kind, count }: { kind: "hype" | "teach" | "learn"; count: number }) {
-  const dim = count === 0;
-  const meta = {
-    hype: { label: "Hype", icon: "♥" },
-    teach: { label: "Teach", icon: "🎓" },
-    learn: { label: "Learn", icon: "📖" },
-  }[kind];
-  return (
-    <span
-      className={`inline-flex items-center gap-1 rounded-full px-1.5 py-0.5 ${
-        dim ? "bg-fill-soft text-fg-disabled" : "bg-fill text-fg-primary"
-      }`}
-      title={`${meta.label}: ${count}`}
-    >
-      <span aria-hidden="true">{meta.icon}</span>
-      <span className="font-semibold tabular-nums">{count}</span>
-      <span className="sr-only">{meta.label}</span>
-    </span>
   );
 }
 
@@ -409,27 +616,44 @@ function CoverageFooter({
 }) {
   if (total === 0) return null;
   const allCovered = unowned.length === 0 && capLimited.length === 0;
-  const titles = (slugs: string[]) =>
-    slugs.map((slug) => slugToGame.get(slug)?.title ?? slug).join(", ");
+  const titles = (slugs: string[]) => {
+    const names = slugs.map((slug) => slugToGame.get(slug)?.title ?? slug);
+    return names.length > 1
+      ? `${names.slice(0, -1).join(", ")} and ${names[names.length - 1]}`
+      : (names[0] ?? "");
+  };
+  const are = (slugs: string[]) => (slugs.length === 1 ? "is" : "are");
   return (
-    <div
-      className={`mt-1 rounded-card-2xl border px-3 py-2.5 text-2xs sm:px-4 ${
-        allCovered
-          ? "border-emerald-400/30 bg-emerald-400/[0.06] text-emerald-100"
-          : "border-amber-400/30 bg-amber-400/[0.06] text-amber-100"
-      }`}
-    >
-      <p className="font-semibold">
-        Top-5 coverage: {covered}/{total}
+    <div className="mt-1 flex items-start gap-2.5 border-t border-line px-2 pt-3 text-2xs leading-relaxed text-fg-secondary">
+      {allCovered ? (
+        <CheckIcon className="mt-0.5 h-3.5 w-3.5 shrink-0 text-emerald-300" />
+      ) : (
+        <AlertIcon className="mt-0.5 h-3.5 w-3.5 shrink-0 text-amber-300" />
+      )}
+      <p>
+        {allCovered ? (
+          <>
+            <span className="font-semibold text-emerald-200">
+              {total === 1 ? "The top pick is" : `All ${total} top picks are`}
+            </span>{" "}
+            coming.
+          </>
+        ) : (
+          <>
+            <span className="font-semibold text-amber-200">
+              {covered} of {total}
+            </span>{" "}
+            top picks are coming.
+            {unowned.length > 0 && <> Nobody coming owns {titles(unowned)}.</>}
+            {capLimited.length > 0 && (
+              <>
+                {" "}
+                {titles(capLimited)} {are(capLimited)} owned but over the 3-game bring cap.
+              </>
+            )}
+          </>
+        )}
       </p>
-      {unowned.length > 0 && (
-        <p className="mt-1 text-2xs text-amber-200/80">Nobody attending owns: {titles(unowned)}</p>
-      )}
-      {capLimited.length > 0 && (
-        <p className="mt-1 text-2xs text-amber-200/80">
-          Owned but won't be brought (per-person 3-game cap): {titles(capLimited)}
-        </p>
-      )}
     </div>
   );
 }

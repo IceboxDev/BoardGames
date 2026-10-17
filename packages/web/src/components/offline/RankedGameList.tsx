@@ -1,8 +1,12 @@
 import { useMemo } from "react";
 import type { GameDefinition } from "../../games/types";
 import type { Attendee, ReactionAggregate } from "../../lib/calendar-games";
+import { cn } from "../../lib/cn";
+import { UndoIcon } from "../icons";
 import { Avatar } from "../ui/Avatar";
-import { Eyebrow } from "../ui/Label";
+import { Badge } from "../ui/Badge";
+import { Button } from "../ui/Button";
+import { Eyebrow, MicroLabel } from "../ui/Label";
 import GameReactions from "./GameReactions";
 
 type Props = {
@@ -15,6 +19,12 @@ type Props = {
    * component stays usable for any future caller that doesn't have the
    * server payload yet). */
   topSlugs?: string[];
+  /** Admins only: the next ranked slugs that just missed `topSlugs`, shown
+   * as dashed rows under the list. Empty/absent for everyone else. */
+  runnerUpSlugs?: string[];
+  /** Admins only: clears every vote on the night (the caller confirms). */
+  onResetVotes?: () => void;
+  resettingVotes?: boolean;
   /**
    * Private night in host-pick mode: the list is the host's lineup in pick
    * order, not a vote result — no counts, one "in the lineup" toggle, and the
@@ -44,6 +54,9 @@ export default function RankedGameList({
   games,
   reactions,
   topSlugs,
+  runnerUpSlugs,
+  onResetVotes,
+  resettingVotes = false,
   lineup,
   reactionsDisabled = false,
 }: Props) {
@@ -84,16 +97,41 @@ export default function RankedGameList({
       })
       .slice(0, RESULT_CAP);
   }, [games, reactions, topSlugs]);
+  const runnersUp = useMemo(() => {
+    if (lineup || !runnerUpSlugs?.length) return [];
+    const bySlug = new Map(games.map((g) => [g.slug, g]));
+    return runnerUpSlugs.flatMap((slug) => {
+      const g = bySlug.get(slug);
+      return g ? [{ game: g, agg: reactions[slug] ?? EMPTY }] : [];
+    });
+  }, [games, reactions, runnerUpSlugs, lineup]);
 
   if (ranked.length === 0) return null;
+  const rowDisabled = reactionsDisabled || (lineup ? !lineup.viewerCanPick : false);
 
   return (
     <div className="scrollbar-thin flex h-full w-full max-w-3xl flex-col gap-2 overflow-y-auto px-1 py-2">
-      <Eyebrow tone="amber" className="px-2">
-        {lineup
-          ? `${lineup.hostName ? `${lineup.hostName}'s` : "Host's"} lineup`
-          : "Tonight's picks"}
-      </Eyebrow>
+      {/* Fixed height so the row is the same with or without the admin's
+          reset button — the list never shifts between viewers. */}
+      <div className="flex h-7 items-center justify-between gap-2 px-2">
+        <Eyebrow tone="amber">
+          {lineup
+            ? `${lineup.hostName ? `${lineup.hostName}'s` : "Host's"} lineup`
+            : "Tonight's picks"}
+        </Eyebrow>
+        {onResetVotes && !lineup && (
+          <Button
+            variant="ghost"
+            size="xs"
+            onClick={onResetVotes}
+            loading={resettingVotes}
+            title="Clear every vote on this night"
+          >
+            <UndoIcon className="h-3.5 w-3.5" />
+            Reset votes
+          </Button>
+        )}
+      </div>
       <ul className="flex flex-col gap-2">
         {ranked.map(({ game, agg }, i) => (
           <li key={game.slug}>
@@ -103,12 +141,42 @@ export default function RankedGameList({
               date={date}
               rank={i + 1}
               mode={lineup ? "pick" : "vote"}
-              disabled={reactionsDisabled || (lineup ? !lineup.viewerCanPick : false)}
+              disabled={rowDisabled}
               bringer={lineup ? (bringerBySlug.get(game.slug) ?? null) : null}
             />
           </li>
         ))}
       </ul>
+      {runnersUp.length > 0 && (
+        <section
+          aria-label="Just missed the cut (admins only)"
+          className="mt-2 flex flex-col gap-2"
+        >
+          <div className="flex items-center gap-2 px-2">
+            <MicroLabel>Just missed the cut</MicroLabel>
+            <span aria-hidden="true" className="h-px flex-1 bg-line" />
+            <Badge size="xs" shape="pill" ring title="Only admins see these rows">
+              Admins only
+            </Badge>
+          </div>
+          <ul className="flex flex-col gap-2">
+            {runnersUp.map(({ game, agg }, i) => (
+              <li key={game.slug}>
+                <RankedRow
+                  game={game}
+                  aggregate={agg}
+                  date={date}
+                  rank={ranked.length + i + 1}
+                  mode="vote"
+                  disabled={rowDisabled}
+                  bringer={null}
+                  runnerUp
+                />
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
     </div>
   );
 }
@@ -122,9 +190,20 @@ type RowProps = {
   disabled: boolean;
   /** Who brings it (host-pick lineup rows only). */
   bringer: Attendee | null;
+  /** An admin-only row past the cut: dashed outline, no fill, quieter art. */
+  runnerUp?: boolean;
 };
 
-function RankedRow({ game, aggregate, date, rank, mode, disabled, bringer }: RowProps) {
+function RankedRow({
+  game,
+  aggregate,
+  date,
+  rank,
+  mode,
+  disabled,
+  bringer,
+  runnerUp = false,
+}: RowProps) {
   const isTop = rank === 1;
   const meta = formatMeta(game);
   return (
@@ -135,19 +214,31 @@ function RankedRow({ game, aggregate, date, rank, mode, disabled, bringer }: Row
     // 360px screen). On sm+ everything fits on one line and the wrap never
     // engages.
     <div
-      className="flex flex-wrap items-center gap-x-2 gap-y-1 rounded-card-2xl border bg-surface-900/80 p-2 transition sm:gap-x-3 sm:pr-3"
-      style={{
-        borderColor: isTop ? game.accentHex : DIM_CHROME,
-        boxShadow: isTop
-          ? `0 0 0 1px ${game.accentHex}55, 0 8px 24px -12px ${game.accentHex}55`
-          : undefined,
-      }}
+      className={cn(
+        "flex flex-wrap items-center gap-x-2 gap-y-1 rounded-card-2xl border p-2 transition sm:gap-x-3 sm:pr-3",
+        runnerUp ? "border-dashed border-line-strong bg-transparent" : "bg-surface-900/80",
+      )}
+      style={
+        runnerUp
+          ? undefined
+          : {
+              borderColor: isTop ? game.accentHex : DIM_CHROME,
+              boxShadow: isTop
+                ? `0 0 0 1px ${game.accentHex}55, 0 8px 24px -12px ${game.accentHex}55`
+                : undefined,
+            }
+      }
     >
-      <div className="relative h-12 w-12 shrink-0 overflow-hidden rounded-card-xl sm:h-16 sm:w-16">
+      <div
+        className={cn(
+          "relative shrink-0 overflow-hidden rounded-card-xl",
+          runnerUp ? "h-10 w-10 sm:h-12 sm:w-12" : "h-12 w-12 sm:h-16 sm:w-16",
+        )}
+      >
         <img
           src={game.thumbnail}
           alt=""
-          className="h-full w-full object-cover"
+          className={cn("h-full w-full object-cover", runnerUp && "opacity-70 saturate-50")}
           loading="lazy"
           decoding="async"
           draggable={false}
@@ -158,11 +249,18 @@ function RankedRow({ game, aggregate, date, rank, mode, disabled, bringer }: Row
       <div className="flex min-w-36 flex-1 flex-col gap-0.5">
         <div className="flex items-center gap-2">
           <span
-            className="inline-flex h-5 min-w-5 shrink-0 items-center justify-center rounded-full px-1.5 text-3xs font-bold tabular-nums"
-            style={{
-              backgroundColor: isTop ? game.accentHex : DIM_CHROME,
-              color: isTop ? "#000" : RANK_TEXT_DIM,
-            }}
+            className={cn(
+              "inline-flex h-5 min-w-5 shrink-0 items-center justify-center rounded-full px-1.5 text-3xs font-bold tabular-nums",
+              runnerUp && "border border-dashed border-line-strong text-fg-muted",
+            )}
+            style={
+              runnerUp
+                ? undefined
+                : {
+                    backgroundColor: isTop ? game.accentHex : DIM_CHROME,
+                    color: isTop ? "#000" : RANK_TEXT_DIM,
+                  }
+            }
           >
             <span className="sr-only">Rank </span>
             {rank}
@@ -170,9 +268,20 @@ function RankedRow({ game, aggregate, date, rank, mode, disabled, bringer }: Row
           {/* No "Top pick" chip — the #1 row already reads as the winner via
               its accent border, glow, and colored rank badge, and on phone
               widths the chip stole the room the title needs. */}
-          <h3 className="truncate text-sm font-semibold text-fg-strong">{game.title}</h3>
+          <h3
+            className={cn(
+              "truncate text-sm font-semibold",
+              runnerUp ? "text-fg-secondary" : "text-fg-strong",
+            )}
+          >
+            {game.title}
+          </h3>
         </div>
-        {meta && <p className="truncate text-2xs text-fg-secondary">{meta}</p>}
+        {meta && (
+          <p className={cn("truncate text-2xs", runnerUp ? "text-fg-muted" : "text-fg-secondary")}>
+            {meta}
+          </p>
+        )}
       </div>
 
       <div className="ml-auto flex shrink-0 items-center gap-2">

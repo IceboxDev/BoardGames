@@ -10,8 +10,14 @@
 import type { TreeProviders } from "@boardgames/core/games/chess/trainer/builder";
 import type { EngineLine } from "@boardgames/core/games/chess/trainer/tree";
 import { BrowserEngine } from "../analysis/engine";
-import { cloudEval, explorerMoves } from "./lichess/client";
+import { cloudEval, type ExplorerMove, explorerMoves } from "./lichess/client";
 import { legalUcis } from "./tree-nav";
+
+/** An evaluation with its lines' continuations and where it came from. */
+export interface QuickEval {
+  readonly lines: (EngineLine & { readonly pv?: readonly string[] })[];
+  readonly source: string;
+}
 
 /** Cloud evals are only asked for up to this full move. */
 const CLOUD_MAX_MOVE = 12;
@@ -64,8 +70,60 @@ export class TrainerProviders implements TreeProviders {
     });
   }
 
+  /**
+   * The best evaluation to hand for a position: lichess's cloud (deep —
+   * often depth 40–60 on opening positions) for up to five moves, else a
+   * quick search in this browser. Lines carry their principal variation.
+   */
+  /** lichess's cloud evaluation alone (cheap — for prefetching), or null when it has none. */
+  async cloudLines(fen: string): Promise<QuickEval | null> {
+    const cloud = await cloudEval(fen, 5, this.token).catch(() => null);
+    return cloud && cloud.length > 0
+      ? { lines: normalizeUcis(fen, cloud), source: "lichess cloud" }
+      : null;
+  }
+
+  async quickLines(fen: string, depth: number): Promise<QuickEval> {
+    const cloud = await cloudEval(fen, 5, this.token).catch(() => null);
+    if (cloud && cloud.length > 0) {
+      return { lines: normalizeUcis(fen, cloud), source: "lichess cloud" };
+    }
+    this.engine ??= new BrowserEngine();
+    const turn = fen.split(" ")[1] === "b" ? -1 : 1;
+    const lines = await this.engine.analyse(fen, depth, 3);
+    return {
+      source: "this browser",
+      lines: lines.flatMap((l) => {
+        const uci = l.pv[0] ?? l.best;
+        if (!uci) return [];
+        return [
+          {
+            uci,
+            cp: "cp" in l.score ? turn * l.score.cp : null,
+            mate: "mate" in l.score ? turn * l.score.mate : null,
+            depth: l.depth,
+            pv: l.pv,
+          },
+        ];
+      }),
+    };
+  }
+
+  private readonly explorerCache = new Map<string, Promise<ExplorerMove[]>>();
+
+  /** The lichess database here, with results; asked once per position. */
+  explorer(fen: string): Promise<ExplorerMove[]> {
+    let hit = this.explorerCache.get(fen);
+    if (!hit) {
+      hit = explorerMoves(fen, this.token).then((m) => normalizeUcis(fen, m));
+      hit.catch(() => this.explorerCache.delete(fen));
+      this.explorerCache.set(fen, hit);
+    }
+    return hit;
+  }
+
   async popularMoves(fen: string) {
-    return normalizeUcis(fen, await explorerMoves(fen, this.token));
+    return (await this.explorer(fen)).map(({ uci, games }) => ({ uci, games }));
   }
 
   dispose(): void {

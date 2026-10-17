@@ -315,6 +315,31 @@ describe("online day", () => {
     expect(t.game.timeline.some((e) => e.text.includes("is executed"))).toBe(true);
   });
 
+  it("shows the Storyteller's timer to everyone, and who is ready to move on", () => {
+    const t = startedTable(7, 9);
+    expect(t.refuse(0, { kind: "timer", timer: "discussion", seconds: 60, rev: t.game.rev })).toBe(
+      "Timers run by day",
+    );
+    expect(t.refuse(1, { kind: "ready", ready: true })).toBe("Nothing to be ready for right now");
+    t.runNight();
+    t.st({ kind: "timer", timer: "discussion", seconds: 60 });
+    expect(t.game.day.timer).toEqual({
+      kind: "discussion",
+      label: "Discussion",
+      startedAt: t.now,
+      endsAt: t.now + 60_000,
+    });
+    t.player(2, { kind: "ready", ready: true }).player(3, { kind: "ready", ready: true });
+    t.player(3, { kind: "ready", ready: false });
+    expect(playerView(t.game, 5).day.ready).toEqual([2]);
+    expect(t.refuse(0, { kind: "ready", ready: true })).toBe("The Storyteller moves the day on");
+    // A new part of the day asks again.
+    t.st({ kind: "nominations", open: true });
+    expect(t.game.day.ready).toEqual([]);
+    t.st({ kind: "timer", timer: "nominations", seconds: null });
+    expect(t.game.day.timer).toBeNull();
+  });
+
   it("lets the dead spend one ghost vote and no more", () => {
     const t = dayTable();
     const dead = t.companion.players[0]?.roomSeat ?? 1;

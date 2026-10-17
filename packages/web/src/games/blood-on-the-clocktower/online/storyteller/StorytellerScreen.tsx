@@ -1,6 +1,6 @@
 import { CHARACTERS } from "@boardgames/core/games/blood-on-the-clocktower/characters";
 import { useState } from "react";
-import { GameScreen } from "../../../../components/game-layout";
+import { GameActionBar, GameScreen } from "../../../../components/game-layout";
 import {
   Button,
   ErrorAlert,
@@ -11,9 +11,13 @@ import {
   SegmentedControl,
 } from "../../../../components/ui";
 import { ChatRail } from "../components/ChatRail";
+import { PhaseBanner } from "../components/PhaseBanner";
+import { PhaseTrack } from "../components/PhaseTrack";
 import { type SquareSeat, TownSquare } from "../components/TownSquare";
 import { useStoryteller } from "../context";
+import { type DayPartId, dayPartOf } from "../day-parts";
 import { clockChair, handOf, phaseTitle } from "../helpers";
+import { useServerClockSync } from "../server-clock";
 import { DayScript } from "./DayScript";
 import { NightScript } from "./NightScript";
 import { SeatSheet } from "./SeatSheet";
@@ -133,10 +137,39 @@ function RevealScript() {
 }
 
 function ActionBar({ onEnd }: { onEnd: () => void }) {
-  const { view, st } = useStoryteller();
+  const { view, st, endActions } = useStoryteller();
   const phase = view.phase.kind;
+  const live = view.stage !== "setup" && view.stage !== "over";
   return (
-    <div className="flex h-actions items-center gap-2 overflow-x-auto px-1">
+    <GameActionBar
+      end={
+        live && (
+          <>
+            <Button
+              size="sm"
+              variant="ghost"
+              disabled={!view.undoLabel}
+              title={view.undoLabel ?? undefined}
+              onClick={() => st({ kind: "undo" })}
+            >
+              ↶ Undo
+            </Button>
+            <Button
+              size="sm"
+              variant="ghost"
+              disabled={!view.redoLabel}
+              title={view.redoLabel ?? undefined}
+              onClick={() => st({ kind: "redo" })}
+            >
+              ↷ Redo
+            </Button>
+            <Button size="sm" variant="ghost" onClick={onEnd}>
+              End game…
+            </Button>
+          </>
+        )
+      }
+    >
       {view.stage === "setup" && (
         <Button
           size="sm"
@@ -182,39 +215,34 @@ function ActionBar({ onEnd }: { onEnd: () => void }) {
           </Button>
         </>
       )}
-      <span className="flex-1" />
-      {view.stage !== "setup" && view.stage !== "over" && (
-        <>
-          <Button
-            size="sm"
-            variant="ghost"
-            disabled={!view.undoLabel}
-            title={view.undoLabel ?? undefined}
-            onClick={() => st({ kind: "undo" })}
-          >
-            ↶ Undo
+      {view.stage === "over" &&
+        endActions.map((a) => (
+          <Button key={a.label} size="sm" variant={a.variant} onClick={a.onClick}>
+            {a.label}
           </Button>
-          <Button
-            size="sm"
-            variant="ghost"
-            disabled={!view.redoLabel}
-            title={view.redoLabel ?? undefined}
-            onClick={() => st({ kind: "redo" })}
-          >
-            ↷ Redo
-          </Button>
-          <Button size="sm" variant="ghost" onClick={onEnd}>
-            End game…
-          </Button>
-        </>
-      )}
-    </div>
+        ))}
+    </GameActionBar>
   );
 }
 
+/** What the Storyteller is doing in each part, under the title in the middle of the square. */
+const PART_HINT: Record<DayPartId, string> = {
+  setup: "Shape the bag, then deal.",
+  reveal: "Show everyone their character, then begin the night.",
+  night: "Wake each step from the script on the left.",
+  discussion: "Discussion — open nominations when the town is ready.",
+  nominations: "Nominations are open.",
+  defence: "Accusation and defence — then start the clock.",
+  voting: "The clock is going round.",
+  counting: "Count the hands.",
+  dusk: "Dusk — end the day when ready.",
+  over: "",
+};
+
 /** The Storyteller's desk: the Grimoire on the square, the script, the town's talk. */
 export function StorytellerScreen() {
-  const { view, endActions, error } = useStoryteller();
+  const { view, error } = useStoryteller();
+  useServerClockSync(view);
   const seats = useGrimoireSeats();
   const [sheet, setSheet] = useState<number | null>(null);
   const [ending, setEnding] = useState(false);
@@ -234,13 +262,9 @@ export function StorytellerScreen() {
           ) : phase === "day" ? (
             <DayScript />
           ) : (
-            <div className="flex flex-col gap-2">
-              {endActions.map((a) => (
-                <Button key={a.label} size="sm" variant={a.variant} onClick={a.onClick}>
-                  {a.label}
-                </Button>
-              ))}
-            </div>
+            <p className="text-sm text-fg-secondary">
+              The game is over. The town sees the whole Grimoire now.
+            </p>
           )}
         </div>
       }
@@ -248,23 +272,29 @@ export function StorytellerScreen() {
       sidebar={<ChatRail />}
       actionBar={<ActionBar onEnd={() => setEnding(true)} />}
     >
-      <TownSquare
-        seats={seats}
-        clockAt={clockChair(view)}
-        onSeatClick={view.companion ? setSheet : undefined}
-        ariaLabel="The Grimoire"
-        center={
-          <>
-            <span className="text-xs font-bold uppercase tracking-eyebrow text-fg-muted">
-              Storyteller
-            </span>
-            <span className="text-3xl font-black text-fg-strong">{phaseTitle(view)}</span>
-            {view.phase.kind === "ended" && (
-              <span className="text-sm text-fg-secondary">{view.phase.reason}</span>
-            )}
-          </>
-        }
-      />
+      <PhaseTrack view={view} />
+      <div className="relative flex min-h-0 flex-1">
+        <TownSquare
+          seats={seats}
+          clockAt={clockChair(view)}
+          onSeatClick={view.companion ? setSheet : undefined}
+          ariaLabel="The Grimoire"
+          night={phase === "night"}
+          center={
+            <>
+              <span className="text-xs font-bold uppercase tracking-eyebrow text-fg-muted">
+                Storyteller
+              </span>
+              <span className="text-3xl font-black text-fg-strong">{phaseTitle(view)}</span>
+              <span className="text-sm text-fg-secondary">{PART_HINT[dayPartOf(view)]}</span>
+              {view.phase.kind === "ended" && (
+                <span className="text-sm text-fg-secondary">{view.phase.reason}</span>
+              )}
+            </>
+          }
+        />
+        <PhaseBanner view={view} />
+      </div>
       {sheet !== null && <SeatSheet roomSeat={sheet} onClose={() => setSheet(null)} />}
       {ending && <EndGameModal onClose={() => setEnding(false)} />}
     </GameScreen>

@@ -167,6 +167,11 @@ export const EVENT_LABELS: EventLabels = {
       return `Locked in ${kind}${forDay(date, "on")}${hostName ? `, hosted by ${hostName}` : ""}`;
     },
   },
+  "game-votes-reset": {
+    tone: "night",
+    describe: ({ date, removed, targetUserId }, ctx) =>
+      `Reset ${targetUserId ? `${person(ctx, targetUserId, "an attendee")}'s` : "everyone's"} game votes${forDay(date)}${removed ? ` (${removed} cleared)` : ""}`,
+  },
   "night-unlocked": {
     tone: "night",
     describe: ({ date }) => `Unlocked the game night${forDay(date, "on")}`,

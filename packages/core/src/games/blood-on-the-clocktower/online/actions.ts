@@ -16,7 +16,12 @@ import {
   EditionSchema,
   NightStepIdSchema,
 } from "../schema.ts";
-import { OnlineChoiceSchema, RequestKindSchema, RoomSeatSchema } from "./state.ts";
+import {
+  DayTimerKindSchema,
+  OnlineChoiceSchema,
+  RequestKindSchema,
+  RoomSeatSchema,
+} from "./state.ts";
 
 const Text = z.string().trim().min(1).max(500);
 
@@ -40,6 +45,8 @@ export const PlayerActionSchema = z.discriminatedUnion("kind", [
   action("nominate", { nominee: RoomSeatSchema }),
   /** Raise or lower a hand in the running vote, before the clock reaches them. */
   action("hand", { up: z.boolean() }),
+  /** "I'm ready to move on" — the Storyteller sees who is, and may move on early. */
+  action("ready", { ready: z.boolean() }),
   /** A public claim the Storyteller rules on. */
   action("request", {
     request: RequestKindSchema,
@@ -98,6 +105,12 @@ export const StorytellerActionSchema = z.discriminatedUnion("kind", [
   st("execute", {}),
   st("end-day", {}),
   st("announce", { text: Text }),
+  /** Start a countdown everyone sees (`seconds: null` clears it). Resets who is ready. */
+  st("timer", {
+    timer: DayTimerKindSchema,
+    seconds: z.number().int().min(1).max(1800).nullable(),
+    label: z.string().trim().max(60).optional(),
+  }),
   st("chat-settings", { publicOpen: z.boolean(), whispersOpen: z.boolean() }),
   st("resolve-request", {
     id: z.number().int(),

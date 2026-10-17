@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
 import {
   AdminNightGuestBodySchema,
+  AttendeeSchema,
   AvailableGamesSchema,
   CalendarLocksSchema,
   HostStatsMapSchema,
@@ -11,6 +12,7 @@ import {
   mkOptimisticLock,
   PicksLockBodySchema,
   PrivateNightUpdateBodySchema,
+  ResetGameVotesBodySchema,
   SetRsvpBodySchema,
 } from "./calendar.ts";
 
@@ -271,6 +273,24 @@ describe("PicksLockBodySchema", () => {
   });
 });
 
+describe("ResetGameVotesBodySchema", () => {
+  it("accepts a night key, including the second slot", () => {
+    expect(ResetGameVotesBodySchema.parse({ date: "2026-05-05" }).date).toBe("2026-05-05");
+    expect(ResetGameVotesBodySchema.parse({ date: "2026-05-05_2" }).date).toBe("2026-05-05_2");
+  });
+
+  it("takes an optional person to reset alone", () => {
+    expect(ResetGameVotesBodySchema.parse({ date: "2026-05-05", userId: "u1" }).userId).toBe("u1");
+    expect(() => ResetGameVotesBodySchema.parse({ date: "2026-05-05", userId: "" })).toThrow();
+  });
+
+  it("rejects a missing or malformed date", () => {
+    expect(() => ResetGameVotesBodySchema.parse({})).toThrow();
+    expect(() => ResetGameVotesBodySchema.parse({ date: "May 5" })).toThrow();
+    expect(() => ResetGameVotesBodySchema.parse({ date: "2026-05-05_3" })).toThrow();
+  });
+});
+
 describe("SetRsvpBodySchema", () => {
   it("accepts yes/no", () => {
     expect(() => SetRsvpBodySchema.parse({ date: "2026-05-05", status: "yes" })).not.toThrow();
@@ -457,5 +477,34 @@ describe("AvailableGamesSchema", () => {
     expect(AvailableGamesSchema.parse({ ...base, newSlugs: ["catan"] }).newSlugs).toEqual([
       "catan",
     ]);
+  });
+});
+
+describe("AttendeeSchema staleVotes", () => {
+  const base = {
+    userId: "u1",
+    name: "Alice",
+    isHost: false,
+    status: "definite",
+    votes: { hype: 2, teach: 0, learn: 1 },
+    bringing: [],
+  };
+
+  it("defaults to null on payloads without it", () => {
+    expect(AttendeeSchema.parse(base).staleVotes).toBeNull();
+  });
+
+  it("carries the outdated count and the headcounts they were cast at", () => {
+    const a = AttendeeSchema.parse({ ...base, staleVotes: { count: 2, headcounts: [5, 6] } });
+    expect(a.staleVotes).toEqual({ count: 2, headcounts: [5, 6] });
+  });
+
+  it("rejects an empty or zero record", () => {
+    expect(() =>
+      AttendeeSchema.parse({ ...base, staleVotes: { count: 0, headcounts: [5] } }),
+    ).toThrow();
+    expect(() =>
+      AttendeeSchema.parse({ ...base, staleVotes: { count: 1, headcounts: [] } }),
+    ).toThrow();
   });
 });

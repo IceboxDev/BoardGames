@@ -201,6 +201,16 @@ export type PrivateNightUpdateBody = z.input<typeof PrivateNightUpdateBodySchema
 export const UnlockBodySchema = z.object({ date: NightKeySchema });
 export type UnlockBody = z.infer<typeof UnlockBodySchema>;
 
+/**
+ * Admin: clear the game votes (hype / teach / learn) cast for one night —
+ * everyone's, or one person's when `userId` is given.
+ */
+export const ResetGameVotesBodySchema = z.object({
+  date: NightKeySchema,
+  userId: z.string().min(1).optional(),
+});
+export type ResetGameVotesBody = z.infer<typeof ResetGameVotesBodySchema>;
+
 export const PicksLockBodySchema = z.object({
   date: NightKeySchema,
   on: z.boolean(),
@@ -315,6 +325,20 @@ export const AttendeeSchema = z.object({
    * open nights (and on payloads from before private nights existed).
    */
   seat: SeatStateSchema.nullable().default(null),
+  /**
+   * Admins only: this person's counted votes that were cast when the night
+   * had a different headcount than it has now — `count` of them, and the
+   * distinct headcounts they were cast at (ascending). Null when every vote
+   * is current, for votes from before headcounts were recorded, and for
+   * everyone who isn't an admin.
+   */
+  staleVotes: z
+    .object({
+      count: z.number().int().min(1),
+      headcounts: z.array(z.number().int().min(0)).min(1),
+    })
+    .nullable()
+    .default(null),
 });
 export type Attendee = z.infer<typeof AttendeeSchema>;
 
@@ -336,6 +360,12 @@ export const AvailableGamesSchema = z.object({
   reactions: z.record(z.string(), ReactionAggregateSchema),
   /** Up to 5 slugs, ranked by hype with support tie-break. */
   topSlugs: z.array(z.string()),
+  /**
+   * Admins only: the next up-to-3 ranked slugs that just missed `topSlugs`.
+   * Always empty for everyone else, and on a host-pick lineup (no ranking).
+   * Defaulted so a persisted payload from before the field parses.
+   */
+  runnerUpSlugs: z.array(z.string()).default([]),
   /** All attendees (definite + tentative), pre-sorted host-first then by votes. */
   attendees: z.array(AttendeeSchema),
   /** Mirror of the lock's picks_locked_at — present here for the modal too. */

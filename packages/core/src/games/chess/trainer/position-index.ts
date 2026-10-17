@@ -65,12 +65,32 @@ export interface MoveStat {
   readonly score: number;
 }
 
+/** A built index as plain data (structured-clonable: kept in IndexedDB between visits). */
+export interface PositionIndexData {
+  readonly games: readonly TrainerGame[];
+  readonly hashes: Float64Array;
+  readonly refs: Uint32Array;
+}
+
 export class PositionIndex {
   private constructor(
     readonly games: readonly TrainerGame[],
     private readonly hashes: Float64Array,
     private readonly refs: Uint32Array,
   ) {}
+
+  toData(): PositionIndexData {
+    return { games: this.games, hashes: this.hashes, refs: this.refs };
+  }
+
+  static fromData(data: PositionIndexData): PositionIndex {
+    return new PositionIndex(data.games, data.hashes, data.refs);
+  }
+
+  /** Stored games' UCI split into moves (the server keeps only legal prefixes). */
+  static split(uci: string): string[] {
+    return uci.split(" ").filter(Boolean);
+  }
 
   /**
    * Index the trainee's games (all of one colour). Moves past `MAX_PLIES` are

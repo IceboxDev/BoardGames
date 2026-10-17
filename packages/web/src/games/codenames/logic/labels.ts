@@ -4,6 +4,7 @@ import type { CoverTone } from "../components/WordGrid";
 
 export const TEAM_TEXT: Record<Team, string> = { 0: "text-cn-red", 1: "text-cn-blue" };
 export const TEAM_BG: Record<Team, string> = { 0: "bg-cn-red", 1: "bg-cn-blue" };
+export const TEAM_RING: Record<Team, string> = { 0: "ring-cn-red", 1: "ring-cn-blue" };
 
 export const TEAM_TONE: Record<Team, CoverTone> = { 0: "red", 1: "blue" };
 

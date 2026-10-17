@@ -56,6 +56,8 @@ export interface CardPointer {
   key: string;
   /** Who points — their name, for the avatar and its label. */
   name: string;
+  /** Their profile picture; null shows their initials. */
+  image: string | null;
   /** The viewer's own pointer. */
   mine: boolean;
 }
@@ -336,7 +338,7 @@ function WordCard({
                 p.mine ? "ring-accent-400" : "ring-surface-950",
               )}
             >
-              <Avatar name={p.name} size="xs" className="h-6 w-6" />
+              <Avatar name={p.name} image={p.image} size="xs" className="h-6 w-6" />
             </span>
           ))}
           {pointers.length > MAX_POINTERS && (

@@ -778,3 +778,61 @@ export function PauseIcon({ className = "h-4 w-4" }: IconProps) {
     </svg>
   );
 }
+
+/** A closed folder (trainer folder rows). */
+export function FolderIcon({ className = "h-4 w-4" }: IconProps) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      className={className}
+      strokeWidth={1.75}
+      aria-hidden="true"
+      {...STROKE_BASE}
+    >
+      <path d="M3 7.5A1.5 1.5 0 0 1 4.5 6h4.38a1.5 1.5 0 0 1 1.06.44L11.5 8h8A1.5 1.5 0 0 1 21 9.5v8A1.5 1.5 0 0 1 19.5 19h-15A1.5 1.5 0 0 1 3 17.5z" />
+    </svg>
+  );
+}
+
+/** An open folder (the folder you're in). */
+export function FolderOpenIcon({ className = "h-4 w-4" }: IconProps) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      className={className}
+      strokeWidth={1.75}
+      aria-hidden="true"
+      {...STROKE_BASE}
+    >
+      <path d="M3 17.5v-10A1.5 1.5 0 0 1 4.5 6h4.38a1.5 1.5 0 0 1 1.06.44L11.5 8h7A1.5 1.5 0 0 1 20 9.5V11" />
+      <path d="M3.3 18.2 5.6 12a1.5 1.5 0 0 1 1.4-1h13.4a1 1 0 0 1 .95 1.3l-1.9 5.7a1.5 1.5 0 0 1-1.42 1H4.5a1.2 1.2 0 0 1-1.2-.8z" />
+    </svg>
+  );
+}
+
+/** Three dots in a row — "more actions" on a row. */
+export function MoreIcon({ className = "h-4 w-4" }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" className={className} fill="currentColor" aria-hidden="true">
+      <circle cx="5" cy="12" r="1.8" />
+      <circle cx="12" cy="12" r="1.8" />
+      <circle cx="19" cy="12" r="1.8" />
+    </svg>
+  );
+}
+
+/** An exclamation in a circle — something needs a look. */
+export function AlertIcon({ className = "h-3.5 w-3.5" }: IconProps) {
+  return (
+    <svg
+      viewBox="0 0 16 16"
+      className={className}
+      strokeWidth={1.7}
+      aria-hidden="true"
+      {...STROKE_BASE}
+    >
+      <circle cx="8" cy="8" r="6" />
+      <path d="M8 5v3.5M8 11v.25" />
+    </svg>
+  );
+}

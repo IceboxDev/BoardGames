@@ -1,17 +1,22 @@
 /**
- * BEST_MOVE_V1 — what "the best move" means in an opening tree, and how much
+ * BEST_MOVE — what "the best move" means in an opening tree, and how much
  * search each position gets. Every stored evaluation names the spec it was
  * made under, so a later definition can be told apart and re-run.
  *
- * Your move: Stockfish, single-PV, to a depth set by how many of your games
- * reach the position (its "tier"). Moves within `candidateMarginCp` of the
- * top are searched to the same depth; those ending within `tieMarginCp` of
- * the best are a tie, broken by Lc0's win-minus-loss for you. Opponent
+ * Your move: Stockfish, single-PV, to the tier's depth — every tier is 50 (the
+ * tiers stay so a budget can lower the rare ones; see `allocateDepths`). Moves within
+ * `candidateMarginCp` of the top in a pre-pass are searched to the same depth;
+ * the best is the one Stockfish scores highest. Only an exact tie — the same
+ * score at full depth (`tieMarginCp` 0) — is broken, by Lc0's win-minus-loss
+ * for you. Opponent
  * padding: Stockfish MultiPV 3 at `opp.depth` (no tie-break — every one of
  * the three is used).
  */
 
-export const BEST_MOVE_SPEC = "BEST_MOVE_V1";
+export const BEST_MOVE_SPEC = "BEST_MOVE_V2";
+
+/** How every farm search runs, everywhere (the worker takes these, never local settings). */
+export const SEARCH = { threads: 1, hashMb: 1024 } as const;
 
 export type TierName = "trunk" | "main" | "rare" | "leaf";
 
@@ -22,25 +27,35 @@ export interface Tier {
   readonly depth: number;
 }
 
-export const BEST_MOVE_V1 = {
+export const BEST_MOVE = {
   candidateMarginCp: 25,
-  tieMarginCp: 15,
+  /** Stockfish decides; Lc0 only between moves it scores exactly the same. */
+  tieMarginCp: 0,
   /** Lc0's choice scoring this much worse by Stockfish marks the position contested. */
   contestedCp: 50,
   lc0Nodes: 1_000_000,
   tiers: [
     { name: "trunk", minReach: 20, depth: 50 },
-    { name: "main", minReach: 3, depth: 45 },
-    { name: "rare", minReach: 1, depth: 42 },
-    { name: "leaf", minReach: 0, depth: 38 },
+    { name: "main", minReach: 3, depth: 50 },
+    { name: "rare", minReach: 1, depth: 50 },
+    { name: "leaf", minReach: 0, depth: 50 },
   ] as readonly Tier[],
   opp: { depth: 40, multipv: 3 },
   /** ChessDB's ranking replaces the opponent search when its PV is at least this deep. */
   chessdbOppMinDepth: 36,
 } as const;
 
-export function tierOf(reach: number, tiers: readonly Tier[] = BEST_MOVE_V1.tiers): Tier {
+export function tierOf(reach: number, tiers: readonly Tier[] = BEST_MOVE.tiers): Tier {
   return tiers.find((t) => reach >= t.minReach) ?? (tiers.at(-1) as Tier);
+}
+
+/**
+ * The depth a stored evaluation must reach to count as final: your position's
+ * tier depth, the opponent depth for theirs. A shallower one (a search the
+ * node limit stopped) is never stored by the farm, and a tree never keeps one.
+ */
+export function finalDepth(side: "user" | "opp", reach: number): number {
+  return side === "user" ? tierOf(reach).depth : BEST_MOVE.opp.depth;
 }
 
 /** A score from the side to move, comparable across cp and mate. */
@@ -87,7 +102,7 @@ export interface BestChoice {
 export function pickBest(
   searched: readonly Scored[],
   lc0: readonly Lc0Move[] = [],
-  spec = BEST_MOVE_V1,
+  spec = BEST_MOVE,
 ): BestChoice {
   if (searched.length === 0) throw new Error("pickBest: nothing searched");
   const ranked = [...searched].sort((a, b) => scoreValue(b) - scoreValue(a));
@@ -127,7 +142,7 @@ export function pickBest(
 }
 
 /** The moves worth a full-depth search: within the candidate margin of the top (cheap) score. */
-export function candidates(preview: readonly Scored[], spec = BEST_MOVE_V1): string[] {
+export function candidates(preview: readonly Scored[], spec = BEST_MOVE): string[] {
   if (preview.length === 0) return [];
   const ranked = [...preview].sort((a, b) => scoreValue(b) - scoreValue(a));
   const top = scoreValue(ranked[0] as Scored);
@@ -211,7 +226,7 @@ export function allocateDepths(
   cal: Calibration,
   work: Workload,
   budgetSeconds: number,
-  spec = BEST_MOVE_V1,
+  spec = BEST_MOVE,
   floor = 30,
 ): { tiers: Tier[]; oppDepth: number; seconds: number } {
   const depth: Record<TierName, number> = { trunk: 0, main: 0, rare: 0, leaf: 0 };

@@ -12,6 +12,7 @@ import { compareForHeadcount, coversWindow } from "../../lib/bgg-format";
 import {
   type Attendee,
   type AvailableGames,
+  adminResetGameVotes,
   fetchAvailableGames,
   type ReactionAggregate,
 } from "../../lib/calendar-games";
@@ -41,10 +42,14 @@ type UseRsvpAvailabilityResult = {
   >;
   togglePicksLockMutation: UseMutationResult<unknown, Error, { on: boolean }, unknown>;
   kickMutation: UseMutationResult<unknown, Error, { userId: string }, unknown>;
+  /** Admin: clear the night's game votes — everyone's, or one person's (`userId`). */
+  resetVotesMutation: UseMutationResult<unknown, Error, { userId?: string } | undefined, unknown>;
   definiteCount: number;
   tentativeCount: number;
   reactions: Record<string, ReactionAggregate>;
   topSlugs: string[];
+  /** Admins only: the next ranked games that just missed `topSlugs`. */
+  runnerUpSlugs: string[];
   attendees: Attendee[];
   ownedSlugs: string[];
   /** Copies new to an attending owner — the picker's New frame. */
@@ -103,10 +108,19 @@ export function useRsvpAvailability({
     },
   });
 
+  const resetVotesMutation = useMutation({
+    mutationFn: (vars?: { userId?: string }) => adminResetGameVotes(date, vars?.userId),
+    onSettled: () => {
+      void queryClient.invalidateQueries({ queryKey: qk.calendarLocks() });
+      void refreshGames();
+    },
+  });
+
   const definiteCount = gamesQuery.data?.definiteCount ?? 0;
   const tentativeCount = gamesQuery.data?.tentativeCount ?? 0;
   const reactions = gamesQuery.data?.reactions ?? {};
   const topSlugs = gamesQuery.data?.topSlugs ?? [];
+  const runnerUpSlugs = gamesQuery.data?.runnerUpSlugs ?? [];
   const attendees = gamesQuery.data?.attendees ?? [];
   const ownedSlugs = gamesQuery.data?.ownedSlugs ?? [];
   // Copies new to an attending owner — the picker's New frame, and the
@@ -154,10 +168,12 @@ export function useRsvpAvailability({
     setRsvpMutation,
     togglePicksLockMutation,
     kickMutation,
+    resetVotesMutation,
     definiteCount,
     tentativeCount,
     reactions,
     topSlugs,
+    runnerUpSlugs,
     attendees,
     ownedSlugs,
     newSlugs,

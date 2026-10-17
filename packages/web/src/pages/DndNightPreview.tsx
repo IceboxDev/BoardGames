@@ -52,6 +52,7 @@ const ATTENDEES: Attendee[] = [
     votes: { hype: 1, teach: 1, learn: 0 },
     bringing: [],
     seat: null,
+    staleVotes: null,
   },
   {
     userId: "u2",
@@ -64,6 +65,7 @@ const ATTENDEES: Attendee[] = [
     votes: { hype: 1, teach: 0, learn: 1 },
     bringing: [],
     seat: null,
+    staleVotes: null,
   },
   {
     userId: "u3",
@@ -76,6 +78,7 @@ const ATTENDEES: Attendee[] = [
     votes: { hype: 1, teach: 0, learn: 0 },
     bringing: [],
     seat: null,
+    staleVotes: null,
   },
   {
     userId: "u4",
@@ -88,6 +91,7 @@ const ATTENDEES: Attendee[] = [
     votes: { hype: 0, teach: 0, learn: 0 },
     bringing: [],
     seat: null,
+    staleVotes: null,
   },
   {
     userId: "u5",
@@ -100,6 +104,7 @@ const ATTENDEES: Attendee[] = [
     votes: { hype: 0, teach: 0, learn: 0 },
     bringing: [],
     seat: null,
+    staleVotes: null,
   },
 ];
 

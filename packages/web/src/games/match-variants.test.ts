@@ -171,6 +171,34 @@ describe("variantConfigForSlug", () => {
     expect(config?.mode).toBe("single");
     expect(config?.options.map((o) => o.value)).toEqual(["Standard", "The Plot Thickens"]);
   });
+
+  it("records The Hunger's mode and Carnegie's project-tab sides, book default first", () => {
+    expect(variantConfigForSlug("the-hunger")?.options.map((o) => o.value)).toEqual([
+      "Elder Mode",
+      "Rookie Mode",
+    ]);
+    expect(variantConfigForSlug("carnegie")?.options.map((o) => o.value)).toEqual([
+      "Free choice",
+      "A only",
+    ]);
+  });
+
+  it("records FlipToons' and Questline's boxes (multi, base pre-checked)", () => {
+    const flip = variantConfigForSlug("fliptoons");
+    expect(flip?.mode).toBe("multi");
+    expect(flip?.options.map((o) => o.value)).toEqual([
+      "Season 1",
+      "Season 2",
+      "Big Button",
+      "Big Button 2",
+    ]);
+    expect(defaultVariantValue("fliptoons")).toBe("Season 1");
+    expect(variantConfigForSlug("questline")?.options.map((o) => o.value)).toEqual([
+      "Base",
+      "Solstice",
+    ]);
+    expect(defaultVariantValue("questline")).toBe("Base");
+  });
 });
 
 describe("defaultVariantValue", () => {

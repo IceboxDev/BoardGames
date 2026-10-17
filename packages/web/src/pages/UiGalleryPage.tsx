@@ -48,6 +48,8 @@ import {
   Surface,
   Textarea,
   type Tone,
+  TreeView,
+  type TreeViewNode,
   useConfirm,
   WaitingIndicator,
 } from "../components/ui";
@@ -138,6 +140,8 @@ export default function UiGalleryPage() {
   const [checked, setChecked] = useState(true);
   const [search, setSearch] = useState("");
   const [rowChecked, setRowChecked] = useState(true);
+  const [treeSelected, setTreeSelected] = useState<string | null>("alapin");
+  const [treeOpen, setTreeOpen] = useState<ReadonlySet<string>>(new Set(["white", "sicilian"]));
   const [seatCount, setSeatCount] = useState(5);
   const [pickedMembers, setPickedMembers] = useState<ReadonlySet<string>>(new Set(["m2"]));
   const [rowPicked, setRowPicked] = useState(false);
@@ -525,6 +529,25 @@ export default function UiGalleryPage() {
             </div>
           </Section>
 
+          <Section title="TreeView">
+            <TreeView
+              aria-label="Opening folders"
+              className="max-w-xs"
+              nodes={GALLERY_TREE}
+              selectedId={treeSelected}
+              onSelect={setTreeSelected}
+              expanded={treeOpen}
+              onToggle={(id, open) =>
+                setTreeOpen((prev) => {
+                  const next = new Set(prev);
+                  if (open) next.add(id);
+                  else next.delete(id);
+                  return next;
+                })
+              }
+            />
+          </Section>
+
           <Section title="Stepper / MemberPicker">
             <div className="grid max-w-2xl gap-4 sm:grid-cols-2">
               <Swatch label="Stepper (sm) — bounded 2..8">
@@ -771,3 +794,27 @@ export default function UiGalleryPage() {
     </PageShell>
   );
 }
+
+const GALLERY_TREE: readonly TreeViewNode[] = [
+  {
+    id: "white",
+    label: "White",
+    trailing: (
+      <Badge tone="amber" size="xs">
+        3
+      </Badge>
+    ),
+    children: [
+      {
+        id: "sicilian",
+        label: "vs Sicilian",
+        children: [
+          { id: "alapin", label: "Alapin main line" },
+          { id: "d5", label: "2…d5 sideline" },
+        ],
+      },
+      { id: "french", label: "vs French", children: [] },
+    ],
+  },
+  { id: "black", label: "Black", children: [] },
+];

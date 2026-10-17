@@ -29,6 +29,8 @@ const PREVIEW_SLUGS = new Set([
   "sushi-go",
   "7-wonders",
   "cascadia",
+  "just-one",
+  "take-5",
 ]);
 // One copy new to an attending owner — keeps the New frame in the fixture.
 const PREVIEW_NEW_SLUGS = new Set(["cascadia"]);
@@ -41,22 +43,34 @@ const PREVIEW_REACTIONS: Record<string, ReactionAggregate> = {
   wavelength: { hype: 5, teach: 1, learn: 1, viewer: [] },
   "sushi-go": { hype: 3, teach: 1, learn: 1, viewer: [] },
   "7-wonders": { hype: 2, teach: 1, learn: 1, viewer: [] },
+  parks: { hype: 1, teach: 1, learn: 0, viewer: [] },
+  "just-one": { hype: 1, teach: 0, learn: 0, viewer: [] },
+  "take-5": { hype: 1, teach: 0, learn: 0, viewer: [] },
 };
 const PREVIEW_TOP = ["captain-sonar", "codenames", "wavelength", "sushi-go", "7-wonders"];
+// ?admin=1 — the admin's view: the reset button and the runner-up rows.
+const PREVIEW_RUNNERS_UP = ["parks", "just-one", "take-5"];
 
 // Attendees fixture for ?view=attendees / ?view=teams: a host, a guest, a
 // maybe and a long name, so the pool chips and team cards wrap on a phone.
-const PREVIEW_ATTENDEES: Attendee[] = [
-  ["Victor", { isHost: true }],
-  ["Ana"],
-  ["Benedikt Hohenzollern"],
-  ["Chloé"],
-  ["Dmitri"],
-  ["Eve", { status: "tentative" as const }],
-  ["Farah"],
-  ["Gus", { isGuest: true }],
-  ["Hana"],
-].map(([name, over]) => ({
+// Votes, a bring list, and (?admin=1) outdated votes on a few rows.
+const v = (hype: number, teach: number, learn: number) => ({ votes: { hype, teach, learn } });
+const PREVIEW_ATTENDEES: Attendee[] = (
+  [
+    [
+      "Victor",
+      { isHost: true, ...v(1, 0, 0), bringing: ["captain-sonar", "sushi-go", "7-wonders"] },
+    ],
+    ["Ana", { ...v(5, 1, 0), staleVotes: { count: 6, headcounts: [5] } }],
+    ["Benedikt Hohenzollern", { ...v(2, 0, 2), bringing: ["codenames"] }],
+    ["Chloé", { ...v(2, 0, 1), staleVotes: { count: 1, headcounts: [6] } }],
+    ["Dmitri", { ...v(3, 0, 0), staleVotes: { count: 3, headcounts: [4, 5] } }],
+    ["Eve", { status: "tentative" as const }],
+    ["Farah", v(1, 1, 0)],
+    ["Gus", { isGuest: true }],
+    ["Hana"],
+  ] as [string, Partial<Attendee>?][]
+).map(([name, over]) => ({
   userId: String(name).toLowerCase(),
   name: String(name),
   isHost: false,
@@ -67,6 +81,7 @@ const PREVIEW_ATTENDEES: Attendee[] = [
   votes: { hype: 0, teach: 0, learn: 0 },
   bringing: [],
   seat: null,
+  staleVotes: null,
   ...(typeof over === "object" ? over : {}),
 }));
 
@@ -102,6 +117,7 @@ export default function RsvpPreview() {
   // headless browser (whose window has a 500px minimum width) can still lay
   // out a true phone viewport. Media queries evaluate against the iframe.
   const frame = new URLSearchParams(window.location.search).get("frame");
+  const admin = new URLSearchParams(window.location.search).get("admin") === "1";
 
   const eyebrow = (
     <span className="inline-flex flex-wrap items-baseline gap-x-2">
@@ -184,13 +200,30 @@ export default function RsvpPreview() {
 
       <div className="flex min-h-0 flex-1 items-center justify-center">
         {view === "attendees" ? (
-          <AttendeesView date="preview" attendees={PREVIEW_ATTENDEES} topSlugs={[]} />
+          <AttendeesView
+            date="preview"
+            attendees={
+              admin ? PREVIEW_ATTENDEES : PREVIEW_ATTENDEES.map((a) => ({ ...a, staleVotes: null }))
+            }
+            topSlugs={PREVIEW_TOP}
+            ownedSlugs={["captain-sonar", "codenames", "sushi-go", "7-wonders", "wavelength"]}
+            headcount={7}
+            canKick={admin}
+            onKick={() => {}}
+            onResetVotes={admin ? () => {} : undefined}
+          />
         ) : view === "teams" ? (
           <div className="scrollbar-thin flex h-full w-full max-w-3xl flex-col overflow-y-auto px-1 py-2">
             <TeamsPanel
               date="preview"
               attendees={PREVIEW_ATTENDEES}
-              lineup={["codenames", "decrypto", "wavelength"]}
+              lineup={[
+                "hitster",
+                "one-night-ultimate-werewolf",
+                "codenames",
+                "decrypto",
+                "wavelength",
+              ]}
               balancer={previewBalancer}
               onBack={() => setView("attendees")}
             />
@@ -201,6 +234,8 @@ export default function RsvpPreview() {
             games={previewGames}
             reactions={PREVIEW_REACTIONS}
             topSlugs={PREVIEW_TOP}
+            runnerUpSlugs={admin ? PREVIEW_RUNNERS_UP : undefined}
+            onResetVotes={admin ? () => {} : undefined}
           />
         ) : (
           <GameCarousel3D

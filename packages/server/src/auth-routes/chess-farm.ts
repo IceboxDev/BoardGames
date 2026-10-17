@@ -1,8 +1,11 @@
 // Chess analysis farm — `/api/chess-farm/*`, for the worker on ws21.
 //
-//   POST /claim     lease up to `max` jobs (highest reach first)
+//   POST /claim     lease up to `max` jobs (most reached first, or deepest first)
 //   POST /complete  store a job's result (validated against the position)
 //   POST /fail      give a job back (retry) or mark it failed
+//   POST /enqueue   queue a finished position's follow-ups (for the member who asked)
+//   GET  /games     a member's games, so the worker can work out those follow-ups
+//   GET  /popular   the lichess explorer's most played moves (pads opponent replies)
 //   GET  /status    queue counts
 //
 // Not a browser surface: the worker authenticates with `Authorization:
@@ -10,12 +13,19 @@
 // the BGA ingest. Without the env var the farm is off (503).
 
 import { timingSafeEqual } from "node:crypto";
+import { BEST_MOVE_SPEC } from "@boardgames/core/games/chess/trainer/eval-policy";
 import {
   FarmClaimBodySchema,
   FarmClaimResponseSchema,
   FarmCompleteBodySchema,
+  FarmEnqueueBodySchema,
+  FarmEnqueueResponseSchema,
   FarmFailBodySchema,
+  FarmGamesPageSchema,
+  FarmGamesQuerySchema,
   FarmOkSchema,
+  FarmPopularQuerySchema,
+  FarmPopularResponseSchema,
   FarmStatusSchema,
 } from "@boardgames/core/protocol";
 import { publicApp } from "../auth/index.ts";
@@ -26,8 +36,11 @@ import {
   failJob,
   farmStats,
   LEASE_MS,
+  requestEvals,
 } from "../lib/chess-trainer/farm-store.ts";
-import { errorResponse, zJsonBody } from "../lib/error-response.ts";
+import { popularMoves } from "../lib/chess-trainer/lichess-explorer.ts";
+import { readGamesPage } from "../lib/chess-trainer/store.ts";
+import { errorResponse, zJsonBody, zQuery } from "../lib/error-response.ts";
 
 export const chessFarmRoutes = publicApp();
 
@@ -47,8 +60,8 @@ chessFarmRoutes.use("*", async (c, next) => {
 });
 
 chessFarmRoutes.post("/claim", zJsonBody(FarmClaimBodySchema), async (c) => {
-  const { worker, max } = c.req.valid("json");
-  const jobs = await claimJobs(getDb(), worker, max);
+  const { worker, max, prefer, kinds, order } = c.req.valid("json");
+  const jobs = await claimJobs(getDb(), worker, max, prefer, kinds, Date.now(), order);
   return c.json(FarmClaimResponseSchema.parse({ jobs, leaseSeconds: LEASE_MS / 1000 }));
 });
 
@@ -60,10 +73,37 @@ chessFarmRoutes.post("/complete", zJsonBody(FarmCompleteBodySchema), async (c) =
 });
 
 chessFarmRoutes.post("/fail", zJsonBody(FarmFailBodySchema), async (c) => {
-  const { worker, id, error, retry } = c.req.valid("json");
-  const r = await failJob(getDb(), worker, id, error, retry);
+  const { worker, id, error, retry, released } = c.req.valid("json");
+  const r = await failJob(getDb(), worker, id, error, retry, Date.now(), released);
   if (!r.ok) return errorResponse(c, r.status, r.message);
   return c.json(FarmOkSchema.parse({ ok: true }));
+});
+
+chessFarmRoutes.post("/enqueue", zJsonBody(FarmEnqueueBodySchema), async (c) => {
+  const { requestedBy, items } = c.req.valid("json");
+  const { results } = await requestEvals(getDb(), requestedBy, BEST_MOVE_SPEC, items);
+  const queued = items.filter((i) => !results[i.fen]).map((i) => i.fen);
+  return c.json(FarmEnqueueResponseSchema.parse({ queued, known: results }));
+});
+
+chessFarmRoutes.get("/games", zQuery(FarmGamesQuerySchema), async (c) => {
+  const { user, color, cursor } = c.req.valid("query");
+  const page = await readGamesPage(getDb(), user, color, cursor);
+  return c.json(
+    FarmGamesPageSchema.parse({
+      games: page.games.map((g) => ({ id: g.id, uci: g.uci, result: g.result })),
+      next: page.next,
+    }),
+  );
+});
+
+chessFarmRoutes.get("/popular", zQuery(FarmPopularQuerySchema), async (c) => {
+  const { fen } = c.req.valid("query");
+  try {
+    return c.json(FarmPopularResponseSchema.parse({ moves: await popularMoves(fen) }));
+  } catch (err) {
+    return errorResponse(c, 503, err instanceof Error ? err.message : "explorer unavailable");
+  }
 });
 
 chessFarmRoutes.get("/status", async (c) => {

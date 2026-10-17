@@ -36,6 +36,7 @@ import * as setupStage from "./setup-stage.ts";
 import {
   type BotcOnline,
   CHAT_LIMIT,
+  type DayTimerKind,
   EMPTY_DAY,
   HISTORY_LIMIT,
   type OnlineChoice,
@@ -54,6 +55,15 @@ const ok = (game: BotcOnline): Applied => ({ ok: true, game });
 const no = (reason: string): Applied => ({ ok: false, reason });
 
 /** Storyteller actions that must be made against the state the screen showed. */
+/** What a timer is called when the Storyteller doesn't name it. */
+const TIMER_LABEL: Record<DayTimerKind, string> = {
+  discussion: "Discussion",
+  nominations: "Nominations",
+  defence: "Accusation and defence",
+  dusk: "Dusk",
+  custom: "Timer",
+};
+
 const REV_CHECKED = new Set([
   "setup-order",
   "setup-traveller",
@@ -525,6 +535,7 @@ function applyPlayer(
           nominators: exile ? game.day.nominators : [...game.day.nominators, seat],
           nominees: [...game.day.nominees, a.nominee],
           vote,
+          ready: [],
         },
       };
       const text = exile
@@ -550,6 +561,21 @@ function applyPlayer(
         day: {
           ...game.day,
           vote: { ...vote, hands: vote.hands.map((h, i) => (i === at ? a.up : h)) },
+        },
+      });
+    }
+
+    case "ready": {
+      if (kind !== "day") return no("Nothing to be ready for right now");
+      if (isSt) return no("The Storyteller moves the day on");
+      if (!playerOf(game, seat)) return no("You aren't in the town");
+      const ready = game.day.ready ?? [];
+      if (ready.includes(seat) === a.ready) return ok(game);
+      return ok({
+        ...game,
+        day: {
+          ...game.day,
+          ready: a.ready ? [...ready, seat] : ready.filter((s) => s !== seat),
         },
       });
     }
@@ -779,7 +805,7 @@ function applyStoryteller(game: BotcOnline, a: StorytellerAction, now: number): 
       if (kind !== "day") return no("Nominations happen by day");
       return ok(
         publish(
-          { ...game, day: { ...game.day, nominationsOpen: a.open } },
+          { ...game, day: { ...game.day, nominationsOpen: a.open, ready: [] } },
           "phase",
           a.open ? "Nominations are open." : "Nominations are closed.",
           now,
@@ -919,6 +945,20 @@ function applyStoryteller(game: BotcOnline, a: StorytellerAction, now: number): 
 
     case "announce":
       return ok(publish(game, "announce", a.text, now, true));
+
+    case "timer": {
+      if (kind !== "day") return no("Timers run by day");
+      const timer =
+        a.seconds === null
+          ? null
+          : {
+              kind: a.timer,
+              label: a.label || TIMER_LABEL[a.timer],
+              startedAt: now,
+              endsAt: now + a.seconds * 1000,
+            };
+      return ok({ ...game, day: { ...game.day, timer, ready: [] } });
+    }
 
     case "chat-settings":
       return ok({

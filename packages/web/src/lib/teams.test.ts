@@ -48,6 +48,7 @@ describe("pool defaults", () => {
     votes: { hype: 0, teach: 0, learn: 0 },
     bringing: [],
     seat: null,
+    staleVotes: null,
     ...over,
   });
 

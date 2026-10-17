@@ -19,7 +19,9 @@ import { createSyncStoragePersister } from "@tanstack/query-sync-storage-persist
 //     (and friends), AvailableGames `playerWindow`/`viewerCanReact`, profile
 //     `nextNight.isPrivate`; a rehydrated pre-v8 lock has no `seats` object
 //     for the cell to read.
-const BUSTER = "v8";
+// v9: the chess trainer's queries stopped being persisted; dropping the old
+//     snapshot clears stale trees a reload would otherwise rehydrate once.
+const BUSTER = "v9";
 
 export const queryPersister =
   typeof window === "undefined"

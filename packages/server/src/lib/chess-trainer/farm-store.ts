@@ -5,8 +5,10 @@
 import { parseFen, positionKey } from "@boardgames/core/games/chess/engine/fen";
 import { legalMoves } from "@boardgames/core/games/chess/engine/movegen";
 import { moveToUci } from "@boardgames/core/games/chess/engine/uci";
+import { finalDepth, pickBest } from "@boardgames/core/games/chess/trainer/eval-policy";
 import {
   type EvalKind,
+  FARM_NODE_LIMIT_PREFIX,
   type FarmJob,
   type PositionEval,
   PositionEvalSchema,
@@ -16,11 +18,11 @@ import { z } from "zod";
 import { jsonColumn, parseRows } from "../db-rows.ts";
 
 /**
- * A claim this old (ms) may be taken by another worker. A trunk position with
- * its candidates can search for most of an hour; a restarted worker takes its
- * own running jobs back at once.
+ * A claim this old (ms) may be taken by another worker. A single-thread
+ * depth-50 search has no node limit and can run for hours; a restarted worker
+ * takes its own running jobs back at once.
  */
-export const LEASE_MS = 3 * 3600_000;
+export const LEASE_MS = 24 * 3600_000;
 /** Jobs failing this often stay failed. */
 const MAX_ATTEMPTS = 3;
 const WORKER_SEEN_MS = 10 * 60_000;
@@ -44,6 +46,8 @@ export interface EvalRequest {
   readonly fen: string;
   readonly kind: EvalKind;
   readonly reach: number;
+  /** 0 on a game line; 1–3 a line end's extension (`EvalStageSchema`). */
+  readonly stage?: number;
 }
 
 /**
@@ -53,7 +57,7 @@ export interface EvalRequest {
  */
 export async function requestEvals(
   db: Client,
-  userId: string,
+  userId: string | null,
   spec: string,
   items: readonly EvalRequest[],
 ): Promise<{ results: Record<string, PositionEval>; queued: number }> {
@@ -78,25 +82,48 @@ export async function requestEvals(
   }
 
   const missing: typeof keyed = [];
+  // Stored but short of its final depth (an older farm's capped search, an older
+  // tier): not an answer — searched again, and replaced when the full one lands.
+  const shallow: typeof keyed = [];
+  const known: typeof keyed = [];
   for (const item of keyed) {
     const hit = found.get(`${item.key}|${item.kind}`);
-    if (hit) results[item.fen] = hit;
-    else missing.push(item);
+    if (hit && hit.depth >= finalDepth(item.kind, item.reach)) {
+      results[item.fen] = hit;
+      if ((item.stage ?? 0) === 0) known.push(item);
+    } else {
+      missing.push(item);
+      if (hit) shallow.push(item);
+    }
   }
-  if (missing.length > 0) {
-    const statements: InStatement[] = missing.map((m) => ({
-      sql: `INSERT INTO chess_eval_jobs (fen_key, spec, kind, fen, reach, requested_by)
-            VALUES (?, ?, ?, ?, ?, ?)
-            ON CONFLICT (fen_key, spec, kind) DO UPDATE SET
-              reach = MAX(chess_eval_jobs.reach, excluded.reach),
-              status = CASE
-                WHEN chess_eval_jobs.status = 'failed' AND chess_eval_jobs.attempts < ${MAX_ATTEMPTS}
-                  THEN 'queued' ELSE chess_eval_jobs.status END,
-              updated_at = datetime('now')`,
-      args: [m.key, spec, m.kind, m.fen, m.reach, userId],
-    }));
-    await db.batch(statements, "write");
+  const statements: InStatement[] = missing.map((m) => ({
+    sql: `INSERT INTO chess_eval_jobs (fen_key, spec, kind, fen, reach, requested_by, stage)
+          VALUES (?, ?, ?, ?, ?, ?, ?)
+          ON CONFLICT (fen_key, spec, kind) DO UPDATE SET
+            reach = MAX(chess_eval_jobs.reach, excluded.reach),
+            stage = MIN(chess_eval_jobs.stage, excluded.stage),
+            status = CASE
+              WHEN chess_eval_jobs.status = 'failed' AND chess_eval_jobs.attempts < ${MAX_ATTEMPTS}
+                THEN 'queued' ELSE chess_eval_jobs.status END,
+            updated_at = datetime('now')`,
+    args: [m.key, spec, m.kind, m.fen, m.reach, userId, m.stage ?? 0],
+  }));
+  for (const m of known) {
+    // Now on one of your games' lines: its follow-ups are a game line's.
+    statements.push({
+      sql: "UPDATE chess_eval_jobs SET stage = 0 WHERE fen_key = ? AND spec = ? AND kind = ? AND stage > 0",
+      args: [m.key, spec, m.kind],
+    });
   }
+  for (const m of shallow) {
+    statements.push({
+      sql: `UPDATE chess_eval_jobs SET status = 'queued', attempts = 0, error = NULL,
+              worker = NULL, claimed_at_ms = NULL, updated_at = datetime('now')
+            WHERE fen_key = ? AND spec = ? AND kind = ? AND status IN ('done', 'failed')`,
+      args: [m.key, spec, m.kind],
+    });
+  }
+  if (statements.length > 0) await db.batch(statements, "write");
   return { results, queued: missing.length };
 }
 
@@ -147,32 +174,115 @@ const JobRowSchema = z.object({
   reach: z.number(),
   spec: z.string(),
   attempts: z.number(),
+  requested_by: z.string().nullable(),
+  stage: z.number(),
 });
 
-/** Lease up to `max` jobs to `worker`: highest reach first, oldest first. */
+/** Plies from the start, from a FEN's side to move and move number. */
+function plyOf(fen: string): number {
+  const [, side, , , , full] = fen.split(" ");
+  return ((Number(full) || 1) - 1) * 2 + (side === "b" ? 1 : 0);
+}
+
+const CandidateRowSchema = z.object({
+  id: z.number(),
+  fen_key: z.string(),
+  fen: z.string(),
+  reach: z.number(),
+});
+
+/**
+ * Lease up to `max` jobs of `kinds` to `worker`. `reach` order: highest reach
+ * first, then the `prefer`red positions (the worker's follow-ups, whose parent
+ * is still in its hash) in their order, then oldest first — the warm hash saves
+ * ~5–20 %, too little to spend hours on a one-game line while a main line
+ * waits. `deep` order: the preferred positions first, then the deepest waiting
+ * position (most reach among equals) — a worker that finishes lines.
+ */
 export async function claimJobs(
   db: Client,
   worker: string,
   max: number,
+  prefer: readonly string[] = [],
+  kinds: readonly EvalKind[] = ["user", "opp"],
   now = Date.now(),
+  order: "reach" | "deep" = "reach",
 ): Promise<FarmJob[]> {
   await touchWorker(db, worker, now);
+  const keys = prefer.flatMap((fen) => {
+    const key = fenKey(fen);
+    return key ? [key] : [];
+  });
+  const rank = (key: string) => {
+    const i = keys.indexOf(key);
+    return i < 0 ? keys.length : i;
+  };
+  // Never a job this worker already ran out of nodes on (another worker may finish it).
+  const claimable = `kind IN (${kinds.map(() => "?").join(", ")})
+              AND (status = 'queued'
+                OR (status = 'running' AND (claimed_at_ms < ? OR worker = ?)))
+              AND (error IS NULL OR error NOT LIKE ?)`;
+  const claimableArgs = [...kinds, now - LEASE_MS, worker, `${FARM_NODE_LIMIT_PREFIX}${worker}:%`];
+
+  let pick: { sql: string; args: (string | number)[] };
+  if (order === "deep") {
+    const res = await db.execute({
+      sql: `SELECT id, fen_key, fen, reach FROM chess_eval_jobs WHERE ${claimable}`,
+      args: claimableArgs,
+    });
+    const ids = parseRows(CandidateRowSchema, res.rows, "chess_eval_jobs.candidates")
+      .sort(
+        (a, b) =>
+          rank(a.fen_key) - rank(b.fen_key) ||
+          plyOf(b.fen) - plyOf(a.fen) ||
+          b.reach - a.reach ||
+          a.id - b.id,
+      )
+      .slice(0, max)
+      .map((r) => r.id);
+    if (ids.length === 0) return [];
+    pick = { sql: ids.map(() => "?").join(", "), args: ids };
+  } else {
+    const preferOrder =
+      keys.length > 0
+        ? `CASE fen_key ${keys.map((_, i) => `WHEN ? THEN ${i}`).join(" ")} ELSE ${keys.length} END, `
+        : "";
+    pick = {
+      sql: `SELECT id FROM chess_eval_jobs WHERE ${claimable}
+            ORDER BY reach DESC, ${preferOrder}id LIMIT ?`,
+      args: [...claimableArgs, ...keys, max],
+    };
+  }
+  // The claimable test again on the UPDATE: a `deep` pick may have been leased meanwhile.
   const res = await db.execute({
     sql: `UPDATE chess_eval_jobs
           SET status = 'running', worker = ?, claimed_at_ms = ?, attempts = attempts + 1,
               updated_at = datetime('now')
-          WHERE id IN (
-            SELECT id FROM chess_eval_jobs
-            WHERE status = 'queued'
-               OR (status = 'running' AND (claimed_at_ms < ? OR worker = ?))
-            ORDER BY reach DESC, id
-            LIMIT ?)
-          RETURNING id, fen, kind, reach, spec, attempts`,
-    args: [worker, now, now - LEASE_MS, worker, max],
+          WHERE id IN (${pick.sql}) AND ${claimable}
+          RETURNING id, fen_key, fen, kind, reach, spec, attempts, requested_by, stage`,
+    args: [worker, now, ...pick.args, ...claimableArgs],
   });
-  return parseRows(JobRowSchema, res.rows, "chess_eval_jobs.claim").sort(
-    (a, b) => b.reach - a.reach || a.id - b.id,
+  const rows = parseRows(
+    JobRowSchema.extend({ fen_key: z.string() }),
+    res.rows,
+    "chess_eval_jobs.claim",
   );
+  const byOrder =
+    order === "deep"
+      ? (a: (typeof rows)[number], b: (typeof rows)[number]) =>
+          rank(a.fen_key) - rank(b.fen_key) || plyOf(b.fen) - plyOf(a.fen) || b.reach - a.reach
+      : (a: (typeof rows)[number], b: (typeof rows)[number]) =>
+          b.reach - a.reach || rank(a.fen_key) - rank(b.fen_key) || a.id - b.id;
+  return rows.sort(byOrder).map((r) => ({
+    id: r.id,
+    fen: r.fen,
+    kind: r.kind,
+    reach: r.reach,
+    spec: r.spec,
+    attempts: r.attempts,
+    requestedBy: r.requested_by,
+    stage: r.stage,
+  }));
 }
 
 export type CompleteResult = { ok: true } | { ok: false; status: 404 | 409 | 422; message: string };
@@ -195,16 +305,31 @@ export function resultProblem(fen: string, result: PositionEval): string | null 
 }
 
 /** Store a finished job's result (the deeper one wins) and close the job. */
+/**
+ * Your move, decided here from what was searched — Stockfish's highest score,
+ * Lc0 only between exactly equal ones (`pickBest`) — so every result follows
+ * the current rule whichever worker version sent it.
+ */
+export function decide(result: PositionEval): PositionEval {
+  if (result.kind !== "user" || result.lines.length === 0) return result;
+  const pick = pickBest(
+    result.lines.map((l) => ({ uci: l.uci, cp: l.cp, mate: l.mate })),
+    result.lc0 ?? [],
+  );
+  return { ...result, best: pick.best, ties: [...pick.ties], contested: pick.contested };
+}
+
 export async function completeJob(
   db: Client,
   worker: string,
   id: number,
-  result: PositionEval,
+  sent: PositionEval,
   now = Date.now(),
 ): Promise<CompleteResult> {
+  const result = decide(sent);
   await touchWorker(db, worker, now);
   const res = await db.execute({
-    sql: "SELECT fen_key, fen, kind, spec, status, worker FROM chess_eval_jobs WHERE id = ?",
+    sql: "SELECT fen_key, fen, kind, spec, status, worker, reach FROM chess_eval_jobs WHERE id = ?",
     args: [id],
   });
   const job = res.rows[0];
@@ -217,6 +342,10 @@ export async function completeJob(
   }
   const problem = resultProblem(String(job.fen), result);
   if (problem) return { ok: false, status: 422, message: problem };
+  const needs = finalDepth(result.kind, Number(job.reach));
+  if (result.depth < needs) {
+    return { ok: false, status: 422, message: `Depth ${result.depth} is short of ${needs}` };
+  }
   await db.batch(
     [
       {
@@ -257,14 +386,22 @@ export async function failJob(
   error: string,
   retry: boolean,
   now = Date.now(),
+  released = false,
 ): Promise<CompleteResult> {
   await touchWorker(db, worker, now);
   const res = await db.execute({
-    sql: `UPDATE chess_eval_jobs SET
+    sql: released
+      ? `UPDATE chess_eval_jobs SET
+            status = 'queued', attempts = MAX(0, attempts - 1), error = ?,
+            worker = NULL, claimed_at_ms = NULL, updated_at = datetime('now')
+          WHERE id = ? AND status = 'running' AND worker = ?`
+      : `UPDATE chess_eval_jobs SET
             status = CASE WHEN ? AND attempts < ${MAX_ATTEMPTS} THEN 'queued' ELSE 'failed' END,
             error = ?, worker = NULL, claimed_at_ms = NULL, updated_at = datetime('now')
           WHERE id = ? AND status = 'running' AND worker = ?`,
-    args: [retry ? 1 : 0, error.slice(0, 500), id, worker],
+    args: released
+      ? [error.slice(0, 500), id, worker]
+      : [retry ? 1 : 0, error.slice(0, 500), id, worker],
   });
   if (res.rowsAffected === 0) {
     return { ok: false, status: 409, message: "The job isn't leased to this worker" };

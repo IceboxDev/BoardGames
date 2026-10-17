@@ -284,6 +284,7 @@
   --layout-nav-h: 3rem;
   --layout-board-rail-w: 16rem;
   --layout-history-rail-w: 18rem;
+  --layout-explorer-rail-w: 25rem;
   /* The fan tray is the SAME height in every game and every phase: the
      card fan's 160×240 cards set it (parks' player grid and the D&D tray
      match). Content that is shorter centres inside it; nothing grows it. */
@@ -374,6 +375,9 @@
 }
 @utility w-history-rail {
   width: var(--layout-history-rail-w);
+}
+@utility w-explorer-rail {
+  width: var(--layout-explorer-rail-w);
 }
 @utility h-fan {
   height: var(--layout-fan-h);

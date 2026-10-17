@@ -1,8 +1,15 @@
 import type { CodenamesPlayerView, Team } from "@boardgames/core/games/codenames/types";
 import { BotIcon, UserIcon } from "../../../components/icons";
-import { MicroLabel } from "../../../components/ui";
+import { Avatar, MicroLabel } from "../../../components/ui";
 import { cn } from "../../../lib/cn";
-import { hasHumanTeammate, seatLabel, TEAM_BG, TEAM_TEXT, teamName } from "../logic/labels";
+import {
+  hasHumanTeammate,
+  seatLabel,
+  TEAM_BG,
+  TEAM_RING,
+  TEAM_TEXT,
+  teamName,
+} from "../logic/labels";
 import { TeamChat } from "./TeamChat";
 
 // The left rail: each team's agents still hidden (as a row of agent pips),
@@ -71,17 +78,20 @@ function SeatStatus({
 export function TeamsPanel({
   view,
   names,
+  images,
   onChat,
 }: {
   view: CodenamesPlayerView;
   names: readonly (string | null)[];
+  /** People's profile pictures by seat; null = the role icon. */
+  images: readonly (string | null)[];
   onChat: (text: string) => void;
 }) {
   const chat = view.team !== null && view.phase !== "over" && hasHumanTeammate(view);
   return (
     <div className="flex min-h-0 flex-col gap-3">
       {([view.startingTeam, (1 - view.startingTeam) as Team] as const).map((team) => (
-        <TeamCard key={team} team={team} view={view} names={names} />
+        <TeamCard key={team} team={team} view={view} names={names} images={images} />
       ))}
       {chat && view.team !== null && (
         <div className="flex min-h-0 flex-1 flex-col gap-1.5">
@@ -105,10 +115,12 @@ function TeamCard({
   team,
   view,
   names,
+  images,
 }: {
   team: Team;
   view: CodenamesPlayerView;
   names: readonly (string | null)[];
+  images: readonly (string | null)[];
 }) {
   const active = view.phase !== "over" && view.currentTeam === team;
   const total = team === view.startingTeam ? 9 : 8;
@@ -159,18 +171,34 @@ function TeamCard({
           .filter((s) => s.team === team)
           .map((s) => (
             <li key={s.seat} className="flex items-center gap-2 text-xs">
-              <span
-                className={cn(
-                  "flex h-5 w-5 shrink-0 items-center justify-center rounded-full",
-                  s.role === "spymaster"
-                    ? cn(TEAM_BG[team], "text-cn-cover-ink")
-                    : "bg-fill-strong text-fg-secondary",
-                  s.seat === view.seat && "ring-2 ring-accent-400",
-                )}
-                title={s.seat === view.seat ? "You" : undefined}
-              >
-                {s.ai ? <BotIcon className="h-3 w-3" /> : <UserIcon className="h-3 w-3" />}
-              </span>
+              {!s.ai && images[s.seat] ? (
+                // A person's picture; the ring keeps the role circle's code —
+                // yours in the accent, a spymaster's in the team colour.
+                <Avatar
+                  name={seatLabel(s.seat, names)}
+                  image={images[s.seat]}
+                  size="xs"
+                  className={cn(
+                    "h-5 w-5",
+                    s.seat === view.seat
+                      ? "ring-2 ring-accent-400"
+                      : s.role === "spymaster" && cn("ring-2", TEAM_RING[team]),
+                  )}
+                />
+              ) : (
+                <span
+                  className={cn(
+                    "flex h-5 w-5 shrink-0 items-center justify-center rounded-full",
+                    s.role === "spymaster"
+                      ? cn(TEAM_BG[team], "text-cn-cover-ink")
+                      : "bg-fill-strong text-fg-secondary",
+                    s.seat === view.seat && "ring-2 ring-accent-400",
+                  )}
+                  title={s.seat === view.seat ? "You" : undefined}
+                >
+                  {s.ai ? <BotIcon className="h-3 w-3" /> : <UserIcon className="h-3 w-3" />}
+                </span>
+              )}
               <span
                 className={cn(
                   "min-w-0 flex-1 truncate",

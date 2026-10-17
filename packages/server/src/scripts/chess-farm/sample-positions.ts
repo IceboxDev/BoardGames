@@ -11,6 +11,7 @@
  * Reads the staging database (`.env`).
  */
 import "dotenv/config";
+import { applyMove } from "@boardgames/core/games/chess/engine/apply";
 import { parseFen, positionKey } from "@boardgames/core/games/chess/engine/fen";
 import { legalMoves } from "@boardgames/core/games/chess/engine/movegen";
 import { moveToUci } from "@boardgames/core/games/chess/engine/uci";
@@ -46,6 +47,8 @@ async function main() {
     p: P,
     games: { w: 0, b: 0 },
     workload: { user: { trunk: 0, main: 0, rare: 0, leaf: 0 }, opp: 0 },
+    /** Deviation leaves: distinct positions right after your own move left the tree. */
+    leaves: { w: 0, b: 0 },
     positions: [] as {
       fen: string;
       kind: "user" | "opp";
@@ -97,6 +100,20 @@ async function main() {
         popularMoves: async () => [],
       },
     );
+    const leafKeys = new Set<string>();
+    for (const node of Object.values(tree.nodes)) {
+      if (node.side !== "user" || !node.deviations) continue;
+      const pos = parseFen(node.fen);
+      const legal = legalMoves(pos);
+      for (const d of node.deviations) {
+        const move = legal.find((m) => moveToUci(m) === d.uci);
+        if (!move) continue;
+        const next = applyMove(pos, move);
+        const key = positionKey(next);
+        if (!tree.nodes[key] && legalMoves(next).length > 0) leafKeys.add(key);
+      }
+    }
+    out.leaves[color] = Math.round(leafKeys.size * SCALE);
     const byTier = new Map<string, typeof out.positions>();
     for (const node of Object.values(tree.nodes)) {
       if (!node.engine) continue; // no engine was needed here

@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { type RoomSlot, roomSeating } from "./room.ts";
+import { type RoomSlot, RoomSlotSchema, roomSeating } from "./room.ts";
 
 const human: RoomSlot = { kind: "human", ready: true, connected: true };
 const ai: RoomSlot = { kind: "ai", aiStrategy: "x", ready: true, connected: false };
@@ -17,5 +17,22 @@ describe("roomSeating", () => {
   it("follows the host's seat swaps", () => {
     expect(roomSeating([human, human], [1, 0])).toEqual([1, 0]);
     expect(roomSeating([human, open, ai], [2, 1, 0])).toEqual([2, 0]);
+  });
+});
+
+describe("RoomSlotSchema", () => {
+  it("carries a person's picture only as the server's versioned avatar URL", () => {
+    const slot = { ...human, avatarUrl: "/api/avatars/user-1?v=abcDEF012_-9" };
+    expect(RoomSlotSchema.parse(slot)).toEqual(slot);
+    for (const avatarUrl of [
+      "https://evil.example/x.png",
+      "/api/avatars/user-1",
+      "/api/avatars/a/b?v=1",
+      "javascript:alert(1)",
+    ]) {
+      const result = RoomSlotSchema.safeParse({ ...human, avatarUrl });
+      expect(result.success).toBe(false);
+      expect(result.error?.issues[0]?.path).toEqual(["avatarUrl"]);
+    }
   });
 });

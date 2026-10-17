@@ -27,7 +27,14 @@ import { PIECE_URL, pieceName } from "./pieces";
 export interface BoardArrow {
   readonly from: string;
   readonly to: string;
-  readonly tone: "best" | "user" | "alt";
+  /**
+   * `best` / `alt` / `user` (game analysis, drawn arrows); `pick` / `engine` /
+   * `popular` — the opening trainer's three kinds of move, the same colours as
+   * its explorer dots.
+   */
+  readonly tone: "best" | "user" | "alt" | "pick" | "engine" | "popular";
+  /** The one that matters most (the trainer: the engine's best) — drawn bolder and solid. */
+  readonly emphasis?: boolean;
 }
 
 export interface ChessBoardProps {
@@ -50,6 +57,12 @@ export interface ChessBoardProps {
   readonly dropKey?: string | null;
   readonly onDropKeyChange?: (key: string | null) => void;
   readonly bughouse?: boolean;
+  /**
+   * Keyboard play (a square cursor, Enter to pick up and put down). Off for
+   * boards whose page owns the keys — the opening trainer's ← / → step through
+   * the line and nothing else.
+   */
+  readonly keyboard?: boolean;
   readonly "aria-label"?: string;
   readonly className?: string;
 }
@@ -121,6 +134,8 @@ interface Drag {
   readonly x: number;
   readonly y: number;
   readonly moved: boolean;
+  /** Pressed on the piece that was already selected: let go without moving to deselect it. */
+  readonly reselect: boolean;
 }
 
 interface Promotion {
@@ -152,12 +167,12 @@ export default function ChessBoard({
   dropKey = null,
   onDropKeyChange,
   bughouse = false,
+  keyboard = true,
   "aria-label": ariaLabel = "Chess board",
   className,
 }: ChessBoardProps) {
   const reduceMotion = useReducedMotion();
   const checkId = useId();
-  const arrowId = useId();
   const position = useMemo(() => safePosition(fen, bughouse), [fen, bughouse]);
   const board = position?.board ?? [];
 
@@ -285,14 +300,19 @@ export default function ChessBoard({
     setUserArrows([]);
     const piece = board[sq];
     const wasSelected = from;
-    press(sq);
+    // The selected piece again: keep it while it might be dragged; a plain
+    // click lets go of it (on pointer-up).
+    const reselect = !dropKey && selected === squareName(sq);
+    if (!reselect) press(sq);
     if (
       piece &&
       selectable(sq) &&
       !(wasSelected && movesBetween(active, wasSelected, squareName(sq)).length)
     ) {
       e.currentTarget.setPointerCapture(e.pointerId);
-      setDrag({ from: squareName(sq), piece, x: p.x, y: p.y, moved: false });
+      setDrag({ from: squareName(sq), piece, x: p.x, y: p.y, moved: false, reselect });
+    } else if (reselect) {
+      clearSelection();
     }
   };
 
@@ -322,6 +342,8 @@ export default function ChessBoard({
     }
     if (drag?.moved) {
       if (sq !== null && squareName(sq) !== drag.from && !tryMove(drag.from, sq)) clearSelection();
+    } else if (drag?.reselect) {
+      clearSelection();
     }
     setDrag(null);
   };
@@ -351,6 +373,7 @@ export default function ChessBoard({
       case "Enter":
       case " ":
         if (promotion) commit(promotion.options[0] ?? "");
+        else if (!dropKey && selected === squareName(cursor)) clearSelection();
         else press(cursor);
         break;
       case "Escape":
@@ -384,7 +407,9 @@ export default function ChessBoard({
     ...arrows.flatMap((a) => {
       const f = parseSquare(a.from);
       const t = parseSquare(a.to);
-      return f === null || t === null ? [] : [{ from: f, to: t, tone: a.tone }];
+      return f === null || t === null
+        ? []
+        : [{ from: f, to: t, tone: a.tone, emphasis: a.emphasis }];
     }),
     ...userArrows.map((a) => ({ ...a, tone: "user" as const })),
   ];
@@ -395,10 +420,14 @@ export default function ChessBoard({
       aria-label={ariaLabel}
       className={className}
       svgProps={{
-        tabIndex: 0,
-        onKeyDown,
-        onFocus: () => setFocused(true),
-        onBlur: () => setFocused(false),
+        ...(keyboard
+          ? {
+              tabIndex: 0,
+              onKeyDown,
+              onFocus: () => setFocused(true),
+              onBlur: () => setFocused(false),
+            }
+          : {}),
         onContextMenu: (e) => e.preventDefault(),
         style: { touchAction: "none", outline: "none", userSelect: "none" },
       }}
@@ -504,10 +533,28 @@ export default function ChessBoard({
             <stop offset="70%" stopColor={BOARD_COLORS.check} stopOpacity={0.4} />
             <stop offset="100%" stopColor={BOARD_COLORS.check} stopOpacity={0} />
           </radialGradient>
-          <marker id={arrowId} markerWidth="4" markerHeight="4" refX="2.2" refY="2" orient="auto">
-            <path d="M0,0 L4,2 L0,4 Z" fill="context-stroke" />
-          </marker>
         </defs>
+      </BoardLayer>
+
+      <BoardLayer name="arrows">
+        {allArrows.map((a) => {
+          const strong = "emphasis" in a && a.emphasis === true;
+          // Several arrows with one marked: the marked one bold and solid, the rest lighter.
+          const anyStrong = allArrows.some((x) => "emphasis" in x && x.emphasis === true);
+          return (
+            <path
+              key={`${a.from}-${a.to}-${a.tone}`}
+              d={arrowPath(
+                center(a.from, orientation),
+                center(a.to, orientation),
+                strong ? 1.3 : 1,
+              )}
+              fill={ARROW_COLOR[a.tone]}
+              opacity={a.tone === "alt" ? 0.6 : strong ? 0.95 : anyStrong ? 0.6 : 0.85}
+              pointerEvents="none"
+            />
+          );
+        })}
       </BoardLayer>
 
       <BoardLayer name="pieces">
@@ -551,35 +598,6 @@ export default function ChessBoard({
             />
           ) : (
             <circle key={uci} cx={c.x} cy={c.y} r={SQUARE * 0.15} fill={BOARD_COLORS.legalDot} />
-          );
-        })}
-      </BoardLayer>
-
-      <BoardLayer name="arrows">
-        {allArrows.map((a) => {
-          const s = center(a.from, orientation);
-          const t = center(a.to, orientation);
-          const len = Math.hypot(t.x - s.x, t.y - s.y);
-          const end = { x: t.x - ((t.x - s.x) / len) * 22, y: t.y - ((t.y - s.y) / len) * 22 };
-          const color =
-            a.tone === "best"
-              ? BOARD_COLORS.arrowBest
-              : a.tone === "alt"
-                ? BOARD_COLORS.arrowAlt
-                : BOARD_COLORS.arrowUser;
-          return (
-            <line
-              key={`${a.from}-${a.to}-${a.tone}`}
-              x1={s.x}
-              y1={s.y}
-              x2={end.x}
-              y2={end.y}
-              stroke={color}
-              strokeWidth={16}
-              strokeLinecap="round"
-              markerEnd={`url(#${arrowId})`}
-              pointerEvents="none"
-            />
           );
         })}
       </BoardLayer>
@@ -703,4 +721,58 @@ function PromotionPicker({
       })}
     </g>
   );
+}
+
+const ARROW_COLOR: Record<BoardArrow["tone"], string> = {
+  best: BOARD_COLORS.arrowBest,
+  alt: BOARD_COLORS.arrowAlt,
+  user: BOARD_COLORS.arrowUser,
+  pick: BOARD_COLORS.arrowPick,
+  engine: BOARD_COLORS.arrowEngine,
+  popular: BOARD_COLORS.arrowPopular,
+};
+
+// An arrow as one closed outline (shaft and head together), so a translucent
+// fill never overlaps itself. Arrows are drawn UNDER the pieces: the shaft
+// starts at the moving piece's centre and runs out from beneath it. In square
+// units the shaft is 0.16 wide and the head — 0.62 wide, 0.5 long — big enough
+// to read at a glance, its tip just inside the target square.
+const SHAFT_HALF = SQUARE * 0.08;
+const HEAD_HALF = SQUARE * 0.31;
+const HEAD_LEN = SQUARE * 0.5;
+const START_GAP = 0;
+const TIP_GAP = SQUARE * 0.06;
+
+function arrowPath(
+  from: { x: number; y: number },
+  to: { x: number; y: number },
+  /** Width scale (the emphasised arrow is wider; its length is the same). */
+  weight = 1,
+): string {
+  const dx = to.x - from.x;
+  const dy = to.y - from.y;
+  const len = Math.hypot(dx, dy);
+  if (len === 0) return "";
+  const ux = dx / len;
+  const uy = dy / len;
+  // Perpendicular.
+  const px = -uy;
+  const py = ux;
+  const shaft = SHAFT_HALF * weight;
+  const head = HEAD_HALF * weight;
+  const at = (along: number, side: number) =>
+    `${(from.x + ux * along + px * side).toFixed(1)},${(from.y + uy * along + py * side).toFixed(1)}`;
+  const tip = len - TIP_GAP;
+  const start = Math.min(START_GAP, tip - HEAD_LEN);
+  const neck = tip - HEAD_LEN;
+  return [
+    `M${at(start, shaft)}`,
+    `L${at(neck, shaft)}`,
+    `L${at(neck, head)}`,
+    `L${at(tip, 0)}`,
+    `L${at(neck, -head)}`,
+    `L${at(neck, -shaft)}`,
+    `L${at(start, -shaft)}`,
+    "Z",
+  ].join(" ");
 }

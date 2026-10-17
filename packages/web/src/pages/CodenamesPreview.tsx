@@ -287,7 +287,14 @@ export default function CodenamesPreview() {
     );
   }
   const scene = params.get("scene") ?? "guess";
-  const names = [null, null, null, null, null, null];
+  // The team scene is a room: its two people have names and pictures.
+  const room = scene === "team";
+  const names = room
+    ? [null, null, "Mantas", null, "Jaqueline", null]
+    : [null, null, null, null, null, null];
+  const images = room
+    ? [null, null, "/avatars/mantas.webp", null, "/avatars/jaqueline.webp", null]
+    : names;
 
   if (scene.startsWith("duet")) {
     const { state, phase, seat } = duetScene(scene);
@@ -318,7 +325,13 @@ export default function CodenamesPreview() {
           ]}
         />
       ) : (
-        <CodenamesBoard view={view} names={names} onAction={() => {}} error={null} />
+        <CodenamesBoard
+          view={view}
+          names={names}
+          images={images}
+          onAction={() => {}}
+          error={null}
+        />
       )}
     </div>
   );

@@ -58,6 +58,7 @@ export {
   type SurfaceVariant,
 } from "./Surface";
 export { Textarea } from "./Textarea";
+export { TreeView, type TreeViewNode } from "./TreeView";
 export {
   type CoreTone,
   TONE_ACTIVE,
