@@ -747,6 +747,9 @@
     "slug": "fliptoons",
     "bggId": 449185,
     "accentHex": "#a85124",
+    "bggOverrides": {
+      "maxPlayers": 8
+    },
     "skills": {
       "int": 40,
       "pln": 50,
@@ -989,6 +992,9 @@
     "slug": "just-one",
     "bggId": 254640,
     "accentHex": "#b95213",
+    "bggOverrides": {
+      "maxPlayers": 8
+    },
     "skills": {
       "int": 15,
       "pln": 5,
@@ -1343,6 +1349,9 @@
     "slug": "perudo",
     "bggId": 45,
     "accentHex": "#af451d",
+    "bggOverrides": {
+      "maxPlayers": "infinity"
+    },
     "skills": {
       "int": 40,
       "pln": 5,
@@ -1682,12 +1691,18 @@
     "bggId": 63268,
     "accentHex": "#b81a14",
     "skills": {
-      "int": 5,
+      "int": 0,
       "pln": 0,
       "per": 70,
       "soph": 0,
       "soc": 0,
-      "dex": 25
+      "dex": 30
+    },
+    "family": {
+      "id": "dobble",
+      "canonical": true,
+      "name": "Dobble",
+      "variant": "Super Mario"
     },
     "displayTitle": "Spot It! Super Mario"
   },
@@ -1938,6 +1953,9 @@
     "bggId": 2952,
     "accentHex": "#ea702d",
     "displayTitle": "Trivial Pursuit",
+    "bggOverrides": {
+      "maxPlayers": "infinity"
+    },
     "skills": {
       "int": 5,
       "pln": 0,
@@ -2094,6 +2112,9 @@
     "slug": "war-with-the-evil-power-master",
     "bggId": 278297,
     "accentHex": "#247fa8",
+    "bggOverrides": {
+      "maxPlayers": "infinity"
+    },
     "skills": {
       "int": 25,
       "pln": 10,
@@ -2183,6 +2204,171 @@
       "per": 10,
       "soph": 0,
       "soc": 5,
+      "dex": 0
+    }
+  },
+  {
+    "slug": "casino-night",
+    "bggId": 0,
+    "accentHex": "#1f7a4a",
+    "skills": {
+      "int": 45,
+      "pln": 15,
+      "per": 5,
+      "soph": 0,
+      "soc": 35,
+      "dex": 0
+    },
+    "displayTitle": "Casino Night"
+  },
+  {
+    "slug": "celestia",
+    "bggId": 175117,
+    "accentHex": "#42d7b7",
+    "skills": {
+      "int": 25,
+      "pln": 20,
+      "per": 10,
+      "soph": 0,
+      "soc": 45,
+      "dex": 0
+    }
+  },
+  {
+    "slug": "clue",
+    "bggId": 374342,
+    "accentHex": "#245fa8",
+    "skills": {
+      "int": 50,
+      "pln": 15,
+      "per": 20,
+      "soph": 0,
+      "soc": 15,
+      "dex": 0
+    },
+    "family": {
+      "id": "clue",
+      "canonical": true,
+      "name": "Clue",
+      "variant": "Classic"
+    },
+    "displayTitle": "Clue"
+  },
+  {
+    "slug": "clue-conspiracy",
+    "bggId": 391824,
+    "accentHex": "#2460a8",
+    "skills": {
+      "int": 20,
+      "pln": 10,
+      "per": 10,
+      "soph": 5,
+      "soc": 55,
+      "dex": 0
+    },
+    "family": {
+      "id": "clue",
+      "variant": "Conspiracy"
+    },
+    "displayTitle": "Clue Conspiracy"
+  },
+  {
+    "slug": "concept",
+    "bggId": 147151,
+    "accentHex": "#e0bd6c",
+    "skills": {
+      "int": 20,
+      "pln": 5,
+      "per": 10,
+      "soph": 55,
+      "soc": 10,
+      "dex": 0
+    }
+  },
+  {
+    "slug": "dobble-connect",
+    "bggId": 381429,
+    "accentHex": "#fbe11d",
+    "skills": {
+      "int": 0,
+      "pln": 20,
+      "per": 55,
+      "soph": 0,
+      "soc": 0,
+      "dex": 25
+    },
+    "family": {
+      "id": "dobble",
+      "variant": "Connect"
+    },
+    "displayTitle": "Dobble Connect"
+  },
+  {
+    "slug": "gloomhaven-buttons-and-bugs",
+    "bggId": 393672,
+    "accentHex": "#f0c05c",
+    "skills": {
+      "int": 45,
+      "pln": 55,
+      "per": 0,
+      "soph": 0,
+      "soc": 0,
+      "dex": 0
+    },
+    "family": {
+      "id": "gloomhaven",
+      "variant": "Buttons & Bugs"
+    },
+    "displayTitle": "Gloomhaven: Buttons & Bugs"
+  },
+  {
+    "slug": "ticket-to-ride",
+    "bggId": 9209,
+    "accentHex": "#a83c24",
+    "skills": {
+      "int": 25,
+      "pln": 55,
+      "per": 20,
+      "soph": 0,
+      "soc": 0,
+      "dex": 0
+    },
+    "family": {
+      "id": "ticket-to-ride",
+      "canonical": true,
+      "name": "Ticket to Ride",
+      "variant": "Original"
+    },
+    "displayTitle": "Ticket to Ride"
+  },
+  {
+    "slug": "ticket-to-ride-europe",
+    "bggId": 14996,
+    "accentHex": "#a84524",
+    "skills": {
+      "int": 30,
+      "pln": 55,
+      "per": 15,
+      "soph": 0,
+      "soc": 0,
+      "dex": 0
+    },
+    "family": {
+      "id": "ticket-to-ride",
+      "variant": "Europe"
+    },
+    "displayTitle": "Ticket to Ride: Europe"
+  },
+  {
+    "slug": "when-i-dream",
+    "bggId": 198454,
+    "accentHex": "#b56a26",
+    "skills": {
+      "int": 15,
+      "pln": 5,
+      "per": 10,
+      "soph": 45,
+      "soc": 25,
       "dex": 0
     }
   }

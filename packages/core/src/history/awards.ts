@@ -19,6 +19,7 @@ export type MatchAward = {
 };
 
 export const PUBLISH_OR_PERISH_SLUG = "publish-or-perish";
+export const FLIPTOONS_SLUG = "fliptoons";
 
 const AWARDS_BY_SLUG: Record<string, readonly MatchAward[]> = {
   [PUBLISH_OR_PERISH_SLUG]: [
@@ -26,6 +27,8 @@ const AWARDS_BY_SLUG: Record<string, readonly MatchAward[]> = {
     { id: "theoretical-innovation", label: "Theoretical Innovation", points: 3 },
     { id: "almost-there", label: "Almost There", points: 2.9 },
   ],
+  // FlipToons: the Director's Choice bonus at final scoring.
+  [FLIPTOONS_SLUG]: [{ id: "directors-choice", label: "Director's Choice", points: 3 }],
 };
 
 export function awardsForSlug(slug: string | null | undefined): readonly MatchAward[] {

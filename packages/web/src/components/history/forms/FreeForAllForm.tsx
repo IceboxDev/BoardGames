@@ -33,7 +33,7 @@ type Props = {
 export function FreeForAllForm({ users, value, onChange, gameSlug }: Props) {
   const selectedIds = value.players.map((p) => p.userId);
   const lowestWins = lowScoreWinsForSlug(gameSlug);
-  // Table-voted awards (Publish or Perish): the score INPUT edits the base
+  // End-of-match awards (Publish or Perish, FlipToons): the score INPUT edits the base
   // (citations before awards); the stored `score` is always base + award
   // points, so placement, stats, and the rating engine read finals unchanged.
   const awardDefs = awardsForSlug(gameSlug);
@@ -150,9 +150,7 @@ export function FreeForAllForm({ users, value, onChange, gameSlug }: Props) {
 
       {awardDefs.length > 0 && value.players.length > 0 && (
         <div className="flex flex-col gap-2">
-          <GroupLabel>
-            Awards — table vote, points are added to the total. Ties may share an award.
-          </GroupLabel>
+          <GroupLabel>Awards — points are added to the total. Ties may share an award.</GroupLabel>
           {awardDefs.map((award) => (
             <div key={award.id} className="flex flex-wrap items-center gap-1.5">
               <span className="w-44 shrink-0 text-2xs text-fg-secondary">

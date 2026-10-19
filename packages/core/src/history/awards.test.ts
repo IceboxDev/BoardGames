@@ -1,5 +1,11 @@
 import { describe, expect, it } from "vitest";
-import { awardLabel, awardPoints, awardsForSlug, PUBLISH_OR_PERISH_SLUG } from "./awards.ts";
+import {
+  awardLabel,
+  awardPoints,
+  awardsForSlug,
+  FLIPTOONS_SLUG,
+  PUBLISH_OR_PERISH_SLUG,
+} from "./awards.ts";
 
 describe("awards", () => {
   it("defines the three Publish or Perish awards with their bonus points", () => {
@@ -11,6 +17,13 @@ describe("awards", () => {
     ]);
     expect(awardsForSlug("chess")).toEqual([]);
     expect(awardsForSlug(null)).toEqual([]);
+  });
+
+  it("gives FlipToons' Director's Choice +3", () => {
+    expect(awardsForSlug(FLIPTOONS_SLUG).map((a) => [a.id, a.points])).toEqual([
+      ["directors-choice", 3],
+    ]);
+    expect(awardPoints(FLIPTOONS_SLUG, ["directors-choice"])).toBe(3);
   });
 
   it("sums a player's award points, ignoring unknown ids", () => {

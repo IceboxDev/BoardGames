@@ -393,7 +393,7 @@ const VARIANTS: Record<string, GameVariantConfig> = {
     mode: "multi",
     default: "Season 1",
     options: [
-      { value: "Season 1", label: "FlipToons (Season 1)" },
+      { value: "Season 1", label: "Season 1" },
       { value: "Season 2", label: "Season 2" },
       { value: "Big Button", label: "Big Button" },
       { value: "Big Button 2", label: "Big Button 2" },

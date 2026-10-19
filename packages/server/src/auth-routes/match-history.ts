@@ -5,6 +5,7 @@ import { z } from "zod";
 import { authedApp } from "../auth/index.ts";
 import { getDb } from "../db.ts";
 import { jsonColumn, parseRow, parseRows } from "../lib/db-rows.ts";
+import { matchCursor, matchCursorFilter } from "../lib/match-participants.ts";
 import { collectUserIds, refreshDisplayNames } from "./match-history-validate.ts";
 
 export const matchHistoryRoutes = authedApp();
@@ -121,19 +122,14 @@ matchHistoryRoutes.get("/", async (c) => {
     Number.isFinite(rawLimit) && rawLimit > 0 ? Math.min(rawLimit, MAX_LIMIT) : DEFAULT_LIMIT;
   const before = c.req.query("before");
 
-  const sql = before
-    ? `SELECT id, date_key, played_at, game_slug, game_title, outcome_json, notes,
+  const after = before ? matchCursorFilter(before) : null;
+  const sql = `SELECT id, date_key, played_at, game_slug, game_title, outcome_json, notes,
               recorded_by, recorded_at, updated_at, sort_order
          FROM match_results
-         WHERE played_at < ?
-         ORDER BY played_at DESC, id DESC
-         LIMIT ?`
-    : `SELECT id, date_key, played_at, game_slug, game_title, outcome_json, notes,
-              recorded_by, recorded_at, updated_at, sort_order
-         FROM match_results
+         ${after ? `WHERE ${after.sql}` : ""}
          ORDER BY played_at DESC, id DESC
          LIMIT ?`;
-  const args = before ? [before, limit + 1] : [limit + 1];
+  const args = [...(after?.args ?? []), limit + 1];
 
   const db = getDb();
   const { rows } = await db.execute({ sql, args });
@@ -141,7 +137,8 @@ matchHistoryRoutes.get("/", async (c) => {
   const hasMore = rows.length > limit;
   const pageRows = hasMore ? rows.slice(0, limit) : rows;
   const matches = await rowsToMatches(db, pageRows);
-  const nextBefore = hasMore && matches.length > 0 ? matches[matches.length - 1].playedAt : null;
+  const last = matches.at(-1);
+  const nextBefore = hasMore && last ? matchCursor(last) : null;
 
   return c.json({ matches, nextBefore });
 });

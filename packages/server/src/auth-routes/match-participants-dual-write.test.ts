@@ -9,6 +9,7 @@ import type { MatchOutcome } from "@boardgames/core/history/types";
 import { type Client, createClient } from "@libsql/client";
 import { afterEach, beforeEach, describe, expect, it } from "vitest";
 import {
+  matchCursor,
   matchIdOf,
   matchIdOfClientId,
   newestMatchId,
@@ -229,6 +230,31 @@ describe("profile match pagination over match_participants", () => {
     }
     expect(seen).toEqual(all);
     expect(new Set(seen).size).toBe(seen.length);
+  });
+
+  it("walks matches that share a played_at across a page break", async () => {
+    // Four matches logged for one evening all carry the same timestamp; with a
+    // time-only cursor the page break between them dropped the rest.
+    for (let i = 0; i < 4; i += 1) {
+      await recordMatch(db, { outcome: ffa("u1", "u2"), playedAt: "2026-02-14T14:00:00.000Z" });
+    }
+    const all = await matchIdsFor(db, "u1");
+    expect(all).toHaveLength(11);
+
+    const seen: number[] = [];
+    let before: string | undefined;
+    for (;;) {
+      const { rows } = await db.execute(
+        userMatchesQuery({ userId: "u1", before, limit: PAGE + 1 }),
+      );
+      const hasMore = rows.length > PAGE;
+      const page = hasMore ? rows.slice(0, PAGE) : rows;
+      seen.push(...page.map((r) => Number(r.id)));
+      const last = page.at(-1);
+      if (!hasMore || !last) break;
+      before = matchCursor({ playedAt: String(last.played_at), id: Number(last.id) });
+    }
+    expect(seen).toEqual(all);
   });
 
   it("never returns a match the user only appears to be in by substring", async () => {

@@ -40,8 +40,9 @@ export function userMatchesQuery(params: {
        JOIN match_participants p ON p.match_id = m.id
       WHERE p.user_id = ?`;
   if (before !== undefined) {
-    sql += " AND m.played_at < ?";
-    args.push(before);
+    const after = matchCursorFilter(before, "m.");
+    sql += ` AND ${after.sql}`;
+    args.push(...after.args);
   }
   sql += " ORDER BY m.played_at DESC, m.id DESC";
   if (limit !== undefined) {
@@ -49,6 +50,31 @@ export function userMatchesQuery(params: {
     args.push(limit);
   }
   return { sql, args };
+}
+
+/**
+ * The history lists page by `played_at DESC, id DESC`, so the cursor is the
+ * last row's `playedAt|id`: matches logged together share one `played_at`, and
+ * a time-only cursor (`played_at < ?`) skipped the rest of them after a page
+ * break. A bare timestamp (a client still holding an old cursor) pages as before.
+ */
+export function matchCursor(match: { readonly playedAt: string; readonly id: number }): string {
+  return `${match.playedAt}|${match.id}`;
+}
+
+/** The WHERE fragment selecting the rows after `cursor` in that order. */
+export function matchCursorFilter(
+  cursor: string,
+  prefix = "",
+): { readonly sql: string; readonly args: InValue[] } {
+  const bar = cursor.lastIndexOf("|");
+  const id = bar === -1 ? Number.NaN : Number(cursor.slice(bar + 1));
+  if (!Number.isInteger(id)) return { sql: `${prefix}played_at < ?`, args: [cursor] };
+  const playedAt = cursor.slice(0, bar);
+  return {
+    sql: `(${prefix}played_at < ? OR (${prefix}played_at = ? AND ${prefix}id < ?))`,
+    args: [playedAt, playedAt, id],
+  };
 }
 
 /** A SQL expression resolving to one `match_results.id`, plus its bound args. */

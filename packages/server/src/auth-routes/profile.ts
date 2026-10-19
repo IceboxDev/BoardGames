@@ -39,7 +39,7 @@ import { logActivity } from "../lib/activity-log.ts";
 import { computeAvailableGamesPayload } from "../lib/available-games.ts";
 import { jsonColumn, parseRow, parseRows, RowParseError } from "../lib/db-rows.ts";
 import { errorResponse, zJsonBody } from "../lib/error-response.ts";
-import { userMatchesQuery } from "../lib/match-participants.ts";
+import { matchCursor, userMatchesQuery } from "../lib/match-participants.ts";
 import { groupMatchUnits, unitResult } from "../lib/match-units.ts";
 import { fetchNewSlugs } from "../lib/new-acquisitions.ts";
 import {
@@ -266,7 +266,8 @@ profileRoutes.get("/:userId/matches", async (c) => {
   for (const r of page) for (const id of extractParticipantIds(r.outcome_json)) nameIds.add(id);
   const nameById = await fetchNameMap(db, nameIds);
   const matches = page.map((r) => rowToMatchRecord(r, nameById));
-  const nextBefore = hasMore && matches.length > 0 ? matches[matches.length - 1].playedAt : null;
+  const last = matches.at(-1);
+  const nextBefore = hasMore && last ? matchCursor(last) : null;
 
   return c.json(HistoryListResponseSchema.parse({ matches, nextBefore }));
 });
