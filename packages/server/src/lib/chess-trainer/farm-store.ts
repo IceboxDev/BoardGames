@@ -19,10 +19,13 @@ import { jsonColumn, parseRows } from "../db-rows.ts";
 
 /**
  * A claim this old (ms) may be taken by another worker. A single-thread
- * depth-50 search has no node limit and can run for hours; a restarted worker
- * takes its own running jobs back at once.
+ * depth-50 search has no time limit and can run for days, and a stopped worker
+ * releases its job, so this only covers a machine that died outright. (At 24 h
+ * live 30–40 h searches were handed to a second lane, whose claim then made
+ * the first lane's result unsaveable.) A restarted worker takes its own
+ * running jobs back at once.
  */
-export const LEASE_MS = 24 * 3600_000;
+export const LEASE_MS = 7 * 24 * 3600_000;
 /** Jobs failing this often stay failed. */
 const MAX_ATTEMPTS = 3;
 const WORKER_SEEN_MS = 10 * 60_000;
@@ -192,9 +195,11 @@ const CandidateRowSchema = z.object({
 });
 
 /**
- * Lease up to `max` jobs of `kinds` to `worker`. `reach` order: highest reach
- * first, then the `prefer`red positions (the worker's follow-ups, whose parent
- * is still in its hash) in their order, then oldest first — the warm hash saves
+ * Lease up to `max` jobs of `kinds` to `worker`. `reach` order: the positions
+ * most played on lichess first (`popularity`; not looked up yet waits behind
+ * every counted one), then highest reach, then the `prefer`red positions (the
+ * worker's follow-ups, whose parent is still in its hash) in their order, then
+ * oldest first — the warm hash saves
  * ~5–20 %, too little to spend hours on a one-game line while a main line
  * waits. `deep` order: the preferred positions first, then the deepest waiting
  * position (most reach among equals) — a worker that finishes lines.
@@ -249,7 +254,7 @@ export async function claimJobs(
         : "";
     pick = {
       sql: `SELECT id FROM chess_eval_jobs WHERE ${claimable}
-            ORDER BY reach DESC, ${preferOrder}id LIMIT ?`,
+            ORDER BY popularity IS NULL, popularity DESC, reach DESC, ${preferOrder}id LIMIT ?`,
       args: [...claimableArgs, ...keys, max],
     };
   }
@@ -259,11 +264,11 @@ export async function claimJobs(
           SET status = 'running', worker = ?, claimed_at_ms = ?, attempts = attempts + 1,
               updated_at = datetime('now')
           WHERE id IN (${pick.sql}) AND ${claimable}
-          RETURNING id, fen_key, fen, kind, reach, spec, attempts, requested_by, stage`,
+          RETURNING id, fen_key, fen, kind, reach, spec, attempts, requested_by, stage, popularity`,
     args: [worker, now, ...pick.args, ...claimableArgs],
   });
   const rows = parseRows(
-    JobRowSchema.extend({ fen_key: z.string() }),
+    JobRowSchema.extend({ fen_key: z.string(), popularity: z.number().nullable() }),
     res.rows,
     "chess_eval_jobs.claim",
   );
@@ -272,7 +277,10 @@ export async function claimJobs(
       ? (a: (typeof rows)[number], b: (typeof rows)[number]) =>
           rank(a.fen_key) - rank(b.fen_key) || plyOf(b.fen) - plyOf(a.fen) || b.reach - a.reach
       : (a: (typeof rows)[number], b: (typeof rows)[number]) =>
-          b.reach - a.reach || rank(a.fen_key) - rank(b.fen_key) || a.id - b.id;
+          (b.popularity ?? -1) - (a.popularity ?? -1) ||
+          b.reach - a.reach ||
+          rank(a.fen_key) - rank(b.fen_key) ||
+          a.id - b.id;
   return rows.sort(byOrder).map((r) => ({
     id: r.id,
     fen: r.fen,

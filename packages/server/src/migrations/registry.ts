@@ -64,6 +64,7 @@ import { chessFarm } from "./0056-chess-farm.ts";
 import { chessTrainerLibrary } from "./0057-chess-trainer-library.ts";
 import { chessEvalStage } from "./0058-chess-eval-stage.ts";
 import { gameRequestHeadcount } from "./0059-game-request-headcount.ts";
+import { chessEvalPopularity } from "./0060-chess-eval-popularity.ts";
 import type { Migration } from "./types.ts";
 
 export const migrations: readonly Migration[] = [
@@ -126,6 +127,7 @@ export const migrations: readonly Migration[] = [
   chessTrainerLibrary,
   chessEvalStage,
   gameRequestHeadcount,
+  chessEvalPopularity,
 ];
 
 /**

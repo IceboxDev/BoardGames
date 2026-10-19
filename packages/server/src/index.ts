@@ -12,6 +12,7 @@ import { setQuestionSource } from "@boardgames/core/games/quiztopia/question-sou
 import { serve } from "@hono/node-server";
 import { initDb } from "./db.ts";
 import { startGoReviewRunner } from "./games/go-reviews.ts";
+import { startPopularityFiller } from "./lib/chess-trainer/farm-popularity.ts";
 import { markStaleProcessingCampaigns } from "./lib/dnd-campaigns-db.ts";
 import { markStaleProcessingCharacters } from "./lib/dnd-characters-db.ts";
 import { installProcessGuards } from "./lib/process-guards.ts";
@@ -43,6 +44,8 @@ try {
   console.log(`[quiztopia] content v${quiztopia.version} (${quiztopia.cardIds.length} cards)`);
   // Go reviews drain in the background when KataGo is configured.
   startGoReviewRunner();
+  // The analysis farm's claim order: lichess game counts, looked up where a token is set.
+  startPopularityFiller();
 } catch (err) {
   console.error("[boot] initialisation failed — refusing to start:", err);
   process.exit(1);

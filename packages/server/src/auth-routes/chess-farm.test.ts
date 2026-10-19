@@ -28,6 +28,8 @@ vi.mock("../db.ts", () => ({
 
 const { chessFarmRoutes } = await import("./chess-farm.ts");
 const { chessTrainerRoutes } = await import("./chess-trainer.ts");
+const { fillPopularity } = await import("../lib/chess-trainer/farm-popularity.ts");
+const explorer = await import("../lib/chess-trainer/lichess-explorer.ts");
 
 const ME = "member-1";
 const TOKEN = "farm-secret-token";
@@ -131,6 +133,26 @@ describe("chess analysis farm", () => {
       ["opp", 40],
     ]);
     expect(await claim("other")).toEqual([]);
+  });
+
+  it("hands out the position most played on lichess first, uncounted ones last", async () => {
+    await ask([
+      { fen: START_FEN, kind: "user", reach: 1 },
+      { fen: AFTER_E4, kind: "opp", reach: 50 },
+      { fen: AFTER_D4, kind: "opp", reach: 90 },
+    ]);
+    const games: Record<string, number> = { [START_FEN]: 9_000_000, [AFTER_E4]: 4_000_000 };
+    vi.stubEnv("LICHESS_TOKEN", "lichess-test-token");
+    const lookups = vi.spyOn(explorer, "positionGames");
+    lookups.mockImplementation(async (fen) => games[fen] ?? 0);
+    // One lookup batch, then D4's count is taken back: not looked up yet.
+    expect(await fillPopularity()).toBe(3);
+    await client.execute({
+      sql: "UPDATE chess_eval_jobs SET popularity = NULL WHERE fen = ?",
+      args: [AFTER_D4],
+    });
+    expect((await claim("ws21", 3)).map((j) => j.fen)).toEqual([START_FEN, AFTER_E4, AFTER_D4]);
+    lookups.mockRestore();
   });
 
   it("re-leases a job whose worker went quiet", async () => {

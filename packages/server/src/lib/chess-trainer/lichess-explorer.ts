@@ -1,7 +1,8 @@
 /**
  * The lichess opening explorer for the analysis farm: the most played moves at
  * a position (every rating and speed — the trainer's "popular"), so the farm
- * pads opponent replies exactly like the trainer does. Needs `LICHESS_TOKEN`
+ * pads opponent replies exactly like the trainer does, and how many games
+ * reached the position (the farm's claim order). Needs `LICHESS_TOKEN`
  * (a personal token, no scopes) on the server; one request at a time, a minute's
  * wait after a 429 (lichess's rule), a dropped connection retried, answers kept
  * for the life of the process.
@@ -13,6 +14,9 @@ import { z } from "zod";
 
 const EXPLORER = "https://explorer.lichess.org/lichess";
 const ExplorerSchema = z.object({
+  white: z.number(),
+  draws: z.number(),
+  black: z.number(),
   moves: z.array(
     z.object({ uci: z.string(), white: z.number(), draws: z.number(), black: z.number() }),
   ),
@@ -30,13 +34,19 @@ export interface PopularMove {
   readonly games: number;
 }
 
-const cache = new Map<string, Promise<PopularMove[]>>();
+/** One explorer answer: the position's game count and its most played moves. */
+interface ExplorerAnswer {
+  readonly games: number;
+  readonly moves: PopularMove[];
+}
+
+const cache = new Map<string, Promise<ExplorerAnswer>>();
 let tail: Promise<unknown> = Promise.resolve();
 
 /** Whether the server can ask the explorer at all. */
 export const explorerConfigured = () => Boolean(process.env.LICHESS_TOKEN);
 
-async function fetchOnce(fen: string, token: string): Promise<PopularMove[]> {
+async function fetchOnce(fen: string, token: string): Promise<ExplorerAnswer> {
   const url = new URL(EXPLORER);
   url.search = new URLSearchParams({
     variant: "standard",
@@ -64,8 +74,9 @@ async function fetchOnce(fen: string, token: string): Promise<PopularMove[]> {
     }
     if (!res.ok) throw new Error(`lichess explorer ${res.status}`);
     const legal = new Set(legalMoves(parseFen(fen)).map(moveToUci));
-    return ExplorerSchema.parse(await res.json())
-      .moves.map((m) => {
+    const answer = ExplorerSchema.parse(await res.json());
+    const moves = answer.moves
+      .map((m) => {
         const castle = CASTLE_AS_ROOK[m.uci];
         const uci = !legal.has(m.uci) && castle && legal.has(castle) ? castle : m.uci;
         return { uci, games: m.white + m.draws + m.black };
@@ -73,12 +84,12 @@ async function fetchOnce(fen: string, token: string): Promise<PopularMove[]> {
       .filter((m) => legal.has(m.uci))
       .sort((a, b) => b.games - a.games)
       .slice(0, 12);
+    return { games: answer.white + answer.draws + answer.black, moves };
   }
   throw new Error("lichess explorer kept rate-limiting");
 }
 
-/** The most played moves at `fen`, most first. Throws when not configured or lichess fails. */
-export function popularMoves(fen: string): Promise<PopularMove[]> {
+function explore(fen: string): Promise<ExplorerAnswer> {
   const token = process.env.LICHESS_TOKEN;
   if (!token) return Promise.reject(new Error("LICHESS_TOKEN is not set"));
   const key = fen.split(" ").slice(0, 4).join(" ");
@@ -90,4 +101,14 @@ export function popularMoves(fen: string): Promise<PopularMove[]> {
   cache.set(key, next);
   next.catch(() => cache.delete(key));
   return next;
+}
+
+/** The most played moves at `fen`, most first. Throws when not configured or lichess fails. */
+export async function popularMoves(fen: string): Promise<PopularMove[]> {
+  return (await explore(fen)).moves;
+}
+
+/** How many lichess games reached `fen`. Throws when not configured or lichess fails. */
+export async function positionGames(fen: string): Promise<number> {
+  return (await explore(fen)).games;
 }

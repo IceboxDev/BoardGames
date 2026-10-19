@@ -21,8 +21,9 @@
  *                       ws21 searches your moves, the AWS fleet the opponents'
  *   FARM_IDLE_EXIT_MIN  exit (code 0) after this many minutes with nothing to claim; an AWS
  *                       instance's unit then shuts the machine down so idle time costs nothing
- *   FARM_ORDER          `reach` (default: most games first, breadth first) or `deep` (its own
- *                       follow-ups, then the deepest waiting position: finishes lines)
+ *   FARM_ORDER          `reach` (default: most played on lichess first, then most of your
+ *                       games) or `deep` (its own follow-ups, then the deepest waiting
+ *                       position: finishes lines)
  *   LC0_SERVE_PORT      also serve this worker's Lc0 on 127.0.0.1 to the fleet (ws21: 3002)
  *   LC0_URL             use that remote Lc0 instead of a local one (fleet: http://localhost:3002/)
  */
