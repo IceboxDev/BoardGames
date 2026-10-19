@@ -9,10 +9,10 @@ import {
 import { Button } from "../../ui/Button";
 import { Chip } from "../../ui/Chip";
 import { IconButton } from "../../ui/IconButton";
-import { Input } from "../../ui/Input";
 import { Surface } from "../../ui/Surface";
 import { ParticipantPicker, type PickerUser } from "../ParticipantPicker";
 import { PlayerRow } from "../PlayerRow";
+import { ScoreInput } from "../ScoreInput";
 import { GroupLabel, OutcomeFormShell } from "./shared";
 
 type User = PickerUser;
@@ -149,14 +149,10 @@ export function TeamsForm({
                 <GroupLabel>Team {idx + 1}</GroupLabel>
                 <span className="flex-1" />
                 {showScores && (
-                  <Input
-                    type="number"
-                    inputMode="numeric"
+                  <ScoreInput
+                    aria-label={`Team ${idx + 1} — score`}
                     value={team.score ?? 0}
-                    onChange={(e) => {
-                      const num = Number.parseFloat(e.target.value);
-                      updateTeam(idx, { score: Number.isFinite(num) ? num : 0 });
-                    }}
+                    onValueChange={(score) => updateTeam(idx, { score })}
                     width="score"
                   />
                 )}

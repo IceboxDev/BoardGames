@@ -8,6 +8,7 @@ import {
   MAX_ROUND_SCORES,
   MIN_ROUND_SCORES,
 } from "../../history/round-scores";
+import { describeRaceRoundsError, SCORE_RACE_MAX_ROUNDS } from "../../history/score-race";
 import { describeWedgesError, FULL_PIE, WedgeSchema } from "../../history/trivial-pursuit";
 import { NightKeyStringSchema } from "../common.ts";
 
@@ -59,6 +60,11 @@ const FreeForAllPlayerSchema = ParticipantSchema.extend({
   // always the rupee-total leader. Cross-field rules live in the superRefine
   // below via `describeRoundScoresError`.
   roundScores: z.array(z.number().finite()).min(MIN_ROUND_SCORES).max(MAX_ROUND_SCORES).optional(),
+  // Score-limit race record (Take 5, Bandit): the points from every hand,
+  // played until a total crosses the game's limit. When present, `score` is
+  // the summed total and every player holds the same number of hands — see
+  // history/score-race.ts (the limit itself is checked where the slug is known).
+  raceRounds: z.array(z.number().finite()).min(1).max(SCORE_RACE_MAX_ROUNDS).optional(),
   // Table-voted end-of-match award ids (Publish or Perish: Snarkiest
   // Reviewer, …). Ties put the same id on several players. The award points
   // are already folded into `score` — see history/awards.ts.
@@ -276,6 +282,10 @@ export const MatchOutcomeSchema = z
       const roundError = describeRoundScoresError(v);
       if (roundError) {
         ctx.addIssue({ code: "custom", path: ["players"], message: roundError });
+      }
+      const raceError = describeRaceRoundsError(v);
+      if (raceError) {
+        ctx.addIssue({ code: "custom", path: ["players"], message: raceError });
       }
       v.players.forEach((p, i) => {
         const wedgeError = p.wedges && describeWedgesError(p.wedges);

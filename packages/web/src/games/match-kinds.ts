@@ -33,6 +33,10 @@ export const MATCH_KIND_BY_SLUG: Record<string, MatchKind> = {
   // explicitly (like villainous) so switching to it from a non-FFA game resets
   // the kind and surfaces that form.
   jaipur: "free-for-all",
+  // Score-limit races with the hand-by-hand ScoreRaceForm (core
+  // history/score-race) — listed for the same reason as jaipur.
+  "take-5": "free-for-all",
+  bandit: "free-for-all",
   "trivial-pursuit": "free-for-all",
 
   // Cooperative — players share a single win/loss

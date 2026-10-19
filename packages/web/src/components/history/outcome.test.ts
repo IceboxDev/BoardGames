@@ -12,11 +12,13 @@ import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import {
   applyParticipants,
   applyScenario,
+  attendeesOf,
   carryOverParticipants,
   describeClocktowerError,
   describeGenericTeamsError,
   describeJaipurError,
   describeOutcomeError,
+  describeRaceError,
   describeResistanceError,
   describeSingleWinnerError,
   describeVillainousError,
@@ -29,6 +31,9 @@ import {
   isoToLocalInput,
   localInputToIso,
   sortLockKeys,
+  standaloneDay,
+  standaloneDayToIso,
+  stripRaceRounds,
   toCreateInput,
 } from "./outcome";
 
@@ -964,5 +969,71 @@ describe("Trivial Pursuit validation", () => {
     expect(teams([0])).toBeNull();
     expect(teams([0, 1])).toBe("Only one team can win");
     expect(teams([])).toBe("Pick at least one winning team");
+  });
+});
+
+// ── Score races (Take 5, Bandit) ─────────────────────────────────────────
+
+describe("describeRaceError", () => {
+  function race(...hands: number[][]): MatchOutcomeFreeForAll {
+    return {
+      kind: "free-for-all",
+      players: hands.map((raceRounds, i) => ({
+        ...p(String(i)),
+        raceRounds,
+        score: raceRounds.reduce((a, b) => a + b, 0),
+      })),
+    };
+  }
+
+  it("only saves a finished game", () => {
+    expect(describeRaceError(race([0], [0]), "take-5")).toMatch(/passes 66/);
+    expect(describeRaceError(race([40, 20], [3, 9]), "take-5")).toMatch(/passes 66/);
+    expect(describeRaceError(race([40, 27], [3, 9]), "take-5")).toBeNull();
+    expect(describeRaceError(race([90, 10], [3, 9]), "bandit")).toBeNull();
+  });
+
+  it("is wired into describeOutcomeError by slug", () => {
+    expect(describeOutcomeError(race([10], [20]), "take-5")).toMatch(/passes 66/);
+    expect(describeOutcomeError(race([10], [20]), "phase-10")).toBeNull();
+  });
+
+  it("keeps totals-only records from before hand-by-hand entry valid", () => {
+    expect(
+      describeRaceError(ffa({ id: "a", score: 70 }, { id: "b", score: 20 }), "take-5"),
+    ).toBeNull();
+  });
+
+  it("stripRaceRounds drops the hands when another game is picked", () => {
+    const stripped = stripRaceRounds(race([5], [6]));
+    expect(stripped.kind === "free-for-all" && stripped.players.some((x) => x.raceRounds)).toBe(
+      false,
+    );
+  });
+});
+
+// ── Standalone days ──────────────────────────────────────────────────────
+
+describe("standalone days", () => {
+  it("store a day at noon UTC and read back the same day", () => {
+    expect(standaloneDayToIso("2026-10-18")).toBe("2026-10-18T12:00:00.000Z");
+    expect(standaloneDay(standaloneDayToIso("2026-10-18"))).toBe("2026-10-18");
+    expect(standaloneDay("2026-10-18T21:30:00.000Z")).toBe("2026-10-18");
+  });
+
+  it("attendeesOf collects everyone once, moderators included", () => {
+    const coop: MatchOutcomeCoop = {
+      kind: "coop",
+      participants: [p("a"), p("b")],
+      outcome: "win",
+      moderator: p("dm"),
+    };
+    const later = ffa({ id: "b", score: 1 }, { id: "c", score: 2 });
+    expect(attendeesOf([{ outcome: coop }, { outcome: later }]).map((x) => x.userId)).toEqual([
+      "a",
+      "b",
+      "dm",
+      "c",
+    ]);
   });
 });

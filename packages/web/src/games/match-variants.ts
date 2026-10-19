@@ -114,6 +114,17 @@ const VARIANTS: Record<string, GameVariantConfig> = {
   "codenames-pictures": CODENAMES_LANGUAGE,
   "codenames-duet": CODENAMES_LANGUAGE,
   bandit: FIXED_STANDARD,
+  // Take 5 (6 nimmt!): the base game, or the rulebook's "Profivariante" for
+  // 2–6 — only players × 10 + 4 cards in play, all known, and each player
+  // drafts their 10 from the open table.
+  "take-5": {
+    label: "Ruleset",
+    mode: "single",
+    options: [
+      { value: "Standard", label: "Standard" },
+      { value: "Pro", label: "Pro (open draft)" },
+    ],
+  },
   wavelength: {
     label: "Mode",
     mode: "single",

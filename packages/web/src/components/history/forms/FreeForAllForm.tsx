@@ -2,21 +2,13 @@ import { awardPoints, awardsForSlug } from "@boardgames/core/history/awards";
 import type { MatchOutcomeFreeForAll, Participant } from "@boardgames/core/history/types";
 import { useEffect } from "react";
 import { lowScoreWinsForSlug } from "../../../games/score-config";
-import { ordinal } from "../../../lib/match-result-badge";
-import { ChevronDownIcon } from "../../icons";
 import { Chip } from "../../ui/Chip";
-import { IconButton } from "../../ui/IconButton";
-import { Input } from "../../ui/Input";
 import type { PickerUser } from "../ParticipantPicker";
 import { PlayerRow } from "../PlayerRow";
-import {
-  breakTie,
-  hasScoreTie,
-  placementOrder,
-  ranksEqual,
-  reconcileRanks,
-} from "./free-for-all-placement";
+import { ScoreInput } from "../ScoreInput";
+import { hasScoreTie, ranksEqual, reconcileRanks } from "./free-for-all-placement";
 import { GroupLabel, OutcomeFormShell } from "./shared";
+import { TieBreakPanel } from "./TieBreakPanel";
 
 type User = PickerUser;
 
@@ -81,9 +73,7 @@ export function FreeForAllForm({ users, value, onChange, gameSlug }: Props) {
     commit(players);
   }
 
-  function setScore(userId: string, raw: string) {
-    const num = Number.parseFloat(raw);
-    const base = Number.isFinite(num) ? num : 0;
+  function setScore(userId: string, base: number) {
     commit(
       value.players.map((p) =>
         p.userId === userId ? { ...p, score: base + awardPoints(gameSlug, p.awards) } : p,
@@ -109,7 +99,6 @@ export function FreeForAllForm({ users, value, onChange, gameSlug }: Props) {
     );
   }
 
-  const ranked = placementOrder(value.players, lowestWins);
   const tie = value.players.some((p) => p.score !== 0) && hasScoreTie(value.players);
 
   return (
@@ -133,11 +122,10 @@ export function FreeForAllForm({ users, value, onChange, gameSlug }: Props) {
                     {awardDefs.length > 0 && (
                       <span className="text-2xs tabular-nums text-fg-muted">= {p.score}</span>
                     )}
-                    <Input
-                      type="number"
-                      inputMode="numeric"
+                    <ScoreInput
+                      aria-label={`${p.displayName} — score`}
                       value={awardDefs.length > 0 ? baseOf(p) : p.score}
-                      onChange={(e) => setScore(p.userId, e.target.value)}
+                      onValueChange={(n) => setScore(p.userId, n)}
                       width="score"
                     />
                   </span>
@@ -173,62 +161,11 @@ export function FreeForAllForm({ users, value, onChange, gameSlug }: Props) {
       )}
 
       {tie && (
-        <div className="flex flex-col gap-2 rounded-card-xl border border-amber-500/30 bg-amber-500/5 p-3">
-          <div className="flex flex-col gap-0.5">
-            <span className="text-xs font-medium text-amber-200">Break the tie</span>
-            <span className="text-2xs leading-snug text-fg-secondary">
-              Players share a score. Use the arrows to order tied players so the placement is
-              unambiguous — top is 1st.
-            </span>
-          </div>
-          <div className="flex flex-col gap-1">
-            {ranked.map((p, i) => {
-              const tiedAbove = i > 0 && ranked[i - 1].score === p.score;
-              const tiedBelow = i < ranked.length - 1 && ranked[i + 1].score === p.score;
-              return (
-                <PlayerRow
-                  key={p.userId}
-                  highlight={i === 0}
-                  name={
-                    <span className="flex items-center gap-2">
-                      <span className="w-7 shrink-0 text-2xs font-medium tabular-nums text-fg-muted">
-                        {ordinal(i + 1)}
-                      </span>
-                      <span className="truncate">{p.displayName}</span>
-                    </span>
-                  }
-                  right={<span className="text-xs tabular-nums text-fg-muted">{p.score}</span>}
-                  actions={
-                    tiedAbove || tiedBelow ? (
-                      <div className="flex flex-col">
-                        <IconButton
-                          size="xs"
-                          aria-label={`Move ${p.displayName} up`}
-                          disabled={!tiedAbove}
-                          onClick={() =>
-                            commit(breakTie(value.players, p.userId, "up", lowestWins))
-                          }
-                          className="h-5 w-6 p-0"
-                          icon={<ChevronDownIcon className="h-3 w-3 rotate-180" />}
-                        />
-                        <IconButton
-                          size="xs"
-                          aria-label={`Move ${p.displayName} down`}
-                          disabled={!tiedBelow}
-                          onClick={() =>
-                            commit(breakTie(value.players, p.userId, "down", lowestWins))
-                          }
-                          className="h-5 w-6 p-0"
-                          icon={<ChevronDownIcon className="h-3 w-3" />}
-                        />
-                      </div>
-                    ) : null
-                  }
-                />
-              );
-            })}
-          </div>
-        </div>
+        <TieBreakPanel
+          players={value.players}
+          lowestWins={lowestWins}
+          onChange={(players) => commit(players)}
+        />
       )}
     </OutcomeFormShell>
   );

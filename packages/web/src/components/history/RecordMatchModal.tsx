@@ -1,5 +1,7 @@
+import { scoreRaceForSlug } from "@boardgames/core/history/score-race";
 import { TRIVIAL_PURSUIT_SLUG } from "@boardgames/core/history/trivial-pursuit";
 import type {
+  HistoryListResponse,
   MatchKind,
   MatchOutcome,
   MatchOutcomeCoop,
@@ -11,7 +13,7 @@ import type {
   Participant,
 } from "@boardgames/core/history/types";
 import { nightDate } from "@boardgames/core/protocol";
-import { useMutation, useQuery } from "@tanstack/react-query";
+import { type InfiniteData, useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useEffect, useId, useMemo, useRef, useState } from "react";
 import { defaultKindForSlug } from "../../games/match-kinds";
 import { defaultVariantValue, variantConfigForSlug } from "../../games/match-variants";
@@ -20,6 +22,7 @@ import { isVillainousSlug } from "../../games/villainous/villains";
 import { useAdminUsers } from "../../hooks/useAdminUsers.ts";
 import { fetchCalendarLocks } from "../../lib/calendar-locks";
 import { fetchDndOpenCampaigns, recordMatch, updateMatch } from "../../lib/match-history";
+import { dateKey as localDayKey } from "../../lib/offline-availability";
 import { qk } from "../../lib/query-keys";
 import { Button } from "../ui/Button";
 import { Chip } from "../ui/Chip";
@@ -45,6 +48,7 @@ import { OneVsManyForm } from "./forms/OneVsManyForm";
 import { QuiztopiaForm } from "./forms/QuiztopiaForm";
 import { ResistanceForm } from "./forms/ResistanceForm";
 import { ScoredCoopForm } from "./forms/ScoredCoopForm";
+import { ScoreRaceForm } from "./forms/ScoreRaceForm";
 import { SensoForm } from "./forms/SensoForm";
 import { SensoTeamsForm } from "./forms/SensoTeamsForm";
 import { SingleWinnerForm } from "./forms/SingleWinnerForm";
@@ -60,14 +64,16 @@ import { GameVariantPicker } from "./GameVariantPicker";
 import {
   applyParticipants,
   applyScenario,
+  attendeesOf,
   carryOverParticipants,
   describeOutcomeError,
   emptyOutcome,
   getScenario,
-  isoNow,
-  isoToLocalInput,
   localInputToIso,
   sortLockKeys,
+  standaloneDay,
+  standaloneDayToIso,
+  stripRaceRounds,
   toCreateInput,
 } from "./outcome";
 import type { PickerUser } from "./ParticipantPicker";
@@ -124,8 +130,11 @@ export function RecordMatchModal({ state, onClose, onSaved }: Props) {
     return {
       dateKey: state.dateKey,
       // A standalone "+ Match" on a past day group seeds that day; the top-level
-      // "Record match" passes nothing and falls back to now.
-      playedAt: state.playedAt ?? isoNow(),
+      // "Record match" passes nothing and falls back to today. Standalone
+      // matches keep a day, never a time (see standaloneDayToIso).
+      playedAt: standaloneDayToIso(
+        state.playedAt ? standaloneDay(state.playedAt) : localDayKey(new Date()),
+      ),
       gameSlug: null as string | null,
       gameTitle: "",
       kind: "free-for-all" as MatchKind,
@@ -163,7 +172,8 @@ export function RecordMatchModal({ state, onClose, onSaved }: Props) {
     if (lastDateKeyRef.current === dateKey) return;
     lastDateKeyRef.current = dateKey;
     if (!dateKey) {
-      if (state.mode === "create") setPlayedAt(isoNow());
+      // Back to standalone: keep the day that was showing, drop the night's time.
+      if (state.mode === "create") setPlayedAt((prev) => standaloneDayToIso(standaloneDay(prev)));
       return;
     }
     const eventTime = locksQuery.data?.[dateKey]?.eventTime ?? "20:00";
@@ -188,7 +198,10 @@ export function RecordMatchModal({ state, onClose, onSaved }: Props) {
     const scenario = defaultVariantValue(gameSlug);
     if (guess) setKind(guess);
     setOutcome((prev) => {
-      const next = applyScenario(guess ? carryOverParticipants(guess, prev) : prev, scenario);
+      const next = applyScenario(
+        guess ? carryOverParticipants(guess, prev) : stripRaceRounds(prev),
+        scenario,
+      );
       // D&D starts UNRESOLVED (ongoing) with an empty campaign name — the common
       // case is a mid-campaign session, so pre-selecting "won" would be a
       // footgun. The campaign name is required before the match can be saved.
@@ -221,6 +234,26 @@ export function RecordMatchModal({ state, onClose, onSaved }: Props) {
       .map((u) => ({ userId: u.id, displayName: u.name }));
     setOutcome((prev) => applyParticipants(prev.kind, prev, participants));
   }, [dateKey, allUsers, locksQuery.data, state.mode]);
+
+  // A standalone evening has no RSVPs to prefill from, so take its people from
+  // the matches already recorded on that day: attendees are entered once per
+  // evening. Fires when the day changes (and once on open), only in create
+  // mode, and leaves the roster alone when nothing was recorded that day.
+  const queryClient = useQueryClient();
+  const standaloneDayKey = dateKey ? null : standaloneDay(playedAt);
+  const lastStandalonePrefillRef = useRef<string | null>(null);
+  useEffect(() => {
+    if (state.mode === "edit" || !standaloneDayKey) return;
+    if (lastStandalonePrefillRef.current === standaloneDayKey) return;
+    lastStandalonePrefillRef.current = standaloneDayKey;
+    const pages = queryClient.getQueryData<InfiniteData<HistoryListResponse>>(qk.history())?.pages;
+    const sameDay = (pages ?? [])
+      .flatMap((p) => p.matches)
+      .filter((m) => m.dateKey === null && standaloneDay(m.playedAt) === standaloneDayKey);
+    const attendees = attendeesOf(sameDay);
+    if (attendees.length === 0) return;
+    setOutcome((prev) => applyParticipants(prev.kind, prev, attendees));
+  }, [standaloneDayKey, state.mode, queryClient]);
 
   function changeKind(nextKind: MatchKind) {
     setKind(nextKind);
@@ -260,6 +293,8 @@ export function RecordMatchModal({ state, onClose, onSaved }: Props) {
     onSuccess: () => onSaved(),
     onError: (e) => setError(e instanceof Error ? e.message : "Could not save"),
   });
+
+  const scoreRace = scoreRaceForSlug(gameSlug);
 
   return (
     <Modal
@@ -305,12 +340,19 @@ export function RecordMatchModal({ state, onClose, onSaved }: Props) {
         </Field>
 
         {!dateKey && (
-          <Field label="Played at" htmlFor={playedAtId}>
+          <Field
+            label="Date"
+            htmlFor={playedAtId}
+            hint="Players already recorded on this day are filled in"
+          >
             <Input
               id={playedAtId}
-              type="datetime-local"
-              value={isoToLocalInput(playedAt)}
-              onChange={(e) => setPlayedAt(localInputToIso(e.target.value))}
+              type="date"
+              required
+              value={standaloneDay(playedAt)}
+              onChange={(e) => {
+                if (e.target.value) setPlayedAt(standaloneDayToIso(e.target.value));
+              }}
             />
           </Field>
         )}
@@ -375,6 +417,13 @@ export function RecordMatchModal({ state, onClose, onSaved }: Props) {
                 users={allUsers}
                 value={outcome as MatchOutcomeFreeForAll}
                 onChange={setOutcome}
+              />
+            ) : scoreRace ? (
+              <ScoreRaceForm
+                users={allUsers}
+                value={outcome as MatchOutcomeFreeForAll}
+                onChange={setOutcome}
+                race={scoreRace}
               />
             ) : isSensoSlug(gameSlug) ? (
               <SensoForm

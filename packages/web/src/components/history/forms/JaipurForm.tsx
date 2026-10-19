@@ -7,9 +7,9 @@ import {
 import type { MatchOutcomeFreeForAll, Participant } from "@boardgames/core/history/types";
 import { useEffect } from "react";
 import { JAIPUR_BEST_OF_ONE } from "../../../games/match-variants";
-import { Input } from "../../ui/Input";
 import type { PickerUser } from "../ParticipantPicker";
 import { PlayerRow } from "../PlayerRow";
+import { ScoreInput } from "../ScoreInput";
 import { FreeForAllForm } from "./FreeForAllForm";
 import { jaipurOutcomesEqual, normalizeJaipurOutcome } from "./jaipur-rounds";
 import { GroupLabel, mergeParticipants, OutcomeFormShell } from "./shared";
@@ -74,13 +74,7 @@ function JaipurRoundsForm({ users, value, onChange }: Props) {
     });
   }
 
-  function parseCount(raw: string): number {
-    const num = Number.parseFloat(raw);
-    return Number.isFinite(num) ? num : 0;
-  }
-
-  function setRoundScore(userId: string, round: number, raw: string) {
-    const score = parseCount(raw);
+  function setRoundScore(userId: string, round: number, score: number) {
     commit({
       ...value,
       players: value.players.map((p) =>
@@ -95,10 +89,10 @@ function JaipurRoundsForm({ users, value, onChange }: Props) {
     round: number,
     playerIdx: number,
     kind: "bonus" | "goods",
-    raw: string,
+    entered: number,
   ) {
     // Token counts are small non-negative integers; 100 is the wire schema's cap.
-    const count = Math.min(100, Math.max(0, Math.trunc(parseCount(raw))));
+    const count = Math.min(100, Math.max(0, Math.trunc(entered)));
     commit({
       ...value,
       roundTiebreaks: (value.roundTiebreaks ?? []).map((tb) => {
@@ -142,14 +136,12 @@ function JaipurRoundsForm({ users, value, onChange }: Props) {
               right={
                 <div className="flex items-center gap-1.5">
                   {(p.roundScores ?? []).map((s, r) => (
-                    <Input
+                    <ScoreInput
                       // biome-ignore lint/suspicious/noArrayIndexKey: rounds are positional by nature.
                       key={r}
-                      type="number"
-                      inputMode="numeric"
                       aria-label={`${p.displayName} — round ${r + 1} rupees`}
                       value={s}
-                      onChange={(e) => setRoundScore(p.userId, r, e.target.value)}
+                      onValueChange={(n) => setRoundScore(p.userId, r, n)}
                       width="auto"
                       className="w-14 px-2 text-right tabular-nums"
                     />
@@ -204,22 +196,18 @@ function JaipurRoundsForm({ users, value, onChange }: Props) {
                   highlight={resolution.winner === i}
                   right={
                     <div className="flex items-center gap-1.5">
-                      <Input
-                        type="number"
-                        inputMode="numeric"
+                      <ScoreInput
                         aria-label={`${p.displayName} — round ${tb.round + 1} bonus tokens`}
                         value={tb.bonusTokens[i] ?? 0}
-                        onChange={(e) => setTiebreakToken(tb.round, i, "bonus", e.target.value)}
+                        onValueChange={(n) => setTiebreakToken(tb.round, i, "bonus", n)}
                         width="auto"
                         className="w-14 px-2 text-right tabular-nums"
                       />
                       {tb.goodsTokens && (
-                        <Input
-                          type="number"
-                          inputMode="numeric"
+                        <ScoreInput
                           aria-label={`${p.displayName} — round ${tb.round + 1} goods tokens`}
                           value={tb.goodsTokens[i] ?? 0}
-                          onChange={(e) => setTiebreakToken(tb.round, i, "goods", e.target.value)}
+                          onValueChange={(n) => setTiebreakToken(tb.round, i, "goods", n)}
                           width="auto"
                           className="w-14 px-2 text-right tabular-nums"
                         />

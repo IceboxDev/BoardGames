@@ -9,7 +9,7 @@
  * Slugs whose scoring is inverted: the *lowest* total wins (penalty-style).
  * Default is highest-wins; add Skyjo, golf-style card games, etc. here.
  */
-const LOW_SCORE_WINS = new Set<string>(["phase-10", "bandit"]);
+const LOW_SCORE_WINS = new Set<string>(["phase-10", "bandit", "take-5"]);
 
 // Shared by POINTLESS_FFA (these duels are point-less) and isWinDrawLossFfa
 // (they additionally allow a drawn game). Declared first so the set literal

@@ -854,3 +854,30 @@ describe("MatchOutcomeSchema — Trivial Pursuit wedges", () => {
     expect(r.error?.issues[0]?.path).toEqual(["players", 0, "wedges"]);
   });
 });
+
+describe("score-race records (Take 5, Bandit)", () => {
+  const base = {
+    kind: "free-for-all" as const,
+    players: [
+      { userId: "a", displayName: "A", score: 70, raceRounds: [30, 40] },
+      { userId: "b", displayName: "B", score: 12, raceRounds: [2, 10] },
+    ],
+  };
+
+  it("accepts consistent hands", () => {
+    expect(MatchOutcomeSchema.parse(base)).toEqual(base);
+  });
+
+  it("rejects a total that doesn't add up", () => {
+    const bad = { ...base, players: [{ ...base.players[0], score: 69 }, base.players[1]] };
+    expect(() => MatchOutcomeSchema.parse(bad)).toThrow(/total/);
+  });
+
+  it("rejects uneven hand counts", () => {
+    const bad = {
+      ...base,
+      players: [base.players[0], { ...base.players[1], score: 2, raceRounds: [2] }],
+    };
+    expect(() => MatchOutcomeSchema.parse(bad)).toThrow(/same hands/);
+  });
+});

@@ -4,6 +4,7 @@ import { Input } from "../../ui/Input";
 import { Surface } from "../../ui/Surface";
 import { ParticipantPicker, type PickerUser } from "../ParticipantPicker";
 import { PlayerRow } from "../PlayerRow";
+import { ScoreInput } from "../ScoreInput";
 import { AwaitingCubes, ResultLine } from "./SensoForm";
 import {
   CLAN_FACTIONS,
@@ -106,12 +107,10 @@ export function SensoTeamsForm({ users, value, onChange }: Props) {
               <div className="flex items-center gap-2">
                 <GroupLabel>Team {idx + 1}</GroupLabel>
                 <span className="flex-1" />
-                <Input
-                  type="number"
-                  inputMode="numeric"
+                <ScoreInput
                   aria-label={`Team ${idx + 1} — points`}
                   value={team.score ?? 0}
-                  onChange={(e) => updateTeam(idx, { score: parseCount(e.target.value) })}
+                  onValueChange={(score) => updateTeam(idx, { score })}
                   width="score"
                 />
               </div>

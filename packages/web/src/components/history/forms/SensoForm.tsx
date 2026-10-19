@@ -4,6 +4,7 @@ import { Input } from "../../ui/Input";
 import { Surface } from "../../ui/Surface";
 import type { PickerUser } from "../ParticipantPicker";
 import { PlayerRow } from "../PlayerRow";
+import { ScoreInput } from "../ScoreInput";
 import {
   describeSensoTiebreak,
   EMPEROR_FACTION,
@@ -63,8 +64,7 @@ export function SensoForm({ users, value, onChange }: Props) {
     return Number.isFinite(num) ? num : 0;
   }
 
-  function setScore(userId: string, raw: string) {
-    const score = parseCount(raw);
+  function setScore(userId: string, score: number) {
     commit(value.players.map((p) => (p.userId === userId ? { ...p, score } : p)));
   }
 
@@ -113,12 +113,10 @@ export function SensoForm({ users, value, onChange }: Props) {
                 name={p.displayName}
                 highlight={p.rank === 1}
                 right={
-                  <Input
-                    type="number"
-                    inputMode="numeric"
+                  <ScoreInput
                     aria-label={`${p.displayName} — points`}
                     value={p.score}
-                    onChange={(e) => setScore(p.userId, e.target.value)}
+                    onValueChange={(n) => setScore(p.userId, n)}
                     width="score"
                   />
                 }

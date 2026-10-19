@@ -675,3 +675,33 @@ describe("parseOutcome — Trivial Pursuit pie wedges", () => {
     );
   });
 });
+
+describe("parseOutcome — free-for-all score race (Take 5, Bandit)", () => {
+  const players = [
+    { userId: "a", displayName: "A", score: 70, raceRounds: [30, 40] },
+    { userId: "b", displayName: "B", score: -2, raceRounds: [8, -10] },
+  ];
+
+  it("round-trips the hands", () => {
+    const result = parseOutcome({ kind: "free-for-all", players });
+    expect(result.ok && result.value.kind === "free-for-all" && result.value.players[1]).toEqual(
+      players[1],
+    );
+  });
+
+  it("rejects hands that don't add up to the score", () => {
+    const result = parseOutcome({
+      kind: "free-for-all",
+      players: [{ ...players[0], score: 1 }, players[1]],
+    });
+    expect(result.ok).toBe(false);
+  });
+
+  it("rejects a non-numeric hand", () => {
+    const result = parseOutcome({
+      kind: "free-for-all",
+      players: [{ ...players[0], raceRounds: [30, "x"] }, players[1]],
+    });
+    expect(result.ok).toBe(false);
+  });
+});

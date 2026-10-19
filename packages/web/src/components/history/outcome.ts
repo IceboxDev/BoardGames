@@ -12,6 +12,11 @@ import {
 } from "@boardgames/core/history/coop-challenge";
 import { describeDecryptoRecordError } from "@boardgames/core/history/decrypto-tokens";
 import { describeRoundScoresError } from "@boardgames/core/history/round-scores";
+import {
+  describeScoreRaceError,
+  isRaceTotalsOnly,
+  scoreRaceForSlug,
+} from "@boardgames/core/history/score-race";
 import { TRIVIAL_PURSUIT_SLUG } from "@boardgames/core/history/trivial-pursuit";
 import type {
   MatchKind,
@@ -136,6 +141,40 @@ export function sortLockKeys(keys: string[]): string[] {
     .sort((a, b) => nightDate(b).localeCompare(nightDate(a)) || a.localeCompare(b));
 }
 
+/**
+ * The day a standalone match belongs to — its UTC date, the same key the
+ * history page groups standalone days by (`HistoryPage`'s `dayLabelOf`).
+ */
+export function standaloneDay(iso: string): string {
+  const d = new Date(iso);
+  if (Number.isNaN(d.getTime())) return iso.slice(0, 10);
+  return d.toISOString().slice(0, 10);
+}
+
+/**
+ * A standalone match stores a day, not a time (the card shows none): noon UTC
+ * of `day`, so it lands in that day's group from any timezone.
+ */
+export function standaloneDayToIso(day: string): string {
+  return `${day}T12:00:00.000Z`;
+}
+
+/** Everyone who took part in these matches — players and moderators — in first-seen order. */
+export function attendeesOf(matches: readonly { outcome: MatchOutcome }[]): Participant[] {
+  const seen = new Map<string, Participant>();
+  for (const m of matches) {
+    const moderator =
+      m.outcome.kind === "teams" || m.outcome.kind === "coop" ? m.outcome.moderator : undefined;
+    const people = [...flatParticipants(m.outcome), ...(moderator ? [moderator] : [])];
+    for (const p of people) {
+      if (!seen.has(p.userId)) {
+        seen.set(p.userId, { userId: p.userId, displayName: p.displayName });
+      }
+    }
+  }
+  return [...seen.values()];
+}
+
 /** Convert an ISO timestamp to the local-tz string `<input type="datetime-local">` expects. */
 export function isoToLocalInput(iso: string): string {
   const d = new Date(iso);
@@ -177,6 +216,7 @@ export function describeOutcomeError(
       if (isWinDrawLossFfa(gameSlug)) return describeWinDrawLossError(outcome);
       if (isSingleWinnerFfa(gameSlug)) return describeSingleWinnerError(outcome);
       if (gameSlug === "jaipur") return describeJaipurError(outcome);
+      if (scoreRaceForSlug(gameSlug)) return describeRaceError(outcome, gameSlug);
       if (isSensoSlug(gameSlug)) return describeSensoFfaError(outcome);
       if (outcome.players.length < 2) return "Add at least two players";
       return null;
@@ -291,6 +331,34 @@ export function describeJaipurError(outcome: MatchOutcomeFreeForAll): string | n
     return "Enter each round's rupees";
   }
   return describeRoundScoresError(outcome);
+}
+
+/**
+ * Take 5 / Bandit: hands are entered one by one until a total crosses the
+ * game's limit (ScoreRaceForm). A record from before hand-by-hand entry —
+ * final totals only, no hands — stays valid so old matches can still be
+ * edited; a fresh one must reach the end of the game.
+ */
+export function describeRaceError(
+  outcome: MatchOutcomeFreeForAll,
+  gameSlug: string | null,
+): string | null {
+  if (outcome.players.length < 2) return "Add at least two players";
+  const race = scoreRaceForSlug(gameSlug);
+  if (!race) return null;
+  if (isRaceTotalsOnly(outcome.players)) return null;
+  return describeScoreRaceError(race, outcome);
+}
+
+/**
+ * A different game was picked: drop a score-race record (Take 5 / Bandit
+ * hands) the new game's form wouldn't keep in step with the scores.
+ */
+export function stripRaceRounds(outcome: MatchOutcome): MatchOutcome {
+  if (outcome.kind !== "free-for-all" || !outcome.players.some((p) => p.raceRounds)) {
+    return outcome;
+  }
+  return { ...outcome, players: outcome.players.map(({ raceRounds: _drop, ...p }) => p) };
 }
 
 /**

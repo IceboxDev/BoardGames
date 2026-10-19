@@ -8,6 +8,10 @@ import {
   MIN_ROUND_SCORES,
 } from "@boardgames/core/history/round-scores";
 import {
+  describeRaceRoundsError,
+  SCORE_RACE_MAX_ROUNDS,
+} from "@boardgames/core/history/score-race";
+import {
   describeWedgesError,
   FULL_PIE,
   type Wedge,
@@ -129,6 +133,28 @@ function parseFreeForAll(v: Record<string, unknown>): ParseResult<MatchOutcomeFr
       }
       roundScores = parsedRounds;
     }
+    // Optional score-limit race record (Take 5, Bandit): points per hand.
+    // Same hand count everywhere and totals are checked below.
+    let raceRounds: number[] | undefined;
+    if (raw.raceRounds !== undefined && raw.raceRounds !== null) {
+      if (
+        !Array.isArray(raw.raceRounds) ||
+        raw.raceRounds.length < 1 ||
+        raw.raceRounds.length > SCORE_RACE_MAX_ROUNDS
+      ) {
+        return {
+          ok: false,
+          error: `players[${i}]: raceRounds must hold 1–${SCORE_RACE_MAX_ROUNDS} hands`,
+        };
+      }
+      const parsedHands: number[] = [];
+      for (const s of raw.raceRounds) {
+        const n = asFiniteNumber(s);
+        if (n === null) return { ok: false, error: `players[${i}]: invalid hand score` };
+        parsedHands.push(n);
+      }
+      raceRounds = parsedHands;
+    }
     // Optional table-voted award ids (Publish or Perish) — points are already
     // folded into `score`; the ids survive for round-trips and display.
     // Mirrors FreeForAllPlayerSchema.
@@ -161,6 +187,7 @@ function parseFreeForAll(v: Record<string, unknown>): ParseResult<MatchOutcomeFr
       ...(rank !== undefined ? { rank } : {}),
       ...(role !== undefined ? { role } : {}),
       ...(roundScores !== undefined ? { roundScores } : {}),
+      ...(raceRounds !== undefined ? { raceRounds } : {}),
       ...(awards !== undefined ? { awards } : {}),
       ...(tiebreak !== undefined ? { tiebreak } : {}),
       ...(wedges !== undefined ? { wedges } : {}),
@@ -228,6 +255,8 @@ function parseFreeForAll(v: Record<string, unknown>): ParseResult<MatchOutcomeFr
   // same shared-validator pattern as Decrypto's tokens.
   const roundError = describeRoundScoresError(value);
   if (roundError) return { ok: false, error: `free-for-all: ${roundError}` };
+  const raceError = describeRaceRoundsError(value);
+  if (raceError) return { ok: false, error: `free-for-all: ${raceError}` };
   return { ok: true, value };
 }
 

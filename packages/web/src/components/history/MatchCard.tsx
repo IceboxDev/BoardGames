@@ -284,6 +284,14 @@ function FreeForAllInline({
           />
           {p.roundScores ? (
             <RoundScores player={p} outcome={outcome} />
+          ) : p.raceRounds ? (
+            // Score race (Take 5, Bandit): the total, the hands on hover.
+            <span
+              className="cursor-default text-xs tabular-nums text-fg-muted"
+              title={`${p.raceRounds.length} hands: ${p.raceRounds.join(" + ")} = ${p.score}`}
+            >
+              {p.score}
+            </span>
           ) : (
             <span className="text-xs tabular-nums text-fg-muted">{p.score}</span>
           )}
