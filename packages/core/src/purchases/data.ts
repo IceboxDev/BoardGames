@@ -579,14 +579,17 @@ export const PURCHASES: readonly PurchaseRecord[] = [
     orderGroup: null,
     slug: "roma-xli",
     kind: "crowdfunding",
-    status: "production",
+    status: "shipping",
     platform: "Kickstarter",
     campaignUrl: "https://www.kickstarter.com/projects/facadegames/roma-xli-game",
     pledgeManagerUrl: "https://www.allplay.com/pledge-manager",
     // The Kickstarter pledge itself promised "Estimated delivery Nov 2026";
-    // the Aug 25 '26 update still estimates October/November delivery.
+    // the Aug 25 '26 update still estimates October/November delivery. The
+    // Oct 15 update has the EU ship reaching the warehouse Nov 22, with
+    // receiving, packing and shipping still to follow (and delays expected
+    // on at least one ship) — so delivery reads as December.
     originalEtaMonth: "2026-11",
-    currentEtaMonth: "2026-11",
+    currentEtaMonth: "2026-12",
     pledgedOn: "2026-03-25",
     deliveredOn: null,
     currency: "USD",
@@ -645,6 +648,18 @@ export const PURCHASES: readonly PurchaseRecord[] = [
           "(link retrievable at allplay.com/pledge-manager) and stays open until 2027; " +
           "delivery currently estimated October/November 2026.",
         sourceUrl: "https://www.kickstarter.com/projects/facadegames/roma-xli-game/posts/4779725",
+      },
+      {
+        id: "roma-xli-e05",
+        occurredOn: "2026-10-15",
+        type: "status-change",
+        title: "Production finished — on the water, EU warehouse arrival ~Nov 22",
+        details:
+          "The factory finished everything and the games are at sea. Expected warehouse " +
+          "arrivals: China Nov 1, Australia Nov 7, Canada Nov 12, USA Nov 18, EU Nov 22, UK " +
+          "Dec 5 — with delays likely on at least one ship and receiving, packing and " +
+          "shipping still to come after arrival.",
+        sourceUrl: "https://www.kickstarter.com/projects/facadegames/roma-xli-game/posts/4829043",
       },
     ],
   },
