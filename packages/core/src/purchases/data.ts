@@ -914,15 +914,18 @@ export const PURCHASES: readonly PurchaseRecord[] = [
     orderGroup: null,
     slug: "parks-europe",
     kind: "crowdfunding",
-    status: "production",
+    status: "shipping",
     platform: "BackerKit",
     campaignUrl:
       "https://www.backerkit.com/c/projects/keymaster/parks-europe-chalet-edition-free-expansion",
     pledgeManagerUrl: null, // BackerKit survey; closed Aug 31 '26, cards charged Sep 1
     // A BackerKit "Ready-to-Ship" campaign — printing ran during the campaign
-    // and the page promises "Estimated to ship by October 2026".
+    // and the page promises "Estimated to ship by October 2026". The Oct 14
+    // update puts the EU container at the fulfilment hub in late November and
+    // warns that's a hub date, not a doorstep date (holiday-rush queue) —
+    // so delivery reads as December.
     originalEtaMonth: "2026-10",
-    currentEtaMonth: "2026-10",
+    currentEtaMonth: "2026-12",
     pledgedOn: "2026-08-03",
     deliveredOn: null,
     currency: "USD",
@@ -975,6 +978,32 @@ export const PURCHASES: readonly PurchaseRecord[] = [
           "ship window. (Date approximate.)",
         sourceUrl:
           "https://www.backerkit.com/c/projects/keymaster/parks-europe-chalet-edition-free-expansion/updates/50907",
+      },
+      {
+        id: "parks-europe-e04",
+        occurredOn: "2026-10-14",
+        type: "status-change",
+        title: "Production finished Sep 24 — EU container waiting at the port",
+        details:
+          "Parks Europe finished production September 24. The US shipment is on the water; " +
+          "the Canada, Europe and Australia containers are packed and waiting at the port in " +
+          "China for their ships. (Date approximate.)",
+        sourceUrl:
+          "https://www.backerkit.com/c/projects/keymaster/parks-europe-chalet-edition-free-expansion/updates/53168",
+      },
+      {
+        id: "parks-europe-e05",
+        occurredOn: "2026-10-14",
+        type: "delay",
+        title: "Typhoons and Golden Week miss every sailing — EU hub arrival late November",
+        details:
+          "No container left China on schedule: a typhoon slowed the wooden-parts factory, " +
+          "four typhoons and daily intake limits backed up Yantian port, and Golden Week " +
+          "(Oct 1–7) followed. Expected hub arrivals: Australia late October, US early " +
+          "November, Canada/UK/EU late November — hub dates, not doorstep dates; backers are " +
+          "promised their copies before retail. (Date approximate.)",
+        sourceUrl:
+          "https://www.backerkit.com/c/projects/keymaster/parks-europe-chalet-edition-free-expansion/updates/53168",
       },
     ],
   },
