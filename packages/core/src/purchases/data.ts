@@ -662,11 +662,11 @@ export const PURCHASES: readonly PurchaseRecord[] = [
     pledgeManagerUrl: null, // BackerKit; closed May 15 '26, addresses locked July 18 '26
     // Kickstarter's reward estimate at pledge time: Sep 2026 (the creator's
     // internal goal was July/August). The EU vessel was due in Rotterdam
-    // Sep 12 for a ~Sep 28 fulfilment start, but by Sep 30 the games still
-    // hadn't reached the fulfilment centre and no new date was given — the
-    // ETA stays put and reads as overdue.
+    // Sep 12 for a ~Sep 28 fulfilment start; the games only reached the
+    // fulfilment centre Oct 15 and this order left Meeples' Dronten
+    // warehouse Oct 19 (Maersk) — delivery expected in October.
     originalEtaMonth: "2026-09",
-    currentEtaMonth: "2026-09",
+    currentEtaMonth: "2026-10",
     pledgedOn: "2026-03-25",
     deliveredOn: null,
     currency: "USD",
@@ -678,8 +678,8 @@ export const PURCHASES: readonly PurchaseRecord[] = [
       "14 tarot-size Boss cards, wood Temptation tokens, gold-foil box, plus all unlocked " +
       "stretch goals (incl. solo mode and 44 bosses, added late campaign). Add-on: Deluxe " +
       "Foil Poker Deck dual pack ($20.00, gold + red). Total $85.00 collected; shipping and " +
-      "VAT went through the BackerKit pledge manager. EU copies fulfil via MeeplesNL from " +
-      "Rotterdam.",
+      "VAT went through the BackerKit pledge manager. EU copies fulfil via Meeples " +
+      "Distributie (Dronten, NL) — order MF122479, shipped Oct 19 '26 via Maersk 8669301001.",
     events: [
       {
         id: "hell-of-a-deal-e01",
@@ -769,6 +769,30 @@ export const PURCHASES: readonly PurchaseRecord[] = [
           "centre can't say when it will.",
         sourceUrl:
           "https://www.kickstarter.com/projects/smirkanddagger/hell-of-a-deal/posts/4813237",
+      },
+      {
+        id: "hell-of-a-deal-e08",
+        occurredOn: "2026-10-15",
+        type: "campaign-update",
+        title: "EU games reach the fulfilment centre; foil poker decks being reprinted",
+        details:
+          "The EU/UK games arrived at the fulfilment centre Oct 15, with packing set to start " +
+          "within days. After backer reports of defects, the foil decks are being reprinted " +
+          "(300gsm linen, cold-foil emboss, no edge foil) for ~mid-December; backers unhappy " +
+          "with their decks can email for a replacement or an add-on refund.",
+        sourceUrl:
+          "https://www.kickstarter.com/projects/smirkanddagger/hell-of-a-deal/posts/4829647",
+      },
+      {
+        id: "hell-of-a-deal-e09",
+        occurredOn: "2026-10-19",
+        type: "shipping-notice",
+        title: "Order MF122479 shipped from Meeples (Dronten) — Maersk 8669301001",
+        details:
+          "Meeples Distributie shipped the order from its Dronten, Netherlands warehouse via " +
+          "Maersk (tracking 8669301001). Listed contents: Hell of a Deal ×1 and Hell of a " +
+          "Deal: Foil Poker Deck 2-Pack ×1.",
+        sourceUrl: null,
       },
     ],
   },
