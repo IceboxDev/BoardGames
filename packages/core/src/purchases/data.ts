@@ -1589,15 +1589,15 @@ export const PURCHASES: readonly PurchaseRecord[] = [
     orderGroup: { id: "fliptoons", title: "FlipToons" },
     slug: "fliptoons",
     kind: "retail",
-    status: "shipping",
+    status: "delivered",
     platform: "Thunderworks Games",
     campaignUrl: null,
     pledgeManagerUrl: null, // order page link not recorded
-    // Shipment 1: "5–8 business days" from Oct 11 — about Oct 20–21.
+    // Shipment 1: "5–8 business days" from Oct 11; arrived Oct 15.
     originalEtaMonth: "2026-10",
     currentEtaMonth: "2026-10",
     pledgedOn: "2026-10-11",
-    deliveredOn: null,
+    deliveredOn: "2026-10-15",
     currency: "USD",
     pledgeCents: 2374, // $19.95 + $3.79 VAT (19%), paid
     shippingCents: 200, // a quarter of shipment 1's $8.00
@@ -1615,6 +1615,25 @@ export const PURCHASES: readonly PurchaseRecord[] = [
           "Order #KHRL825NA: $19.95 + VAT, in shipment 1 of 2 from Germany (5–8 business days).",
         sourceUrl: null,
       },
+      {
+        id: "fliptoons-e02",
+        occurredOn: "2026-10-13",
+        type: "shipping-notice",
+        title: "Shipment 1 handed to DHL — tracking 018096206518",
+        details:
+          "Sent by Happyshops GmbH within Germany with DHL (tracking 018096206518), together " +
+          "with the order's other shipment-1 items.",
+        sourceUrl: null,
+      },
+      {
+        id: "fliptoons-e03",
+        occurredOn: "2026-10-15",
+        type: "status-change",
+        title: "Delivered",
+        details:
+          "DHL delivered shipment 1 to the letterbox on Oct 15 at 14:30, four days after the order.",
+        sourceUrl: null,
+      },
     ],
   },
   {
@@ -1625,15 +1644,15 @@ export const PURCHASES: readonly PurchaseRecord[] = [
     orderGroup: { id: "fliptoons", title: "FlipToons" },
     slug: "fliptoons",
     kind: "retail",
-    status: "shipping",
+    status: "delivered",
     platform: "Thunderworks Games",
     campaignUrl: null,
     pledgeManagerUrl: null, // order page link not recorded
-    // Shipment 1: "5–8 business days" from Oct 11 — about Oct 20–21.
+    // Shipment 1: "5–8 business days" from Oct 11; arrived Oct 15.
     originalEtaMonth: "2026-10",
     currentEtaMonth: "2026-10",
     pledgedOn: "2026-10-11",
-    deliveredOn: null,
+    deliveredOn: "2026-10-15",
     currency: "USD",
     pledgeCents: 2374, // $19.95 + $3.79 VAT (19%), paid
     shippingCents: 200, // a quarter of shipment 1's $8.00
@@ -1651,6 +1670,25 @@ export const PURCHASES: readonly PurchaseRecord[] = [
           "Order #KHRL825NA: $19.95 + VAT, in shipment 1 of 2 from Germany (5–8 business days).",
         sourceUrl: null,
       },
+      {
+        id: "fliptoons-season-2-e02",
+        occurredOn: "2026-10-13",
+        type: "shipping-notice",
+        title: "Shipment 1 handed to DHL — tracking 018096206518",
+        details:
+          "Sent by Happyshops GmbH within Germany with DHL (tracking 018096206518), together " +
+          "with the order's other shipment-1 items.",
+        sourceUrl: null,
+      },
+      {
+        id: "fliptoons-season-2-e03",
+        occurredOn: "2026-10-15",
+        type: "status-change",
+        title: "Delivered",
+        details:
+          "DHL delivered shipment 1 to the letterbox on Oct 15 at 14:30, four days after the order.",
+        sourceUrl: null,
+      },
     ],
   },
   {
@@ -1661,15 +1699,15 @@ export const PURCHASES: readonly PurchaseRecord[] = [
     orderGroup: null,
     slug: "questline",
     kind: "retail",
-    status: "shipping",
+    status: "delivered",
     platform: "Thunderworks Games",
     campaignUrl: null,
     pledgeManagerUrl: null, // order page link not recorded
-    // Shipment 1: "5–8 business days" from Oct 11 — about Oct 20–21.
+    // Shipment 1: "5–8 business days" from Oct 11; arrived Oct 15.
     originalEtaMonth: "2026-10",
     currentEtaMonth: "2026-10",
     pledgedOn: "2026-10-11",
-    deliveredOn: null,
+    deliveredOn: "2026-10-15",
     currency: "USD",
     pledgeCents: 2374, // $19.95 + $3.79 VAT (19%), paid
     shippingCents: 200, // a quarter of shipment 1's $8.00
@@ -1687,6 +1725,25 @@ export const PURCHASES: readonly PurchaseRecord[] = [
           "Order #KHRL825NA: $19.95 + VAT, in shipment 1 of 2 from Germany (5–8 business days).",
         sourceUrl: null,
       },
+      {
+        id: "questline-e02",
+        occurredOn: "2026-10-13",
+        type: "shipping-notice",
+        title: "Shipment 1 handed to DHL — tracking 018096206518",
+        details:
+          "Sent by Happyshops GmbH within Germany with DHL (tracking 018096206518), together " +
+          "with the order's other shipment-1 items.",
+        sourceUrl: null,
+      },
+      {
+        id: "questline-e03",
+        occurredOn: "2026-10-15",
+        type: "status-change",
+        title: "Delivered",
+        details:
+          "DHL delivered shipment 1 to the letterbox on Oct 15 at 14:30, four days after the order.",
+        sourceUrl: null,
+      },
     ],
   },
   {
@@ -1697,15 +1754,15 @@ export const PURCHASES: readonly PurchaseRecord[] = [
     orderGroup: null,
     slug: "tenpenny-parks",
     kind: "retail",
-    status: "shipping",
+    status: "delivered",
     platform: "Thunderworks Games",
     campaignUrl: "https://www.thunderworksgames.com/tenpennyparks.html",
     pledgeManagerUrl: null, // order page link not recorded
-    // Shipment 1: "5–8 business days" from Oct 11 — about Oct 20–21.
+    // Shipment 1: "5–8 business days" from Oct 11; arrived Oct 15.
     originalEtaMonth: "2026-10",
     currentEtaMonth: "2026-10",
     pledgedOn: "2026-10-11",
-    deliveredOn: null,
+    deliveredOn: "2026-10-15",
     currency: "USD",
     pledgeCents: 16059, // $134.95 + $25.64 VAT (19%), paid
     shippingCents: 200, // a quarter of shipment 1's $8.00
@@ -1721,6 +1778,25 @@ export const PURCHASES: readonly PurchaseRecord[] = [
         title: "Ordered as an add-on in the Thunderworks pledge manager",
         details:
           "Order #KHRL825NA: $134.95 + VAT, in shipment 1 of 2 from Germany (5–8 business days).",
+        sourceUrl: null,
+      },
+      {
+        id: "tenpenny-parks-collectors-edition-e02",
+        occurredOn: "2026-10-13",
+        type: "shipping-notice",
+        title: "Shipment 1 handed to DHL — tracking 018096206518",
+        details:
+          "Sent by Happyshops GmbH within Germany with DHL (tracking 018096206518), together " +
+          "with the order's other shipment-1 items.",
+        sourceUrl: null,
+      },
+      {
+        id: "tenpenny-parks-collectors-edition-e03",
+        occurredOn: "2026-10-15",
+        type: "status-change",
+        title: "Delivered",
+        details:
+          "DHL delivered shipment 1 to the letterbox on Oct 15 at 14:30, four days after the order.",
         sourceUrl: null,
       },
     ],
